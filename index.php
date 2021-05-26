@@ -48,7 +48,7 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="index.php">Inicio</a></li>
-          <li><a href="#about">Nostros</a></li>
+          <li><a href="Nosotros.php">Nostros</a></li>
           <li><a href="#services">Servicios</a></li>
           <li><a href="#portfolio">Galeria</a></li>
           <li><a href="#team">Team</a></li>
