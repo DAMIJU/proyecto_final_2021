@@ -47,10 +47,10 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#about">Nosotros</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#portfolio">Galeria</a></li>
           <li><a href="#team">Team</a></li>
           <li class="active"><a href="blog.html">Blog</a></li>
           <li class="drop-down"><a href="">Drop Down</a>
