@@ -316,7 +316,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/Casme02.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="icofont-twitter"></i></a>
                   <a href=""><i class="icofont-facebook"></i></a>
@@ -325,12 +325,12 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <h4>Diego Castaño</h4>
+                <span>Owner</span>
               </div>
             </div>
           </div>
-
+<!-- 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
@@ -388,7 +388,8 @@
         </div>
 
       </div>
-    </section><!-- End Team Section -->
+    </section>
+  --><!-- End Team Section -->
 
     
 

@@ -342,7 +342,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100vh;
   background: white top center;
-  background-image: url(https://cdn1.matadornetwork.com/blogs/2/2017/03/COLOMBIA_santuariodelaslajas.jpg);
+  background-image: url("../img/Casme01.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
