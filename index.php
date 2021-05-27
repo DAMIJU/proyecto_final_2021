@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Tempo Bootstrap Template - Index</title>
+  <title>Servicios Caninos Casme</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
   <meta content="Miguel Arias, Darwin Meneses, Juan Esteban Alvarez" name="autor">
   
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/Logo.ico" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -40,13 +40,13 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.php"><img src="assets/img/Logo sin fondo.png" alt=""></a></h1>
+      <h1 class="logo mr-auto"><a href="index.php"><img src="assets/img/Logo sin fondo.png" alt="Caninos Casme"></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="index.php">Inicio</a></li>
-          <li><a href="Nosotros.php">Nostros</a></li>
+          <li><a href="Nosotros.php">Nosotros</a></li>
           <li><a href="Servicios.php">Servicios</a></li>
           <li><a href="Galeria.php">Galeria</a></li>
           <li><a href="blog.php">Blog</a></li>          
@@ -59,8 +59,8 @@
   <section id="hero">
     <div class="hero-container">
       <h3>Bienvenidos</h3>
-      <h1>Caninos Casme</h1>
-      <h2>We are team of talented designers making websites with Bootstrap</h2>
+      <h1>Servicios Caninos Casme</h1>
+      <h2>Escuela profesional de adiestramiento canino</h2>
       <a href="#about" class="btn-get-started scrollto">Iniciar sesión</a>
     </div>
   </section><!-- End Hero -->
