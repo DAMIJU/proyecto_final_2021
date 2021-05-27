@@ -8,7 +8,8 @@
   <title>Tempo Bootstrap Template - Index</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  <meta content="Miguel Arias, Darwin Meneses, Juan Esteban Alvarez" name="autor">
+  
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -48,27 +49,8 @@
           <li><a href="Nosotros.php">Nostros</a></li>
           <li><a href="Servicios.php">Servicios</a></li>
           <li><a href="Galeria.php">Galeria</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="blog.php">Blog</a></li>
-          <li class="drop-down"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Deep Drop Down</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a href="Contacto.php">Contact</a></li>
-
+          <li><a href="blog.php">Blog</a></li>          
+          <li><a href="Contacto.php">Contacto</a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -76,16 +58,15 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container">
-      <h3>Welcome to <strong>Tempo</strong></h3>
+      <h3>Bienvenidos</h3>
       <h1>Caninos Casme</h1>
       <h2>We are team of talented designers making websites with Bootstrap</h2>
-      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+      <a href="#about" class="btn-get-started scrollto">Iniciar sesión</a>
     </div>
   </section><!-- End Hero -->
   
-
-    <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
+  <!-- ======= Features Section ======= -->
+    <!-- <section id="features" class="features">
       <div class="container">
 
         <div class="row">
@@ -162,9 +143,8 @@
             </div>
           </div>
         </div>
-
-      </div>
-    </section><!-- End Features Section -->
+      </div> -->
+    </section><!-- End Features Section -->  
 
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
@@ -181,7 +161,7 @@
 
    
     <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
+    <!-- <section id="pricing" class="pricing">
       <div class="container">
 
         <div class="section-title">
@@ -247,7 +227,8 @@
         </div>
 
       </div>
-    </section><!-- End Pricing Section -->
+    </section> 
+    --><!-- End Pricing Section -->
 
     <!-- ======= F.A.Q Section ======= -->
     <section id="faq" class="faq">
@@ -317,7 +298,8 @@
         </ul>
 
       </div>
-    </section><!-- End F.A.Q Section -->
+    </section>
+    <!-- End F.A.Q Section -->
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team">
