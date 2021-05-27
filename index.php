@@ -49,7 +49,7 @@
           <li><a href="Nosotros.php">Nosotros</a></li>
           <li><a href="Servicios.php">Servicios</a></li>
           <li><a href="Galeria.php">Galeria</a></li>
-          <li><a href="blog.php">Blog</a></li>          
+          <li><a href="blog.php">Citas</a></li>          
           <li><a href="Contacto.php">Contacto</a></li>
         </ul>
       </nav><!-- .nav-menu -->
