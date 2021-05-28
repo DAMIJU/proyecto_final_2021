@@ -46,11 +46,11 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="index.php">Inicio</a></li>
-          <li><a href="Nosotros.php">Nosotros</a></li>
-          <li><a href="Servicios.php">Servicios</a></li>
-          <li><a href="Galeria.php">Galeria</a></li>
-          <li><a href="blog.php">Citas</a></li>          
-          <li><a href="Contacto.php">Contacto</a></li>
+          <li ><a href="Nosotros.php">Nosotros</a></li>
+          <li ><a href="Servicios.php">Servicios</a></li>
+          <li ><a href="Galeria.php">Galería</a></li>
+          <li ><a href="Citas.php">Citas</a></li>          
+          <li ><a href="Contacto.php">Contacto</a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -58,10 +58,10 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container">
-      <h3>Bienvenidos</h3>
+      <!-- <h3>Bienvenidos</h3> -->
       <h1>Servicios Caninos Casme</h1>
       <h2>Escuela profesional de adiestramiento canino</h2>
-      <a href="#about" class="btn-get-started scrollto">Iniciar sesión</a>
+      <a href="#about" class="btn-get-started btn btn-lg scrollto">Iniciar sesión</a>
     </div>
   </section><!-- End Hero -->
   
@@ -235,8 +235,8 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>F.A.Q</h2>
-          <h3>Frequently Asked <span>Questions</span></h3>
+          <!-- <h2>F.A.Q</h2> -->
+          <h3>Preguntas<span> Frecuentes</span></h3>
         </div>
 
         <ul class="faq-list">
@@ -311,7 +311,7 @@
           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
         </div>
 
-        <div class="row">
+        <div class="m-0 vh-100 row justify-content-center align-items-center">
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member">
@@ -401,35 +401,35 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Tempo</h3>
+            <h3>Casme</h3>
             <p>
               A108 Adam Street <br>
               New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              Mexico <br><br>
+              <strong>Telefono:</strong> +1 5589 55488 55<br>
+              <strong>Correo:</strong> info@example.com<br>
             </p>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Enlaces utiles</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Nosotros</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Servicios</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Galeria</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contacto</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4>Nuestros servicios</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Adiestramiento</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Estetica</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">?</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">?</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">?</a></li>
             </ul>
           </div>
 
