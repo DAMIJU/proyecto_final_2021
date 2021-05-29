@@ -314,7 +314,7 @@
 
         <div class="m-0 vh-100 row justify-content-center align-items-center">
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="col-lg-4 col-md-8 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
                 <img src="assets/img/team/Casme02.jpg" class="img-fluid" alt="">
@@ -326,8 +326,7 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Diego Castaño</h4>
-                <span>Owner</span>
+                <h2>Diego Castaño</h2>
               </div>
             </div>
           </div>
