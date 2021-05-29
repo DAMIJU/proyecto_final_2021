@@ -48,6 +48,7 @@
           <li class="active"><a href="index.php">Inicio</a></li>
           <li ><a href="Nosotros.php">Nosotros</a></li>
           <li ><a href="Servicios.php">Servicios</a></li>
+          <li ><a href="Productos.php">Productos</a></li>
           <li ><a href="Galeria.php">Galería</a></li>
           <li ><a href="Citas.php">Citas</a></li>          
           <li ><a href="Contacto.php">Contacto</a></li>
@@ -414,22 +415,24 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Enlaces utiles</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Nosotros</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Servicios</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Galeria</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Contacto</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php">Inicio</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Nosotros.php">Nosotros</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Servicios.php">Servicios</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Productos.php">Productos</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Galeria.php">Galeria</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Contacto.php">Contacto</a></li>
+              
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Nuestros servicios</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Adiestramiento</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Estetica</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">?</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">?</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">?</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Servicios.php">Adiestramiento</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Servicios.php">Estetica</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Servicios.php">?</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Servicios.php">?</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Servicios.php">?</a></li>
             </ul>
           </div>
 

@@ -47,8 +47,8 @@
           <li><a href="index.php">Inicio</a></li>
           <li><a href="Nosotros.php">Nosotros</a></li>
           <li><a href="Servicios.php">Servicios</a></li>
-          <li ><a href="Productos.php">Productos</a></li>
-          <li class="active"><a href="Galeria.php">Galería</a></li>
+          <li class="active" ><a href="Productos.php">Productos</a></li>
+          <li><a href="Galeria.php">Galería</a></li>
           <li><a href="Citas.php">Citas</a></li>          
           <li><a href="Contacto.php">Contacto</a></li>
         </ul>
