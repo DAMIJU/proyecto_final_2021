@@ -24,6 +24,8 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -60,7 +62,7 @@
   <section id="hero">
     <div class="hero-container">
       <!-- <h3>Bienvenidos</h3> -->
-      <h1>Servicios Caninos Casme</h1>
+      <h1 style="font-family: 'Audiowide', cursive;">Servicios Caninos Casme</h1>
       <h2>Escuela profesional de adiestramiento canino</h2>
       <a href="#about" class="btn-get-started btn btn-lg scrollto">Iniciar sesión</a>
     </div>
