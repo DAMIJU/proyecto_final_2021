@@ -4998,6 +4998,12 @@
   .bxl-whatsapp-square:before {
     content: "\eed3";
   }
+  .bxl-tiktok:before {
+    content: "\eed2";
+  }
+  .bxl-tiktok-square:before {
+    content: "\eed3";
+  }
   .bxl-wikipedia:before {
     content: "\eed4";
   }
