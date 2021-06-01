@@ -148,6 +148,7 @@
         </div>
       </div> -->
     </section><!-- End Features Section -->  
+    <br></br>
 
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
@@ -170,13 +171,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-80" src="https://fondosmil.com/fondo/20145.jpg" alt="First slide">
+      <img class="d-block w-100" src="https://fondosmil.com/fondo/20145.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-80"  src="https://p4.wallpaperbetter.com/wallpaper/267/764/50/cute-pembroke-welsh-corgi-puppies-running-wallpaper-preview.jpg" alt="Second slide">
+      <img class="d-block w-100"  src="https://p4.wallpaperbetter.com/wallpaper/267/764/50/cute-pembroke-welsh-corgi-puppies-running-wallpaper-preview.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-80" src="https://imagendeperros.com/wp-content/uploads/2016/01/Imagenes-De-Grupos-De-Perros-San-Bernardo-Cachorros-Tiernos.jpg" alt="Third slide">
+      <img class="d-block w-100" src="https://imagendeperros.com/wp-content/uploads/2016/01/Imagenes-De-Grupos-De-Perros-San-Bernardo-Cachorros-Tiernos.jpg" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
