@@ -149,20 +149,7 @@
       </div> -->
     </section><!-- End Features Section -->  
     <br></br>
-
-    <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container">
-
-        <div class="text-center">
-          <h3>Call To Action</h3>
-          <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a class="cta-btn" href="#">Call To Action</a>
-        </div>
-
-      </div>
-    </section><!-- End Cta Section -->
-  <section>
+    <section>
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -171,7 +158,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="https://fondosmil.com/fondo/20145.jpg" alt="First slide">
+      <img class="d-block w-100" src="https://st2.depositphotos.com/1063397/5982/i/600/depositphotos_59823897-stock-photo-bathing-a-dog-golden-retriever.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
       <img class="d-block w-100"  src="https://p4.wallpaperbetter.com/wallpaper/267/764/50/cute-pembroke-welsh-corgi-puppies-running-wallpaper-preview.jpg" alt="Second slide">
@@ -189,7 +176,21 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-  </section><!-- End Cta Section -->
+  </section>
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container">
+
+        <div class="text-center">
+          <h3>Call To Action</h3>
+          <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a class="cta-btn" href="#">Call To Action</a>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+  <!-- End Cta Section -->
     
     
 
@@ -429,8 +430,6 @@
         </div>
 
       </div>
-<<<<<<< Updated upstream
-    </section>
 =======
     <!--  --></section>
     <br></br>
