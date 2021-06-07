@@ -489,13 +489,10 @@
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
           </div>
-
         </div>
       </div>
     </div>
-
     <div class="container d-md-flex py-4">
-
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
           &copy; Copyright <strong><span>Tempo</span></strong>. All Rights Reserved
