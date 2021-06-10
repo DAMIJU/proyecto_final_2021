@@ -120,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: block;
   position: relative;
-  color: #000;
+  color: white;
   transition: 0.3s;
   font-size: 19px;
   padding: 0 4px;
@@ -341,7 +341,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   /* background: rgb(231, 175, 175); */
  /*  background-image: url(blob:https://web.whatsapp.com/ead45053-fb98-458a-bec5-a9c53e756ea3); */
-  background-image: url('../img/perrito.jpg');
+  background-image: url('https://image.freepik.com/foto-gratis/lindo-perrito-aislado-amarillo_23-2148985956.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -350,7 +350,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero:before {
   content: "";
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.3); 
   position: absolute;
   bottom: 0;
   top: 0;

@@ -50,6 +50,7 @@
           <li><a href="Galeria.php">Galería</a></li>
           <li class="active"><a href="Citas.php">Citas</a></li>          
           <li><a href="Contacto.php">Contacto</a></li>
+          <li ><a href="Login.php">Admin</a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
