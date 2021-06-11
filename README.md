@@ -1,0 +1,2 @@
+# Proyecto_Final_2021
+Desarrollar una aplicación web que permita controlar y gestionar las actividades que se llevan a cabo en la empresa  (adiestramiento canino, estetica, vacunas, tratamientos invasivos), mediante lenguajes de programación (PHP, Javascript, Jquery), lenguaje de etiquetas (Html), estilos (CSS y Bootstrap) y estructuras de datos (Mysql), esto con el fin de mejorar la atención brindada a los clientes y caninos.
