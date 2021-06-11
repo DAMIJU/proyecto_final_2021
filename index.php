@@ -189,7 +189,7 @@
         <div class="text-center">
           <h3>Call To Action</h3>
           <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a class="cta-btn" href="#">Call To Action</a>
+          <a class="cta-btn" href="#">Ir</a>
         </div>
       </div>
     </section><!-- End Cta Section -->
@@ -339,8 +339,9 @@
       </div>
     </section>
     <!-- End F.A.Q Section -->
-
+    <br><br>
     <!-- ======= Team Section ======= -->
+    
     <section id="team" class="team">
       <div class="container">
 
@@ -349,9 +350,7 @@
           <h3>Our Hardworking <span>Team</span></h3>
           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
         </div>
-
         <div class="m-0 vh-100 row justify-content-center align-items-center">
-
           <div class="col-lg-4 col-md-8 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
@@ -367,10 +366,8 @@
                 <h2>Diego Castaño</h2>
               </div>
             </div>
-          </div>
-          
-          
-<!-- 
+          </div>       
+       <!-- 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
@@ -429,14 +426,10 @@
 
       </div>
 =======
-    <!--  --></section>
-    <br></br>
-
-    
-  --><!-- End Team Section -->
-
-    
-
+    <--  -->
+  </section>
+  <br></br>   
+  <!-- End Team Section -->
   <!-- ======= Footer ======= -->
   
   <footer id="footer">
