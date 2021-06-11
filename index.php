@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Servicios Caninos Casme</title>
@@ -65,7 +66,9 @@
       <!-- <h3>Bienvenidos</h3> -->
       <h1 style="font-family: 'Audiowide', cursive;">Servicios Caninos Casme</h1>
       <h2>Escuela profesional de adiestramiento canino</h2>
-      <a href="#about" class="btn-get-started btn btn-lg scrollto">Iniciar sesión</a>
+      <a href="#about" class="btn-get-started btn btn-lg scrollto span2"></a>
+      
+
     </div>
   </section><!-- End Hero -->
   
@@ -150,7 +153,7 @@
       </div> -->
     </section><!-- End Features Section -->  
     <br></br>
-    <section>
+   <!--  <section>
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -177,7 +180,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-  </section>
+  </section> -->
 
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
@@ -188,7 +191,6 @@
           <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <a class="cta-btn" href="#">Call To Action</a>
         </div>
-
       </div>
     </section><!-- End Cta Section -->
   <!-- End Cta Section -->
@@ -267,10 +269,7 @@
     --><!-- End Pricing Section -->
 
     <!-- ======= F.A.Q Section ======= -->
-    <br></br>
-       <br></br>
-       <br></br>
-       <br></br>
+    <br></br>    
     <section id="faq" class="faq">
       <div class="container">
 

@@ -341,7 +341,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   /* background: rgb(231, 175, 175); */
  /*  background-image: url(blob:https://web.whatsapp.com/ead45053-fb98-458a-bec5-a9c53e756ea3); */
-  background-image: url('../img/perroamarillo.jpg');
+  background-image: url('../img/Fondo_amarillo.png');
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -665,7 +665,7 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cta-bg.jpg") center center;
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.8)), url("https://media-private.canva.com/MADerThXHvM/1/screen_3x.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJWF6QO3UH4PAAJ6Q%2F20210610%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210610T125555Z&X-Amz-Expires=61899&X-Amz-Signature=dd70df373d2c52b30d8eb68cee6db6d8c432a66e756bc588ad686c1b7be3b605&X-Amz-SignedHeaders=host&response-expires=Fri%2C%2011%20Jun%202021%2006%3A07%3A34%20GMT") center center;
   background-size: cover;
   padding: 60px 0;
 }
@@ -922,6 +922,11 @@ section {
 --------------------------------------------------------------*/
 .faq {
   padding: 60px 0;
+  background-image: url(../img/Amarillo.png);
+  
+}
+.faq:before {
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .faq .faq-list {
