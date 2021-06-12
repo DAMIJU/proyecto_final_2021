@@ -52,8 +52,7 @@
           <li ><a href="Nosotros.php">Nosotros</a></li>
           <li ><a href="Servicios.php">Servicios</a></li>
           <li ><a href="Productos.php">Productos</a></li>
-          <li ><a href="Galeria.php">Galería</a></li>
-          <li ><a href="Citas.php">Citas</a></li>          
+          <li ><a href="Galeria.php">Galería</a></li>              
           <li ><a href="Contacto.php">Contacto</a></li>
           <li ><a href="Login.php">Admin</a></li>
         </ul>
@@ -66,7 +65,7 @@
       <!-- <h3>Bienvenidos</h3> -->
       <h1 style="font-family: 'Audiowide', cursive;">Servicios Caninos Casme</h1>
       <h2>Escuela profesional de adiestramiento canino</h2>
-      <a href="#about" class="btn-get-started btn btn-lg scrollto span2"></a>
+      <a href="#about" class="btn-get-started btn btn-lg scrollto span2">Contactenos</a>
       
 
     </div>
@@ -434,7 +433,7 @@
   
   <footer id="footer">
 
-    <div class="footer-top">
+    <!-- <div class="footer-top">
       <div class="container">
         <div class="row">
 
@@ -482,7 +481,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
