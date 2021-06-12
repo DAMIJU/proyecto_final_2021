@@ -922,7 +922,7 @@ section {
 --------------------------------------------------------------*/
 .faq {
   padding: 60px 0;
-  background-image: url(../img/Amarillo.png);
+  background-image: #fff;
   
 }
 .faq:before {
@@ -984,7 +984,7 @@ section {
 # Team
 --------------------------------------------------------------*/
 .team {
-  background-image: url("../img/Perro_asomado.png");
+   background-image: #fff; 
   padding: 60px 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -998,7 +998,7 @@ section {
   overflow: hidden;
   text-align: center;
   border-radius: 5px;
-  background: #fff;
+  background:white;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
