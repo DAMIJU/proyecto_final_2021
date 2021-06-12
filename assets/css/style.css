@@ -986,7 +986,10 @@ section {
 .team {
   background-image: url("../img/Perro_asomado.png");
   padding: 60px 0;
-  
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: right;
+
 }
 
 
