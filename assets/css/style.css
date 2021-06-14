@@ -61,6 +61,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
+ 
 }
 
 #header .logo {
@@ -341,7 +342,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   /* background: rgb(231, 175, 175);
  /*  background-image: url(blob:https://web.whatsapp.com/ead45053-fb98-458a-bec5-a9c53e756ea3); */
-  background-image: url('../img/Fondo_amarillo.png');
+  background-image: url('../img/Azul.png');
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -370,6 +371,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   text-align: center;
   padding: 0 15px;
+  
 }
 
  /* #hero h3 {
@@ -450,7 +452,7 @@ section {
 }
 
 .section-bg {
-  background-color:white;
+  background-color: white;
 }
 
 .section-title {
@@ -496,6 +498,7 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;

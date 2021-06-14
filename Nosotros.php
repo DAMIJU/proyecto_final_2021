@@ -33,6 +33,27 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+
+    body {
+      background-image: url('assets/img/Amarillo.png');
+      /* background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;   */
+    }
+    body:before{    
+      content: "";
+      background: rgba(0, 0, 0, 0.2); 
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    
+
+  </style>
+
 </head>
 <body>
 <!-- ======= Header ======= -->
