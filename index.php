@@ -342,6 +342,7 @@
     <!-- ======= Team Section ======= -->
     
     <section id="team" class="team">
+
       <div class="container">
 
         <div class="section-title">
