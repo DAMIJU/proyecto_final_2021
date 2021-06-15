@@ -50,7 +50,7 @@
             </div>
 
             <div class="d-grid">
-              <input type="submit" class="btn-get-started btn btn-lg scrollto span2" value="Iniciar sesión" name="Enviar_Acceder">
+              <input type="submit" class="btn btn-lg" value="Iniciar sesión" name="Enviar_Acceder">
             </div>
 
             <div class="my-3">
