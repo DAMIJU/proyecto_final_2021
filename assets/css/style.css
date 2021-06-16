@@ -22,7 +22,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Nunito", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
-  background-image: url("../img/Azul 2.png"); 
+  background-image: url("../img/Fondo azul.png"); 
 }
 #header:before {
   content: "";
@@ -129,13 +129,13 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: block;
   position: relative;
-  font-weight: 600;
+  font-weight: 500;
   color: white;
   transition: 0.3s;
   font-size: 19px;
   padding: 0 4px;
   letter-spacing: 0.4px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .nav-menu > ul > li > a:before {
@@ -349,10 +349,10 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  /* background: rgb(231, 175, 175);
- /*  background-image: url(blob:https://web.whatsapp.com/ead45053-fb98-458a-bec5-a9c53e756ea3); */
-  background-image: url('../img/Azul 2.png');
+  background-image: url('../img/Fondo azul.png');
+  background-color: #2D92CB;
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   position: relative;
 
@@ -393,9 +393,9 @@ h1, h2, h3, h4, h5, h6 {
 } */
 
 #hero h1 {
-  margin: 0 0 10px 0;
+  margin: -50px 0 10px 0;
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 200;
   line-height: 56px;
   text-transform: uppercase;
   color: #fff;
@@ -408,7 +408,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 13px;
@@ -477,7 +477,7 @@ section {
   line-height: 1;
   margin: 0;
   background: #fdeff2;
-  color: #e43c5c;
+  color: #9ACD32;
   display: inline-block;
   text-transform: uppercase;
   border-radius: 50px;
@@ -1084,11 +1084,10 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: #e43c5c;
+  color: #9ACD32;
   float: left;
   width: 44px;
   height: 44px;
-  background-image: url("../img/Amarillo.png");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1116,7 +1115,7 @@ section {
 }
 
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-  background: #e43c5c;
+  background: #9ACD32;
   color: #fff;
 }
 
@@ -1186,7 +1185,7 @@ section {
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  border-color: #e43c5c;
+  border-color: #9ACD32;
 }
 
 .contact .php-email-form input {
@@ -1198,16 +1197,22 @@ section {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #e43c5c;
-  border: 0;
-  padding: 10px 28px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 50px;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 30px 9px 30px;
+  border-radius: 10px;
+  transition: 0.3s;
+  background-color: #9ACD32;
+  color: #2C2E27;
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: #d01d3f;
+  background:  #83AE2A;
+  color: #2C2E27;
 }
 
 @-webkit-keyframes animate-loading {

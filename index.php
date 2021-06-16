@@ -348,15 +348,15 @@
         <div class="section-title">
           <h2>Team</h2>
           <h3>Titulo de ejemplo <span>123</span></h3>
-          <p>Diego León castaño castaño adiestrador canino profesional con  más de 15 años de experiencia.<p>
+          <p>Diego León Castaño Castaño adiestrador canino profesional con más de 15 años de experiencia.<p>
 
-<p>Diplomado en la escuela de adiestramiento Canino Handler  Colombia  en el 2008.<p>
+<p>Diplomado en la escuela de adiestramiento Canino Handler Colombia en el 2008.<p>
 
-<p>Participación en el 1er seminario internacional de adiestramiento Canino de perros de trabajo en la universidad UANL en noviembre del 2009 en coordinación con la fuerza aérea colombiana.<p>
+<p>Participación en el 1er seminario internacional de adiestramiento Canino de perros de trabajo en la universidad UANL en noviembre del 2009 en coordinación con la fuerza aérea Colombiana.<p>
 
-<p>Participación en seminarios de IGP, OCI, con los campeones mundiales. Valentina Balli, Arnold kivago Miriam sodlengard.<p>
+<p>Participación en seminarios de IGP, OCI, con los campeones mundiales. Valentina Balli, Arnold Kivago, Miriam Sodlengard.<p>
 
-<p>Adiestrador Canino calificado K-nes de la escuela Colombia  de adiestramiento, con énfasis en educación y modificación de conducta Canina</p>
+<p>Adiestrador Canino calificado K-nes de la escuela Colombia de adiestramiento, con énfasis en educación y modificación de conducta canina</p>
         </div>
         <div class="m-0 vh-90 row justify-content-center align-items-center">
           <div class="col-lg-4 col-md-8 d-flex align-items-stretch">
@@ -371,7 +371,7 @@
                 </div>
               </div>
               <div class="member-info">
-                <h2>Diego Castaño</h2>
+                <h2>Adiestrador</h2>
               </div>
             </div>
           </div>       
