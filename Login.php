@@ -7,7 +7,6 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link href="assets/css/style.css" rel="stylesheet">
 
     <title>Iniciar sesión</title>
     <style>
@@ -50,7 +49,7 @@
             </div>
 
             <div class="d-grid">
-              <input type="submit" class="btn btn-lg" value="Iniciar sesión" name="Enviar_Acceder">
+              <input type="submit" class="btn btn-primary" value="Iniciar sesión" name="Enviar_Acceder">
             </div>
 
             <div class="my-3">
