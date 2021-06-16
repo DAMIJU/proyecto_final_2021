@@ -10,6 +10,7 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
   <meta content="Miguel Angel Arias, Darwin Meneses, Juan Esteban Alvarez" name="autor">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
   <!-- Favicons -->
   <link href="assets/img/Logo.ico" rel="icon">
@@ -27,6 +28,9 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -65,10 +69,28 @@
       <!-- <h3>Bienvenidos</h3> -->
       <h1 style="font-family: 'Audiowide', cursive;">Servicios Caninos Casme</h1>
       <h2>Escuela profesional de adiestramiento canino</h2>
-      <a href="#about" class="btn-get-started btn btn-lg scrollto span2">Contactenos</a>
+      <a id="btn-abrir-popup" class="btn-get-started btn btn-lg scrollto span2">Contactenos</a>
       
-
     </div>
+    <div class="contenedor">
+		<div class="overlay" id="overlay">
+			<div class="popup" id="popup">
+				<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+				<h3>CONTACTO CASME</h3>
+				<h4>Ingresa tu información para que nuestro acesor se comunique contigo.</h4>
+				<form action="">
+					<div class="contenedor-inputs">
+						<input type="text" placeholder="Nombre">
+						<input type="email" placeholder="Correo">
+            <input type="text" placeholder="Telefono">
+					</div>
+					<input type="submit" class="btn-submit" value="Enviar">
+				</form>
+			</div>
+		</div>
+	</div>
+  <script src="popup.js"></script>
+
   </section><!-- End Hero -->
   
   <!-- ======= Features Section ======= -->
