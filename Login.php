@@ -1,65 +1,123 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    
+    <title>Iniciar Sesión - Servidores del Altar</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
-    <title>Iniciar sesión</title>
+    <!-- Nuestro css-->
     <style>
-      body{
-        background-image: url('assets/img/Amarillo.png');
-        
-      }
+    body{
+    background: url('assets/img/Fondo azul.png') no-repeat center center fixed;
+    background-size: cover;
+    }
 
-      label{
-        font-weight: bold;
-        text-align: center;
-      }
-      .d-grid:hover {
-       background:  #07656B;
+    .main-section{
+        margin:0 auto;
+        margin-top:25%;
+        padding: 0;
+    }
+
+    .modal-content{
+        background-color: #3b4652;
+        opacity: .85;
+        padding: 0 20px;
+        box-shadow: 0px 0px 3px #848484;
+    }
+    .user-img{
+        margin-top: -50px;
+        margin-bottom: 35px;
+    }
+
+    .user-img img{
+        width: 100xp;
+        height: 100px;
+        box-shadow: 0px 0px 3px #848484;
+        border-radius: 50%;
+    }
+
+    .form-group input[type=text],[type=password]{
+        height: 42px;
+        font-size: 18px;
+        border:0;
+        padding-left: 54px;
+        border-radius: 5px;
+    }
+
+    .form-group::before{
+        font-family: "Font Awesome\ 5 Free";
+        position: absolute;
+        left: 28px;
+        font-size: 22px;
+        padding-top:4px;
+    }
+
+    .form-group#user-group::before{
+        content: "\f007";
+    }
+
+    .form-group#contrasena-group::before{
+        content: "\f023";
+    }
+
+    button{
+        width: 60%;
+        margin: 5px 0 25px;
+    }
+
+    .forgot{
+        padding: 5px 0;
+    }
+
+    .forgot a{
         color: white;
+    }
+
+    input[type=checkbox] {
+  transform: scale(1.5);
 }
     </style>
-  </head>
-  
-  <body>
-    <div class="container bg-primary mt-5 rounded shadow w-75">
-      <div class="row align-items-strech">
-        <div class="col d-none d-lg-block col-md-5 col-lg ">
 
+</head>
+<body>
+    <div class="modal-dialog text-center">
+        <div class="col-sm-8 main-section">
+            <div class="modal-content">
+                <div class="col-12 user-img">
+                    <img src="https://login.santisimatrinidadacolitos.com/ingreso/1/static/img/user.png" th:src="@{/img/user.png}"/>
+                    <br>
+                    <h4 style="color:yellow">Iniciar Sesión - Panel administrador</h4>
+                </div>
+                <form class="col-12" action="https://s16.santisimatrinidadacolitos.com/Login/proceso.php" method="POST">
+                    <div class="form-group" id="user-group">
+                        <input type="text" class="form-control" autocomplete="off" placeholder="Nombre de usuario" name="id_usuario"/>
+                    </div>
+                    <div class="form-group" id="contrasena-group">
+                        <input type="password" class="form-control" autocomplete="off" placeholder="Contraseña" name="clave"/>
+                    </div>
+                    <div class="">
+                      <div style="width:10px"><input type="checkbox" class="form-control"></div><div style="margin-top:-18px;margin-left:10px;width:90%;"><label style="color:white;margin-left:-30px">Mantener la sesión iniciada</label></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Acceder </button>
+                </form>
+                <div class="col-12 forgot">
+                    <a href="#" style="">¿Olvidó su contraseña?</a>
+                </div>
+                <!-- <div th:if="${param.error}" class="alert alert-danger" role="alert">
+		            
+		        </div> --><br><br>
+            </div>
         </div>
-        <div class="col bg-white p-5 rounded-end">
-          <div class="text-end">
-            <img src="assets/img/Logo sin fondo.png" width="60px" alt="Caninos Casme - Logo">
-          </div>
-
-          <h2 class="fw-bold text-center py-5" style="color:red">Panel de administrador</h2>
-          <form action="#" method="POST">
-            <div class="mb-4">
-            <label for="Usuario" class="form-label">Usuario:</label>
-              <input type="text" class="form-control" name="Usuario" placeholder="Ingrese su usuario" autocomplete="off">
-            </div>
-            <div class="mb-4">
-            <label for="Password" class="form-label">Contraseña:</label>
-              <input type="password" class="form-control" placeholder="Ingrese su contraseña" name="Password_Contraseña">
-            </div>
-
-            <div class="d-grid">
-              <input type="submit" class="btn btn-primary" value="Iniciar sesión" name="Enviar_Acceder">
-            </div>
-
-            <div class="my-3">
-              <span><a href="#">Restablecer contraseña</a></span>
-            </div>
-          </form>
-        </div>
-      </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>
