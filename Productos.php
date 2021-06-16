@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
@@ -56,7 +56,7 @@
     </div>
   </header>
   <!-- End Header -->
-  <br><br><br>
+  <br><br><br><br><br><br><br>
  <!-- ======= Portfolio Section ======= -->
  <section id="portfolio" class="portfolio">
       <div class="container">

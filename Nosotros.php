@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
@@ -33,34 +33,13 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-  <style>
-
-    body {
-      background-image: url('assets/img/Amarillo.png');
-      /* background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;   */
-    }
-    body:before{    
-      content: "";
-      background: rgba(0, 0, 0, 0.2); 
-      position: absolute;
-      bottom: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-    }
-    
-
-  </style>
-
 </head>
 <body>
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="#"><img src="assets/img/Logo sin fondo.png" alt="Caninos Casme"></a></h1>
+      <h1 class="logo mr-auto"><a href="index.php"><img src="assets/img/Logo sin fondo.png" alt="Caninos Casme"></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       <nav class="nav-menu d-none d-lg-block">
@@ -77,7 +56,7 @@
     </div>
   </header>
   <!-- End Header -->
-  <br><br><br>
+  <br><br><br><br><br><br><br>
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container">

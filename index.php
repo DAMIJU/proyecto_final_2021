@@ -9,7 +9,7 @@
   <title>Servicios Caninos Casme</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-  <meta content="Miguel Arias, Darwin Meneses, Juan Esteban Alvarez" name="autor">
+  <meta content="Miguel Angel Arias, Darwin Meneses, Juan Esteban Alvarez" name="autor">
   
   <!-- Favicons -->
   <link href="assets/img/Logo.ico" rel="icon">
@@ -40,10 +40,10 @@
 </head>
 <body>
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
+  <header id="header" class="">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.php"><img src="assets/img/Logo blanco2.png" alt="Caninos Casme"></a></h1>
+      <h1 class="logo mr-auto"><a href="index.php"><img src="assets/img/Logo sin fondo.png" alt="Caninos Casme"></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       <nav class="nav-menu d-none d-lg-block">
@@ -347,10 +347,18 @@
 
         <div class="section-title">
           <h2>Team</h2>
-          <h3>Our Hardworking <span>Team</span></h3>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+          <h3>Titulo de ejemplo <span>123</span></h3>
+          <p>Diego León castaño castaño adiestrador canino profesional con  más de 15 años de experiencia.<p>
+
+<p>Diplomado en la escuela de adiestramiento Canino Handler  Colombia  en el 2008.<p>
+
+<p>Participación en el 1er seminario internacional de adiestramiento Canino de perros de trabajo en la universidad UANL en noviembre del 2009 en coordinación con la fuerza aérea colombiana.<p>
+
+<p>Participación en seminarios de IGP, OCI, con los campeones mundiales. Valentina Balli, Arnold kivago Miriam sodlengard.<p>
+
+<p>Adiestrador Canino calificado K-nes de la escuela Colombia  de adiestramiento, con énfasis en educación y modificación de conducta Canina</p>
         </div>
-        <div class="m-0 vh-100 row justify-content-center align-items-center">
+        <div class="m-0 vh-90 row justify-content-center align-items-center">
           <div class="col-lg-4 col-md-8 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
@@ -36,7 +36,7 @@
 </head>
 <body>
 <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
+<header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
       <h1 class="logo mr-auto"><a href="index.php"><img src="assets/img/Logo sin fondo.png" alt="Caninos Casme"></a></h1>
@@ -48,15 +48,14 @@
           <li><a href="Nosotros.php">Nosotros</a></li>
           <li class="active"><a href="Servicios.php">Servicios</a></li>
           <li ><a href="Productos.php">Productos</a></li>
-          <li><a href="Galeria.php">Galería</a></li>         
+          <li><a href="Galeria.php">Galería</a></li>            
           <li><a href="Contacto.php">Contacto</a></li>
           <li ><a href="Login.php">Admin</a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
   </header>
-  <!-- End Header -->
-  <br><br><br>
+  <br><br><br><br><br><br><br>
 <main id="main">
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">

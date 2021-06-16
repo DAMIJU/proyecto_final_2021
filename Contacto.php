@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
@@ -55,7 +55,7 @@
       </nav><!-- .nav-menu -->
     </div>
   </header>
-  <br><br><br>
+  <br><br><br><br><br><br><br>
   <!-- End Header -->
 <!-- ======= Contact Section ======= -->
 <section id="contact" class="contact">
