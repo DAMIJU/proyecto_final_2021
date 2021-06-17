@@ -36,7 +36,7 @@
 </head>
 <body>
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
+  <header id="header" class="">
     <div class="container d-flex align-items-center">
 
       <h1 class="logo mr-auto"><a href="index.php"><img src="assets/img/Logo sin fondo.png" alt="Caninos Casme"></a></h1>
