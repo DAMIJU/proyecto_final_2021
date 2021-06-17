@@ -14,6 +14,7 @@
     <!-- Los iconos tipo Solid de Fontawesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="assets/js/CaninosCasmeLogin.js"></script>
 
     <!-- Nuestro css-->
     <style>
@@ -93,12 +94,12 @@
                     <br>
                     <h4 style="color:yellow">Iniciar Sesión - Panel administrador</h4>
                 </div>
-                <form class="col-12" action="https://s16.santisimatrinidadacolitos.com/Login/proceso.php" method="POST">
+                <form class="col-12" action="admin/validar.php" method="POST" id="Form_InicioSesion">
                     <div class="form-group" id="user-group">
-                        <input type="text" class="form-control" autocomplete="off" placeholder="Nombre de usuario" name="id_usuario"/>
+                        <input type="text" name="username" class="login-field form-control" value="" placeholder="Usuario" maxlength="10" id="login-name" autocomplete="off">
                     </div>
                     <div class="form-group" id="contrasena-group">
-                        <input type="password" class="form-control" autocomplete="off" placeholder="Contraseña" name="clave"/>
+                        <input type="password" name="password" class="login-field form-control" value="" placeholder="Contraseña" maxlength="" id="login-pass" autocomplete="off">
                     </div>
                     <div class="">
                       <div style="width:10px"><input type="checkbox" class="form-control"></div><div style="margin-top:-18px;margin-left:10px;width:90%;"><label style="color:white;margin-left:-30px">Mantener la sesión iniciada</label></div>
