@@ -17,11 +17,6 @@
 
     <!-- Nuestro css-->
     <style>
-    body{
-    background: url('assets/img/Fondo azul.png') no-repeat center center fixed;
-    background-size: cover;
-    }
-
     .main-section{
         margin:0 auto;
         margin-top:25%;
