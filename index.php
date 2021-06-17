@@ -69,25 +69,118 @@
       <!-- <h3>Bienvenidos</h3> -->
       <h1 style="font-family: 'Audiowide', cursive;">Servicios Caninos Casme</h1>
       <h2>Escuela profesional de adiestramiento canino</h2>
-      <a id="btn-abrir-popup" class="btn-get-started btn btn-lg scrollto span2">Contactenos</a>
-      
+      <a id="btn-abrir-popup" class="btn-get-started btn btn-lg scrollto span2">Contactenos</a>   
     </div>
-    <div class="contenedor">
-		<div class="overlay" id="overlay">
-			<div class="popup" id="popup">
-				<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-				<h3>CONTACTO CASME</h3>
-				<h4>Ingresa tu información para que nuestro acesor se comunique contigo.</h4>
-				<form action="">
-					<div class="contenedor-inputs">
-						<input type="text" placeholder="Nombre">
-						<input type="email" placeholder="Correo">
-            <input type="text" placeholder="Telefono">
-					</div>
-					<input type="submit" class="btn-submit" value="Enviar">
-				</form>
-			</div>
+    <div class="container">
+       <div class="contenedor">
+		     <div class="overlay" id="overlay">
+			     <div class="popup" id="popup">
+				     <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a><section id="contact" class="contact">
+      <div class="container">
+
+        <!-- <div class="section-title">
+           <h2>Contact</h2> -->
+          <!-- <h3><span>Contactenos</span></h3>
+          <p>Aqui podrá encontrar informacion detallada para contactarse con nosotros</p>
+        </div>  -->
+
+        <!-- <div>
+          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3715.9451588385273!2d-98.22713938466444!3d21.352658282016883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d716a71280e53b%3A0x8c0bf753232ec395!2sPan%20Rico%20Pan!5e0!3m2!1ses!2sco!4v1623822539893!5m2!1ses!2sco" frameborder="0" allowfullscreen></iframe>
+
+        </div> -->
+
+        <div class="row mt-5">
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                <h4>Ubicacion:</h4>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Correo:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="icofont-phone"></i>
+                <h4>Telefono:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Correo" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="mensage" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Enviar</button></div>
+            </form> -->
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+				      <!-- <div class="row mt-5"> -->
+
+             <!-- <div class="col-lg-4">
+               <div class="info">
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                <h4>Ubicacion:</h4>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Correo:</h4>
+                <p>info@example.com</p>
+              </div>
+ -->
+              <!-- <div class="phone">
+                <i class="icofont-phone"></i>
+                <h4>Telefono:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+            </div>
+
+          </div> -->
+        <!-- </div> -->
+       
+
+			       </div>
+      
 		</div>
+    </div>
 	</div>
   <script src="popup.js"></script>
 
