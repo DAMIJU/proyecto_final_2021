@@ -192,8 +192,8 @@ body {
 /* ANIMACIONES */
 /* ------------------------- */
 .popup.active {	transform: scale(1); opacity: 1; }
-.popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
-.popup.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
+.popup.active h3 { animation: entradaTitulo .3s ease .2s forwards; }
+.popup.active h4 { animation: entradaSubtitulo .3s ease .2s forwards; }
 .popup.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
 
 @keyframes entradaTitulo {
@@ -233,7 +233,7 @@ body {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .back-to-top i {
@@ -246,7 +246,7 @@ body {
   border-radius: 50px;
   background: #0C8289;
   color: #fff;
-  transition: all 0.4s;
+  transition: all 0.2s;
 }
 
 .back-to-top:hover {
