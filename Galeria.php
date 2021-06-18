@@ -347,7 +347,7 @@
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
         </div>
-        
+
         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <img src="assets/img/Galeria/Galeria-28.jpg"class="img-fluid" alt="">
             <div class="portfolio-info">
@@ -396,16 +396,5 @@
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-    </section><!-- End Portfolio Section -->
-
-
+    </section><!-- End Portfolio Sectionn -->
 </body>
