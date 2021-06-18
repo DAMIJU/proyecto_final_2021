@@ -78,7 +78,7 @@
         </div> -->
         <div class="row portfolio-container">
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
+            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Web 2</h4>
               <p>Web</p>
@@ -88,7 +88,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
+            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>App 3</h4>
               <p>App</p>
@@ -98,7 +98,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
+            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Card 1</h4>
               <p>Card</p>
@@ -108,7 +108,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
+            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Card 3</h4>
               <p>Card</p>
@@ -118,7 +118,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
+            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Web 3</h4>
               <p>Web</p>
@@ -128,7 +128,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
+            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Web 3</h4>
               <p>Web</p>
@@ -138,7 +138,7 @@
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
+            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Web 3</h4>
               <p>Web</p>
@@ -146,8 +146,9 @@
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
         </div>
+
         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
+            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Web 3</h4>
               <p>Web</p>
@@ -157,7 +158,7 @@
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
+            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Web 3</h4>
               <p>Web</p>
@@ -166,7 +167,7 @@
             </div>
         </div>
         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
+            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Web 3</h4>
               <p>Web</p>
