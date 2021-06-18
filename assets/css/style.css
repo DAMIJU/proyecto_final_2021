@@ -108,17 +108,16 @@ body {
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
 	border-radius: 3px;
 	font-family: 'Montserrat', sans-serif;
-	padding: 20px;
+	padding: 10px;
 	text-align: center;
 	width: 600px;
-	
 	transition: .3s ease all;
 	transform: scale(0.7);
 	opacity: 0;
 }
 
 .popup .btn-cerrar-popup {
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 16px;
 	display: block;
 	text-align: right;
@@ -144,6 +143,11 @@ body {
 	margin-bottom: 40px;
 	opacity: 0;
 }
+
+/* .popup .col-lg-4 .info p {
+  text-align: center;
+} */
+
 
 .popup form .contenedor-inputs {
 	opacity: 0;
@@ -175,6 +179,13 @@ body {
 
 .popup form .btn-submit:hover {
 	background: rgba(94,125,227, .9);
+}
+@media (min-width: 1860px) {
+  .col-lg-4 {
+      -ms-flex: 0 0 33.333333%;
+      flex: 0 0 33.333333%;
+      max-width: 68.333333%;
+  }
 }
 
 /* ------------------------- */
@@ -649,7 +660,7 @@ body {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 20px 8px;
 }
 
 .section-bg {
@@ -869,7 +880,7 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.8)), url("../img/Huellitas.png") center center;
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.8)), url("../img/Huellitas2.png") center center;
   background-size: cover;
   padding: 60px 0;
 }
@@ -1293,6 +1304,7 @@ section {
   font-weight: 600;
   margin-bottom: 5px;
   color: #493c3e;
+  text-align: left;
 }
 
 .contact .info p {
@@ -1300,6 +1312,7 @@ section {
   margin-bottom: 0;
   font-size: 14px;
   color: #816a6e;
+  text-align: left;
 }
 
 .contact .info .email, .contact .info .phone {

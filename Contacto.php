@@ -68,11 +68,11 @@
         </div>
 
         <div>
-          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3715.9451588385273!2d-98.22713938466444!3d21.352658282016883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d716a71280e53b%3A0x8c0bf753232ec395!2sPan%20Rico%20Pan!5e0!3m2!1ses!2sco!4v1623822539893!5m2!1ses!2sco" frameborder="0" allowfullscreen></iframe>
+          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d928.9682542251818!2d-98.2250638!3d21.3555034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d71787e3e5984b%3A0x4839630c463432b!2sServicios%20Caninos%20CASME%20(Adiestramiento%2C%20Estetica%20y%20Tienda)!5e0!3m2!1ses!2sco!4v1623975618769!5m2!1ses!2sco" frameborder="0" allowfullscreen></iframe>       
 
         </div>
 
-        <div class="row mt-5">
+        <!-- <div class="row mt-5">
 
           <div class="col-lg-4">
             <div class="info">
@@ -131,7 +131,7 @@
 
         </div>
 
-      </div>
+      </div> -->
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->

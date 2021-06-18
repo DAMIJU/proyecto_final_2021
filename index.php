@@ -71,329 +71,64 @@
       <h2>Escuela profesional de adiestramiento canino</h2>
       <a id="btn-abrir-popup" class="btn-get-started btn btn-lg scrollto span2">Contactenos</a>   
     </div>
-    <div class="container">
+    <!-- <div class="container"> -->
        <div class="contenedor">
 		     <div class="overlay" id="overlay">
 			     <div class="popup" id="popup">
 				     <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a><section id="contact" class="contact">
-      <div class="container">
+              <!-- <div class="row mt-5"> -->
+                <div class="col-lg-4">
+                  <div class="info">
 
-        <!-- <div class="section-title">
-           <h2>Contact</h2> -->
-          <!-- <h3><span>Contactenos</span></h3>
-          <p>Aqui podrá encontrar informacion detallada para contactarse con nosotros</p>
-        </div>  -->
+                    <div class="address">
+                      <i class="icofont-google-map"></i>
+                      <h4>Ubicacion:</h4>
+                      <p>Av.revolucion #102 colonia la reforma Tantoyuca Veracruz</p>
+                    </div>
 
-        <!-- <div>
-          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3715.9451588385273!2d-98.22713938466444!3d21.352658282016883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d716a71280e53b%3A0x8c0bf753232ec395!2sPan%20Rico%20Pan!5e0!3m2!1ses!2sco!4v1623822539893!5m2!1ses!2sco" frameborder="0" allowfullscreen></iframe>
+                    <div class="email">
+                      <i class="icofont-envelope"></i>
+                      <h4>Correo:</h4>
+                      <p>info@example.com</p>
+                    </div>
 
-        </div> -->
-
-        <div class="row mt-5">
-          <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
-                <i class="icofont-google-map"></i>
-                <h4>Ubicacion:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
-              </div>
-
-              <div class="email">
-                <i class="icofont-envelope"></i>
-                <h4>Correo:</h4>
-                <p>info@example.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="icofont-phone"></i>
-                <h4>Telefono:</h4>
-                <p>+1 5589 55488 55s</p>
-              </div>
-
+                    <div class="phone">
+                      <i class="icofont-phone"></i>
+                      <h4>Telefono:</h4>
+                      <p>+52 789 101 7950</p>
+                    </div>
+                    
+                </div>
+                  <br><br>
+                  <a id="btn-abrir-popup" href="https://wa.me/527891017905" target="_blank" class="btn-get-started btn btn-lg scrollto span2">Whatsapp</a> <a id="btn-abrir-popup" href="tel:+527891017950" class="btn-get-started btn btn-lg scrollto span2">Llamada</a>         
             </div>
-
           </div>
-
-          <div class="col-lg-8 mt-5 mt-lg-0">
-
-            <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="form-row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validate"></div>
-                </div>
-                <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Correo" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validate"></div>
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                <div class="validate"></div>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="mensage" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje"></textarea>
-                <div class="validate"></div>
-              </div>
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Enviar</button></div>
-            </form> -->
-
-          </div>
-
         </div>
-
       </div>
-    </section>
-				      <!-- <div class="row mt-5"> -->
-
-             <!-- <div class="col-lg-4">
-               <div class="info">
-              <div class="address">
-                <i class="icofont-google-map"></i>
-                <h4>Ubicacion:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
-              </div>
-
-              <div class="email">
-                <i class="icofont-envelope"></i>
-                <h4>Correo:</h4>
-                <p>info@example.com</p>
-              </div>
- -->
-              <!-- <div class="phone">
-                <i class="icofont-phone"></i>
-                <h4>Telefono:</h4>
-                <p>+1 5589 55488 55s</p>
-              </div>
-
-            </div>
-
-          </div> -->
-        <!-- </div> -->
-       
-
-			       </div>
-      
-		</div>
-    </div>
-	</div>
   <script src="popup.js"></script>
-
-  </section><!-- End Hero -->
-  
-  <!-- ======= Features Section ======= -->
-    <!-- <section id="features" class="features">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-3 col-md-4 col-6 col-6">
-            <div class="icon-box">
-              <i class="ri-store-line" style="color: #ffbb2c;"></i>
-              <h3><a href="">Lorem Ipsum</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-6">
-            <div class="icon-box">
-              <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
-              <h3><a href="">Dolor Sitema</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
-              <h3><a href="">Sed perspiciatis</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-6 mt-4 mt-lg-0">
-            <div class="icon-box">
-              <i class="ri-paint-brush-line" style="color: #e361ff;"></i>
-              <h3><a href="">Magni Dolores</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-6 mt-4">
-            <div class="icon-box">
-              <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="">Nemo Enim</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-6 mt-4">
-            <div class="icon-box">
-              <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
-              <h3><a href="">Eiusmod Tempor</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-6 mt-4">
-            <div class="icon-box">
-              <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
-              <h3><a href="">Midela Teren</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-6 mt-4">
-            <div class="icon-box">
-              <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
-              <h3><a href="">Pira Neve</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-6 mt-4">
-            <div class="icon-box">
-              <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="">Dirada Pack</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-6 mt-4">
-            <div class="icon-box">
-              <i class="ri-disc-line" style="color: #b20969;"></i>
-              <h3><a href="">Moton Ideal</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-6 mt-4">
-            <div class="icon-box">
-              <i class="ri-base-station-line" style="color: #ff5828;"></i>
-              <h3><a href="">Verdo Park</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-6 mt-4">
-            <div class="icon-box">
-              <i class="ri-fingerprint-line" style="color: #29cc61;"></i>
-              <h3><a href="">Flavor Nivelanda</a></h3>
-            </div>
-          </div>
-        </div>
-      </div> -->
-    </section><!-- End Features Section -->  
+  </section>
+    </section>
     <br></br>
-   <!--  <section>
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="https://st2.depositphotos.com/1063397/5982/i/600/depositphotos_59823897-stock-photo-bathing-a-dog-golden-retriever.jpg" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100"  src="https://p4.wallpaperbetter.com/wallpaper/267/764/50/cute-pembroke-welsh-corgi-puppies-running-wallpaper-preview.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://imagendeperros.com/wp-content/uploads/2016/01/Imagenes-De-Grupos-De-Perros-San-Bernardo-Cachorros-Tiernos.jpg" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-  </section> -->
-
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
       <div class="container">
-
-        <div class="text-center">
-          <h3>Call To Action</h3>
-          <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a class="cta-btn" href="#">Ir</a>
-        </div>
-      </div>
-    </section><!-- End Cta Section -->
-  <!-- End Cta Section -->
-    
-  
-    <!-- ======= Pricing Section ======= -->
-    <!-- <section id="pricing" class="pricing">
-      <div class="container">
-
         <div class="section-title">
-          <h2>Pricing</h2>
-          <h3>Our Competing <span>Prices</span></h3>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+          <h3>¡Adiestramos tu perro para que tu lo disfrutes!</h3>
+          <p></p>
+          <!-- <a class="cta-btn" href="#">Ir</a> -->
         </div>
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="box">
-              <h3>Free</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
-            <div class="box recommended">
-              <span class="recommended-badge">Recommended</span>
-              <h3>Business</h3>
-              <h4><sup>$</sup>19<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-            <div class="box">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
       </div>
-    </section> 
-       <br></br>
-       <br></br>
-    --><!-- End Pricing Section -->
-
+    </section>
+    <!-- End Cta Section -->
     <!-- ======= F.A.Q Section ======= -->
     <br></br>    
     <section id="faq" class="faq">
       <div class="container">
-
         <div class="section-title">
           <!-- <h2>F.A.Q</h2> -->
           <h3>Preguntas<span> Frecuentes</span></h3>
         </div>
-
         <ul class="faq-list">
-
           <li>
             <a data-toggle="collapse" class="" href="#faq1">¿Es esta una pregunta de prueba? <i class="icofont-simple-up"></i></a>
             <div id="faq1" class="collapse show" data-parent=".faq-list">
@@ -402,7 +137,6 @@
               </p>
             </div>
           </li>
-
           <li>
             <a data-toggle="collapse" href="#faq2" class="collapsed">¿Es esta una pregunta de prueba?  <i class="icofont-simple-up"></i></a>
             <div id="faq2" class="collapse" data-parent=".faq-list">
@@ -411,7 +145,6 @@
               </p>
             </div>
           </li>
-
           <li>
             <a data-toggle="collapse" href="#faq3" class="collapsed">¿Es esta una pregunta de prueba?  <i class="icofont-simple-up"></i></a>
             <div id="faq3" class="collapse" data-parent=".faq-list">
@@ -420,7 +153,6 @@
               </p>
             </div>
           </li>
-
           <li>
             <a data-toggle="collapse" href="#faq4" class="collapsed">¿Es esta una pregunta de prueba?  <i class="icofont-simple-up"></i></a>
             <div id="faq4" class="collapse" data-parent=".faq-list">
@@ -429,7 +161,6 @@
               </p>
             </div>
           </li>
-
           <li>
             <a data-toggle="collapse" href="#faq5" class="collapsed">¿Es esta una pregunta de prueba?  <i class="icofont-simple-up"></i></a>
             <div id="faq5" class="collapse" data-parent=".faq-list">
@@ -438,7 +169,6 @@
               </p>
             </div>
           </li>
-
           <li>
             <a data-toggle="collapse" href="#faq6" class="collapsed">¿Es esta una pregunta de prueba?  <i class="icofont-simple-up"></i></a>
             <div id="faq6" class="collapse" data-parent=".faq-list">
@@ -447,9 +177,7 @@
               </p>
             </div>
           </li>
-
         </ul>
-
       </div>
     </section>
     <!-- End F.A.Q Section -->
@@ -465,19 +193,20 @@
           <h3>Titulo de ejemplo <span>123</span></h3>
           <p>Diego León Castaño Castaño adiestrador canino profesional con más de 15 años de experiencia.<p>
 
-<p>Diplomado en la escuela de adiestramiento Canino Handler Colombia en el 2008.<p>
+          <p>Diplomado en la escuela de adiestramiento Canino Handler Colombia en el 2008.<p>
 
-<p>Participación en el 1er seminario internacional de adiestramiento Canino de perros de trabajo en la universidad UANL en noviembre del 2009 en coordinación con la fuerza aérea Colombiana.<p>
+          <p>Participación en el 1er seminario internacional de adiestramiento Canino de perros de trabajo en la universidad UANL en noviembre del 2009 en coordinación con la fuerza aérea Colombiana.<p>
 
-<p>Participación en seminarios de IGP, OCI, con los campeones mundiales. Valentina Balli, Arnold Kivago, Miriam Sodlengard.<p>
+          <p>Participación en seminarios de IGP, OCI, con los campeones mundiales. Valentina Balli, Arnold Kivago, Miriam Sodlengard.<p>
 
-<p>Adiestrador Canino calificado K-nes de la escuela Colombia de adiestramiento, con énfasis en educación y modificación de conducta canina</p>
+          <p>Adiestrador Canino calificado K-nes de la escuela Colombia de adiestramiento, con énfasis en educación y modificación de conducta canina</p>
         </div>
+
         <div class="m-0 vh-90 row justify-content-center align-items-center">
           <div class="col-lg-4 col-md-8 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/team/Casme02.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/Adiestrador_canino.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <!-- <a href=""><i class="icofont-twitter"></i></a> -->
                   <a href=""><i class="icofont-facebook"></i></a>
@@ -486,126 +215,16 @@
                 </div>
               </div>
               <div class="member-info">
-                <h2>Adiestrador</h2>
+                <h2>Adiestrador canino</h2>
               </div>
-            </div>
-          </div>       
-       <!-- 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-              </div>
-            </div>
           </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-=======
-    <--  -->
-  </section>
-  <br></br>   
+        </div>       
+      </section>
+    <br></br>   
   <!-- End Team Section -->
   <!-- ======= Footer ======= -->
   
   <footer id="footer">
-
-    <!-- <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Casme</h3>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              Mexico <br><br>
-              <strong>Telefono:</strong> +1 5589 55488 55<br>
-              <strong>Correo:</strong> info@example.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Enlaces utiles</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.php">Inicio</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="Nosotros.php">Nosotros</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="Servicios.php">Servicios</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="Productos.php">Productos</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="Galeria.php">Galeria</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="Contacto.php">Contacto</a></li>
-              
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Nuestros servicios</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="Servicios.php">Adiestramiento</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="Servicios.php">Estetica</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="Servicios.php">?</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="Servicios.php">?</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="Servicios.php">?</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Boletín informativo</h4>
-            <p>Suscribete a nuestro boletin y descubre promociones y nuevos productos.</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
