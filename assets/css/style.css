@@ -701,6 +701,10 @@ section {
   font-weight: 600;
 }
 
+.col-lg-6 p{
+  color: #9ACD32;
+}
+
 .section-title p span {
   color: #9ACD32;
 }
@@ -727,6 +731,12 @@ section {
   font-weight: 600;
   font-size: 26px;
 }
+
+.about .content p  {
+  color: #9ACD32;
+}
+
+
 
 .about .content p span {
   color: #9ACD32;
@@ -757,6 +767,7 @@ section {
 
 .about .content p:last-child {
   margin-bottom: 0;
+  
 }
 
 .about .content .btn-learn-more {

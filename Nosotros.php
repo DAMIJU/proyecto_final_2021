@@ -75,14 +75,7 @@
             
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-            <span id="mision">Misión:</span> Ser una empresa reconocida por toda la región y recomendada por su calidad y buen servicio donde se encuentre la solución a necesidades como: elección de mascota, embellecimiento, orientación psicosocial e integración familiar.
-            </p>
-            <br>
-            <p>
-            <span>Visión:</span>  Consentir y embellecer a tu mascota mediante un servicio de calidad y profesionalismo. 
-            </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
+          <img src="assets/img/casmeabout.jpg" class="img-fluid" alt="">
           </div>
         </div>
       </div>
