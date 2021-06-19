@@ -77,246 +77,338 @@
           </div>
         </div> -->
         <div class="row portfolio-container">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+  <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
+  <!-- <div class="portfolio-info">
+    <h4>App 1</h4>
+    <p>App</p>
+    <a href="assets/img/portfolio/img prueba.png" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div> -->
+</div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
+  <!-- <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div> -->
+</div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+  <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
+  <!-- <div class="portfolio-info">
+    <h4>App 2</h4>
+    <p>App</p>
+    <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div> -->
+</div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>        
-          </div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-card">
+  <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
+  <!-- <div class="portfolio-info">
+    <h4>Card 2</h4>
+    <p>Card</p>
+    <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div> -->
+</div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>      
-        </div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
+  <!-- <div class="portfolio-info">
+    <h4>Web 2</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div> -->
+</div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-        </div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+  <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
+  <!-- <div class="portfolio-info">
+    <h4>App 3</h4>
+    <p>App</p>
+    <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div> -->
+</div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>      
-        </div>
+<!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+  <img src="assets/img/Galeria/Galeria-7.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Card 1</h4>
+    <p>Card</p>
+    <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>
+</div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/Galeria/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>      
-        </div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-card">
+  <img src="assets/img/Galeria/Galeria-8.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Card 3</h4>
+    <p>Card</p>
+    <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>
+</div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>      
-        </div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-9.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>        
+</div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-10.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>      
+</div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-11.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>
+</div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-12.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>      
+</div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-13.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>
+</div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-14.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>      
+</div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>        
-          </div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-15.jpg"class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>
+</div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>      
-        </div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-16.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>      
+</div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>      
-        </div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-17.jpg"class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>
+</div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>      
-        </div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-18.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>      
+</div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/img prueba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>      
-        </div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-19.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>
+</div>
 
-        </div>
-      </div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-20.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>      
+</div>
 
-      
-    </section><!-- End Portfolio Section -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-21.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>
+</div>
 
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-22.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>      
+</div>
 
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-23.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-24.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>      
+</div>
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-25.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-26.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>      
+</div>
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-27.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-28.jpg"class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>
+
+</div> <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-29.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>      
+</div>
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-30.jpg" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>
+</div> 
+
+  <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-31.jpg"  class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>      
+</div>
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria/Galeria-32.jpg"  class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>Web 3</h4>
+    <p>Web</p>
+    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+  </div>
+</div> -->
+</div>
+<a class="btn-get-started btn btn-lg scrollto span2">Ver más</a>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(".portfolio-item").slice(0, 3).show()
+  $(".btn-get-started").on("click", function(){
+      $(".portfolio-item:hidden").slice(0, 3).slideDown()
+      if ($(".portfolio-item:hidden").length == 0) {
+          $(".btn-get-started").fadeOut('slow')
+      }
+    })
+</script>
+</section>             
+<!-- End Portfolio Sectionn -->
 </body>

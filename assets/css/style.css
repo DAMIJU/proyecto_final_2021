@@ -931,6 +931,9 @@ section {
   text-align: center;
   border-radius: 50px;
 }
+.container .portfolio-item{
+  display:none;
+}
 
 .portfolio #portfolio-flters li {
   cursor: pointer;
@@ -958,6 +961,7 @@ section {
 .portfolio .portfolio-item {
   margin-bottom: 30px;
   overflow: hidden;
+  
 }
 
 .portfolio .portfolio-item img {
