@@ -62,28 +62,25 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>About</h2>
-          <h3>Learn More <span>About Us</span></h3>
+          <h2>Sobre Nosotros</h2>
+          <h3>Enterate más de <span>Caninos casme</span></h3>
           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
         </div>
 
         <div class="row content">
           <div class="col-lg-6">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            Caninos Casme es un centro de servicios caninos, ubicado en Tantoyuca Veracruz México, es un lugar que cuenta con más de 16 años de experiencia, donde se prestan servicios como estética canina, educación y modificación de conducta, asesorías, venta de mascotas y productos. Se ha mantenido un crecimiento en lo que respecta al número de clientes y nivel de ingreso, lo cual es producto de una constante búsqueda de satisfacción al cliente, entregándoles una mayor variedad de servicios y prestaciones.
             </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-            </ul>
+            
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+            <span id="mision">Misión:</span> Ser una empresa reconocida por toda la región y recomendada por su calidad y buen servicio donde se encuentre la solución a necesidades como: elección de mascota, embellecimiento, orientación psicosocial e integración familiar.
+            </p>
+            <br>
+            <p>
+            <span>Visión:</span>  Consentir y embellecer a tu mascota mediante un servicio de calidad y profesionalismo. 
             </p>
             <a href="#" class="btn-learn-more">Learn More</a>
           </div>

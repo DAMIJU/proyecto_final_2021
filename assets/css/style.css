@@ -701,6 +701,18 @@ section {
   font-weight: 600;
 }
 
+.section-title p span {
+  color: #9ACD32;
+}
+
+#mision {
+  color: #9ACD32;
+}
+
+#vision span{
+  color: #9ACD32;
+}
+
 @media (min-width: 1024px) {
   .section-title p {
     width: 50%;
@@ -714,6 +726,10 @@ section {
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
+}
+
+.about .content p span {
+  color: #9ACD32;
 }
 
 .about .content ul {
