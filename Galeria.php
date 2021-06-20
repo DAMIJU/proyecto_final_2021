@@ -59,7 +59,7 @@
   <br><br><br><br><br><br><br>
  <!-- ======= Portfolio Section ======= -->
  <section id="portfolio" class="portfolio">
-      <div class="container">
+      <div class="container text-center">
 
         <div class="section-title">
           <!-- <h2>Productos</h2> -->
