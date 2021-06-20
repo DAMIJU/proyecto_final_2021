@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     
-    <title>Iniciar Sesión - Servidores del Altar</title>
+    <title>Iniciar Sesión - Panel de administrador</title>
 
     <!--JQUERY-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -95,7 +95,7 @@
                     <br>
                     <h4 style="color:yellow">Iniciar Sesión - Panel administrador</h4>
                 </div>
-                <form class="col-12" action="admin/validar.php" method="POST" id="Form_InicioSesion">
+                <form class="col-12" action="admin/admin.php" method="POST" id="Form_InicioSesion">
                     <div class="form-group" id="user-group">
                         <input type="text" name="username" class="login-field form-control" value="" placeholder="Usuario" maxlength="10" id="login-name" autocomplete="off">
                     </div>

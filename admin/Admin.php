@@ -1,3 +1,9 @@
+<?php 
+  include("ConectarBD_Mysql.php");
+  require("validar.php");
+  $Consulta_DatosUsuario = "SELECT * FROM usuarios WHERE usuario = '$username'";
+  $ejecuta = $conn->query($Consulta_DatosUsuario);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

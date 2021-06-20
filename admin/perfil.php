@@ -1,65 +1,34 @@
 <!DOCTYPE html>
- <html>
- <head>
-  <meta charset=utf-8 />
-  <title>Editor JavaScript online - www.cubicfactory.com</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <style>
-     .loader-page {
-        position: fixed;
-        z-index: 25000;
-        background: rgb(255, 255, 255);
-        left: 0px;
-        top: 0px;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition:all .3s ease;
-    }
-    .loader-page::before {
-        content: "";
-        position: absolute;
-        border: 2px solid rgb(50, 150, 176);
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        box-sizing: border-box;
-        border-left: 2px solid rgba(50, 150, 176,0);
-        border-top: 2px solid rgba(50, 150, 176,0);
-        animation: rotarload 1s linear infinite;
-        transform: rotate(0deg);
-    }
-    @keyframes rotarload {
-        0%   {transform: rotate(0deg)}
-        100% {transform: rotate(360deg)}
-    }
-    .loader-page::after {
-        content: "";
-        position: absolute;
-        border: 2px solid rgba(50, 150, 176,.5);
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        box-sizing: border-box;
-        border-left: 2px solid rgba(50, 150, 176, 0);
-        border-top: 2px solid rgba(50, 150, 176, 0);
-        animation: rotarload 1s ease-out infinite;
-        transform: rotate(0deg);
-    }
+    .loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('loading_2.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .8;
+  }
   </style>
- </head>
- <body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
-    $(window).on('load', function () {
-      setTimeout(function () {
-    $(".loader-page").css({visibility:"hidden",opacity:"0"});
-  }, 2000);
-     
-});
+</head>
+<body>
+  <div class="loader"></div>
+  <div>
+    <h1>Hola esto es el perfil de administrador</h1>
+  </div>
+
+  <script>
+    $(window).load(function() {
+      $(".loader").fadeOut("slow");
+    }, 3000);
   </script>
-    <div class="loader-page"><br><br><br><br><br>Cargando..</div>
-        <h1>Contenido de la pagina</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </body>
 </html>
