@@ -86,22 +86,37 @@
     <section id="aboutcanino" class="aboutcanino">
       <div class="container">
         <div class="section-mision">
+        <br>
+           <br>
+           <br>
+           <br>
           <!-- <h2>F.A.Q</h2> -->
           <h3>Nuestra<span> Misión</span></h3>
           <p>
-Ser una empresa reconocida por toda la región y recomendada por su calidad y buen servicio donde se encuentre la solución a necesidades como: elección de mascota, embellecimiento, orientación psicosocial e integración familiar.
-</p>
+          Ser una empresa reconocida por toda la región y recomendada por su calidad y buen servicio donde se encuentre la solución a necesidades como: elección de mascota, embellecimiento, orientación psicosocial e integración familiar.
+           </p>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
         </div>
        
       </div>
     </section>
-    <section id="aboutcanino" class="aboutcanino">
+    <section id="aboutcaninov" class="aboutcaninov">
       <div class="container">
         <div class="section-vision">
+          
          
           <h3>Nuestra<span> Visión</span></h3>
           <p>Consentir y embellecer a tu mascota mediante un servicio de calidad y profesionalismo. 
            </p>
+           </p>
+           <br>
+           <br>
+       
+           <br>
         </div>
        
       </div>
