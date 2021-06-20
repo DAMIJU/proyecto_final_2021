@@ -732,9 +732,109 @@ section {
   font-size: 26px;
 }
 
-.about .content p  {
-  color: #9ACD32;
+.aboutcanino {
+  padding: 60px 0;
+  background-image: #fff;
+  
 }
+.aboutcanino:before {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.about .content p  {
+  font-family: 'Arial Rounded MT Bold',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 23px;
+    color: black!important;
+}
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-vision h2 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 8px 20px;
+  line-height: 1;
+  margin: 0;
+  background: #fdeff2;
+  color: #9ACD32;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
+
+.section-vision h3 {
+  margin: 15px 0 0 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.section-vision h3 span {
+  color: #9ACD32;
+  text-align: center;
+}
+
+.section-vision p {
+  margin: 15px auto 0 auto;
+  font-weight: 600;
+}
+
+.section-vision p{
+  
+  font-size: 30px;
+}
+
+
+.section-mision h2 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 8px 20px;
+  line-height: 1;
+  margin: 0;
+  background: #fdeff2;
+  color: #9ACD32;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
+
+.section-mision h3 {
+  margin: 15px 0 0 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.section-mision h3 span {
+  color: #1f8ccc;
+  text-align: center;
+}
+
+.section-mision p {
+  margin: 15px auto 0 auto;
+  font-weight: 600;
+}
+
+.section-mision p{
+  
+  font-size: 30px;
+}
+.img-sepia {
+  max-width: 100%;
+  height: auto;
+  border-radius:50%;
+  -webkit-border-radius:50%;
+  box-shadow: 0px 0px 15px 15px  #c9e98d;
+  -webkit-box-shadow: 0px 0px 15px 15px   #c9e98d;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+}
+
+ .img-sepia:hover {filter: saturate(180%);}
+
+
 
 
 

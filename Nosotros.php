@@ -64,7 +64,8 @@
         <div class="section-title">
           <h2>Sobre Nosotros</h2>
           <h3>Enterate más de <span>Caninos casme</span></h3>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+          
+          <br><br>
         </div>
 
         <div class="row content">
@@ -75,11 +76,37 @@
             
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
-          <img src="assets/img/casmeabout.jpg" class="img-fluid" alt="">
+          <img src="assets/img/6657.jpg"   class="img-sepia" alt="">
           </div>
         </div>
+
+        
       </div>
     </section><!-- End About Section -->
+    <section id="aboutcanino" class="aboutcanino">
+      <div class="container">
+        <div class="section-mision">
+          <!-- <h2>F.A.Q</h2> -->
+          <h3>Nuestra<span> Misión</span></h3>
+          <p>
+Ser una empresa reconocida por toda la región y recomendada por su calidad y buen servicio donde se encuentre la solución a necesidades como: elección de mascota, embellecimiento, orientación psicosocial e integración familiar.
+</p>
+        </div>
+       
+      </div>
+    </section>
+    <section id="aboutcanino" class="aboutcanino">
+      <div class="container">
+        <div class="section-vision">
+         
+          <h3>Nuestra<span> Visión</span></h3>
+          <p>Consentir y embellecer a tu mascota mediante un servicio de calidad y profesionalismo. 
+           </p>
+        </div>
+       
+      </div>
+    </section>
+    
     <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
 
 <!-- Vendor JS Files -->
