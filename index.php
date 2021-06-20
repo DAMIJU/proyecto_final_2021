@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="utf-8">
-
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Servicios Caninos Casme</title>
@@ -43,6 +42,7 @@
   ======================================================== -->
 </head>
 <body>
+<!--   <button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button> -->
   <!-- ======= Header ======= -->
   <header id="header" class="">
     <div class="container d-flex align-items-center">

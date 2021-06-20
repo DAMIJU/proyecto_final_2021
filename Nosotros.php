@@ -35,6 +35,7 @@
   ======================================================== -->
 </head>
 <body>
+  <!-- <button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button> -->
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
@@ -101,7 +102,6 @@
            <br>
            <br>
         </div>
-       
       </div>
     </section>
     <section id="aboutcaninov" class="aboutcaninov">
