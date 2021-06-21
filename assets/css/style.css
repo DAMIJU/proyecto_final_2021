@@ -184,7 +184,7 @@ body {
   .col-lg-4 {
       -ms-flex: 0 0 33.333333%;
       flex: 0 0 33.333333%;
-      max-width: 68.333333%;
+      max-width: 100.333333%;
   }
 }
 
@@ -767,9 +767,10 @@ section {
 .about .content p  {
  /*  font-family: 'Arial Rounded MT Bold',Helvetica,Arial,Lucida,sans-serif; */
 
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 24px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Arial Rounded MT Bold', serif;
+    font-size: 20px;
     color: black!important;
+    
 }
 .section-title {
   text-align: center;

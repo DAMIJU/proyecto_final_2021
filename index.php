@@ -100,7 +100,9 @@
                     
                 </div>
                   <br><br>
-                  <a id="btn-abrir-popup" href="https://wa.me/527891017905" target="_blank" class="btn-get-started btn btn-lg scrollto span2">Whatsapp</a> <a id="btn-abrir-popup" href="tel:+527891017950" class="btn-get-started btn btn-lg scrollto span2">Llamada</a>         
+                  <a id="btn-abrir-popup" href="https://wa.me/527891017905" target="_blank" class="btn-get-started btn btn-lg scrollto span2">Whatsapp</a> 
+                  <a id="btn-abrir-popup" href="tel:+527891017950" class="btn-get-started btn btn-lg scrollto span2">Llamar ahora</a>         
+                  <a id="btn-abrir-popup" href="tel:+527891017950" class="btn-get-started btn btn-lg scrollto span2">Como llegar</a>
             </div>
           </div>
         </div>
