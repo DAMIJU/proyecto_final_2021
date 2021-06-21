@@ -77,7 +77,7 @@
 			     <div class="popup" id="popup">
 				     <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a><section id="contact" class="contact">
               <!-- <div class="row mt-5"> -->
-                <div class="col-lg-4">
+                <div class="col-lg-15">
                   <div class="info">
 
                     <div class="address">
@@ -100,9 +100,17 @@
                     
                 </div>
                   <br><br>
-                  <a id="btn-abrir-popup" href="https://wa.me/527891017905" target="_blank" class="btn-get-started btn btn-lg scrollto span2">Whatsapp</a> 
+                    <div class="row">
+                      <div class="col-md-6">
+                        <a id="btn-abrir-popup" href="https://wa.me/527891017905" target="_blank" class="btn-get-started btn btn-lg scrollto span2">Whatsapp</a> 
+                      </div>
+                  <div class="col-md-6">
                   <a id="btn-abrir-popup" href="tel:+527891017950" class="btn-get-started btn btn-lg scrollto span2">Llamar ahora</a>         
+                  </div>
+                  <div class="col-md-6">
                   <a id="btn-abrir-popup" href="tel:+527891017950" class="btn-get-started btn btn-lg scrollto span2">Como llegar</a>
+                  </div>
+                  </div>
             </div>
           </div>
         </div>
