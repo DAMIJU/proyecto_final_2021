@@ -790,7 +790,11 @@ section {
   text-transform: uppercase;
   border-radius: 50px;
 }
-Hola soy miguel
+<<<<<<< HEAD
+
+=======
+hola soy darwin
+>>>>>>> c60dd1c56cd8fc8335712a606221802eaa84bf03
 .section-vision h3 {
   margin: 15px 0 0 0;
   font-size: 32px;
