@@ -1,14 +1,14 @@
 <?php 
   session_start();
   require_once("ConectarBD_Mysql.php");
-  $Usuario = $_POST['username'];
   
   //VERIFICACION DE ESCRITURA DE DATOS EN EL FORM
         if ( !isset($_POST['username'], $_POST['password']) )
               {
         // Could not get the data that should have been sent.
-        exit('Please fill both the username and password fields!');
+        echo "<script>alert('Debe llenar todos los campos para iniciar sesión');window.location.href='../Login.php'</script>";
         }
+        $Usuario = $_POST['username'];
   //  SI SE CONECTO Y SI SE ENVIARON AMBOS DATOS SE PROCEDE CON LA CONSULTA DE EXISTENCIA DEL USUARIO EVITANDO INYECCIONES SQL ?
   // El valor DNI se reemplaza por id_user.
   if ($stmt = $conn->prepare('SELECT id_user , clave FROM usuarios WHERE usuario = ?'))
@@ -35,6 +35,17 @@
             $Consulta_DatosUsuario = "SELECT * FROM usuarios WHERE usuario = '$Usuario'";
             $ejecuta = $conn->query($Consulta_DatosUsuario);
             $row = $ejecuta->fetch_assoc();
+            $inactivo = 1200;
+ 
+            if(isset($_SESSION['tiempo']) ) {
+            $vida_session = time() - $_SESSION['tiempo'];
+                if($vida_session > $inactivo)
+                {
+                    session_destroy();
+                    echo "<script>alert('Su sesión ha caducado.');window.location.href='../Login.php'</script>";
+                }
+            }
+            $_SESSION['tiempo'] = time();
                 // echo 'BIENVENIDO USUARIOP : ' . $_SESSION['name'] .' CON TU DNI NUMERO : '. $_SESSION['dni'] . '!';
 ?>
 <!DOCTYPE html>
