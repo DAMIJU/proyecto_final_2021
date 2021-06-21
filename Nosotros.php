@@ -39,7 +39,6 @@
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
-
       <h1 class="logo mr-auto"><a href="index.php"><img src="assets/img/Logo sin fondo.png" alt="Caninos Casme"></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -50,7 +49,6 @@
           <li><a href="Servicios.php">Servicios</a></li>
           <li ><a href="Productos.php">Productos</a></li>
           <li><a href="Galeria.php">Galería</a></li>            
-          <li><a href="Contacto.php">Contacto</a></li>
           <li ><a href="Login.php">Admin</a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -61,83 +59,47 @@
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container">
-
         <div class="section-title">
           <h2>Sobre Nosotros</h2>
           <h3>Enterate más de <span>Caninos casme</span></h3>
-          
           <br><br>
         </div>
-
         <div class="row content">
           <div class="col-lg-6">
-            <p>
-            Caninos Casme es un centro de servicios caninos, ubicado en Tantoyuca Veracruz México, es un lugar que cuenta con más de 16 años de experiencia, donde se prestan servicios como estética canina, educación y modificación de conducta, asesorías, venta de mascotas y productos. Se ha mantenido un crecimiento en lo que respecta al número de clientes y nivel de ingreso, lo cual es producto de una constante búsqueda de satisfacción al cliente, entregándoles una mayor variedad de servicios y prestaciones.
-            </p>
-            
+            <p> Casme es un centro de servicios caninos, ubicado en Tantoyuca Veracruz México, es un lugar que cuenta con más de 16 años de experiencia, donde se prestan servicios como estética canina, educación y modificación de conducta, asesorías, venta de mascotas y productos. Se ha mantenido un crecimiento en lo que respecta al número de clientes y nivel de ingreso, lo cual es producto de una constante búsqueda de satisfacción al cliente, entregándoles una mayor variedad de servicios y prestaciones.</p>       
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
-          <img src="assets/img/6657.jpg"   class="img-sepia" alt="">
+            <img src="assets/img/6657.jpg"   class="img-sepia" alt="">
           </div>
         </div>
-
-        
       </div>
     </section><!-- End About Section -->
     <section id="aboutcanino" class="aboutcanino">
       <div class="container">
-        
     </section>
     <section id="aboutcaninom" class="aboutcaninom">
       <div class="container">
         <div class="section-mision">
-        <br>
-           <br>
-           <br>
-           <br>
+        <br><br><br><br>
           <!-- <h2>F.A.Q</h2> -->
           <h3>NUESTRA<span> MISIÓN</span></h3>
-          <p>
-          Ser una empresa reconocida por toda la región y recomendada por su calidad y buen servicio donde se encuentre la solución a necesidades como: elección de mascota, embellecimiento, orientación psicosocial e integración familiar.
-           </p>
-           <br>
-           <br>
-           <br>
-           <br>
-           <br>
+          <p>Ser una empresa reconocida por toda la región y recomendada por su calidad y buen servicio donde se encuentre la solución a necesidades como: elección de mascota, embellecimiento, orientación psicosocial e integración familiar.</p>
+           <br><br><br><br><br>
         </div>
       </div>
     </section>
     <section id="aboutcaninovi" class="aboutcaninovi">
       <div class="container">
         <div class="section-vision">
-          
-         
           <h3>NUESTRA<span> VISIÓN</span></h3>
-          <p>Consentir y embellecer a tu mascota mediante un servicio de calidad y profesionalismo. 
-           </p>
-           </p>
-           <br>
-           <br>
-       <br>
-       <br>
-           <br>
+          <p>Consentir y embellecer a tu mascota mediante un servicio de calidad y profesionalismo.</p>  
+           <br><br><br><br><br>
         </div>
-       
       </div>
     </section>
-    <section id="aboutcaninov" class="aboutcaninov">
-      
-    <br>
-  
-</p>
-           
-           
-
-
-      
-    </section>
-
+  <section id="aboutcaninov" class="aboutcaninov">   
+    <br>      
+  </section>
     <footer id="footer">
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
