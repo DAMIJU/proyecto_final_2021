@@ -102,7 +102,7 @@
                   <br><br>
                   <a id="btn-abrir-popup" href="https://wa.me/527891017905" target="_blank" class="btn-get-started btn btn-lg scrollto span2">Whatsapp</a> 
                   <a id="btn-abrir-popup" href="tel:+527891017950" class="btn-get-started btn btn-lg scrollto span2">Llamar ahora</a>         
-                  <a id="btn-abrir-popup" href="tel:+527891017950" class="btn-get-started btn btn-lg scrollto span2">Como llegar</a>
+                  <a id="btn-abrir-popup" href="https://www.google.com/maps/place/Servicios+Caninos+CASME+(Adiestramiento,+Estetica+y+Tienda)/@21.3554351,-98.2251237,17z/data=!4m5!3m4!1s0x0:0x4839630c463432b!8m2!3d21.3555053!4d-98.225054?hl=es" target="_blank" class="btn-get-started btn btn-lg scrollto span2">Como llegar</a>
             </div>
           </div>
         </div>
