@@ -86,13 +86,17 @@
     </section><!-- End About Section -->
     <section id="aboutcanino" class="aboutcanino">
       <div class="container">
+        
+    </section>
+    <section id="aboutcaninom" class="aboutcaninom">
+      <div class="container">
         <div class="section-mision">
         <br>
            <br>
            <br>
            <br>
           <!-- <h2>F.A.Q</h2> -->
-          <h3>Nuestra<span> Misión</span></h3>
+          <h3>NUESTRA<span> MISIÓN</span></h3>
           <p>
           Ser una empresa reconocida por toda la región y recomendada por su calidad y buen servicio donde se encuentre la solución a necesidades como: elección de mascota, embellecimiento, orientación psicosocial e integración familiar.
            </p>
@@ -104,23 +108,59 @@
         </div>
       </div>
     </section>
-    <section id="aboutcaninov" class="aboutcaninov">
+    <section id="aboutcaninovi" class="aboutcaninovi">
       <div class="container">
         <div class="section-vision">
           
          
-          <h3>Nuestra<span> Visión</span></h3>
+          <h3>NUESTRA<span> VISIÓN</span></h3>
           <p>Consentir y embellecer a tu mascota mediante un servicio de calidad y profesionalismo. 
            </p>
            </p>
            <br>
            <br>
-       
+       <br>
+       <br>
            <br>
         </div>
        
       </div>
     </section>
+    <section id="aboutcaninov" class="aboutcaninov">
+      
+    <br>
+  
+</p>
+           
+           
+
+
+      
+    </section>
+
+    <footer id="footer">
+    <div class="container d-md-flex py-4">
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Tempo</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="tiktok"><iconify-icon data-icon="simple-icons:tiktok"></iconify-icon></a> 
+        <a href="https://www.facebook.com/Servicios-caninos-Casme-905518146207815" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>     
+        <a href="https://www.instagram.com/servicioscaninoscasme/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://wa.me/527891017905" target="_blank" class="google-plus"><i class="bx bxl-whatsapp"></i></a>
+        <!-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
+      </div>
+    </div>
+  </footer><!-- End Footer -->
     
     <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
 
