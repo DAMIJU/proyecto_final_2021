@@ -734,6 +734,7 @@ body {
 --------------------------------------------------------------*/
 section {
   padding: 20px 8px;
+  z-index: 2;
 }
 
 .section-bg {
@@ -1531,6 +1532,7 @@ section {
   width: 44px;
   height: 44px;
   display: flex;
+  background: #EBF4DC;
   justify-content: center;
   align-items: center;
   border-radius: 50px;
