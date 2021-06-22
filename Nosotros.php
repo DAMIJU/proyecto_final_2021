@@ -23,7 +23,7 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -45,10 +45,10 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li><a href="index.php">Inicio</a></li>
-          <li><a href="Nosotros.php">Nosotros</a></li>
+          <li class="active"><a href="Nosotros.php">Nosotros</a></li>
           <li><a href="Servicios.php">Servicios</a></li>      
           <li><a href="Galeria.php">Galería</a></li>            
-          <li class="active"><a href="Login.php">Admin</a></li>
+          <li><a href="Login.php">Admin</a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -58,9 +58,8 @@
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container">
-        <div class="section-title">
-          <h2>Sobre Nosotros</h2>
-          <h3>Enterate más de <span>Caninos casme</span></h3>
+        <div class="section-title">     
+          <h3><span>Acerca de nosotros</span></h3>
           <br><br>
         </div>
         <div class="row content">
@@ -68,7 +67,7 @@
             <p> Casme es un centro de servicios caninos, ubicado en Tantoyuca Veracruz México, es un lugar que cuenta con más de 16 años de experiencia, donde se prestan servicios como estética canina, educación y modificación de conducta, asesorías, venta de mascotas y productos. Se ha mantenido un crecimiento en lo que respecta al número de clientes y nivel de ingreso, lo cual es producto de una constante búsqueda de satisfacción al cliente, entregándoles una mayor variedad de servicios y prestaciones.</p>       
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
-            <img src="assets/img/6657.jpg"   class="img-sepia" alt="">
+          <img src="assets/img/Perroasd2.png" class="img-sepia" alt="">
           </div>
         </div>
       </div>
@@ -96,9 +95,6 @@
         </div>
       </div>
     </section>
-  <section id="aboutcaninov" class="aboutcaninov">   
-    <br>      
-  </section>
     <footer id="footer">
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">

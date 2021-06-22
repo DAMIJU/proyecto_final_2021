@@ -68,6 +68,7 @@
       <h1 style="font-family: 'Audiowide', cursive;">Servicios Caninos Casme</h1>
       <h2>Escuela profesional de adiestramiento canino</h2>
       <a id="btn-abrir-popup" class="btn-get-started btn btn-lg scrollto span2">Contactenos</a>   
+      
     </div>
     <!-- <div class="container"> -->
        <div class="contenedor">
@@ -87,7 +88,7 @@
                     <div class="email">
                       <i class="icofont-envelope"></i>
                       <h4>Correo:</h4>
-                      <p>info@example.com</p>
+                      <p>casdie@gmail.com</p>
                     </div>
 
                     <div class="phone">
@@ -109,7 +110,7 @@
                 </div>
               </div>
             </div>
-  <script src="popup.js"></script>
+  
   </section>
     </section>
     <br></br>
@@ -216,8 +217,9 @@
                 <img src="assets/img/team/Adiestrador_canino.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <!-- <a href=""><i class="icofont-twitter"></i></a> -->
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <!-- <a href=""><i class="icofont-instagram"></i></a> -->
+                  <a href="#" id="btn-abrir-popup"><i class="icofont-facebook"></i></a>
+                  
+                   <a href="#" id="btnabrir"><i class="icofont-jacket"></i></a>
                   <!-- <a href=""><i class="icofont-linkedin"></i></a> -->
                 </div>
               </div>
@@ -225,12 +227,26 @@
                 <h2>Adiestrador canino</h2>
               </div>
           </div>
-        </div>       
+        </div> 
+        <div class="fondo_transparente">
+        <div class="modal">
+            <div class="modal_cerrar">
+                <span>x</span>
+            </div>
+            <div class="modal_titulo">VENTANA MODAL</div>
+            <div class="modal_mensaje">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, nam? Minus nihil temporibus, minima reprehenderit, rem explicabo earum nemo debitis, maxime deserunt quidem. Quia odit quae voluptate nobis sit beatae!</p>
+            </div>
+            <div class="modal_botones">
+                <a href="" class="boton">COMPARTIR</a>
+                <a href="" class="boton">ACEPTAR</a>
+            </div>
+        </div>
+    </div>   
       </section>
     <br></br>   
   <!-- End Team Section -->
   <!-- ======= Footer ======= -->
-  
   <footer id="footer">
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
@@ -269,6 +285,8 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <script src="popup.js"></script>
+  <script src="modal.js"></script>
 
 </body>
 

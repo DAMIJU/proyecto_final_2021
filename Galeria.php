@@ -68,7 +68,7 @@
            <h3><span>Galeria</span></h3> 
           <p>Estos son algunos de los productos que tenemos en nuestra tienda fisica.</p>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">Todas</li>
@@ -77,11 +77,11 @@
               <li data-filter=".filter-web">Web</li>
             </ul>
           </div>
-        </div>
+        </div> -->
         <div class="row portfolio-container">
 
 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-  <img src="assets/img/Galeria_opt/Galeria-1-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+  <img src="assets/img/Galeria_opt/Galeria-28-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
   <!-- <div class="portfolio-info">
     <h4>App 1</h4>
     <p>App</p>
@@ -91,7 +91,7 @@
 </div>
 
 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-  <img src="assets/img/Galeria_opt/Galeria-2-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+  <img src="assets/img/Galeria_opt/Galeria-30-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
   <!-- <div class="portfolio-info">
     <h4>Web 3</h4>
     <p>Web</p>
@@ -101,7 +101,7 @@
 </div>
 
 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-  <img src="assets/img/Galeria_opt/Galeria-3-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+  <img src="assets/img/Galeria_opt/Galeria-12-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
   <!-- <div class="portfolio-info">
     <h4>App 2</h4>
     <p>App</p>
@@ -111,7 +111,7 @@
 </div>
 
 <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-  <img src="assets/img/Galeria_opt/Galeria-4-min.jpg"  loading="lazy" class="img-fluid" alt="Imagen Casme">
+  <img src="assets/img/Galeria_opt/Galeria-14-min.jpg"  loading="lazy" class="img-fluid" alt="Imagen Casme">
   <!-- <div class="portfolio-info">
     <h4>Card 2</h4>
     <p>Card</p>
@@ -121,7 +121,7 @@
 </div>
 
 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-  <img src="assets/img/Galeria_opt/Galeria-5-min.jpg"  loading="lazy" mg prueba.png" class="img-fluid" alt="Imagen Casme">
+  <img src="assets/img/Galeria_opt/Galeria-10-min.jpg"  loading="lazy" mg prueba.png" class="img-fluid" alt="Imagen Casme">
   <!-- <div class="portfolio-info">
     <h4>Web 2</h4>
     <p>Web</p>
@@ -171,7 +171,7 @@
 </div>
 
 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-  <img src="assets/img/Galeria_opt/Galeria-10-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+  <img src="assets/img/Galeria_opt/Galeria-5-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
   <!-- <div class="portfolio-info">
     <h4>Web 3</h4>
     <p>Web</p>
@@ -191,7 +191,7 @@
 </div>
 
 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-  <img src="assets/img/Galeria_opt/Galeria-12-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+  <img src="assets/img/Galeria_opt/Galeria-3-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
   <!-- <div class="portfolio-info">
     <h4>Web 3</h4>
     <p>Web</p>
@@ -211,7 +211,7 @@
 </div>
 
 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-  <img src="assets/img/Galeria_opt/Galeria-14-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+  <img src="assets/img/Galeria_opt/Galeria-4-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
   <!-- <div class="portfolio-info">
     <h4>Web 3</h4>
     <p>Web</p>
@@ -351,7 +351,7 @@
 </div>
 
 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-  <img src="assets/img/Galeria_opt/Galeria-28-min.jpg" loading="lazy"class="img-fluid" alt="Imagen Casme">
+  <img src="assets/img/Galeria_opt/Galeria-1-min.jpg" loading="lazy"class="img-fluid" alt="Imagen Casme">
   <!-- <div class="portfolio-info">
     <h4>Web 3</h4>
     <p>Web</p>
@@ -371,7 +371,7 @@
 </div>
 
 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-  <img src="assets/img/Galeria_opt/Galeria-30-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+  <img src="assets/img/Galeria_opt/Galeria-2-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
   <!-- <div class="portfolio-info">
     <h4>Web 3</h4>
     <p>Web</p>
@@ -413,7 +413,21 @@
       }
     })
 </script>
+<script>
+  document.querySelectorAll(".portfolio ").forEach(el=>{
+    el.addEventListener("click",function(ev){
+    ev.stopPropagation();
+    this.parentNode.classList.add("active");
+  })
+});
+document.querySelectorAll(".container").forEach(el=>{
+    el.addEventListener("click", function(ev){  
+    this.classList.remove("active");
+  })
+})
+</script>
 </section>             
+
 <!-- End Portfolio Sectionn -->
 <!-- Vendor JS Files -->
 <!-- <script src="assets/vendor/jquery/jquery.min.js"></script>

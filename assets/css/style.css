@@ -546,6 +546,80 @@ body {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+.page{
+  background: url(img/foto.jpg) center;
+  height: 100vh; 
+  display: flex;          
+  justify-content: center;
+  align-items: center;
+}
+.fondo_transparente{
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.226);
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  display: none;
+}
+.modal{
+  background: linear-gradient(0deg,white 70%, crimson 30%);
+  width: 600px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 30px;
+
+}
+.modal_cerrar{
+  background: white;
+  position: absolute;
+  right: -20px;
+  color: crimson;
+  top: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.modal_titulo{
+  color: white;
+  font-size: 40px;
+}
+.modal_mensaje{            
+ padding: 10px 30px;
+}
+.modal_botones{      
+  width: 100%;    
+ background: whitesmoke;
+ border-top:whitesmoke 1px;
+ padding-top: 20px;
+ display: flex;
+ justify-content: space-evenly;
+}
+
+.boton{
+  background: white;
+  padding: 8px 30px;
+  color: crimson;
+  text-decoration: none;
+  border-radius: 25px;
+  border:1px solid crimson
+}
+.boton:hover{
+  background: crimson;
+  color: white;
+}
+
 #hero {
   width: 100%;
   height: 100vh;
@@ -726,30 +800,24 @@ section {
 # About
 --------------------------------------------------------------*/
 
-
-
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
 }
 
-
-
-.aboutcanino {
+/* .aboutcanino {
   width: 100%;
   height: 100vh;
   background-image: url('../img/fondoabout.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  position: relative;
-  
-}
+  position: relative; 
+} */
 .aboutcanino:before {
   background: rgba(0, 0, 0, 0.3);
 }
-
-.aboutcaninov {
+/* .aboutcaninov {
   width: 100%;
   height: 100vh;
   background-image: url('../img/finabout.png');
@@ -757,18 +825,17 @@ section {
   background-position: center center;
   background-size: cover;
   position: relative;
-  
-}
+} */
 .aboutcaninov:before {
   background: rgba(0, 0, 0, 0.3);
 }
 
 .about .content p  {
  /*  font-family: 'Arial Rounded MT Bold',Helvetica,Arial,Lucida,sans-serif; */
-
-    font-family: Cambria, Cochin, Georgia, Times, 'Arial Rounded MT Bold', serif;
-    font-size: 20px;
-    color: black!important;
+  font-family: Cambria, Cochin, Georgia, Times 'ArialRounded MT Bold', serif;
+  font-size: 20px;
+  color: black!important;
+  text-align: justify;
     
 }
 .section-title {
@@ -807,9 +874,6 @@ section {
   color: black!important;
 }
 
-
-
-
 .section-mision h2 {
   font-size: 13px;
   letter-spacing: 1px;
@@ -823,7 +887,6 @@ section {
   text-transform: uppercase;
   border-radius: 50px;
 }
-
 .section-mision h3 {
   margin: 15px 0 0 0;
   font-size: 32px;
@@ -831,43 +894,34 @@ section {
 }
 
 .section-mision h3 span {
-  color: #1f8ccc;
+  color: #2D92CB;
   text-align: center;
 }
-
 .section-mision p {
   font-family: 'Arial Rounded MT Bold',Helvetica,Arial,Lucida,sans-serif;
   font-size: 23px;
   color: black!important;
 }
-
-
 .img-sepia {
-  max-width: 100%;
+  max-width: 60%;
   height: auto;
   border-radius:50%;
   -webkit-border-radius:50%;
-  box-shadow: 0px 0px 15px 15px  #c9e98d;
-  -webkit-box-shadow: 0px 0px 15px 15px   #c9e98d;
+  box-shadow: 0px 0px 15px 15px  #2D92CB;
+  -webkit-box-shadow: 0px 0px 40px 1px   #2D92CB;
   transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
 }
 
- .img-sepia:hover {filter: saturate(180%);}
-
-
-
-
+/* .img-sepia:hover {filter: saturate(180%);} */
 
 .about .content p span {
   color: #9ACD32;
 }
-
 .about .content ul {
   list-style: none;
   padding: 0;
 }
-
 .about .content ul li {
   padding-left: 28px;
   position: relative;
@@ -888,9 +942,7 @@ section {
 
 .about .content p:last-child {
   margin-bottom: 0;
-  
 }
-
 .about .content .btn-learn-more {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
@@ -907,7 +959,6 @@ section {
   margin-top: 6px;
   border: 2px solid #e43c5c;
 }
-
 .about .content .btn-learn-more:hover {
   background: #e43c5c;
   color: #fff;
@@ -941,12 +992,12 @@ section {
   left: 0;
   bottom: 0;
   top: 100%;
-  transition: all 0.4s;
+  transition: all 0.7s;
   z-index: -1;
 }
 
 .services .icon-box:hover::before {
-  background: #e43c5c;
+  background: #2D92CB;
   top: 0;
   border-radius: 0px;
 }
@@ -958,7 +1009,7 @@ section {
 .services .icon i {
   font-size: 48px;
   line-height: 1;
-  color: #e43c5c;
+  color: #9ACD32;
   transition: all 0.3s ease-in-out;
 }
 
@@ -1081,6 +1132,24 @@ section {
 }
 .container .portfolio-item{
   display:none;
+  
+}
+ .portfolio .active{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:scroll;
+}
+ .portfolio .active::after{
+  content:"";
+  position:fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color:rgba(0, 0, 0,0.70);
+  z-index: 0;
 }
 .portfolio .btn-get-started {
   font-family: "Open Sans", sans-serif;
@@ -1132,7 +1201,8 @@ section {
 .portfolio .portfolio-item img {
   position: relative;
   top: 0;
-  transition: all 300ms;
+  transition: all 150ms;
+  
 }
 
 .portfolio .portfolio-item .portfolio-info {
@@ -1796,7 +1866,6 @@ section {
 .modal-dialog .modal-dialog .forgot a{
   color: white;
 }
-
 .modal-dialog input[type=checkbox] {
 transform: scale(1.5);
 }
