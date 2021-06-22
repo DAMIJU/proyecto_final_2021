@@ -1,4 +1,4 @@
-<?php
++<?php
 session_start();
 require_once("ConectarBD_Mysql.php");
 
@@ -10,8 +10,7 @@ require_once("ConectarBD_Mysql.php");
 			}
 
 //  SI SE CONECTO Y SI SE ENVIARON AMBOS DATOS SE PROCEDE CON LA CONSULTA DE EXISTENCIA DEL USUARIO EVITANDO INYECCIONES SQL ?
-// El valor DNI se reemplaza por id_user.
-if ($stmt = $conn->prepare('SELECT id_user , clave FROM usuarios WHERE usuario = ?'))
+if ($stmt = $conn->prepare('SELECT id_user, clave FROM usuarios WHERE usuario = ?'))
  {
 	$stmt->bind_param('s', $_POST['username']);
 	$stmt->execute();
