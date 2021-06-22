@@ -64,10 +64,10 @@
         </div>
         <div class="row content">
           <div class="col-lg-6">
-            <p> Casme es un centro de servicios caninos, ubicado en Tantoyuca Veracruz México, es un lugar que cuenta con más de 16 años de experiencia, donde se prestan servicios como estética canina, educación y modificación de conducta, asesorías, venta de mascotas y productos. Se ha mantenido un crecimiento en lo que respecta al número de clientes y nivel de ingreso, lo cual es producto de una constante búsqueda de satisfacción al cliente, entregándoles una mayor variedad de servicios y prestaciones.</p>       
+          <img src="assets/img/Perroasd2.png" class="img-sepia" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
-          <img src="assets/img/Perroasd2.png" class="img-sepia" alt="">
+          <p> Casme es un centro de servicios caninos, ubicado en Tantoyuca Veracruz México, es un lugar que cuenta con más de 16 años de experiencia, donde se prestan servicios como estética canina, educación y modificación de conducta, asesorías, venta de mascotas y productos. Se ha mantenido un crecimiento en lo que respecta al número de clientes y nivel de ingreso, lo cual es producto de una constante búsqueda de satisfacción al cliente, entregándoles una mayor variedad de servicios y prestaciones.</p>       
           </div>
         </div>
       </div>
