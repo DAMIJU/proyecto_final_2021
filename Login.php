@@ -81,7 +81,7 @@
                     <br>       
                     <h4 style="color:#9ACD32">Panel administrador</h4>
                 </div>
-                <form class="col-12" action="admin/Admin.php" method="POST" id="Form_InicioSesion">
+                <form class="col-12" action="admin/validar.php" method="POST" id="Form_InicioSesion">
                     <div class="form-group" id="user-group">
                         <input type="text" name="username" class="login-field form-control" value="" placeholder="Usuario" maxlength="10" id="login-name" autocomplete="off">
                     </div>
