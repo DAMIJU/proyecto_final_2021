@@ -3,6 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Servicios Caninos Casme</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <meta content="Miguel Angel Arias, Darwin Meneses, Juan Esteban Alvarez" name="autor">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+    <link rel="stylesheet" href="h<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <title>Iniciar Sesión - Panel de administrador</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -35,23 +53,82 @@
 
     <!--JQUERY-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
 
     <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
 
     <!-- Los iconos tipo Solid de Fontawesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <script src="assets/js/CaninosCasmeLogin.js"></script>
 
+    <!-- Nuestro css-->
+    <style>
+    .main-section{
+        margin:0 auto;
+        margin-top:25%;
+        padding: 0;
+    }
+
+    .modal-content{
+        background-color: #3b4652;
+        opacity: .85;
+        padding: 0 20px;
+        box-shadow: 0px 0px 3px #848484;
+    }
+    .user-img{
+        margin-top: -50px;
+        margin-bottom: 35px;
+    }
+
+    .user-img img{
+        width: 100xp;
+        height: 100px;
+        box-shadow: 0px 0px 3px #848484;
+        border-radius: 50%;
+    }
+
+    .form-group input[type=text],[type=password]{
+        height: 42px;
+        font-size: 18px;
+        border:0;
+        padding-left: 54px;
+        color: black;
+        border-radius: 5px;
+    }
+
+    .form-group::before{
+        font-family: "Font Awesome\ 5 Free";
+        position: absolute;
+        left: 28px;
+        font-size: 22px;
+        padding-top:4px;
+    }
+
+    .form-group#user-group::before{
+        content: "\f007";
+    }
+
+    .form-group#contrasena-group::before{
+        content: "\f023";
+    }
     <!-- Favicons -->
     <link href="assets/img/Logo.ico" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+    button{
+        width: 60%;
+        margin: 5px 0 25px;
+    }
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
+    .forgot{
+        padding: 5px 0;
+    }
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
@@ -64,7 +141,14 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
+    .forgot a{
+        color: white;
+    }
 
+    input[type=checkbox] {
+  transform: scale(1.5);
+}
+    </style>
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
@@ -102,36 +186,26 @@
             <div class="modal-content">
                 <div class="col-12 user-img">
                     <img src="https://login.santisimatrinidadacolitos.com/ingreso/1/static/img/user.png" th:src="@{/img/user.png}"/>
-                    <br>
+                    <br>       
                     <h4 style="color:#9ACD32">Panel administrador</h4>
                 </div>
-                <form action="login.php" method="post">
-
-            <div class=" w3l-form-group">
-                <label>Usuario:</label>
-                <div class="group">
-                    <i class="fas fa-user"></i>
-                    <input type="text" class="form-control" placeholder="Usuario"  name="username"  required="required" value="admin" />
-                </div>
-            </div>
-            <div class=" w3l-form-group">
-                <label>Password:</label>
-                <div class="group">
-                    <i class="fas fa-unlock"></i>
-                    <input type="password" class="form-control" placeholder="Password" name="password"  required="required" value="admin" />
-                </div>
-            </div>
-            <div class="forgot">
-                <a href="https://sistemasenoferta.blogspot.com/">CATALOGO SISTEMAS AQUI?</a>
-                <p><input type="checkbox">Recordar password</p>
-            </div>
-            <button type="submit" name="login">Login</button>
-    
-        </form>
+                <form class="col-12" action="admin/Admin.php" method="POST" id="Form_InicioSesion">
+                    <div class="form-group" id="user-group">
+                        <input type="text" name="username" class="login-field form-control" value="" placeholder="Usuario" maxlength="10" id="login-name" autocomplete="off">
+                    </div>
+                    <div class="form-group" id="contrasena-group">
+                        <input type="password" name="password" class="login-field form-control" value="" placeholder="Contraseña" maxlength="" id="login-pass" autocomplete="off">
+                    </div>             
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Acceder </button>
+                </form>
+                <br>
+                <div class="col-12 forgot">    
                     <div class="col-12 forgot">
                         <a href="#" style="color:#9ACD32">¿Olvidó su contraseña?</a>
                     </div>
                 <!-- <div th:if="${param.error}" class="alert alert-danger" role="alert">
+		            
+		        </div> --><br><br>
                 </div> --><br><br>
             </div>
         </div>
@@ -141,13 +215,8 @@
 <!-- Vendor JS Files -->
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/venobox/venobox.min.js"></script>
-<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
 </body>
+</html>
 </html>
