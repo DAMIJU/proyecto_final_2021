@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<?php 
-  session_start();
-  require_once("ConectarBD_Mysql.php");
-  
-  //VERIFICACION DE ESCRITURA DE DATOS EN EL FORM
-        if ( !isset($_POST['username'], $_POST['password']) )
-              {
-        // Could not get the data that should have been sent.
-        echo "<script>alert('Debe llenar todos los campos para iniciar sesión');window.location.href='../Login.php'</script>";
-=======
 <?php
 require_once("ConectarBD_Mysql.php");
 // Solo se permite el ingreso con el inicio de sesion.
@@ -26,7 +15,6 @@ if (!isset($_SESSION['loggedin'])) {
         {
             session_destroy();
             echo "<script>alert('La sesión ha caducado.');window.location='../Login.php'</script>";
->>>>>>> 83bb6e8e0c9101f1377a60e80d94765e075a246d
         }
         $Usuario = $_POST['username'];
   //  SI SE CONECTO Y SI SE ENVIARON AMBOS DATOS SE PROCEDE CON LA CONSULTA DE EXISTENCIA DEL USUARIO EVITANDO INYECCIONES SQL ?
@@ -57,36 +45,19 @@ if (!isset($_SESSION['loggedin'])) {
             $row = $ejecuta->fetch_assoc();
             $inactivo = 1200;
  
-<<<<<<< HEAD
-            if(isset($_SESSION['tiempo']) ) {
-            $vida_session = time() - $_SESSION['tiempo'];
-                if($vida_session > $inactivo)
-                {
-                    session_destroy();
-                    echo "<script>alert('Su sesión ha caducado.');window.location.href='../Login.php'</script>";
-                }
-            }
-            $_SESSION['tiempo'] = time();
-                // echo 'BIENVENIDO USUARIOP : ' . $_SESSION['name'] .' CON TU DNI NUMERO : '. $_SESSION['dni'] . '!';
-=======
     $_SESSION['tiempo'] = time();
     $NombreSesion_User = $_SESSION['name'];
     //Hacer la consulta y traer los datos del usuario
     $Consulta_DatosSesion = "SELECT * FROM usuarios WHERE usuario ='$NombreSesion_User'";
     $ejecuta = $conn->query($Consulta_DatosSesion);
     $row = $ejecuta->fetch_assoc()
->>>>>>> 83bb6e8e0c9101f1377a60e80d94765e075a246d
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<<<<<<< HEAD
-  <title>Administrador</title>
-=======
   <title>Panel de Control</title>
->>>>>>> 83bb6e8e0c9101f1377a60e80d94765e075a246d
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
