@@ -1,4 +1,4 @@
-+<?php
+<?php
 session_start();
 require_once("ConectarBD_Mysql.php");
 
@@ -10,7 +10,8 @@ require_once("ConectarBD_Mysql.php");
 			}
 
 //  SI SE CONECTO Y SI SE ENVIARON AMBOS DATOS SE PROCEDE CON LA CONSULTA DE EXISTENCIA DEL USUARIO EVITANDO INYECCIONES SQL ?
-if ($stmt = $conn->prepare('SELECT id_user, clave FROM usuarios WHERE usuario = ?'))
+// El valor DNI se reemplaza por id_user.
+if ($stmt = $conn->prepare('SELECT id_user , clave FROM usuarios WHERE usuario = ?'))
  {
 	$stmt->bind_param('s', $_POST['username']);
 	$stmt->execute();
@@ -38,18 +39,11 @@ if ($stmt = $conn->prepare('SELECT id_user, clave FROM usuarios WHERE usuario = 
            
        				// SI EL USUARIO EXISTE PERO EL PASSWORD NO COINCIDE IMPRIMIR EN PANTALLA PASSWORD INCORRECTO
        
-                   		else { echo "  <p> </p>   <p style=text-align:center;> <img src=https://cdn141.picsart.com/292255026029211.png?type=webp&to=min&r=640 style=width:200px;height:220px;></p>
-                        <p> </p>     <table border=1 cellspacing=0 cellpading=0 align=center BORDER BGCOLOR=#16DFDF>
-                        <tr align=center > <td ><font color=red><h2>¡PASSWORD INCORRECTO !</h2>  <a href='exit.php' >SALIR</a>  </td>    </tr>
-                        </table>"; }
+                   		else { echo "<script>alert('Nombre de usuario o contraseña inválido');window.location='../Login.php'</script>"; }
        	}  
-      
-      
+
       			   // SI EL USUARIO NO EXISTE MOSTRAR USUARIO INCORRECTO
-          				else { echo "  <p> </p>   <p style=text-align:center;> <img src=https://cdn141.picsart.com/292255026029211.png?type=webp&to=min&r=640 style=width:200px;height:220px;></p>
-                        <p> </p>     <table border=1 cellspacing=0 cellpading=0 align=center BORDER BGCOLOR=#16DFDF>
-                        <tr align=center > <td ><font color=red><h2>¡USUARIO INCORRECTO !</h2>  <a href='exit.php' >SALIR</a>  </td>    </tr>
-                        </table>"; }
+          				else { echo "<script>alert('Este usuario no existe o es inválido');window.location='../Login.php'</script>"; }
 
 	$stmt->close();
 }

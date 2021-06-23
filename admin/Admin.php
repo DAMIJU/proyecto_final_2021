@@ -1,4 +1,5 @@
 <?php
+require_once("ConectarBD_Mysql.php");
 // Solo se permite el ingreso con el inicio de sesion.
 session_start();
 // Si el usuario no se ha logueado se le regresa al inicio.
@@ -15,16 +16,48 @@ if (!isset($_SESSION['loggedin'])) {
             session_destroy();
             echo "<script>alert('La sesión ha caducado.');window.location='../Login.php'</script>";
         }
-    }
+        $Usuario = $_POST['username'];
+  //  SI SE CONECTO Y SI SE ENVIARON AMBOS DATOS SE PROCEDE CON LA CONSULTA DE EXISTENCIA DEL USUARIO EVITANDO INYECCIONES SQL ?
+  // El valor DNI se reemplaza por id_user.
+  if ($stmt = $conn->prepare('SELECT id_user , clave FROM usuarios WHERE usuario = ?'))
+   {
+    $stmt->bind_param('s', $_POST['username']);
+    $stmt->execute();
+    $stmt->store_result();
+       
+       // SI EL USUARIO EXISTE EN LA TABLA SE EXTRAE Y SE APUNTA SU DNI Y SU CLAVE
+       if ($stmt->num_rows > 0)
+        {
+      $stmt->bind_result($id_user, $clave);
+      $stmt->fetch();
+          
+        // AHORA VERIFICA SI LA CLAVE QUE SE EXTRAJO DE LA TABLA ES IGUAL A LA QUE SE ENVIA DESDE EL FORMULARIO         
+            //if ($_POST['password'] === $clave) 
+              if(password_verify( $_POST['password'],$clave))
+              {
+                      // SI COINICIDEN AMBAS CONTRASEÑAS SE INICIA LA SESION Y SE LE DA LA BIENCENIDA AL USUARIO CON ECHO
+            session_regenerate_id();
+            $_SESSION['loggedin'] = TRUE;
+            $_SESSION['name'] = $_POST['username'];
+            $_SESSION['id_user'] = $id_user;
+            $Consulta_DatosUsuario = "SELECT * FROM usuarios WHERE usuario = '$Usuario'";
+            $ejecuta = $conn->query($Consulta_DatosUsuario);
+            $row = $ejecuta->fetch_assoc();
+            $inactivo = 1200;
  
     $_SESSION['tiempo'] = time();
+    $NombreSesion_User = $_SESSION['name'];
+    //Hacer la consulta y traer los datos del usuario
+    $Consulta_DatosSesion = "SELECT * FROM usuarios WHERE usuario ='$NombreSesion_User'";
+    $ejecuta = $conn->query($Consulta_DatosSesion);
+    $row = $ejecuta->fetch_assoc()
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Administrador <?=$_SESSION['name']?></title>
+  <title>Panel de Control</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -45,6 +78,12 @@ if (!isset($_SESSION['loggedin'])) {
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <style>
+    li{
+      list-style: none;
+    }
+  </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -86,7 +125,8 @@ if (!isset($_SESSION['loggedin'])) {
       <!--   <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
            Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li >
+               <li>&nbsp;&nbsp;&nbsp;<a><i class="fa fa-dashboard"></i> Inicio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fa fa-chevron-right"></span></a>
+          <!-- <li >
             <a href="Admin.php" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -120,7 +160,7 @@ if (!isset($_SESSION['loggedin'])) {
               </p>
             </a>
             <ul class="nav nav-treeview">
-            </li>
+            </li> -->
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -416,3 +456,22 @@ if (!isset($_SESSION['loggedin'])) {
 <script src="dist/js/pages/dashboard.js"></script>
 </body>
 </html>
+<?php 
+    
+} 
+else { echo "  <p> </p>   <p style=text-align:center;> <img src=https://cdn141.picsart.com/292255026029211.png?type=webp&to=min&r=640 style=width:200px;height:220px;></p>
+  <p> </p>     <table border=1 cellspacing=0 cellpading=0 align=center BORDER BGCOLOR=#16DFDF>
+  <tr align=center > <td ><font color=red><h2>¡PASSWORD INCORRECTO !</h2>  <a href='exit.php' >SALIR</a>  </td>    </tr>
+  </table>"; }
+}  
+
+
+// SI EL USUARIO NO EXISTE MOSTRAR USUARIO INCORRECTO
+else { echo "  <p> </p>   <p style=text-align:center;> <img src=https://cdn141.picsart.com/292255026029211.png?type=webp&to=min&r=640 style=width:200px;height:220px;></p>
+  <p> </p>     <table border=1 cellspacing=0 cellpading=0 align=center BORDER BGCOLOR=#16DFDF>
+  <tr align=center > <td ><font color=red><h2>¡USUARIO INCORRECTO !</h2>  <a href='exit.php' >SALIR</a>  </td>    </tr>
+  </table>"; }
+
+$stmt->close();
+}
+?>

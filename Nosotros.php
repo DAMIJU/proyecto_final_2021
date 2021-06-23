@@ -24,6 +24,7 @@
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -54,48 +55,42 @@
     </div>
   </header>
   <!-- End Header -->
-  <br><br><br><br><br><br><br>
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+  <!-- <br><br><br><br><br><br><br> -->
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+  <div class="container">
+      <!-- <div class="section-title">     
+        <h3><span></span></h3>
+        <br><br>
+      </div>  -->
+    <div class="row content">
+      <!-- <div class="col-lg-6">
+      <img src="assets/img/Perroasd2.png" class="img-sepia" alt="">
+      </div> -->
+      <div class="et_pb_row et_pb_row_0">
+        <p> Casme es un centro de servicios caninos, ubicado en Tantoyuca Veracruz México, es un lugar que cuenta con más de 16 años de experiencia, donde se prestan servicios como estética canina, educación y modificación de conducta, asesorías, venta de mascotas y productos. Se ha mantenido un crecimiento en lo que respecta al número de clientes y nivel de ingreso, lo cual es producto de una constante búsqueda de satisfacción al cliente, entregándoles una mayor variedad de servicios y prestaciones.</p>       
+      </div>
       <div class="container">
-        <div class="section-title">     
-          <h3><span>Acerca de nosotros</span></h3>
-          <br><br>
-        </div>
-        <div class="row content">
-          <div class="col-lg-6">
-          <img src="assets/img/Perroasd2.png" class="img-sepia" alt="">
+        <div class="et_pb_row et_pb_row_0">
+          <div class="section-mision">
+            <h3><span> Nuestra Misión</span></h3>
+            <p>Consentir y embellecer a tu mascota mediante un servicio de calidad y profesionalismo, suminiestrando accesorios de calidad necesarios para una sana y alegre convivencia</p>       
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-          <p> Casme es un centro de servicios caninos, ubicado en Tantoyuca Veracruz México, es un lugar que cuenta con más de 16 años de experiencia, donde se prestan servicios como estética canina, educación y modificación de conducta, asesorías, venta de mascotas y productos. Se ha mantenido un crecimiento en lo que respecta al número de clientes y nivel de ingreso, lo cual es producto de una constante búsqueda de satisfacción al cliente, entregándoles una mayor variedad de servicios y prestaciones.</p>       
-          </div>
         </div>
       </div>
-    </section><!-- End About Section -->
-    <section id="aboutcanino" class="aboutcanino">
       <div class="container">
-    </section>
-    <section id="aboutcaninom" class="aboutcaninom">
-      <div class="container">
-        <div class="section-mision">
-        <br><br><br><br>
-          <!-- <h2>F.A.Q</h2> -->
-          <h3>NUESTRA<span> MISIÓN</span></h3>
-          <p>Ser una empresa reconocida por toda la región y recomendada por su calidad y buen servicio donde se encuentre la solución a necesidades como: elección de mascota, embellecimiento, orientación psicosocial e integración familiar.</p>
-           <br><br><br><br><br>
+        <div class="et_pb_row et_pb_row_0">
+          <div class="section-vision">
+            <h3><span> Nuestra Visión</span></h3>
+            <p>Ser una empresa reconocida por toda la región y recomendada por su calidad y buen servicio donde se encuentre la solución a necesidades como: elección de mascota, embellecimiento, orientación psicosocial e integración familiar.</p>  
         </div>
       </div>
-    </section>
-    <section id="aboutcaninovi" class="aboutcaninovi">
-      <div class="container">
-        <div class="section-vision">
-          <h3>NUESTRA<span> VISIÓN</span></h3>
-          <p>Consentir y embellecer a tu mascota mediante un servicio de calidad y profesionalismo.</p>  
-           <br><br><br><br><br>
-        </div>
-      </div>
-    </section>
-    <footer id="footer">
+    </div>
+  </div>
+</section>
+<!-- End About Section -->
+    <!-- ======= Footer ======= -->
+  <footer id="footer">
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
@@ -110,7 +105,7 @@
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="tiktok"><iconify-icon data-icon="simple-icons:tiktok"></iconify-icon></a> 
+        <a href="https://www.tiktok.com/@diego_casme?lang=es" target="_blank" class="tiktok"><iconify-icon data-icon="simple-icons:tiktok"></iconify-icon></a> 
         <a href="https://www.facebook.com/Servicios-caninos-Casme-905518146207815" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>     
         <a href="https://www.instagram.com/servicioscaninoscasme/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
         <a href="https://wa.me/527891017905" target="_blank" class="google-plus"><i class="bx bxl-whatsapp"></i></a>
@@ -132,5 +127,9 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script src="popup.js"></script>
+<script src="modal.js"></script>
 </body>
+</html>
 
