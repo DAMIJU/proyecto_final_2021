@@ -1,6 +1,7 @@
 <?php
 // Solo se permite el ingreso con el inicio de sesion.
 session_start();
+require_once("ConectarBD_Mysql.php");
 // Si el usuario no se ha logueado se le regresa al inicio.
 if (!isset($_SESSION['loggedin'])) {
 	echo "<script>alert('No has iniciado sesión');window.location='../Login.php'</script>";
@@ -19,6 +20,10 @@ if (!isset($_SESSION['loggedin'])) {
     }
 
     $_SESSION['tiempo'] = time();
+    $NombreSesion_User = $_SESSION['name'];
+    $Consulta_DatosSesion = "SELECT * FROM usuarios WHERE usuario ='$NombreSesion_User'";
+    $ejecuta = $conn->query($Consulta_DatosSesion);
+    $row = $ejecuta->fetch_assoc()
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -90,11 +95,12 @@ if (!isset($_SESSION['loggedin'])) {
       <!-- Sidebar user panel (optional) -->
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-      <!--   <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-           Add icons to the links using the .nav-icon class
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+      <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-               <li>&nbsp;&nbsp;&nbsp;<a><i class="fa fa-dashboard"></i> Inicio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fa fa-chevron-right"></span></a>
-          <!-- <li >
+               <!-- <li>&nbsp;&nbsp;&nbsp;<a><i class="fa fa-dashboard"></i> Inicio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fa fa-chevron-right"></span></a> -->
+          <li >
             <a href="Admin.php" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -124,11 +130,11 @@ if (!isset($_SESSION['loggedin'])) {
             <a href="Configuracion.php" class="nav-link">
               <i class="nav-icon fas fa-tree"></i>
               <p>
-                Configuración         
+                Configuración      
               </p>
             </a>
             <ul class="nav nav-treeview">
-            </li> -->
+            </li> 
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -207,14 +213,7 @@ if (!isset($_SESSION['loggedin'])) {
           </div>
           <!-- ./col -->
         </div>
-        <div class="container">
-  <div class="row">
-    <div class="col">col</div>
-    <div class="col">col</div>
-    <div class="w-100"></div>
-    <div class="col">col</div>
-    <div class="col">col</div>
-  </div>
+        
         <!-- /.row -->
         <!-- Main row -->
         <div class="row">

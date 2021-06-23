@@ -6,7 +6,7 @@ require_once("ConectarBD_Mysql.php");
 			if ( !isset($_POST['username'], $_POST['password']) )
             {
 			// Could not get the data that should have been sent.
-			exit('Please fill both the username and password fields!');
+			echo "<script>alert('Por favor llene todos los campos requeridos.');window.location=''</script>";
 			}
 
 //  SI SE CONECTO Y SI SE ENVIARON AMBOS DATOS SE PROCEDE CON LA CONSULTA DE EXISTENCIA DEL USUARIO EVITANDO INYECCIONES SQL ?
