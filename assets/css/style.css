@@ -243,7 +243,7 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50px;
-  background: #0C8289;
+  background: #2D92CB;
   color: #fff;
   transition: all 0.4s;
 }
@@ -975,17 +975,21 @@ section {
 
 .services .icon-box {
   padding: 60px 30px;
+  height: 310px;
+  width:225px;
   position: relative;
   overflow: hidden;
   background: #fff;
   box-shadow: 2px 0 35px 0 rgba(68, 88, 144, 0.12);
   transition: all 0.3s ease-in-out;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 8px;
   z-index: 1;
   text-align: center;
 }
 
-.services .icon-box::before {
+/* .services .icon-box::before {
   content: '';
   position: absolute;
   background: #fdeff2;
@@ -995,14 +999,14 @@ section {
   top: 100%;
   transition: all 0.7s;
   z-index: -1;
-}
+} */
 
-.services .icon-box:hover::before {
+/* .services .icon-box:hover::before {
   background: #2D92CB;
   top: 0;
   border-radius: 0px;
 }
-
+ */
 .services .icon {
   margin-bottom: 15px;
 }
@@ -1029,13 +1033,25 @@ section {
   line-height: 28px;
   margin-bottom: 0;
 }
-
-.services .icon-box:hover .title a, .services .icon-box:hover .description {
-  color: #fff;
-}
-
 .services .icon-box:hover .icon i {
   color: #fff;
+}
+.container .btn-get-started{
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 5px 20px 5px 20px;
+  border-radius: 30px;
+  transition: 0.3s;
+  background-color:  #9ACD32;
+  color: #2C2E27;
+}
+.container .btn-get-started:hover{
+  background:  #83AE2A;
+  color: #2C2E27;
 }
 
 /*--------------------------------------------------------------
@@ -2010,7 +2026,7 @@ transform: scale(1.5);
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #0C8289 ;
+  background: #2D92CB ;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -2023,7 +2039,7 @@ transform: scale(1.5);
 }
 
 #footer .social-links a:hover {
-  background: #07656B;
+  background: #1F74A3;
   color: #fff;
   text-decoration: none;
 }

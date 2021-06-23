@@ -66,7 +66,7 @@
         <div class="section-title">
           <!-- <h2>Productos</h2> -->
            <h3><span>Galeria</span></h3> 
-          <p>Estos son algunos de los productos que tenemos en nuestra tienda fisica.</p>
+          <!-- <p>Estos son algunos de los productos que tenemos en nuestra tienda fisica.</p> -->
         </div>
         <!-- <div class="row">
           <div class="col-lg-12 d-flex justify-content-center">
@@ -440,4 +440,7 @@ document.querySelectorAll(".container").forEach(el=>{
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script src="popup.js"></script>
+<script src="modal.js"></script>
 </body>

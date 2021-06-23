@@ -64,15 +64,16 @@
         <div class="section-title">
           <!-- <h2>Services</h2> -->
           <h3><span>Servicios</span></h3>
-          <p>Estos son los servicios que prestamos</p>
+          <!-- <p>Estos son los servicios que prestamos</p> -->
         </div>
 
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box">
               <div class="icon"><img src="https://img.icons8.com/pastel-glyph/64/000000/dog-heart--v2.png"/></div>
-              <h4 class="title"><a href="">Adiestramiento canino</a></h4>
-              <p class="description">¿Tu perro destruye todo? ¿Es agresivo con otros perros? ¿Se sale sin permiso? ¿No acude a tu llamado? Nosotros podemos ayudarte</p>
+              <h4 class="title"><a href="">Adiestramiento</a></h4>
+              <p class="description"></p>
+              <a id="btn-abrir-popup" class="btn-get-started btn btn-lg scrollto span2">=></a>
             </div>
           </div>
 
@@ -80,7 +81,8 @@
             <div class="icon-box">
               <div class="icon"><img src="https://img.icons8.com/ios/64/000000/gum-.png"/></div>
               <h4 class="title"><a href="">Gimnasio</a></h4>
-              <p class="description">Ejercitamos a tu perro. Llevamos un plan cardiovascular en caminadora canina.</p>
+              <p class="description"></p>
+              <a id="btn-abrir-popup" class="btn-get-started btn btn-lg scrollto span2">=></a>
             </div>
           </div>
           
@@ -88,7 +90,8 @@
             <div class="icon-box">
               <div class="icon"><img src="https://img.icons8.com/wired/64/000000/syringe.png"></div>
               <h4 class="title"><a href="">Vacunacion</a></h4>
-              <p class="description">Vacunamos a tu perrito segun la edad</p>
+              <p class="description"></p>
+              <a id="btn-abrir-popup" class="btn-get-started btn btn-lg scrollto span2">=></a>
             </div>
           </div>
 
@@ -96,14 +99,15 @@
             <div class="icon-box">
               <div class="icon"><img src="https://img.icons8.com/ios/64/000000/poodle.png"/></div>
               <h4 class="title"><a href="">Estetica canina</a></h4>
-              <p class="description">Deja a tu perro disfrutar de un corte  y de un buen baño con nosotros</p>
+              <p class="description"></p>
+              <a id="btn-abrir-popup" class="btn-get-started btn btn-lg scrollto span2">=></a>
             </div>
           </div>    
         </div>
       </div>
     </section>
   <!-- End Services Section -->
-  <br><br><br>
+  <br><br><br><br><br>
   <footer id="footer">
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
@@ -119,7 +123,7 @@
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="tiktok"><iconify-icon data-icon="simple-icons:tiktok"></iconify-icon></a> 
+        <a href="https://www.tiktok.com/@diego_casme?lang=es" target="_blank" class="tiktok"><iconify-icon data-icon="simple-icons:tiktok"></iconify-icon></a> 
         <a href="https://www.facebook.com/Servicios-caninos-Casme-905518146207815" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>     
         <a href="https://www.instagram.com/servicioscaninoscasme/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
         <a href="https://wa.me/527891017905" target="_blank" class="google-plus"><i class="bx bxl-whatsapp"></i></a>
@@ -141,4 +145,7 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script src="popup.js"></script>
+<script src="modal.js"></script>
 </body>
