@@ -1,56 +1,24 @@
 <?php
-require_once("ConectarBD_Mysql.php");
 // Solo se permite el ingreso con el inicio de sesion.
 session_start();
 // Si el usuario no se ha logueado se le regresa al inicio.
 if (!isset($_SESSION['loggedin'])) {
-	echo "<script>alert('No has iniciado sesión.');window.location='../Login.php'</script>";
+	echo "<script>alert('No has iniciado sesión');window.location='../Login.php'</script>";
 	exit; }
-  //Script para definir el tiempo - vida de la sesión (20 minutos)
+
+  //Script para definirle la vida de duración a una sesión
   $inactivo = 1200;
- 
+
     if(isset($_SESSION['tiempo']) ) {
     $vida_session = time() - $_SESSION['tiempo'];
-        if($vida_session > $inactivo)
-        {
-            session_destroy();
-            echo "<script>alert('La sesión ha caducado.');window.location='../Login.php'</script>";
-        }
-        $Usuario = $_POST['username'];
-  //  SI SE CONECTO Y SI SE ENVIARON AMBOS DATOS SE PROCEDE CON LA CONSULTA DE EXISTENCIA DEL USUARIO EVITANDO INYECCIONES SQL ?
-  // El valor DNI se reemplaza por id_user.
-  if ($stmt = $conn->prepare('SELECT id_user , clave FROM usuarios WHERE usuario = ?'))
-   {
-    $stmt->bind_param('s', $_POST['username']);
-    $stmt->execute();
-    $stmt->store_result();
-       
-       // SI EL USUARIO EXISTE EN LA TABLA SE EXTRAE Y SE APUNTA SU DNI Y SU CLAVE
-       if ($stmt->num_rows > 0)
-        {
-      $stmt->bind_result($id_user, $clave);
-      $stmt->fetch();
-          
-        // AHORA VERIFICA SI LA CLAVE QUE SE EXTRAJO DE LA TABLA ES IGUAL A LA QUE SE ENVIA DESDE EL FORMULARIO         
-            //if ($_POST['password'] === $clave) 
-              if(password_verify( $_POST['password'],$clave))
-              {
-                      // SI COINICIDEN AMBAS CONTRASEÑAS SE INICIA LA SESION Y SE LE DA LA BIENCENIDA AL USUARIO CON ECHO
-            session_regenerate_id();
-            $_SESSION['loggedin'] = TRUE;
-            $_SESSION['name'] = $_POST['username'];
-            $_SESSION['id_user'] = $id_user;
-            $Consulta_DatosUsuario = "SELECT * FROM usuarios WHERE usuario = '$Usuario'";
-            $ejecuta = $conn->query($Consulta_DatosUsuario);
-            $row = $ejecuta->fetch_assoc();
-            $inactivo = 1200;
- 
+		if($vida_session > $inactivo)
+		{
+			session_destroy();
+			echo "<script>alert('La sesión ha caducado');window.location='../Login.php'</script>";
+		}
+    }
+
     $_SESSION['tiempo'] = time();
-    $NombreSesion_User = $_SESSION['name'];
-    //Hacer la consulta y traer los datos del usuario
-    $Consulta_DatosSesion = "SELECT * FROM usuarios WHERE usuario ='$NombreSesion_User'";
-    $ejecuta = $conn->query($Consulta_DatosSesion);
-    $row = $ejecuta->fetch_assoc()
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -456,4 +424,3 @@ if (!isset($_SESSION['loggedin'])) {
 <script src="dist/js/pages/dashboard.js"></script>
 </body>
 </html>
-
