@@ -564,7 +564,7 @@ body {
   display: none;
 }
 .modal{
-  background: linear-gradient(0deg,white 95%, crimson 5%);
+  background: linear-gradient(0deg,white 95%,  #9ACD32 5%);
   width: 600px;
   height: 600px;
   top: 50%;
@@ -579,11 +579,11 @@ body {
 
 }
 .modal_cerrar{
-  background: white;
+  background: #9ACD32;
   position: absolute;
-  right: -20px;
-  color: crimson;
-  top: -20px;
+  right: -10px;
+  color: white;
+  top: -10px;
   width: 40px;
   height: 40px;
   border-radius: 25px;

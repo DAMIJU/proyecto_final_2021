@@ -205,7 +205,7 @@
                   <!-- <a href=""><i class="icofont-twitter"></i></a> -->
                   <a href="#" id="btn-abrir-popup"><i class="icofont-facebook"></i></a>
                   
-                   <a  id="btnabrir"><i class="icofont-jacket"></i></a>
+                   <a  id="btnabrir"><i class="icofont-info"></i></a>
                   <!-- <a href=""><i class="icofont-linkedin"></i></a> -->
                 </div>
               </div>
@@ -221,6 +221,7 @@
             
             <!-- <div class="modal_titulo">VENTANA MODAL</div> -->
             <div class="section-title">
+            <br>
             <br>
           <p>Diego León Castaño Castaño adiestrador canino profesional con más de 15 años de experiencia.<p>
 
