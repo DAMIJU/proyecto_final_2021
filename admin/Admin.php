@@ -1,4 +1,5 @@
 <?php
+require_once("ConectarBD_Mysql.php");
 // Solo se permite el ingreso con el inicio de sesion.
 session_start();
 // Si el usuario no se ha logueado se le regresa al inicio.
@@ -18,13 +19,18 @@ if (!isset($_SESSION['loggedin'])) {
     }
  
     $_SESSION['tiempo'] = time();
+    $NombreSesion_User = $_SESSION['name'];
+    //Hacer la consulta y traer los datos del usuario
+    $Consulta_DatosSesion = "SELECT * FROM usuarios WHERE usuario ='$NombreSesion_User'";
+    $ejecuta = $conn->query($Consulta_DatosSesion);
+    $row = $ejecuta->fetch_assoc()
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Administrador <?=$_SESSION['name']?></title>
+  <title>Panel de Control</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -45,6 +51,7 @@ if (!isset($_SESSION['loggedin'])) {
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="http://localhost:8080/sys-veterinaria/veterinaria_sistemasenoferta/pages/layout/vendors/font-awesome/css/font-awesome.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -86,7 +93,8 @@ if (!isset($_SESSION['loggedin'])) {
       <!--   <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
            Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li >
+               <li><a><i class="fa fa-group"></i> Usuarios<span class="fa fa-chevron-down"></span></a>
+          <!-- <li >
             <a href="Admin.php" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -120,7 +128,7 @@ if (!isset($_SESSION['loggedin'])) {
               </p>
             </a>
             <ul class="nav nav-treeview">
-            </li>
+            </li> -->
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
