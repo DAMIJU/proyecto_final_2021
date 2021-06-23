@@ -243,8 +243,7 @@
             </div>
         </div>
     </div>   
-      </section>
-    <br></br>   
+      </section> 
   <!-- End Team Section -->
   <!-- ======= Footer ======= -->
   <footer id="footer">

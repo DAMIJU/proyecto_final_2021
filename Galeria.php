@@ -58,16 +58,14 @@
     </div>
   </header>
   <!-- End Header -->
-  <br><br><br><br><br><br><br>
  <!-- ======= Portfolio Section ======= -->
  <section id="portfolio" class="portfolio">
       <div class="container text-center">
-
-        <div class="section-title">
-          <!-- <h2>Productos</h2> -->
-           <h3><span>Galeria</span></h3> 
-          <!-- <p>Estos son algunos de los productos que tenemos en nuestra tienda fisica.</p> -->
-        </div>
+        <!-- <div class="section-title">
+           <h2>Productos</h2>
+           <h3><span></span></h3> 
+           <p>Estos son algunos de los productos que tenemos en nuestra tienda fisica.</p>
+        </div> -->
         <!-- <div class="row">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
@@ -403,6 +401,7 @@
 <a class="btn-get-started btn btn-lg scrollto span2">Ver más</a>
 
 </div>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
   $(".portfolio-item").slice(0, 6).show()
@@ -427,8 +426,31 @@ document.querySelectorAll(".container").forEach(el=>{
 })
 </script>
 </section>             
-
 <!-- End Portfolio Sectionn -->
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="container d-md-flex py-4">
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Tempo</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="https://www.tiktok.com/@diego_casme?lang=es" target="_blank" class="tiktok"><iconify-icon data-icon="simple-icons:tiktok"></iconify-icon></a> 
+        <a href="https://www.facebook.com/Servicios-caninos-Casme-905518146207815" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>     
+        <a href="https://www.instagram.com/servicioscaninoscasme/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://wa.me/527891017905" target="_blank" class="google-plus"><i class="bx bxl-whatsapp"></i></a>
+        <!-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
+      </div>
+    </div>
+  </footer><!-- End Footer -->
 <!-- Vendor JS Files -->
 <!-- <script src="assets/vendor/jquery/jquery.min.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

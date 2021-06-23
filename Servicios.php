@@ -61,11 +61,11 @@
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container">
-        <div class="section-title">
-          <!-- <h2>Services</h2> -->
-          <h3><span>Servicios</span></h3>
-          <!-- <p>Estos son los servicios que prestamos</p> -->
-        </div>
+        <!-- <div class="section-title">
+           <h2>Services</h2> 
+          <h3><span></span></h3>
+           <p>Estos son los servicios que prestamos</p> 
+        </div> -->
 
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
@@ -73,7 +73,7 @@
               <div class="icon"><img src="https://img.icons8.com/pastel-glyph/64/000000/dog-heart--v2.png"/></div>
               <h4 class="title"><a href="">Adiestramiento</a></h4>
               <p class="description"></p>
-              <a id="btn-abrir-popup" class="btn-get-started btn btn-lg scrollto span2">=></a>
+              <a id="btn-abrir-popup" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"/></a>
             </div>
           </div>
 
@@ -82,7 +82,7 @@
               <div class="icon"><img src="https://img.icons8.com/ios/64/000000/gum-.png"/></div>
               <h4 class="title"><a href="">Gimnasio</a></h4>
               <p class="description"></p>
-              <a id="btn-abrir-popup" class="btn-get-started btn btn-lg scrollto span2">=></a>
+              <a id="btn-abrir-popup" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"/></a>
             </div>
           </div>
           
@@ -91,7 +91,7 @@
               <div class="icon"><img src="https://img.icons8.com/wired/64/000000/syringe.png"></div>
               <h4 class="title"><a href="">Vacunacion</a></h4>
               <p class="description"></p>
-              <a id="btn-abrir-popup" class="btn-get-started btn btn-lg scrollto span2">=></a>
+              <a id="btn-abrir-popup" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"/></a>
             </div>
           </div>
 
@@ -100,15 +100,16 @@
               <div class="icon"><img src="https://img.icons8.com/ios/64/000000/poodle.png"/></div>
               <h4 class="title"><a href="">Estetica canina</a></h4>
               <p class="description"></p>
-              <a id="btn-abrir-popup" class="btn-get-started btn btn-lg scrollto span2">=></a>
+              <a id="btn-abrir-popup" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"/></a>
             </div>
           </div>    
         </div>
       </div>
+      <br><br><br><br><br>
     </section>
   <!-- End Services Section -->
-  <br><br><br><br><br>
-  <footer id="footer">
+ <!-- ======= Footer ======= -->
+ <footer id="footer">
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
