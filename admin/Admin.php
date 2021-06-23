@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 
   session_start();
   require_once("ConectarBD_Mysql.php");
@@ -7,6 +8,25 @@
               {
         // Could not get the data that should have been sent.
         echo "<script>alert('Debe llenar todos los campos para iniciar sesión');window.location.href='../Login.php'</script>";
+=======
+<?php
+require_once("ConectarBD_Mysql.php");
+// Solo se permite el ingreso con el inicio de sesion.
+session_start();
+// Si el usuario no se ha logueado se le regresa al inicio.
+if (!isset($_SESSION['loggedin'])) {
+	echo "<script>alert('No has iniciado sesión.');window.location='../Login.php'</script>";
+	exit; }
+  //Script para definir el tiempo - vida de la sesión (20 minutos)
+  $inactivo = 1200;
+ 
+    if(isset($_SESSION['tiempo']) ) {
+    $vida_session = time() - $_SESSION['tiempo'];
+        if($vida_session > $inactivo)
+        {
+            session_destroy();
+            echo "<script>alert('La sesión ha caducado.');window.location='../Login.php'</script>";
+>>>>>>> 83bb6e8e0c9101f1377a60e80d94765e075a246d
         }
         $Usuario = $_POST['username'];
   //  SI SE CONECTO Y SI SE ENVIARON AMBOS DATOS SE PROCEDE CON LA CONSULTA DE EXISTENCIA DEL USUARIO EVITANDO INYECCIONES SQL ?
@@ -37,6 +57,7 @@
             $row = $ejecuta->fetch_assoc();
             $inactivo = 1200;
  
+<<<<<<< HEAD
             if(isset($_SESSION['tiempo']) ) {
             $vida_session = time() - $_SESSION['tiempo'];
                 if($vida_session > $inactivo)
@@ -47,13 +68,25 @@
             }
             $_SESSION['tiempo'] = time();
                 // echo 'BIENVENIDO USUARIOP : ' . $_SESSION['name'] .' CON TU DNI NUMERO : '. $_SESSION['dni'] . '!';
+=======
+    $_SESSION['tiempo'] = time();
+    $NombreSesion_User = $_SESSION['name'];
+    //Hacer la consulta y traer los datos del usuario
+    $Consulta_DatosSesion = "SELECT * FROM usuarios WHERE usuario ='$NombreSesion_User'";
+    $ejecuta = $conn->query($Consulta_DatosSesion);
+    $row = $ejecuta->fetch_assoc()
+>>>>>>> 83bb6e8e0c9101f1377a60e80d94765e075a246d
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
   <title>Administrador</title>
+=======
+  <title>Panel de Control</title>
+>>>>>>> 83bb6e8e0c9101f1377a60e80d94765e075a246d
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -74,6 +107,12 @@
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <style>
+    li{
+      list-style: none;
+    }
+  </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -115,7 +154,8 @@
       <!--   <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
            Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li >
+               <li>&nbsp;&nbsp;&nbsp;<a><i class="fa fa-dashboard"></i> Inicio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fa fa-chevron-right"></span></a>
+          <!-- <li >
             <a href="Admin.php" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -149,7 +189,7 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-            </li>
+            </li> -->
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

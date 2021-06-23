@@ -7,7 +7,7 @@ document.getElementById("btnabrir").addEventListener
 
 document.getElementsByClassName("modal_cerrar") [0].
 addEventListener("click", function() {
-    document.getElementsByClassNamze
+    document.getElementsByClassName
     ("fondo_transparente")[0].style.display="none"
 })
 
