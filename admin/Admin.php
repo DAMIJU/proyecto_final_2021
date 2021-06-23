@@ -51,7 +51,12 @@ if (!isset($_SESSION['loggedin'])) {
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
-  <link rel="stylesheet" href="http://localhost:8080/sys-veterinaria/veterinaria_sistemasenoferta/pages/layout/vendors/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <style>
+    li{
+      list-style: none;
+    }
+  </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -93,7 +98,7 @@ if (!isset($_SESSION['loggedin'])) {
       <!--   <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
            Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-               <li><a><i class="fa fa-group"></i> Usuarios<span class="fa fa-chevron-down"></span></a>
+               <li>&nbsp;&nbsp;&nbsp;<a><i class="fa fa-dashboard"></i> Inicio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fa fa-chevron-right"></span></a>
           <!-- <li >
             <a href="Admin.php" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
