@@ -576,6 +576,8 @@ body {
   justify-content: space-evenly;
   align-items: center;
   box-sizing:border-box;
+  padding: 15px;
+  z-index: 50;
 
 }
 .modal_cerrar{
@@ -630,6 +632,7 @@ body {
   background-position: center center;
   background-size: cover;
   position: relative;
+  z-index: 50;
   
   
 
@@ -657,6 +660,7 @@ body {
   flex-direction: column;
   text-align: center;
   padding: 0 15px;
+  
   
   
 }
