@@ -124,11 +124,11 @@ if (!isset($_SESSION['loggedin'])) {
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
-                Usuarios
-                <i class="fas fa-angle-left right"></i>
+                Dueño
+                <!-- <i class="fas fa-angle-left right"></i> -->
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            <!-- <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="far fa-registered nav-icon"></i>
@@ -142,16 +142,16 @@ if (!isset($_SESSION['loggedin'])) {
                 </a>
               </li>
             </ul>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-dog"></i>
               <p>
-                Mascota/Cliente
-                <i class="fas fa-angle-left right"></i>
+                Mascota
+                <!-- <i class="fas fa-angle-left right"></i> -->
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            <!-- <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="#" class="nav-link">
                 <i class="fas fa-paw nav-icon"></i>
@@ -170,7 +170,7 @@ if (!isset($_SESSION['loggedin'])) {
                   <p>Historial</p>
                 </a>
               </li>
-            </ul>
+            </ul> -->
           </li>   
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -180,14 +180,14 @@ if (!isset($_SESSION['loggedin'])) {
               </p>
             </a>
           </li>  
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
             <i class="nav-icon far fa-user-circle"></i>
               <p>
                 Perfil
               </p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a href="#" class="nav-link">
             <i class="nav-icon fas fa-cogs"></i>
