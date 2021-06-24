@@ -130,13 +130,13 @@ if (!isset($_SESSION['loggedin'])) {
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-registered nav-icon"></i>
                   <p>Registrar</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
+                <a href="#" class="nav-link">
                 <i class="fas fa-user-friends nav-icon"></i>
                   <p>Usuarios registrados</p>
                 </a>
@@ -153,19 +153,19 @@ if (!isset($_SESSION['loggedin'])) {
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
+                <a href="#" class="nav-link">
                 <i class="fas fa-paw nav-icon"></i>
                   <p>Agregar mascota</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
+                <a href="#" class="nav-link">
                 <i class="fas fa-cat nav-icon"></i>
                   <p>Mascotas registradas</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
+                <a href="#" class="nav-link">
                 <i class="fas fa-notes-medical nav-icon"></i>
                   <p>Historial</p>
                 </a>
@@ -194,8 +194,32 @@ if (!isset($_SESSION['loggedin'])) {
               <p>
                 Configuración
               </p>
+              <i class="fas fa-angle-left right"></i>
             </a>
-          </li>    
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-bars nav-icon"></i>
+                  <p>Menú</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                <i class="fas fa-building nav-icon"></i>
+                  <p>Datos de la empresa</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                <i class="fas fa-photo-video nav-icon"></i>
+                  <p>Galería de imágenes</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <div class="Footer">
+            <button class="btn btn-danger" onclick="location.href='#'">Cerrar sesión</button>
+          </div>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
