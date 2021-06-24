@@ -179,6 +179,7 @@ body {
 .popup form .btn-submit:hover {
 	background: rgba(94,125,227, .9);
 }
+
 @media (min-width: 1860px) {
   .col-lg-4 {
       -ms-flex: 0 0 33.333333%;
@@ -186,6 +187,13 @@ body {
       max-width: 100.333333%;
   }
 }
+.popup .col-md-6 { 
+    flex: 0 0 50%;
+    max-width: 50%;
+    min-width: 100%;
+    padding: 0px 8px 0px 8px;
+  }
+
 
 /* ------------------------- */
 /* ANIMACIONES */
@@ -1243,8 +1251,17 @@ section {
   position: relative;
   top: 0;
   transition: all 150ms;
-  
+  height: 233.09px;
+  width: 350px;
 }
+.portfolio .portfolio-item iframe {
+  position: relative;
+  top: 0;
+  transition: all 150ms;
+  height: 233.09px;
+  width: 350px;
+}
+  
 
 .portfolio .portfolio-item .portfolio-info {
   opacity: 0;

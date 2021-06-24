@@ -68,7 +68,6 @@
       <h1 style="font-family: 'Audiowide', cursive;">Servicios Caninos Casme</h1>
       <h2>Escuela profesional de adiestramiento canino</h2>
       <a id="btn-abrir-popup" class="btn-get-started btn btn-lg scrollto span2">Contactenos</a>   
-      
     </div>
     <!-- <div class="container"> -->
        <div class="contenedor">
@@ -110,7 +109,6 @@
                 </div>
               </div>
             </div>
-  
   </section>
     </section>
     <br></br>
