@@ -128,10 +128,10 @@
     <!-- End Cta Section -->
     <!-- ======= F.A.Q Section ======= -->
     <br></br>    
-    <section id="faq" class="faq">
+    <!-- <section id="faq" class="faq">
       <div class="container">
         <div class="section-title">
-          <!-- <h2>F.A.Q</h2> -->
+           <h2>F.A.Q</h2> 
           <h3>Preguntas<span> Frecuentes</span></h3>
         </div>
         <ul class="faq-list">
@@ -185,7 +185,7 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
     <!-- End F.A.Q Section -->
     <br><br>
     <!-- ======= Team Section ======= -->
@@ -199,41 +199,40 @@
             <div class="member">
               <div class="member-img">
                 <img src="assets/img/team/Adiestrador_canino.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <!-- <a href=""><i class="icofont-twitter"></i></a> -->
+                <!-- <div class="social">
+                   <a href=""><i class="icofont-twitter"></i></a> 
                   <a href="#" id="btn-abrir-popup"><i class="icofont-facebook"></i></a>
                   
                    <a  id="btnabrir"><i class="icofont-info"></i></a>
-                  <!-- <a href=""><i class="icofont-linkedin"></i></a> -->
-                </div>
+                   <a href=""><i class="icofont-linkedin"></i></a> 
+                </div> -->
               </div>
               <div class="member-info">
                 <h2>Adiestrador canino</h2>
               </div>
+              <a id="btnabrir" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"></a>
           </div>
         </div> 
-        <div class="fondo_transparente">
-        <div class="modal">
-            
-           <a class="modal_cerrar"> <i class="fas fa-times"></i></a>
-            
+    <div class="fondo_transparente">
+      <div class="modal">        
+           <a class="modal_cerrar"> <i class="fas fa-times"></i></a>   
             <!-- <div class="modal_titulo">VENTANA MODAL</div> -->
-            <div class="section-title">
-            <br>
-            <br>
-          <p>Diego León Castaño Castaño adiestrador canino profesional con más de 15 años de experiencia.<p>
+        <div class="section-title">
+          <div class="parrafos">    
+            <p>Diego León Castaño Castaño adiestrador canino profesional con más de 15 años de experiencia.<p>
 
-          <p>Diplomado en la escuela de adiestramiento Canino Handler Colombia en el 2008.<p>
+            <p>Diplomado en la escuela de adiestramiento canino Handler Colombia en el 2008.<p>
 
-          <p>Participación en el 1er seminario internacional de adiestramiento Canino de perros de trabajo en la universidad UANL en noviembre del 2009 en coordinación con la fuerza aérea Colombiana.<p>
+            <p>Participación en el 1er seminario internacional de adiestramiento Canino de perros de trabajo en la universidad UANL en noviembre del 2009 en coordinación con la fuerza aérea Colombiana.<p>
 
-          <p>Participación en seminarios de IGP, OCI, con los campeones mundiales. Valentina Balli, Arnold Kivago, Miriam Sodlengard.<p>
+            <p>Participación en seminarios de IGP, OCI, con los campeones mundiales. Valentina Balli, Arnold Kivago, Miriam Sodlengard.<p>
 
-          <p>Adiestrador Canino calificado K-nes de la escuela Colombia de adiestramiento, con énfasis en educación y modificación de conducta canina</p>
+            <p>Adiestrador Canino calificado K-nes de la escuela Colombia de adiestramiento, con énfasis en educación y modificación de conducta canina</p>
+          </div>
         </div>
-        </div>
+      </div>
     </div>   
-      </section> 
+  </section> 
   <!-- End Team Section -->
   <!-- ======= Footer ======= -->
   <footer id="footer">
