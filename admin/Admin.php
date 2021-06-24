@@ -8,7 +8,7 @@ if (!isset($_SESSION['loggedin'])) {
 	exit; }
 
   //Script para definirle la vida de duración a una sesión
-  $inactivo = 1200;
+  $inactivo = 1800;
 
     if(isset($_SESSION['tiempo']) ) {
     $vida_session = time() - $_SESSION['tiempo'];
@@ -69,11 +69,18 @@ if (!isset($_SESSION['loggedin'])) {
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="../index.php" class="nav-link">Inicio</a>
+      </li>
+    </ul>
   
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
-      
+      <!-- Navbar Search -->      
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>
@@ -83,65 +90,117 @@ if (!isset($_SESSION['loggedin'])) {
   </nav>
   <!-- /.navbar -->
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="color:white">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link col-md-6">
-      <img src="../assets/img/Logo.ico" rel="icon" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light"><?php echo $row['Apellidos_Usuario']?>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row['Nombre_Usuario']?></span>
-    </a>
-    <!-- Sidebar -->
+    <!-- <a href="index3.html" class="brand-link">
+    <img src="../assets/img/Logo.ico" rel="icon" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Panel administrador</span>
+    </a> -->
+    <!-- SidebarSearch Form -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
-      <!-- Sidebar Menu -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+        <img src="../assets/img/Logo.ico" rel="icon" class="brand-image img-circle elevation-4" style="opacity: .8">
+        </div>
+        <div class="info">
+        <span class="brand-text font-weight-light" style="font-size:2.5vh"><?php echo $row['Apellidos_Usuario']?><br><?php echo $row['Nombre_Usuario']?></span>
+        </div>
+      </div>
+
       <nav class="mt-2">
-      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-      <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-           <!-- Add icons to the links using the .nav-icon class
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-               <!-- <li>&nbsp;&nbsp;&nbsp;<a><i class="fa fa-dashboard"></i> Inicio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fa fa-chevron-right"></span></a> -->
-          <li >
-            <a href="Admin.php" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active" onclick="alert('Actualmente te encuentras en el inicio')">
+              <i class="nav-icon fa fa-dashboard"></i>
               <p>
-                Inicio             
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="Clientes.php" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Clientes
+                Inicio
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="nav-icon fas fa-users"></i>
               <p>
-                Mascota/cliente                   
+                Usuarios
+                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
-              
+              <li class="nav-item">
+                <a href="pages/layout/top-nav.html" class="nav-link">
+                  <i class="far fa-registered nav-icon"></i>
+                  <p>Registrar</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/top-nav.html" class="nav-link">
+                <i class="fas fa-user-friends nav-icon"></i>
+                  <p>Usuarios registrados</p>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a href="Configuracion.php" class="nav-link">
-              <i class="nav-icon fas fa-tree"></i>
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-dog"></i>
               <p>
-                Configuración      
+                Mascota/Cliente
+                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
-            </li> 
-        </ul>
+              <li class="nav-item">
+                <a href="pages/layout/top-nav.html" class="nav-link">
+                <i class="fas fa-paw nav-icon"></i>
+                  <p>Agregar mascota</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/top-nav.html" class="nav-link">
+                <i class="fas fa-cat nav-icon"></i>
+                  <p>Mascotas registradas</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/top-nav.html" class="nav-link">
+                <i class="fas fa-notes-medical nav-icon"></i>
+                  <p>Historial</p>
+                </a>
+              </li>
+            </ul>
+          </li>   
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-calendar-alt"></i>
+              <p>
+                Citas
+              </p>
+            </a>
+          </li>  
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+            <i class="nav-icon far fa-user-circle"></i>
+              <p>
+                Perfil
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-cogs"></i>
+              <p>
+                Configuración
+              </p>
+            </a>
+          </li>    
       </nav>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
   </aside>
-
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
