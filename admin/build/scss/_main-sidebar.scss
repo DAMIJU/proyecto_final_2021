@@ -398,12 +398,12 @@
     }
 
     // Hover and active states
-    &.menu-open > .nav-link,
+    /* &.menu-open > .nav-link,
     &:hover > .nav-link,
     > .nav-link:focus  {
       background-color: $sidebar-dark-hover-bg;
       color: $sidebar-dark-hover-color;
-    }
+    } */
 
     > .nav-link.active {
       color: $sidebar-dark-hover-color;
