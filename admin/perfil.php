@@ -24,7 +24,6 @@
   <div>
     <h1>Hola esto es el perfil de administrador</h1>
   </div>
-
   <script>
     $(window).load(function() {
       $(".loader").fadeOut("slow");

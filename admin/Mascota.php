@@ -1,11 +1,37 @@
+<?php
+// Solo se permite el ingreso con el inicio de sesion.
+session_start();
+require_once("ConectarBD_Mysql.php");
+// Si el usuario no se ha logueado se le regresa al inicio.
+if (!isset($_SESSION['loggedin'])) {
+	echo "<script>alert('No has iniciado sesión');window.location='../Login.php'</script>";
+	exit; }
+
+  //Script para definirle la vida de duración a una sesión
+  $inactivo = 14400;
+
+    if(isset($_SESSION['tiempo']) ) {
+    $vida_session = time() - $_SESSION['tiempo'];
+		if($vida_session > $inactivo)
+		{
+			session_destroy();
+			echo "<script>alert('La sesión ha caducado');window.location='../Login.php'</script>";
+		}
+    }
+
+    $_SESSION['tiempo'] = time();
+    $NombreSesion_User = $_SESSION['name'];
+    $Consulta_DatosSesion = "SELECT * FROM usuarios WHERE usuario ='$NombreSesion_User'";
+    $ejecuta = $conn->query($Consulta_DatosSesion);
+    $row = $ejecuta->fetch_assoc()
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mascota</title>
+  <title>Panel de Control</title>
 
-  
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
@@ -37,12 +63,10 @@
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
-
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
   </div>
-
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
@@ -51,11 +75,9 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="../index.php" class="nav-link">Inicio</a>
+        <!-- <a href="../index.php" class="nav-link">Inicio</a> -->
       </li>
     </ul>
-  
-    <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->      
       <li class="nav-item">
@@ -65,17 +87,8 @@
       </li>
     </ul>
   </nav>
-  <!-- /.navbar -->
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="color:white">
-    <!-- Brand Logo -->
-    <!-- <a href="index3.html" class="brand-link">
-    <img src="../assets/img/Logo.ico" rel="icon" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Panel administrador</span>
-    </a> -->
-    <!-- SidebarSearch Form -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="color:white">  
     <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
         <img src="../assets/img/Logo.ico" rel="icon" class="brand-image img-circle elevation-4" style="opacity: .8">
@@ -84,11 +97,8 @@
         <span class="brand-text font-weight-light" style="font-size:2.5vh"><?php echo $row['Apellidos_Usuario']?><br><?php echo $row['Nombre_Usuario']?></span>
         </div>
       </div>
-
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">       
           <li class="nav-item menu-open">
             <a href="Admin.php" class="nav-link">
               <i class="nav-icon fa fa-dashboard"></i>
@@ -98,56 +108,19 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="Dueño.php" class="nav-link">        
+            <a href="Dueño.php" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
-                Dueño
-                <!-- <i class="fas fa-angle-left right"></i> -->
+                Dueño            
               </p>
-            </a>
-            <!-- <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-registered nav-icon"></i>
-                  <p>Registrar</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                <i class="fas fa-user-friends nav-icon"></i>
-                  <p>Usuarios registrados</p>
-                </a>
-              </li>
-            </ul>
-          </li> -->
+            </a>    
           <li class="nav-item">
-            <a href="Mascota.php" class="nav-link active"onclick="alert('Actualmente te encuentras en Mascota')">
+            <a href="Mascota.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Mascota')">
               <i class="nav-icon fas fa-dog"></i>
               <p>
-                Mascota
-                <!-- <i class="fas fa-angle-left right"></i> -->
+                Mascota             
               </p>
-            </a>
-            <!-- <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                <i class="fas fa-paw nav-icon"></i>
-                  <p>Agregar mascota</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                <i class="fas fa-cat nav-icon"></i>
-                  <p>Mascotas registradas</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                <i class="fas fa-notes-medical nav-icon"></i>
-                  <p>Historial</p>
-                </a>
-              </li>
-            </ul> -->
+            </a>     
           </li>   
           <li class="nav-item">
             <a href="Citas.php" class="nav-link">
@@ -157,16 +130,8 @@
               </p>
             </a>
           </li>  
-          <!-- <li class="nav-item">
-            <a href="#" class="nav-link">
-            <i class="nav-icon far fa-user-circle"></i>
-              <p>
-                Perfil
-              </p>
-            </a>
-          </li> -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="Configuracion.php" class="nav-link">
             <i class="nav-icon fas fa-cogs"></i>
               <p>
                 Configuración
@@ -198,22 +163,18 @@
             <button class="btn btn-danger" onclick="location.href='#'">Cerrar sesión</button>
           </div>
       </nav>
-      <!-- /.sidebar-menu -->
     </div>
-    <!-- /.sidebar -->
   </aside>
-  <!-- Content Wrapper. Contains page content -->
+</div>
   <div class="content-wrapper">
-    <h1>MASCOTA!</h1>
-  </div>
-  <!-- /.content-wrapper -->
-
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.1.0
-    </div>
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-  </footer>
+    <!-- Aqui va el contenido -->
+  </div>   
+    <footer class="main-footer">
+      <div class="float-right d-none d-sm-block">
+        <b>Version</b> 3.1.0
+      </div>
+        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    </footer>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -221,7 +182,6 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-
 <!-- jQuery -->
 <script src="../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
