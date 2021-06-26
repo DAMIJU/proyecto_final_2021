@@ -37,6 +37,10 @@ if (!isset($_SESSION['loggedin'])) {
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- fullCalendar -->
+  <link rel="stylesheet" href="../plugins/fullcalendar/main.css">
+
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- JQVMap -->
@@ -50,11 +54,15 @@ if (!isset($_SESSION['loggedin'])) {
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<<<<<<< HEAD
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <!-- Bootstrap para DataTables -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+=======
+
+>>>>>>> parent of 35cb6f9 (Co-authored-by: DarwinMeneses <DarwinMeneses@users.noreply.github.com>)
   <style>
     li{
       list-style: none;
@@ -166,6 +174,7 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </aside>
 </div>
+<<<<<<< HEAD
   <div class="content-wrapper"> 
   <h1>MASCOTA</h1>
   <table id="Tabla_mascota" class="table table-striped" style="width:100%">
@@ -649,6 +658,11 @@ if (!isset($_SESSION['loggedin'])) {
         </tfoot>
     </table>
    </div>  
+=======
+  <div class="content-wrapper">
+    <!-- Aqui va el contenido -->
+  </div>   
+>>>>>>> parent of 35cb6f9 (Co-authored-by: DarwinMeneses <DarwinMeneses@users.noreply.github.com>)
     <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
         <b>Version</b> 3.1.0
@@ -670,6 +684,9 @@ if (!isset($_SESSION['loggedin'])) {
 <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../dist/js/adminlte.min.js"></script>
+<!-- fullCalendar 2.2.5 -->
+<script src="../plugins/moment/moment.min.js"></script>
+<script src="../plugins/fullcalendar/main.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
 <!-- Page specific script -->

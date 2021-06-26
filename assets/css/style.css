@@ -1,3 +1,10 @@
+/**
+* Template Name: Tempo - v2.2.1
+* Template URL: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -21,7 +28,9 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Página emergente de index (Darwin Meneses)
+  */
 * {
 	padding: 0;
 	margin: 0;
@@ -74,7 +83,7 @@ body {
 }
 
 /* ------------------------- */
-/* POPUP 
+/* POPUP */
 /* ------------------------- */
 
 .overlay {
@@ -135,6 +144,11 @@ body {
 	opacity: 0;
 }
 
+/* .popup .col-lg-4 .info p {
+  text-align: center;
+} */
+
+
 .popup form .contenedor-inputs {
 	opacity: 0;
 }
@@ -180,6 +194,7 @@ body {
     padding: 0px 8px 0px 8px;
   }
 
+
 /* ------------------------- */
 /* ANIMACIONES */
 /* ------------------------- */
@@ -216,6 +231,8 @@ body {
 	from { opacity: 0; }
 	to { opacity: 1; }
 }
+
+
 
 .back-to-top {
   position: fixed;
@@ -255,6 +272,7 @@ body {
 }
 #header:before {
   content: "";
+  /* background: rgba(0, 0, 0, 0.2); */
   position: absolute;
   bottom: 0;
   top: 0;
@@ -279,6 +297,22 @@ body {
 #header .logo img {
   max-height: 70px;
 }
+
+/* #header.header-scrolled, #header.header-inner-pages {
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 12px 0;
+}
+
+#header.header-scrolled .logo a, #header.header-inner-pages .logo a {
+  color: #493c3e;
+}
+
+@media (max-width: 992px) {
+  #header .logo {
+    font-size: 28px;
+  }
+} */
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -394,6 +428,10 @@ body {
   position: absolute;
   right: 15px;
 }
+
+/* .header-scrolled .nav-menu > ul > li > a, .header-inner-pages .nav-menu > ul > li > a {
+  color: #493c3e;
+} */
 
 @media (max-width: 1366px) {
   .nav-menu .drop-down .drop-down ul {
@@ -629,6 +667,15 @@ body {
   
 }
 
+ /* #hero h3 {
+   background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 26px;
+  padding: 10px 30px;
+  margin-bottom: 30px;
+  border-radius: 50px;
+} */
+
 #hero h1 {
   margin: -50px 0 10px 0;
   font-size: 48px;
@@ -762,7 +809,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# NOSOTROS
+# Nosotros
 --------------------------------------------------------------*/
 .about{
   margin-top: 190px;
@@ -775,10 +822,27 @@ section {
   padding-bottom: 30px;
 }
 
+/* .aboutcanino {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../img/fondoabout.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative; 
+} */
 .aboutcanino:before {
   background: rgba(0, 0, 0, 0.3);
 }
-
+/* .aboutcaninov {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../img/finabout.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+} */
 .aboutcaninov:before {
   background: rgba(0, 0, 0, 0.3);
 }
@@ -872,6 +936,8 @@ section {
   -webkit-transform: rotate(360deg);
 }
 
+/* .img-sepia:hover {filter: saturate(180%);} */
+
 .about .content p span {
   color: #9ACD32;
 }
@@ -923,8 +989,9 @@ section {
   color: #fff;
   text-decoration: none;
 }
+
 /*--------------------------------------------------------------
-# SERVICIOS
+# Services
 --------------------------------------------------------------*/
 .services {
   padding-bottom: 30px;
@@ -946,6 +1013,25 @@ section {
   z-index: 1;
   text-align: center;
 }
+
+/* .services .icon-box::before {
+  content: '';
+  position: absolute;
+  background: #fdeff2;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 100%;
+  transition: all 0.7s;
+  z-index: -1;
+} */
+
+/* .services .icon-box:hover::before {
+  background: #2D92CB;
+  top: 0;
+  border-radius: 0px;
+}
+ */
 .services .icon {
   margin-bottom: 15px;
 }
@@ -1078,7 +1164,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# GALERIA
+# Portfolio
 --------------------------------------------------------------*/
 .portfolio {
   margin-top: 190px;
@@ -1173,6 +1259,7 @@ section {
   width: 350px;
 }
   
+
 .portfolio .portfolio-item .portfolio-info {
   opacity: 0;
   position: absolute;
@@ -1340,8 +1427,74 @@ section {
 }
 
 /*--------------------------------------------------------------
-# MODAL DIEGO CASTAÑO
+# F.A.Q
 --------------------------------------------------------------*/
+.faq {
+  padding: 60px 0;
+  background-image: #fff;
+  
+}
+.faq:before {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.faq .faq-list {
+  padding: 0;
+  list-style: none;
+}
+
+.faq .faq-list li {
+  padding: 0 0 20px 25px;
+}
+
+.faq .faq-list a {
+  display: block;
+  position: relative;
+  font-family: #e43c5c;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.faq .faq-list i {
+  font-size: 18px;
+  position: absolute;
+  left: -25px;
+  top: 6px;
+}
+
+.faq .faq-list p {
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.faq .faq-list a.collapse {
+  color: #e43c5c;
+}
+
+.faq .faq-list a.collapsed {
+  color: #343a40;
+}
+
+.faq .faq-list a.collapsed:hover {
+  color: #e43c5c;
+}
+
+.faq .faq-list a.collapsed i::before {
+  content: "\eab2" !important;
+}
+
+@media (min-width: 1280px) {
+  .faq .container {
+    padding: 0 120px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+/*
+Full screen Modal 
+*/
 .fullscreen-modal .modal-dialog {
   margin: 0;
   margin-right: auto;
@@ -1619,6 +1772,167 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact .info {
+  width: 100%;
+  background: #fff;
+}
+
+.contact .info i {
+  font-size: 20px;
+  color: #9ACD32;
+  float: left;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #493c3e;
+  text-align: left;
+}
+
+.contact .info p {
+  padding: 0 0 0 60px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #816a6e;
+  text-align: left;
+}
+
+.contact .info .email, .contact .info .phone {
+  margin-top: 40px;
+}
+
+.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+  background: #9ACD32;
+  color: #fff;
+}
+
+.contact .php-email-form {
+  width: 100%;
+  background: #fff;
+}
+
+.contact .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+
+.contact .php-email-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .error-message br + br {
+  margin-top: 25px;
+}
+
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input, .contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
+  border-color: #9ACD32;
+}
+
+.contact .php-email-form input {
+  height: 44px;
+}
+
+.contact .php-email-form textarea {
+  padding: 10px 12px;
+}
+
+.contact .php-email-form button[type="submit"] {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 30px 9px 30px;
+  border-radius: 10px;
+  transition: 0.3s;
+  background-color: #9ACD32;
+  color: #2C2E27;
+}
+
+.contact .php-email-form button[type="submit"]:hover {
+  background:  #83AE2A;
+  color: #2C2E27;
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs {
@@ -1659,7 +1973,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# GALERIA DETALLES
+# Portfolio Details
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
@@ -1746,6 +2060,7 @@ section {
 /*--------------------------------------------------------------
 # Panel Administrador
 --------------------------------------------------------------*/
+<<<<<<< HEAD
 
 
 
@@ -1784,6 +2099,9 @@ section {
 
 
  .modal-dialog .modal-dialog .main-section{
+=======
+.modal-dialog .modal-dialog .main-section{
+>>>>>>> parent of 35cb6f9 (Co-authored-by: DarwinMeneses <DarwinMeneses@users.noreply.github.com>)
   margin:0 auto;
   margin-top:25%;
   padding: 0;
@@ -1801,7 +2119,7 @@ section {
 }
 
 .modal-dialog .modal-dialog .user-img img{
-  width: 100px;
+  width: 100xp;
   height: 100px;
   box-shadow: 0px 0px 3px #848484;
   border-radius: 50%;
@@ -1846,7 +2164,11 @@ section {
 }
 .modal-dialog input[type=checkbox] {
 transform: scale(1.5);
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> parent of 35cb6f9 (Co-authored-by: DarwinMeneses <DarwinMeneses@users.noreply.github.com>)
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
