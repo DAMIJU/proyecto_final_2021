@@ -54,15 +54,11 @@ if (!isset($_SESSION['loggedin'])) {
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-<<<<<<< HEAD
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <!-- Bootstrap para DataTables -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
-=======
-
->>>>>>> parent of 35cb6f9 (Co-authored-by: DarwinMeneses <DarwinMeneses@users.noreply.github.com>)
   <style>
     li{
       list-style: none;
@@ -174,7 +170,6 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </aside>
 </div>
-<<<<<<< HEAD
   <div class="content-wrapper"> 
   <h1>MASCOTA</h1>
   <table id="Tabla_mascota" class="table table-striped" style="width:100%">
@@ -658,11 +653,6 @@ if (!isset($_SESSION['loggedin'])) {
         </tfoot>
     </table>
    </div>  
-=======
-  <div class="content-wrapper">
-    <!-- Aqui va el contenido -->
-  </div>   
->>>>>>> parent of 35cb6f9 (Co-authored-by: DarwinMeneses <DarwinMeneses@users.noreply.github.com>)
     <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
         <b>Version</b> 3.1.0

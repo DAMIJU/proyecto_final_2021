@@ -2060,7 +2060,6 @@ Full screen Modal
 /*--------------------------------------------------------------
 # Panel Administrador
 --------------------------------------------------------------*/
-<<<<<<< HEAD
 
 
 
@@ -2099,9 +2098,6 @@ Full screen Modal
 
 
  .modal-dialog .modal-dialog .main-section{
-=======
-.modal-dialog .modal-dialog .main-section{
->>>>>>> parent of 35cb6f9 (Co-authored-by: DarwinMeneses <DarwinMeneses@users.noreply.github.com>)
   margin:0 auto;
   margin-top:25%;
   padding: 0;
@@ -2164,11 +2160,7 @@ Full screen Modal
 }
 .modal-dialog input[type=checkbox] {
 transform: scale(1.5);
-<<<<<<< HEAD
 } 
-=======
-}
->>>>>>> parent of 35cb6f9 (Co-authored-by: DarwinMeneses <DarwinMeneses@users.noreply.github.com>)
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
