@@ -149,10 +149,11 @@
               <a id="btnabrir" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"></a>
           </div>
         </div> 
-    <div class="fondo_transparente">
-      <div class="modal">        
+    <div class="fondo_transparente row">
+      <div class="modal col-xs-12 col-sm-12 col-md-9">        
            <a class="modal_cerrar"> <i class="fas fa-times"></i></a>   
             <!-- <div class="modal_titulo">VENTANA MODAL</div> -->
+           
         <div class="section-title">
           <div class="parrafos">    
             <p>Diego León Castaño Castaño adiestrador canino profesional con más de 15 años de experiencia.<p>
