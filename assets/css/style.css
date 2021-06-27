@@ -571,7 +571,7 @@ body {
   width: 100%;
   display: none;
 }
-.modal{
+/* .modal{
   background: linear-gradient(0deg,white 95%,  #9ACD32 5%);
   width: 600px;
   height: 520px;
@@ -614,7 +614,7 @@ body {
  padding-top: 20px;
  display: flex;
  justify-content: space-evenly;
-}
+} */
 
 .boton{
   background: white;

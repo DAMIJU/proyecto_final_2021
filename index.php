@@ -146,13 +146,40 @@
               <div class="member-info">
                 <h2>Adiestrador canino</h2>
               </div>
-              <a id="btnabrir" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"></a>
+              <button type="button" class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABnUlEQVRIic3VT4hNcRQH8M958xIhMauZldQsxGo2iizt1BQpJbYSOwuWVrKyGrEYZmNjYUG2bEVWylKxUJSFmh6vifla3EtTmveHeeVbt+6955zv99x7/vwqyTxOoGtz8R0PK8kH3MHqJgtswflK0quq7UnOYC9u4CLWqmoxyTXM/IXAZXyqJD1Mo4cOLuB26zSHx3iEL2OQX21j33ehqvpJbmIfHuAQgnd4g2NjZv9WUwOVpI/jYxKMiiddTfdcmZBAV1uDiSBJrzMp8l8YSyBJJ8lYMSM7t8RLWBpLZJQatJkvJ/naXsujiCTp/Z7kIZnfxSxeYg3zWMHZqvoxSGBgFi35vZZ8AX3NzjqJnbifZGoQx7DPPIitWKiq/q+XVbWKUygcGEQwcEVX1Wuc3sDW38i2Hv/XHLTIJAV2GW9t62Iqyashfreqahn78aztnKfYMSSuU0lmsG2I40fs0czBXFX1ksxqOmwQvg2xN0gym+RFkksjBazDH22a5DCOto/TmqPvCK5X1eI/C2j+6+72/jOe41xVrYxLDj8BTZCtqgedHwgAAAAASUVORK5CYII="></button>
           </div>
-        </div> 
-    <div class="fondo_transparente">
-      <div class="modal">        
-           <a class="modal_cerrar"> <i class="fas fa-times"></i></a>   
-            <!-- <div class="modal_titulo">VENTANA MODAL</div> -->
+        </div>
+        <!---Se abre código de modal que muestra info sobre Caninos Casme-->
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header" style="background-color:#9ACD32">
+                <h5 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Adiestrador canino</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Diego León Castaño Castaño adiestrador canino profesional con más de 15 años de experiencia.<p>
+
+                <p>Diplomado en la escuela de adiestramiento canino Handler Colombia en el 2008.<p>
+
+                <p>Participación en el 1er seminario internacional de adiestramiento Canino de perros de trabajo en la universidad UANL en noviembre del 2009 en coordinación con la fuerza aérea Colombiana.<p>
+
+                <p>Participación en seminarios de IGP, OCI, con los campeones mundiales. Valentina Balli, Arnold Kivago, Miriam Sodlengard.<p>
+
+                <p>Adiestrador Canino calificado K-nes de la escuela Colombia de adiestramiento, con énfasis en educación y modificación de conducta canina</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- <div class="fondo_transparente row">
+      <div class="modal col-xs-12 col-sm-12 col-md-9">        
+           <a class="modal_cerrar"> <i class="fas fa-times"></i></a>  
+           
         <div class="section-title">
           <div class="parrafos">    
             <p>Diego León Castaño Castaño adiestrador canino profesional con más de 15 años de experiencia.<p>
@@ -167,7 +194,7 @@
           </div>
         </div>
       </div>
-    </div>   
+    </div>    -->
   </section> 
   <!-- End Team Section -->
   <!-- ======= Footer ======= -->
