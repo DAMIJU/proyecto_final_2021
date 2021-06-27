@@ -146,13 +146,32 @@
               <div class="member-info">
                 <h2>Adiestrador canino</h2>
               </div>
-              <a id="btnabrir" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"></a>
+              <button type="button" class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop"></button>
           </div>
-        </div> 
-    <div class="fondo_transparente row">
+        </div>
+        <!---Se abre código de modal que muestra info sobre Caninos Casme-->
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header" style="background-color:#9ACD32">
+                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Understood</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- <div class="fondo_transparente row">
       <div class="modal col-xs-12 col-sm-12 col-md-9">        
-           <a class="modal_cerrar"> <i class="fas fa-times"></i></a>   
-            <!-- <div class="modal_titulo">VENTANA MODAL</div> -->
+           <a class="modal_cerrar"> <i class="fas fa-times"></i></a>  
            
         <div class="section-title">
           <div class="parrafos">    
@@ -168,7 +187,7 @@
           </div>
         </div>
       </div>
-    </div>   
+    </div>    -->
   </section> 
   <!-- End Team Section -->
   <!-- ======= Footer ======= -->
