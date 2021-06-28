@@ -18,23 +18,12 @@ if (!isset($_SESSION['loggedin'])) {
 			echo "<script>alert('La sesión ha caducado');window.location='../Login.php'</script>";
 		}
     }
-
     $_SESSION['tiempo'] = time();
     $NombreSesion_User = $_SESSION['name'];
     $Consulta_DatosSesion = "SELECT * FROM usuarios WHERE usuario ='$NombreSesion_User'";
     $ejecuta = $conn->query($Consulta_DatosSesion);
     $row = $ejecuta->fetch_assoc()
 ?>
-
-<?php
-  $conn = mysqli_connect("localhost","root","","database_casme");
-     
-  if(!$conn){
-      die("Connection error: " . mysqli_connect_error());	
-  }
-
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -64,10 +53,11 @@ if (!isset($_SESSION['loggedin'])) {
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
   <!-- Bootstrap para DataTables -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
-
   <style>
     li{
       list-style: none;
@@ -121,7 +111,7 @@ if (!isset($_SESSION['loggedin'])) {
             </a>
           </li>
           <li class="nav-item">
-            <a href="Dueño.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección Dueño')">
+            <a href="Dueño.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Mascota')">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Dueño            
@@ -180,43 +170,41 @@ if (!isset($_SESSION['loggedin'])) {
   </aside>
 </div>
   <div class="content-wrapper"> 
-  <h1>DUEÑO</h1>
-  <table id="Tabla_dueño" class="table table-striped" style="width:100%">
+  <h1>MASCOTA</h1>
+  <table id="Tabla_mascota" class="table table-striped" style="width:100%">
         <thead>
             <tr>
-                <th>Doc</th>
-                <th>Nombre</th>
-                <th>Celular</th>
-                <th>Telefono_Fijo</th>
-                <th>Dirección</th>
-                <th>Ciudad</th>
-                <th>Correo</th>
-                <th>Fecha_Registro</th>
+                <th>Registro</th>
+                <th>Documento</th>
+                <th>Dueño</th>
+                <th>Mascota</th>
+                <th>Raza</th>
+                <th>Fecha Nac</th>
+                <th>Sexo</th>
+                <th>Fecha de registro</th>                     
             </tr>
         </thead>
-
-        <?php
-        $sql="SELECT * FROM dueño";
-        $result=mysqli_query($conn,$sql);
-
-        while($mostrar=mysqli_fetch_array($result)){
-
-        ?>
         <tbody>
+        <?php  
+          include("DB/conexion.php");
+          $query="SELECT * FROM tabla_mascotas";
+          $resultado= $con->query($query);
+          while($mostrar=$resultado->fetch_assoc()){
+        ?>   
             <tr>
-                <td><?php echo $mostrar['Doc'] ?></td>
-                <td><?php echo $mostrar['Nombre'] ?></td>
-                <td><?php echo $mostrar['Celular'] ?></td>
-                <td><?php echo $mostrar['Telefono_Fijo'] ?></td>
-                <td><?php echo $mostrar['Dirección'] ?></td>
-                <td><?php echo $mostrar['Ciudad'] ?></td>
-                <td><?php echo $mostrar['Correo'] ?></td>
-                <td><?php echo $mostrar['Fecha_Registro'] ?></td>
+                <td><?php echo $mostrar['Num_Registro']?></td>
+                <td><?php echo $mostrar['Doc_Dueño']?></td>
+                <td><?php echo $mostrar['Nombre_Dueño']?></td>
+                <td><?php echo $mostrar['Nombre_Mascota']?></td>
+                <td><?php echo $mostrar['Raza']?></td>
+                <td><?php echo $mostrar['Fecha/Nac-Edad']?></td>
+                <td><?php echo $mostrar['Sexo']?></td>
+                <td><?php echo $mostrar['Fecha_Registro']?></td>
             </tr>
+            <?php
+              }
+            ?>   
         </tbody>
-        <?php
-        }
-        ?>
         <tfoot>
             <tr>
                 <th>Name</th>
@@ -228,7 +216,7 @@ if (!isset($_SESSION['loggedin'])) {
             </tr>
         </tfoot>
     </table>
-  </div> 
+   </div>  
     <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
         <b>Version</b> 3.1.0
@@ -302,7 +290,7 @@ if (!isset($_SESSION['loggedin'])) {
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
 <script> $(document).ready(function() {
-    $('#Tabla_dueño').DataTable( {
+    $('#Tabla_mascota').DataTable( {
         language: {
             url: 'https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
         }
@@ -310,4 +298,3 @@ if (!isset($_SESSION['loggedin'])) {
 } );
 </script>
 </body>
-</html>
