@@ -616,15 +616,6 @@ body {
  justify-content: space-evenly;
 } */
 
-.Img_VacunamosTuPerrito, .Img_GimnasiaCanina{
-  border-radius: 5px;
-  border:2px solid #fff;
-  box-shadow: 10px 10px 5px #ccc;
-  -moz-box-shadow: 10px 10px 5px #ccc;
-  -webkit-box-shadow: 10px 10px 5px #ccc;
-  -khtml-box-shadow: 10px 10px 5px #ccc;
-}
-
 .boton{
   background: white;
   padding: 8px 30px;
@@ -1021,6 +1012,17 @@ section {
   border-radius: 8px;
   z-index: 1;
   text-align: center;
+}
+
+
+.Img_VacunamosTuPerrito, .Img_GimnasiaCanina, .Img_EsteticaCanina, .Img_Adiestramiento{
+  border-radius: 5px;
+  border:2px solid #fff;
+  box-shadow: 10px 10px 5px #ccc;
+  -moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+  -khtml-box-shadow: 10px 10px 5px #ccc;
+  width:40%;
 }
 
 /* .services .icon-box::before {

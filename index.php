@@ -171,30 +171,11 @@
                 <p>Adiestrador Canino calificado K-nes de la escuela Colombia de adiestramiento, con énfasis en educación y modificación de conducta canina</p>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
               </div>
             </div>
           </div>
         </div>
-    <!-- <div class="fondo_transparente row">
-      <div class="modal col-xs-12 col-sm-12 col-md-9">        
-           <a class="modal_cerrar"> <i class="fas fa-times"></i></a>  
-           
-        <div class="section-title">
-          <div class="parrafos">    
-            <p>Diego León Castaño Castaño adiestrador canino profesional con más de 15 años de experiencia.<p>
-
-            <p>Diplomado en la escuela de adiestramiento canino Handler Colombia en el 2008.<p>
-
-            <p>Participación en el 1er seminario internacional de adiestramiento Canino de perros de trabajo en la universidad UANL en noviembre del 2009 en coordinación con la fuerza aérea Colombiana.<p>
-
-            <p>Participación en seminarios de IGP, OCI, con los campeones mundiales. Valentina Balli, Arnold Kivago, Miriam Sodlengard.<p>
-
-            <p>Adiestrador Canino calificado K-nes de la escuela Colombia de adiestramiento, con énfasis en educación y modificación de conducta canina</p>
-          </div>
-        </div>
-      </div>
-    </div>    -->
   </section> 
   <!-- End Team Section -->
   <!-- ======= Footer ======= -->
@@ -202,14 +183,10 @@
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
-          &copy; Copyright <strong><span>Tempo</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>Caninos Casme</span></strong>. Todos los derechos reservados
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Diseñado por <a href="#">Caninos Casme</a>
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
