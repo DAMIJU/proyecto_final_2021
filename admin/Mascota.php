@@ -280,9 +280,9 @@ if (!isset($_SESSION['loggedin'])) {
    </div>
     <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
-        <b>Version</b> 3.1.0
+        <b>Servicios Caninos Casme.</b> 
       </div>
-        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+        <strong>Panel de administrador</a></strong> 
     </footer>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
