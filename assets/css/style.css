@@ -616,7 +616,7 @@ body {
  justify-content: space-evenly;
 } */
 
-.Img_VacunamosTuPerrito{
+.Img_VacunamosTuPerrito, .Img_GimnasiaCanina{
   border-radius: 5px;
   border:2px solid #fff;
   box-shadow: 10px 10px 5px #ccc;

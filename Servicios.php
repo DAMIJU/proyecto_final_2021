@@ -66,7 +66,7 @@
               <div class="icon"><img src="https://img.icons8.com/pastel-glyph/64/000000/dog-heart--v2.png"/></div>
               <h4 class="title"><a href="">Adiestramiento</a></h4>
               <p class="description"></p>
-              <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/ios/24/000000/cursor-in-window.png"/></button>
+              <button type="button" data-toggle="modal" data-target="#Modal_ServicioAdiestramiento" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/ios/24/000000/cursor-in-window.png"/></button>
             </div>
           </div>
 
@@ -75,7 +75,7 @@
               <div class="icon"><img src="https://img.icons8.com/ios/64/000000/gum-.png"/></div>
               <h4 class="title"><a href="">Gimnasio</a></h4>
               <p class="description"></p>
-              <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/ios/24/000000/cursor-in-window.png"/></button>
+              <button type="button" data-toggle="modal" data-target="#Modal_ServicioGimnasio" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/ios/24/000000/cursor-in-window.png"/></button>
             </div>
           </div>
           
@@ -100,10 +100,10 @@
       </div>
       <br><br><br><br><br>
       <!---Modal Adiestramiento-->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="Modal_ServicioAdiestramiento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"style="background-color:#9ACD32">
+            <div class="modal-header" style="background-color:#9ACD32">
               <h5 class="modal-title" style="font-weight:bold" id="exampleModalLabel">Adiestramiento básico</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -139,21 +139,22 @@
       </div>
 
       <!---Modal Gimnasio-->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+      <div class="modal fade" id="Modal_ServicioGimnasio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <div class="modal-header" style="background-color:#9ACD32">
+              <h5 class="modal-title" style="font-weight:bold" id="exampleModalLabel">Gimnasia Canina</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              ...
+              <center><p style="color:red;font-size:20px">¡Ejercita a tu perro!</p>
+              <p>Ejercitamos a tu perro, llevamos un plan cardiobascular en caminadora, canina.</p>
+              <img class="Img_GimnasiaCanina img-fluid" style="width:40%" src="https://scontent.feoh3-1.fna.fbcdn.net/v/t45.5328-4/c110.0.740.740a/37025879_1715583431888680_7715288291993452544_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=c48759&_nc_eui2=AeHqLHI5rg-5geqXKax4zqZPj0zqbcxuilqPTOptzG6KWkegtyQkBUqHHNVycEsnesihdEnHKeRWmbRaxXdLhF1c&_nc_ohc=qeID1SBwHTYAX8By1gC&tn=C-qNvwX96CU2PIeK&_nc_ht=scontent.feoh3-1.fna&tp=29&oh=17402068e672a24e3b7ec48030f14e19&oe=60DF9C9D" alt="Gimnasia Canina"></center>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             </div>
           </div>
         </div>
@@ -171,8 +172,8 @@
               </button>
             </div>
             <div class="modal-body">
-              <center><p style="font-size:1.3em">¡Vacunamos a tu perrito según la edad!</p>
-              <img class="Img_VacunamosTuPerrito img-fluid" src="https://scontent.feoh3-1.fna.fbcdn.net/v/t45.5328-4/c120.0.720.720a/37018219_1909743955779661_9157509958911131648_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=c48759&_nc_eui2=AeH45JFicbD640mMoIiLq1mf0I2f1WIrjWbQjZ_VYiuNZq4vWjFxyv_cK8I-N0EtaPxw4san6tZnNxdlwcihX8UA&_nc_ohc=YASxGsbQSDsAX8-3J7F&_nc_ht=scontent.feoh3-1.fna&tp=29&oh=f2e9301eb5afdc163d62d8c7cc66cef7&oe=60DF6DE8" style="width:40%">
+              <center>¡Vacunamos a tu perrito según la edad!</p>
+              <img class="Img_VacunamosTuPerrito img-fluid" src="https://scontent.feoh3-1.fna.fbcdn.net/v/t45.5328-4/c120.0.720.720a/37018219_1909743955779661_9157509958911131648_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=c48759&_nc_eui2=AeH45JFicbD640mMoIiLq1mf0I2f1WIrjWbQjZ_VYiuNZq4vWjFxyv_cK8I-N0EtaPxw4san6tZnNxdlwcihX8UA&_nc_ohc=YASxGsbQSDsAX8-3J7F&_nc_ht=scontent.feoh3-1.fna&tp=29&oh=f2e9301eb5afdc163d62d8c7cc66cef7&oe=60DF6DE8" style="width:40%" alt="Vacunamos tu perrito">
               </center>
             </div>
             <div class="modal-footer">
