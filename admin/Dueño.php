@@ -193,7 +193,7 @@ if (!isset($_SESSION['loggedin'])) {
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <form action="save_task.php" method="POST">
+                <form action="Añadir_Dueño.php" method="POST">
           <div class="form-group">
             <input type="text" name="Doc" class="form-control" placeholder="Documento" autofocus>
           </div>

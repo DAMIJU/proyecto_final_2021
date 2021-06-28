@@ -83,10 +83,10 @@
                 </div>
                 <form class="col-12" action="admin/validar.php" method="POST" id="Form_InicioSesion">
                     <div class="form-group" id="user-group">
-                        <input type="text" name="username" class="login-field form-control" value="" placeholder="Usuario" maxlength="10" id="login-name" autocomplete="off">
+                        <input type="text" name="username" class="login-field form-control" value="" placeholder="Usuario" maxlength="10" id="login-name">
                     </div>
                     <div class="form-group" id="contrasena-group">
-                        <input type="password" name="password" class="login-field form-control" value="" placeholder="Contraseña" maxlength="" id="login-pass" autocomplete="off">
+                        <input type="password" name="password" class="login-field form-control" value="" placeholder="Contraseña" maxlength="" id="login-pass">
                     </div>             
                     <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Acceder </button>
                 </form>

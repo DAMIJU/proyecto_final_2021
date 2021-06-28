@@ -191,7 +191,7 @@ if (!isset($_SESSION['loggedin'])) {
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <form action="save_task.php" method="POST">
+                <form action="Añadir_Mascota.php" method="POST">
             <div class="form-group">
               <input type="text" name="Registro" class="form-control" placeholder="Registro" autofocus>
             </div>
@@ -264,14 +264,12 @@ if (!isset($_SESSION['loggedin'])) {
           <tfoot>
               <tr>
                   <th>Registro</th>
-                  <!-- <th>Documento</th> -->
                   <th>Dueño</th>
                   <th>Mascota</th>
                   <th>Raza</th>
                   <th>Fecha Nac</th>
                   <th>Sexo</th>
                   <th>Acción</th>
-                  <!-- <th>Fecha de registro</th>       -->      
               </tr>
           </tfoot>
         </table>
