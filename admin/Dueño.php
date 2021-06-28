@@ -111,14 +111,14 @@ if (!isset($_SESSION['loggedin'])) {
             </a>
           </li>
           <li class="nav-item">
-            <a href="Dueño.php" class="nav-link">
+            <a href="Dueño.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Dueño')"">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Dueño            
               </p>
             </a>    
           <li class="nav-item">
-            <a href="Mascota.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Mascota')">
+            <a href="Mascota.php" class="nav-link">
               <i class="nav-icon fas fa-dog"></i>
               <p>
                 Mascota             
@@ -169,13 +169,9 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </aside>
 </div>
-    
   </div>
-  
   <div class="content-wrapper">
-  <h1>DUEÑO</h1>
-  <div class="row">
-    <div class="col-md-4">
+  <h1>DUEÑO</h1><button type="button" class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABnUlEQVRIic3VT4hNcRQH8M958xIhMauZldQsxGo2iizt1BQpJbYSOwuWVrKyGrEYZmNjYUG2bEVWylKxUJSFmh6vifla3EtTmveHeeVbt+6955zv99x7/vwqyTxOoGtz8R0PK8kH3MHqJgtswflK0quq7UnOYC9u4CLWqmoxyTXM/IXAZXyqJD1Mo4cOLuB26zSHx3iEL2OQX21j33ehqvpJbmIfHuAQgnd4g2NjZv9WUwOVpI/jYxKMiiddTfdcmZBAV1uDiSBJrzMp8l8YSyBJJ8lYMSM7t8RLWBpLZJQatJkvJ/naXsujiCTp/Z7kIZnfxSxeYg3zWMHZqvoxSGBgFi35vZZ8AX3NzjqJnbifZGoQx7DPPIitWKiq/q+XVbWKUygcGEQwcEVX1Wuc3sDW38i2Hv/XHLTIJAV2GW9t62Iqyashfreqahn78aztnKfYMSSuU0lmsG2I40fs0czBXFX1ksxqOmwQvg2xN0gym+RFkksjBazDH22a5DCOto/TmqPvCK5X1eI/C2j+6+72/jOe41xVrYxLDj8BTZCtqgedHwgAAAAASUVORK5CYII="></button>
       <!-- MESSAGES -->
 
       <?php if (isset($_SESSION['message'])) { ?>
@@ -187,9 +183,17 @@ if (!isset($_SESSION['loggedin'])) {
       </div>
       <?php session_unset(); } ?>
 
-      <!-- ADD TASK FORM -->
-      <div class="card card-body">
-      <form action="save_task.php" method="POST">
+      <!-- FORMULARIO AÑADIR DUEÑO -->
+      <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header" style="background-color:#9ACD32">
+                  <h5 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Añadir Dueño</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <form action="save_task.php" method="POST">
           <div class="form-group">
             <input type="text" name="Doc" class="form-control" placeholder="Documento" autofocus>
           </div>
@@ -216,11 +220,12 @@ if (!isset($_SESSION['loggedin'])) {
           </div>
           <input type="submit" name="save_task" class="btn btn-success btn-block" value="Save Task">
         </form>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
       </div>
     </div>
-
-  <div class="col-md-8"> 
-  <div class="table-responsive table-box">
+  </div>
+</div>
   <table id="dueño" class="table table-striped table-sm non-top-border " width="100%" cellspacing="0">
         <thead>
             <tr>
