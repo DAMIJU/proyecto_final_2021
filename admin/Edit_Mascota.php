@@ -119,7 +119,7 @@ if (isset($_POST['update'])) {
             <div class="form-group">
             <input type="text" name="Sexo" class="form-control" value="<?php echo $Sexo; ?>" placeholder="Actualizar Sexo">
             </div>
-            <input type="submit" class="btn-success" name="update" value="Actualizar">                 
+            <input type="submit" class="btn-success" name="update" value="Actualizar">            
       </form>
       </div>
     </div>
