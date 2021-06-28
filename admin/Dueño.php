@@ -257,7 +257,7 @@ if (!isset($_SESSION['loggedin'])) {
                 <td><?php echo $mostrar['Correo'] ?></td>
                 <td><?php echo $mostrar['Fecha_Registro'] ?></td>
                 <td>
-              <a href="edit.php?Doc=<?php echo $mostrar['Doc']?>" class="btn btn-secondary">
+              <a href="Edit_Dueño.php?Doc=<?php echo $mostrar['Doc']?>" class="btn btn-secondary">
                 <i class="fas fa-marker"></i>
               </a>
               <a href="Delete_Dueño.php?Doc=<?php echo $mostrar['Doc']?>" class="btn btn-danger">
