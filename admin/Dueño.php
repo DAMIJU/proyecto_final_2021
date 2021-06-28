@@ -111,14 +111,14 @@ if (!isset($_SESSION['loggedin'])) {
             </a>
           </li>
           <li class="nav-item">
-            <a href="Dueño.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Mascota')">
+            <a href="Dueño.php" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Dueño            
               </p>
             </a>    
           <li class="nav-item">
-            <a href="Mascota.php" class="nav-link">
+            <a href="Mascota.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Mascota')">
               <i class="nav-icon fas fa-dog"></i>
               <p>
                 Mascota             
@@ -169,37 +169,96 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </aside>
 </div>
-  <div class="content-wrapper"> 
-  <h1>MASCOTA</h1>
-  <table id="Tabla_mascota" class="table table-striped" style="width:100%">
+    
+  </div>
+  
+  <div class="content-wrapper">
+  <h1>DUEÑO</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <!-- MESSAGES -->
+
+      <?php if (isset($_SESSION['message'])) { ?>
+      <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
+        <?= $_SESSION['message']?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <?php session_unset(); } ?>
+
+      <!-- ADD TASK FORM -->
+      <div class="card card-body">
+      <form action="save_task.php" method="POST">
+          <div class="form-group">
+            <input type="text" name="Doc" class="form-control" placeholder="Documento" autofocus>
+          </div>
+          <div class="form-group">
+          <input type="text" name="Nombre" class="form-control" placeholder="Nombre" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" name="Celular" class="form-control" placeholder="Celular" autofocus>
+          </div>
+          <div class="form-group">
+          <input type="text" name="Telefono_Fijo" class="form-control" placeholder="Telefono FIjo" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" name="Dirección" class="form-control" placeholder="Dirección" autofocus>
+          </div>
+          <div class="form-group">
+          <input type="text" name="Ciudad" class="form-control" placeholder="Ciudad" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" name="Correo" class="form-control" placeholder="Correo" autofocus>
+          </div>
+          <div class="form-group">
+          <input type="date" name="Fecha_Registro" class="form-control" placeholder="Fecha_Registro" autofocus>
+          </div>
+          <input type="submit" name="save_task" class="btn btn-success btn-block" value="Save Task">
+        </form>
+      </div>
+    </div>
+
+  <div class="col-md-8"> 
+  <div class="table-responsive table-box">
+  <table id="dueño" class="table table-striped table-sm non-top-border " width="100%" cellspacing="0">
         <thead>
             <tr>
-                <th>Registro</th>
-                <th>Documento</th>
-                <th>Dueño</th>
-                <th>Mascota</th>
-                <th>Raza</th>
-                <th>Fecha Nac</th>
-                <th>Sexo</th>
-                <th>Fecha de registro</th>                     
+                <th>Doc</th>
+                <th>Nombre</th>
+                <th>Celular</th>
+                <th>Telefono_Fijo</th>
+                <th>Dirección</th>
+                <th>Ciudad</th>
+                <th>Correo</th>
+                <th>Fecha_Registro</th> 
+                <th>Acción</th>                 
             </tr>
         </thead>
         <tbody>
         <?php  
           include("DB/conexion.php");
-          $query="SELECT * FROM tabla_mascotas";
+          $query="SELECT * FROM dueño";
           $resultado= $con->query($query);
           while($mostrar=$resultado->fetch_assoc()){
         ?>   
             <tr>
-                <td><?php echo $mostrar['Num_Registro']?></td>
-                <td><?php echo $mostrar['Doc_Dueño']?></td>
-                <td><?php echo $mostrar['Nombre_Dueño']?></td>
-                <td><?php echo $mostrar['Nombre_Mascota']?></td>
-                <td><?php echo $mostrar['Raza']?></td>
-                <td><?php echo $mostrar['Fecha/Nac-Edad']?></td>
-                <td><?php echo $mostrar['Sexo']?></td>
-                <td><?php echo $mostrar['Fecha_Registro']?></td>
+                <td><?php echo $mostrar['Doc'] ?></td>
+                <td><?php echo $mostrar['Nombre'] ?></td>
+                <td><?php echo $mostrar['Celular'] ?></td>
+                <td><?php echo $mostrar['Telefono_Fijo'] ?></td>
+                <td><?php echo $mostrar['Dirección'] ?></td>
+                <td><?php echo $mostrar['Ciudad'] ?></td>
+                <td><?php echo $mostrar['Correo'] ?></td>
+                <td><?php echo $mostrar['Fecha_Registro'] ?></td>
+                <td>
+              <!-- <a href="edit.php?id=<?php echo $mostrar['Doc']?>" class="btn btn-secondary">
+                <i class="fas fa-marker"></i>
+              </a> -->
+              <a href="Delete_Dueño.php?Doc=<?php echo $mostrar['Doc']?>" class="btn btn-danger">
+                <i class="far fa-trash-alt"></i>
+              </a>
+            </td>
             </tr>
             <?php
               }
@@ -207,16 +266,21 @@ if (!isset($_SESSION['loggedin'])) {
         </tbody>
         <tfoot>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>Doc</th>
+                <th>Nombre</th>
+                <th>Celular</th>
+                <th>Telefono_Fijo</th>
+                <th>Dirección</th>
+                <th>Ciudad</th>
+                <th>Correo</th>
+                <th>Fecha_Registro</th>  
+                <th>Acción</th>        
             </tr>
         </tfoot>
     </table>
    </div>  
+   </div>  
+   </div> 
     <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
         <b>Version</b> 3.1.0
@@ -290,7 +354,7 @@ if (!isset($_SESSION['loggedin'])) {
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
 <script> $(document).ready(function() {
-    $('#Tabla_mascota').DataTable( {
+    $('#dueño').DataTable( {
         language: {
             url: 'https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
         }
