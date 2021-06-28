@@ -179,7 +179,52 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </aside>
 </div>
-  <div class="content-wrapper"> 
+<div class="content-wrapper">
+      <!-- MESSAGES -->
+
+      <?php if (isset($_SESSION['message'])) { ?>
+      <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
+        <?= $_SESSION['message']?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <?php session_unset(); } ?>
+
+      <!-- ADD TASK FORM -->
+      <div class="col-md-4">
+      <div class="card card-body">
+        <form action="save_task.php" method="POST">
+          <div class="form-group">
+            <input type="text" name="Doc" class="form-control" placeholder="Documento" autofocus>
+          </div>
+          <div class="form-group">
+          <input type="text" name="Nombre" class="form-control" placeholder="Nombre" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" name="Celular" class="form-control" placeholder="Celular" autofocus>
+          </div>
+          <div class="form-group">
+          <input type="text" name="Telefono_Fijo" class="form-control" placeholder="Telefono FIjo" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" name="Dirección" class="form-control" placeholder="Dirección" autofocus>
+          </div>
+          <div class="form-group">
+          <input type="text" name="Ciudad" class="form-control" placeholder="Ciudad" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" name="Correo" class="form-control" placeholder="Correo" autofocus>
+          </div>
+          <div class="form-group">
+          <input type="date" name="Fecha_Registro" class="form-control" placeholder="Fecha_Registro" autofocus>
+          </div>
+          <input type="submit" name="save_task" class="btn btn-success btn-block" value="Save Task">
+        </form>
+      </div>
+      </div>
+    
+  
   <h1>DUEÑO</h1>
   <table id="Tabla_dueño" class="table table-striped" style="width:100%">
         <thead>
@@ -219,12 +264,14 @@ if (!isset($_SESSION['loggedin'])) {
         ?>
         <tfoot>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>Doc</th>
+                <th>Nombre</th>
+                <th>Celular</th>
+                <th>Telefono_Fijo</th>
+                <th>Dirección</th>
+                <th>Ciudad</th>
+                <th>Correo</th>
+                <th>Fecha_Registro</th>
             </tr>
         </tfoot>
     </table>
