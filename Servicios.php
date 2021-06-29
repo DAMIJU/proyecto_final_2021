@@ -66,8 +66,7 @@
               <div class="icon"><img src="https://img.icons8.com/pastel-glyph/64/000000/dog-heart--v2.png"/></div>
               <h4 class="title"><a href="">Adiestramiento</a></h4>
               <p class="description"></p>
-              <!-- <button type="button" data-toggle="modal" data-target="#Modal_ServicioAdiestramiento" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/ios/24/000000/cursor-in-window.png"/></button> -->
-              <a id="btnabrir" class="btn-get-started btn btn-lg scrollto span2" data-toggle="modal" data-target="#Modal_ServicioAdiestramiento"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"></a>
+              <button type="button" data-toggle="modal" data-target="#Modal_ServicioAdiestramiento" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/ios/24/000000/cursor-in-window.png"/></button>
             </div>
           </div>
 
@@ -76,8 +75,7 @@
               <div class="icon"><img src="https://img.icons8.com/ios/64/000000/gum-.png"/></div>
               <h4 class="title"><a href="">Gimnasio</a></h4>
               <p class="description"></p>
-              <!-- <button type="button" data-toggle="modal" data-target="#Modal_ServicioGimnasio" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/ios/24/000000/cursor-in-window.png"/></button> -->
-              <a id="btnabrir" class="btn-get-started btn btn-lg scrollto span2" data-toggle="modal" data-target="#Modal_ServicioGimnasio"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"></a>
+              <button type="button" data-toggle="modal" data-target="#Modal_ServicioGimnasio" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/ios/24/000000/cursor-in-window.png"/></button>
             </div>
           </div>
           
@@ -86,8 +84,7 @@
               <div class="icon"><img src="https://img.icons8.com/wired/64/000000/syringe.png"></div>
               <h4 class="title"><a href="">Vacunacion</a></h4>
               <p class="description"></p>
-              <!-- <button type="button" data-toggle="modal" data-target="#ModalServicio_Vacunacion" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/ios/24/000000/cursor-in-window.png"/></button> -->
-              <a id="btnabrir" class="btn-get-started btn btn-lg scrollto span2" data-toggle="modal" data-target="#ModalServicio_Vacunacion"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"></a>
+              <button type="button" data-toggle="modal" data-target="#ModalServicio_Vacunacion" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/ios/24/000000/cursor-in-window.png"/></button>
             </div>
           </div>
 
@@ -96,8 +93,7 @@
               <div class="icon"><img src="https://img.icons8.com/ios/64/000000/poodle.png"/></div>
               <h4 class="title"><a href="">Estetica canina</a></h4>
               <p class="description"></p>
-              <!-- <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/ios/24/000000/cursor-in-window.png"/></button> -->
-              <a id="btnabrir" class="btn-get-started btn btn-lg scrollto span2" data-toggle="modal" data-target="#exampleModal"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"></a>
+              <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/ios/24/000000/cursor-in-window.png"/></button>
             </div>
           </div>    
         </div>
