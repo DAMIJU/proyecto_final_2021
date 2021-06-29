@@ -14,10 +14,11 @@ if (!isset($_SESSION['loggedin'])) {
     $vida_session = time() - $_SESSION['tiempo'];
 		if($vida_session > $inactivo)
 		{
-			session_destroy();
+		
 			echo "<script>alert('La sesión ha caducado');window.location='../Login.php'</script>";
 		}
     }
+
     $_SESSION['tiempo'] = time();
     $NombreSesion_User = $_SESSION['name'];
     $Consulta_DatosSesion = "SELECT * FROM usuarios WHERE usuario ='$NombreSesion_User'";
@@ -66,60 +67,54 @@ if (!isset($_SESSION['loggedin'])) {
 </head>
 <?php
 include("DB/conexion.php");
-$Dueño= '';
-$Mascota= '';
-$Raza= '';
-$Fecha_Nac= '';
-$Sexo= '';
 
-if  (isset($_GET['Num_Registro'])) {
-  $Registro = $_GET['Num_Registro'];
-  $query = "SELECT * FROM tabla_mascotas WHERE Num_Registro=$Registro";
-  $resultado = mysqli_query($con, $query);
-  if (mysqli_num_rows($resultado) == 1) {
-    $mostrar = mysqli_fetch_array($resultado);
-    $Dueño = $mostrar['Nombre_Dueño'];
-    $Mascota = $mostrar['Nombre_Mascota'];
-    $Raza = $mostrar['Raza'];
-    $Fecha_Nac = $mostrar['Fecha/Nac-Edad'];
-    $Sexo = $mostrar['Sexo'];
-  }
-}
-if (isset($_POST['update'])) {
-  $Dueño = $_POST['Nombre_Dueño'];
-  $Mascota = $_POST['Nombre_Mascota'];
+$Num_Registro = $_REQUEST['Num_Registro'];
+
+
+$query="SELECT * FROM tabla_mascotas WHERE Num_Registro='$Num_Registro'";
+$resultado= $con->query($query);
+$row=$resultado->fetch_assoc();
+
+if(isset($_POST['update'])){
+  
+  $Num_Registro = $_REQUEST['Num_Registro'];
+  $NombreDueño = $_POST['Dueño'];
+  $NombreMascota = $_POST['Mascota'];
   $Raza = $_POST['Raza'];
-  $Fecha_Nac = $_POST['Fecha/Nac-Edad'];
+  $Fecha_Nac = $_POST['Fecha_Nac'];
   $Sexo = $_POST['Sexo'];
 
-  $query = "UPDATE tabla_mascotas set Nombre_Dueño = '$Dueño', Nombre_Mascota = '$Mascota', Raza = '$Raza', Fecha/Nac-Edad = '$Fecha_Nac', Sexo = '$Sexo' WHERE Num_Registro = $Registro";
-  mysqli_query($con, $query);
-  $_SESSION['message'] = 'Mascota actualizada correctamente';
-  $_SESSION['message_type'] = 'warning';
-  /* header('Location: Mascota.php'); */
+  $query="UPDATE tabla_mascotas SET Nombre_Dueño='$NombreDueño', Nombre_Mascota='$NombreMascota', Raza='$Raza', Fecha_Nac_Edad='$Fecha_Nac', Sexo='$Sexo' WHERE Num_Registro='$Num_Registro'";
+  $ResultadoEditMascota = $con->query($query);
+
+  if($ResultadoEditMascota){
+  echo "<script>alert('Los datos se han guardado correctamente');window.location='Mascota.php'</script>";
+  }else{
+    echo "<script>alert('los datos no se han podido guardar correctamente');</script>";
+  }
 }
 ?>
         <div class="container p-4">
   <div class="row">
     <div class="col-md-4 mx-auto">
       <div class="card card-body">
-      <form action="Edit_Mascota.php?id=<?php echo $_GET['Num_Registro']; ?>" method="POST">
+      <form action="" method="POST">
         <div class="form-group">
-        <input type="text" name="Dueño" class="form-control" value="<?php echo $Dueño; ?>" placeholder="Actualizar Dueño">
+        <input type="text" name="Dueño" class="form-control" value="<?php echo $row['Nombre_Dueño']; ?>" placeholder="Actualizar Dueño">
             </div>
             <div class="form-group">
-              <input type="text" name="Mascota" class="form-control" value="<?php echo $Mascota; ?>" placeholder="Actualizar Mascota">
+              <input type="text" name="Mascota" class="form-control" value="<?php echo $row['Nombre_Mascota']; ?>" placeholder="Actualizar Mascota">
             </div>
             <div class="form-group">
-            <input type="text" name="Raza" class="form-control" value="<?php echo $Raza; ?>" placeholder="Actualizar Raza">
+            <input type="text" name="Raza" class="form-control" value="<?php echo $row['Raza']; ?>" placeholder="Actualizar Raza">
             </div>
             <div class="form-group">
-              <input type="text" name="Fecha Nac" class="form-control" value="<?php echo $Fecha_Nac; ?>" placeholder="Actualizar Fecha nacimiento">
+              <input type="date" name="Fecha_Nac" class="form-control" value="<?php echo $row['Fecha_Nac_Edad']; ?>" placeholder="Actualizar Fecha nacimiento">
             </div>
             <div class="form-group">
-            <input type="text" name="Sexo" class="form-control" value="<?php echo $Sexo; ?>" placeholder="Actualizar Sexo">
+            <input type="text" name="Sexo" class="form-control" value="<?php echo $row['Sexo']; ?>" placeholder="Actualizar Sexo">
             </div>
-            <input type="submit" class="btn-success" name="update" value="Actualizar">            
+            <input type="submit" class="btn btn-success" id="Guardar_Actualizar" name="update" value="Actualizar">            
       </form>
       </div>
     </div>
