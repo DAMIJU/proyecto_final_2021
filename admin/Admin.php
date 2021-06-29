@@ -55,7 +55,7 @@ if (!isset($_SESSION['loggedin'])) {
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
   <!-- Bootstrap para DataTables -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
@@ -105,7 +105,7 @@ if (!isset($_SESSION['loggedin'])) {
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">       
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Inicio')">
+            <a href="Admin.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Inicio')">
               <i class="nav-icon fa fa-dashboard"></i>
               <p>
                 Inicio
@@ -118,7 +118,8 @@ if (!isset($_SESSION['loggedin'])) {
               <p>
                 Dueño            
               </p>
-            </a>    
+            </a>
+          </li>
           <li class="nav-item">
             <a href="Mascota.php" class="nav-link">
               <i class="nav-icon fas fa-dog"></i>

@@ -189,13 +189,13 @@ if (!isset($_SESSION['loggedin'])) {
       <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
-                <div class="modal-header" style="background-color:#9ACD32">
+                <div class="modal-header">
                   <h5 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Añadir Mascota</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <form action="Añadir_Mascota.php" method="POST">
+          <form action="Añadir_Mascota.php" method="POST">
             <div class="form-group">
               <input type="text" name="Num_Registro" class="form-control" placeholder="Registro" autofocus>
             </div>
@@ -220,11 +220,13 @@ if (!isset($_SESSION['loggedin'])) {
             <div class="form-group">
             <input type="date" name="Fecha_Registro" class="form-control" placeholder="Fecha_Registro" autofocus>
             </div>
-            <input type="submit" name="Agregar_Mascota" class="btn btn-success btn-block" value="Agregar">
-          </form>
-              <div class="modal-footer">
+            <div class="row">
+              <div class="col-md-6">
+                <input type="submit" name="Agregar_Mascota" class="btn btn-success " value="Agregar">
                 <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
               </div>
+            </div>
+          </form>           
             </div>
           </div>
         </div>
@@ -366,7 +368,7 @@ if (!isset($_SESSION['loggedin'])) {
 <script type="text/javascript">
       function preguntar(Num_Registro)
       {
-        if(confirm('¿Estás seguro que quieres eliminar está mascota?'))
+        if(confirm('¿Está seguro que desea eliminar esta mascota?'))
         {
           window.location.href = "Delete_Mascota.php?Num_Registro="+Num_Registro;
         }

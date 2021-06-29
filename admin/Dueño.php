@@ -373,7 +373,7 @@ if (!isset($_SESSION['loggedin'])) {
 <script type="text/javascript">
       function preguntar(Doc)
       {
-        if(confirm('¿Estás seguro que quieres eliminar al cliente?'))
+        if(confirm('¿Está seguro que desea eliminar este cliente?'))
         {
           window.location.href = "Delete_Dueño.php?Doc="+Doc;
         }
