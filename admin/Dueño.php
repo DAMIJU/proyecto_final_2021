@@ -54,7 +54,7 @@ if (!isset($_SESSION['loggedin'])) {
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
   <!-- Bootstrap para DataTables -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
@@ -171,9 +171,12 @@ if (!isset($_SESSION['loggedin'])) {
 </div>
   </div>
   <div class="content-wrapper">
-  <h1>DUEÑO</h1><button type="button" class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABnUlEQVRIic3VT4hNcRQH8M958xIhMauZldQsxGo2iizt1BQpJbYSOwuWVrKyGrEYZmNjYUG2bEVWylKxUJSFmh6vifla3EtTmveHeeVbt+6955zv99x7/vwqyTxOoGtz8R0PK8kH3MHqJgtswflK0quq7UnOYC9u4CLWqmoxyTXM/IXAZXyqJD1Mo4cOLuB26zSHx3iEL2OQX21j33ehqvpJbmIfHuAQgnd4g2NjZv9WUwOVpI/jYxKMiiddTfdcmZBAV1uDiSBJrzMp8l8YSyBJJ8lYMSM7t8RLWBpLZJQatJkvJ/naXsujiCTp/Z7kIZnfxSxeYg3zWMHZqvoxSGBgFi35vZZ8AX3NzjqJnbifZGoQx7DPPIitWKiq/q+XVbWKUygcGEQwcEVX1Wuc3sDW38i2Hv/XHLTIJAV2GW9t62Iqyashfreqahn78aztnKfYMSSuU0lmsG2I40fs0czBXFX1ksxqOmwQvg2xN0gym+RFkksjBazDH22a5DCOto/TmqPvCK5X1eI/C2j+6+72/jOe41xVrYxLDj8BTZCtqgedHwgAAAAASUVORK5CYII="></button>
+  <div class="text-center">
+  <h1>DUEÑO</h1>
+  <button class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Dueño</button>
+  <button class="btn btn-warning" id="" data-toggle="" data-target="">Info</button>
+    </div>
       <!-- MESSAGES -->
-
       <?php if (isset($_SESSION['message'])) { ?>
       <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
         <?= $_SESSION['message']?>
@@ -226,6 +229,7 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </div>
 </div>
+<div class="datatable-responsive datatable-box">
   <table id="dueño" class="table table-striped table-sm non-top-border " width="100%" cellspacing="0">
         <thead>
             <tr>

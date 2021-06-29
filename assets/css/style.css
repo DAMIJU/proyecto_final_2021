@@ -2070,7 +2070,16 @@ Full screen Modal
 # Panel Administrador
 --------------------------------------------------------------*/
 
-
+.content-wrapper .datatable-responsive {
+  display: block;
+  width: auto;
+}
+.content-wrapper .datatable-box {
+  margin: 15px 10px;
+  padding: 10px;
+  border: black 2px solid;
+  border-radius: 8px;
+}
 
 
 

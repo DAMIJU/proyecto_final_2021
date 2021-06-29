@@ -54,7 +54,7 @@ if (!isset($_SESSION['loggedin'])) {
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
   <!-- Bootstrap para DataTables -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
@@ -169,8 +169,12 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </aside>
 </div>
-  <div class="content-wrapper"> 
-  <h1>MASCOTA</h1><button type="button" class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABnUlEQVRIic3VT4hNcRQH8M958xIhMauZldQsxGo2iizt1BQpJbYSOwuWVrKyGrEYZmNjYUG2bEVWylKxUJSFmh6vifla3EtTmveHeeVbt+6955zv99x7/vwqyTxOoGtz8R0PK8kH3MHqJgtswflK0quq7UnOYC9u4CLWqmoxyTXM/IXAZXyqJD1Mo4cOLuB26zSHx3iEL2OQX21j33ehqvpJbmIfHuAQgnd4g2NjZv9WUwOVpI/jYxKMiiddTfdcmZBAV1uDiSBJrzMp8l8YSyBJJ8lYMSM7t8RLWBpLZJQatJkvJ/naXsujiCTp/Z7kIZnfxSxeYg3zWMHZqvoxSGBgFi35vZZ8AX3NzjqJnbifZGoQx7DPPIitWKiq/q+XVbWKUygcGEQwcEVX1Wuc3sDW38i2Hv/XHLTIJAV2GW9t62Iqyashfreqahn78aztnKfYMSSuU0lmsG2I40fs0czBXFX1ksxqOmwQvg2xN0gym+RFkksjBazDH22a5DCOto/TmqPvCK5X1eI/C2j+6+72/jOe41xVrYxLDj8BTZCtqgedHwgAAAAASUVORK5CYII="></button>
+  <div class="content-wrapper">
+    <div class="text-center">
+  <h1>MASCOTA</h1>
+  <button class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Mascota</button>
+  <button class="btn btn-warning" id="" data-toggle="" data-target="">Cumpleaños</button>
+    </div>
       <!-- MESSAGES -->
       <?php if (isset($_SESSION['message'])) { ?>
       <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
@@ -225,60 +229,60 @@ if (!isset($_SESSION['loggedin'])) {
           </div>
         </div>
         <!-- DATATABLE MASCOTA -->
-        <table id="Tabla_mascotas" class="table table-striped table-sm non-top-border" width="100%" cellspacing="0">
-          <thead>
-              <tr>
-                  <th>Registro</th>
-                  <th>Dueño</th>
-                  <th>Mascota</th>
-                  <th>Raza</th>
-                  <th>Fecha Nac</th>
-                  <th>Sexo</th>
-                  <th>Acción</th>         
-              </tr>
-          </thead>
-          <tbody>
-          <?php  
-            include("DB/conexion.php");
-            $query="SELECT * FROM tabla_mascotas";
-            $resultado= $con->query($query);
-            while($mostrar=$resultado->fetch_assoc()){
-          ?>   
-              <tr>
-                  <td><?php echo $mostrar['Num_Registro']?></td>
-                  <td><?php echo $mostrar['Nombre_Dueño']?></td>
-                  <td><?php echo $mostrar['Nombre_Mascota']?></td>
-                  <td><?php echo $mostrar['Raza']?></td>
-                  <td><?php echo $mostrar['Fecha_Nac_Edad']?></td>
-                  <td><?php echo $mostrar['Sexo']?></td>
-                  <td>
-                    <a href="Edit_Mascota.php?Num_Registro=<?php echo $mostrar['Num_Registro']?>" class="btn btn-secondary">
-                      <i class="fas fa-marker"></i>
-                    </a>
-                    <a href="Delete_Mascota.php?Num_Registro=<?php echo $mostrar['Num_Registro']?>" class="btn btn-danger">
-                      <i class="far fa-trash-alt"></i>
-                    </a>
-                  </td>
-              </tr>
-              <?php
-                }
-              ?>   
-          </tbody>
-          <tfoot>
-              <tr>
-                  <th>Registro</th>
-                  <th>Dueño</th>
-                  <th>Mascota</th>
-                  <th>Raza</th>
-                  <th>Fecha Nac</th>
-                  <th>Sexo</th>
-                  <th>Acción</th>
-              </tr>
-          </tfoot>
-        </table>
-    </div>
-   </div>
-   </div>
+        <div class="datatable-responsive datatable-box">
+          <table id="Tabla_mascotas" class="table table-striped table-sm non-top-border" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Registro</th>
+                    <th>Dueño</th>
+                    <th>Mascota</th>
+                    <th>Raza</th>
+                    <th>Fecha Nac</th>
+                    <th>Sexo</th>
+                    <th>Acción</th>         
+                </tr>
+            </thead>
+            <tbody>
+            <?php  
+              include("DB/conexion.php");
+              $query="SELECT * FROM tabla_mascotas";
+              $resultado= $con->query($query);
+              while($mostrar=$resultado->fetch_assoc()){
+            ?>   
+                <tr>
+                    <td><?php echo $mostrar['Num_Registro']?></td>
+                    <td><?php echo $mostrar['Nombre_Dueño']?></td>
+                    <td><?php echo $mostrar['Nombre_Mascota']?></td>
+                    <td><?php echo $mostrar['Raza']?></td>
+                    <td><?php echo $mostrar['Fecha_Nac_Edad']?></td>
+                    <td><?php echo $mostrar['Sexo']?></td>
+                    <td>
+                      <a href="Edit_Mascota.php?Num_Registro=<?php echo $mostrar['Num_Registro']?>" class="btn btn-secondary">
+                        <i class="fas fa-marker"></i>
+                      </a>
+                      <a href="Delete_Mascota.php?Num_Registro=<?php echo $mostrar['Num_Registro']?>" class="btn btn-danger">
+                        <i class="far fa-trash-alt"></i>
+                      </a>
+                    </td>
+                </tr>
+                <?php
+                  }
+                ?>   
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Registro</th>
+                    <th>Dueño</th>
+                    <th>Mascota</th>
+                    <th>Raza</th>
+                    <th>Fecha Nac</th>
+                    <th>Sexo</th>
+                    <th>Acción</th>
+                </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
     <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
         <b>Servicios Caninos Casme.</b> 
