@@ -218,7 +218,7 @@ if (!isset($_SESSION['loggedin'])) {
           <div class="form-group">
           <input type="date" name="Fecha_Registro" class="form-control" placeholder="Fecha_Registro" autofocus>
           </div>
-          <input type="submit" name="save_task" class="btn btn-success btn-block" value="Save Task">
+          <input type="submit" name="agregar_dueño" class="btn btn-success btn-block" value="Agregar">
         </form>
         <div class="modal-footer">
         <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
