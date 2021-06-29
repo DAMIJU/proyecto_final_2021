@@ -260,8 +260,8 @@ if (!isset($_SESSION['loggedin'])) {
                       <a href="Edit_Mascota.php?Num_Registro=<?php echo $mostrar['Num_Registro']?>" class="btn btn-secondary">
                         <i class="fas fa-marker"></i>
                       </a>
-                      <a href="Delete_Mascota.php?Num_Registro=<?php echo $mostrar['Num_Registro']?>" class="btn btn-danger">
-                        <i class="far fa-trash-alt"></i>
+                      <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro']?>)" class="btn btn-danger">
+                         <i class="far fa-trash-alt"></i>
                       </a>
                     </td>
                 </tr>
@@ -362,5 +362,14 @@ if (!isset($_SESSION['loggedin'])) {
         }
     } );
 } );
+</script>
+<script type="text/javascript">
+      function preguntar(Num_Registro)
+      {
+        if(confirm('¿Estás seguro que quieres eliminar está mascota?'))
+        {
+          window.location.href = "Delete_Mascota.php?Num_Registro="+Num_Registro;
+        }
+      }
 </script>
 </body>

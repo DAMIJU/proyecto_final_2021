@@ -264,7 +264,7 @@ if (!isset($_SESSION['loggedin'])) {
               <a href="Edit_Dueño.php?Doc=<?php echo $mostrar['Doc']?>" class="btn btn-secondary">
                 <i class="fas fa-marker"></i>
               </a>
-              <a href="Delete_Dueño.php?Doc=<?php echo $mostrar['Doc']?>" class="btn btn-danger">
+              <a href="#" onclick="preguntar(<?php echo $mostrar['Doc']?>)" class="btn btn-danger">
                 <i class="far fa-trash-alt"></i>
               </a>
             </td>
@@ -369,5 +369,14 @@ if (!isset($_SESSION['loggedin'])) {
         }
     } );
 } );
+</script>
+<script type="text/javascript">
+      function preguntar(Doc)
+      {
+        if(confirm('¿Estás seguro que quieres eliminar al cliente?'))
+        {
+          window.location.href = "Delete_Dueño.php?Doc="+Doc;
+        }
+      }
 </script>
 </body>
