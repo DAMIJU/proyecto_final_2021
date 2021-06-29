@@ -99,7 +99,7 @@ if (isset($_POST['update'])) {
   /* header('Location: Mascota.php'); */
 }
 ?>
-        <div class="container p-4">
+  <div class="container p-4">
   <div class="row">
     <div class="col-md-4 mx-auto">
       <div class="card card-body">
