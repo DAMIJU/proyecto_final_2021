@@ -1,4 +1,30 @@
 <?php
+// Solo se permite el ingreso con el inicio de sesion.
+session_start();
+require_once("ConectarBD_Mysql.php");
+// Si el usuario no se ha logueado se le regresa al inicio.
+if (!isset($_SESSION['loggedin'])) {
+	echo "<script>alert('No has iniciado sesión');window.location='../Login.php'</script>";
+	exit; }
+
+  //Script para definirle la vida de duración a una sesión
+  $inactivo = 14400;
+
+    if(isset($_SESSION['tiempo']) ) {
+    $vida_session = time() - $_SESSION['tiempo'];
+		if($vida_session > $inactivo)
+		{
+			session_destroy();
+			echo "<script>alert('La sesión ha caducado');window.location='../Login.php'</script>";
+		}
+    }
+    $_SESSION['tiempo'] = time();
+    $NombreSesion_User = $_SESSION['name'];
+    $Consulta_DatosSesion = "SELECT * FROM usuarios WHERE usuario ='$NombreSesion_User'";
+    $ejecuta = $conn->query($Consulta_DatosSesion);
+    $row = $ejecuta->fetch_assoc()
+?>
+<?php
 
 include("DB/conexion.php");
           
@@ -18,7 +44,7 @@ if  (isset($_GET['Doc'])) {
   $result = mysqli_query($con, $query);
   if (mysqli_num_rows($result) == 1) {
     $row = mysqli_fetch_array($result);
-    $Doc = $row['Doc'];
+    $Id = $row['Doc'];
     $Nombre = $row['Nombre'];
     $Celular = $row['Celular'];
     $Telefono_Fijo = $row['Telefono_Fijo'];
@@ -47,32 +73,7 @@ if (isset($_POST['update'])) {
 }
 
 ?>
-<?php
-// Solo se permite el ingreso con el inicio de sesion.
-session_start();
-require_once("ConectarBD_Mysql.php");
-// Si el usuario no se ha logueado se le regresa al inicio.
-if (!isset($_SESSION['loggedin'])) {
-	echo "<script>alert('No has iniciado sesión');window.location='../Login.php'</script>";
-	exit; }
 
-  //Script para definirle la vida de duración a una sesión
-  $inactivo = 14400;
-
-    if(isset($_SESSION['tiempo']) ) {
-    $vida_session = time() - $_SESSION['tiempo'];
-		if($vida_session > $inactivo)
-		{
-			session_destroy();
-			echo "<script>alert('La sesión ha caducado');window.location='../Login.php'</script>";
-		}
-    }
-    $_SESSION['tiempo'] = time();
-    $NombreSesion_User = $_SESSION['name'];
-    $Consulta_DatosSesion = "SELECT * FROM usuarios WHERE usuario ='$NombreSesion_User'";
-    $ejecuta = $conn->query($Consulta_DatosSesion);
-    $row = $ejecuta->fetch_assoc()
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -223,7 +224,7 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="row">
     <div class="col-md-4 mx-auto">
       <div class="card card-body">
-      <form action="Edit_Dueño.php?id=<?php echo $_GET['Doc']; ?>" method="POST">
+      <form action="Edit_Dueño.php?Doc=<?php echo $_GET['Doc']; ?>" method="POST">
         <div class="form-group">
         <input name="Doc" type="number" class="form-control" value="<?php echo $Doc; ?>" placeholder="Documento">
         </div>
@@ -258,7 +259,74 @@ if (!isset($_SESSION['loggedin'])) {
   </div>
 </div>
 </div>
+        
+        <!-- jQuery -->
+        <script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery UI -->
+<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- fullCalendar 2.2.5 -->
+<script src="../plugins/moment/moment.min.js"></script>
+<script src="../plugins/fullcalendar/main.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+<!-- Page specific script -->
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+<!-- SCRIPTS DataTables -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+<script> $(document).ready(function() {
+    $('#Tabla_mascotas').DataTable( {
+        language: {
+            url: 'https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
+        }
+    } );
+} );
+</script>
+</body>
 
 
-
-?>
