@@ -178,10 +178,10 @@ if (!isset($_SESSION['loggedin'])) {
 </div>
   </div>
   <div class="content-wrapper">
-  <div class="text-center">
+  <div class="text-left">
   <h1>DUEÑO</h1>
-  <button class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Dueño</button>
-  <button class="btn btn-warning" id="" data-toggle="" data-target="">Info</button>
+  <!-- <button class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Dueño</button>
+  <button class="btn btn-warning" id="" data-toggle="" data-target="">Info</button> -->
     </div>
       <!-- MESSAGES -->
       <?php if (isset($_SESSION['message'])) { ?>
@@ -194,109 +194,61 @@ if (!isset($_SESSION['loggedin'])) {
       <?php session_unset(); } ?>
 
       <!-- FORMULARIO AÑADIR DUEÑO -->
-      <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <div class="modal-header" style="background-color:#9ACD32">
-                  <h5 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Añadir Dueño</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <form action="Añadir_Dueño.php" method="POST">
-          <div class="form-group">
-            <input type="text" name="Doc" class="form-control" placeholder="Documento" autofocus>
-          </div>
-          <div class="form-group">
-          <input type="text" name="Nombre" class="form-control" placeholder="Nombre" autofocus>
-          </div>
-          <div class="form-group">
-            <input type="text" name="Celular" class="form-control" placeholder="Celular" autofocus>
-          </div>
-          <div class="form-group">
-          <input type="text" name="Telefono_Fijo" class="form-control" placeholder="Telefono FIjo" autofocus>
-          </div>
-          <div class="form-group">
-            <input type="text" name="Dirección" class="form-control" placeholder="Dirección" autofocus>
-          </div>
-          <div class="form-group">
-          <input type="text" name="Ciudad" class="form-control" placeholder="Ciudad" autofocus>
-          </div>
-          <div class="form-group">
-            <input type="text" name="Correo" class="form-control" placeholder="Correo" autofocus>
-          </div>
-          <div class="form-group">
-          <input type="date" name="Fecha_Registro" class="form-control" placeholder="Fecha_Registro" autofocus>
-          </div>
-          <input type="submit" name="agregar_dueño" class="btn btn-success btn-block" value="Agregar">
-        </form>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
+      
+      <?php
+      include("DB/conexion.php");
+
+      $Doc = $_REQUEST['Doc'];
+      
+      
+      $query="SELECT * FROM dueño WHERE Doc='$Doc'";
+      $resultado= $con->query($query);
+      $row=$resultado->fetch_assoc();
+
+      ?>
+  
+
 <div class="datatable-responsive datatable-box">
-  <table id="dueño" class="table table-striped table-sm non-top-border " width="100%" cellspacing="0">
-        <thead>
-            <tr>
-                <th>Doc</th>
-                <th>Nombre</th>
-                <th>Celular</th>
-                <th>Telefono_Fijo</th>
-                <th>Dirección</th>
-                <th>Ciudad</th>
-                <th>Correo</th>
-                <th>Fecha_Registro</th> 
-                <th>Acción</th>                 
-            </tr>
-        </thead>
-        <tbody>
-        <?php  
-          include("DB/conexion.php");
-          $query="SELECT * FROM dueño";
-          $resultado= $con->query($query);
-          while($mostrar=$resultado->fetch_assoc()){
-        ?>   
-            <tr>
-                <td><?php echo $mostrar['Doc'] ?></td>
-                <td><a href="Vista_Dueño.php?Doc=<?php echo $mostrar['Doc']?>"><?php echo $mostrar['Nombre'] ?></a></td>
-                <td><?php echo $mostrar['Celular'] ?></td>
-                <td><?php echo $mostrar['Telefono_Fijo'] ?></td>
-                <td><?php echo $mostrar['Dirección'] ?></td>
-                <td><?php echo $mostrar['Ciudad'] ?></td>
-                <td><?php echo $mostrar['Correo'] ?></td>
-                <td><?php echo $mostrar['Fecha_Registro'] ?></td>
-                <td>
-              <a href="Edit_Dueño.php?Doc=<?php echo $mostrar['Doc']?>" class="btn btn-secondary">
-                <i class="fas fa-marker"></i>
-              </a>
-              <a href="#" onclick="preguntar(<?php echo $mostrar['Doc']?>)" class="btn btn-danger">
-                <i class="far fa-trash-alt"></i>
-              </a>
-              <a href="Vista_Dueño.php?Doc=<?php echo $mostrar['Doc']?>" class="btn btn-primary">
-              <i class="icofont-eye-alt"></i>
-              </a>
-            </td>
-            </tr>
-            <?php
-              }
-            ?>   
-        </tbody>
-        <tfoot>
-            <tr>
-                <th>Doc</th>
-                <th>Nombre</th>
-                <th>Celular</th>
-                <th>Telefono_Fijo</th>
-                <th>Dirección</th>
-                <th>Ciudad</th>
-                <th>Correo</th>
-                <th>Fecha_Registro</th>  
-                <th>Acción</th>        
-            </tr>
-        </tfoot>
-    </table>
+<table class="table table-sm  non-top-border">
+                <tbody>
+                                            <tr>
+                            <th>Documento</th>
+                            <td> <?php echo $row['Doc']; ?></td>
+                        </tr>
+                                        <tr>
+                        <th>Nombre</th>
+                        <td>
+                         <?php echo $row['Nombre']; ?>
+                                                    </td>
+                    </tr>
+                                            <tr>
+                            <th>Celular</th>
+                            <td><a href="tel:<?php echo $row['Celular']; ?>"><?php echo $row['Celular']; ?></a></td>
+                        </tr>
+                                                                                                                    <tr>
+                                <th>Telefono_Fijo</th>
+                                <td><a href="tel:<?php echo $row['Telefono_Fijo']; ?>"><?php echo $row['Telefono_Fijo']; ?></a></td>
+                            </tr>
+                                                <tr>
+                            <th>Dirección</th>
+                            <td><?php echo $row['Dirección']; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Ciudad</th>
+                            <td><?php echo $row['Ciudad']; ?></td>
+                        </tr>
+                                                    <tr>
+                                <th>
+                                    Correo
+                                                                    </th>
+                                <td><a target="_blank" href="mailto:<?php echo $row['Correo']; ?>"><?php echo $row['Correo']; ?> <i class="fa fa-external-link-alt"></i></a> </td>
+                            </tr>
+                    <tr>
+                        <th>Fecha_Registro</th>
+                        <td><?php echo $row['Fecha_Registro']; ?></td>
+                    </tr>
+                </tbody>
+            </table>
    </div>  
    </div>  
    </div> 
