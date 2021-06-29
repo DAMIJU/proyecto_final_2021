@@ -66,7 +66,7 @@
               <div class="icon"><img src="https://img.icons8.com/pastel-glyph/64/000000/dog-heart--v2.png"/></div>
               <h4 class="title"><a href="">Adiestramiento</a></h4>
               <p class="description"></p>
-              <button type="button" data-toggle="modal" data-target="#Modal_ServicioAdiestramiento" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/ios/24/000000/cursor-in-window.png"/></button>
+              <a id="btnabrir" class="btn-get-started btn btn-lg scrollto span2" data-toggle="modal" data-target="#Modal_ServicioAdiestramiento"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"></a>
             </div>
           </div>
 
@@ -75,7 +75,7 @@
               <div class="icon"><img src="https://img.icons8.com/ios/64/000000/gum-.png"/></div>
               <h4 class="title"><a href="">Gimnasio</a></h4>
               <p class="description"></p>
-              <button type="button" data-toggle="modal" data-target="#Modal_ServicioGimnasio" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/ios/24/000000/cursor-in-window.png"/></button>
+              <a id="btnabrir" class="btn-get-started btn btn-lg scrollto span2" data-toggle="modal" data-target="#Modal_ServicioGimnasio"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"></a>
             </div>
           </div>
           
@@ -84,7 +84,7 @@
               <div class="icon"><img src="https://img.icons8.com/wired/64/000000/syringe.png"></div>
               <h4 class="title"><a href="">Vacunacion</a></h4>
               <p class="description"></p>
-              <button type="button" data-toggle="modal" data-target="#ModalServicio_Vacunacion" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/ios/24/000000/cursor-in-window.png"/></button>
+              <a id="btnabrir" class="btn-get-started btn btn-lg scrollto span2" data-toggle="modal" data-target="#ModalServicio_Vacunacion"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"></a>
             </div>
           </div>
 
@@ -93,7 +93,7 @@
               <div class="icon"><img src="https://img.icons8.com/ios/64/000000/poodle.png"/></div>
               <h4 class="title"><a href="">Estetica canina</a></h4>
               <p class="description"></p>
-              <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/ios/24/000000/cursor-in-window.png"/></button>
+              <a id="btnabrir" class="btn-get-started btn btn-lg scrollto span2" data-toggle="modal" data-target="#Modal_EsteticaCanina"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"></a>
             </div>
           </div>    
         </div>
@@ -184,25 +184,26 @@
       </div>
 
       <!---Modal Estética-->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+      <div class="modal fade" id="Modal_EsteticaCanina" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <div class="modal-header" style="background-color:#9ACD32">
+              <h5 class="modal-title" style="font-weight:bold" id="exampleModalLabel">Estética Canina</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              ...
+            <center><h3 style="color:#2D92CB">Duración variable - Spa</h3></center>
+              <p style="color:black">La mejor opción para NUESTROS PERROS en Tantoyuca y la región, Nuestro servicio incluye: Desenredado Recuperación de pelaje, baño control caída de pelo,, baño con shampoo hipo alergénico y aromaterapia, lavanda y romero, masaje relajante durante el baño, limpieza de glándulas anales, acondicionado y texturizado de pelo según la raza, secado rápido y a conciencia, corte de uñas ya reblandecidas por el baño, limpieza de oídos, corte y arreglo estético que puede ser clásico, diseño de imagen, cambio de look o arreglo de fantasía, adorno y perfume si es de su agrado.</p><center><p style="font-weight:bold">Quedamos a sus órdenes.</p>
+              <img class="Img_EsteticaCanina img-fluid" src="https://scontent.feoh3-1.fna.fbcdn.net/v/t45.5328-4/c0.1.960.960a/p960x960/60676998_2260992997320018_2832629320822816768_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=c48759&_nc_eui2=AeEMTa9R1egLTe7JELtUKeTjPzHXzjTwmOA_MdfONPCY4MYpA28bnaYsJ7Kim5vU50SBDN3EGM0AjkYSyfpTx7XD&_nc_ohc=ocmU715rJ-4AX_0IlfZ&tn=C-qNvwX96CU2PIeK&_nc_ht=scontent.feoh3-1.fna&tp=27&oh=fdecca95c016efbcb676c390516479ce&oe=60DFBFB3" alt="Estética Canina">
+            </center>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             </div>
           </div>
         </div>
-      </div>
   <!-- End Services Section -->
  <!-- ======= Footer ======= -->
  <footer id="footer">
