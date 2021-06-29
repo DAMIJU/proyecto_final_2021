@@ -93,7 +93,7 @@
               <div class="icon"><img src="https://img.icons8.com/ios/64/000000/poodle.png"/></div>
               <h4 class="title"><a href="">Estetica canina</a></h4>
               <p class="description"></p>
-              <button type="button" data-toggle="modal" data-target="#Modal_EsteticaCanina" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/ios/24/000000/cursor-in-window.png"/></button>
+              <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn-get-started btn btn-lg scrollto span2"><img src="https://img.icons8.com/ios/24/000000/cursor-in-window.png"/></button>
             </div>
           </div>    
         </div>
@@ -129,8 +129,7 @@
                   <li>XI. Quieto sentado a 2 metros duración 1 minuto.</li>
                   <li>XII. Quieto echado a 2 metros duración 1 min</li>
                 </div>
-              </div><br>
-              <center><img class="Img_Adiestramiento img-fluid" src="https://scontent.feoh3-1.fna.fbcdn.net/v/t45.5328-4/c4.0.960.960a/p960x960/60762487_2528678210510911_626519721419735040_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=c48759&_nc_eui2=AeG5CSB2Ya4VBOtSfp7CSTbXG3F0AHNWsUMbcXQAc1axQyFQJzJ8SZT1uPE38jkoTK3S5g895_xhnj7ds4dq1Jgh&_nc_ohc=7tniddXMasIAX_VCCJC&tn=C-qNvwX96CU2PIeK&_nc_ht=scontent.feoh3-1.fna&tp=27&oh=2a36b12c5c2d93cbf641947ee68c6e77&oe=60DF0499"></center>
+              </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -185,23 +184,21 @@
       </div>
 
       <!---Modal Estética-->
-      <div class="modal fade" id="Modal_EsteticaCanina" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
           <div class="modal-content">
-            <div class="modal-header" style="background-color:#9ACD32">
-              <h5 class="modal-title" style="font-weight:bold" id="exampleModalLabel">Estética Canina</h5>
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <center><h3 style="color:#2D92CB">Duración variable - Spa</h3></center>
-              <p style="color:black">La mejor opción para NUESTROS PERROS en Tantoyuca y la región, Nuestro servicio incluye: Desenredado Recuperación de pelaje, baño control caída de pelo,, baño con shampoo hipo alergénico y aromaterapia, lavanda y romero, masaje relajante durante el baño, limpieza de glándulas anales, acondicionado y texturizado de pelo según la raza, secado rápido y a conciencia, corte de uñas ya reblandecidas por el baño, limpieza de oídos, corte y arreglo estético que puede ser clásico, diseño de imagen, cambio de look o arreglo de fantasía, adorno y perfume si es de su agrado.</p><center><p style="font-weight:bold">Quedamos a sus órdenes.</p>
-              <img class="Img_EsteticaCanina img-fluid" src="https://scontent.feoh3-1.fna.fbcdn.net/v/t45.5328-4/c0.1.960.960a/p960x960/60676998_2260992997320018_2832629320822816768_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=c48759&_nc_eui2=AeEMTa9R1egLTe7JELtUKeTjPzHXzjTwmOA_MdfONPCY4MYpA28bnaYsJ7Kim5vU50SBDN3EGM0AjkYSyfpTx7XD&_nc_ohc=ocmU715rJ-4AX_0IlfZ&tn=C-qNvwX96CU2PIeK&_nc_ht=scontent.feoh3-1.fna&tp=27&oh=fdecca95c016efbcb676c390516479ce&oe=60DFBFB3" alt="Estética Canina">
-            </center>
+              ...
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>
@@ -212,10 +209,14 @@
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
-          &copy; Copyright <strong><span>Caninos Casme</span></strong>. Todos los derechos reservados
+          &copy; Copyright <strong><span>Tempo</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          Diseñado por <a href="#">Caninos Casme</a>
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
