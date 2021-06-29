@@ -69,8 +69,6 @@ if (!isset($_SESSION['loggedin'])) {
 include("DB/conexion.php");
 
 $Num_Registro = $_REQUEST['Num_Registro'];
-
-
 $query="SELECT * FROM tabla_mascotas WHERE Num_Registro='$Num_Registro'";
 $resultado= $con->query($query);
 $row=$resultado->fetch_assoc();
@@ -78,13 +76,13 @@ $row=$resultado->fetch_assoc();
 if(isset($_POST['update'])){
   
   $Num_Registro = $_REQUEST['Num_Registro'];
-  $NombreDueño = $_POST['Dueño'];
-  $NombreMascota = $_POST['Mascota'];
+  $NombreDueño = $_POST['Nombre_Dueño'];
+  $NombreMascota = $_POST['Nombre_Mascota'];
   $Raza = $_POST['Raza'];
-  $Fecha_Nac = $_POST['Fecha_Nac'];
+  $Fecha_Nac_Edad = $_POST['Fecha_Nac_Edad'];
   $Sexo = $_POST['Sexo'];
 
-  $query="UPDATE tabla_mascotas SET Nombre_Dueño='$NombreDueño', Nombre_Mascota='$NombreMascota', Raza='$Raza', Fecha_Nac_Edad='$Fecha_Nac', Sexo='$Sexo' WHERE Num_Registro='$Num_Registro'";
+  $query="UPDATE tabla_mascotas SET Nombre_Dueño='$NombreDueño', Nombre_Mascota='$NombreMascota', Raza='$Raza', Fecha_Nac_Edad='$Fecha_Nac_Edad', Sexo='$Sexo' WHERE Num_Registro='$Num_Registro'";
   $ResultadoEditMascota = $con->query($query);
 
   if($ResultadoEditMascota){
@@ -100,16 +98,16 @@ if(isset($_POST['update'])){
       <div class="card card-body">
       <form action="" method="POST">
         <div class="form-group">
-        <input type="text" name="Dueño" class="form-control" value="<?php echo $row['Nombre_Dueño']; ?>" placeholder="Actualizar Dueño">
+        <input type="text" name="Nombre_Dueño" class="form-control" value="<?php echo $row['Nombre_Dueño']; ?>" placeholder="Actualizar Dueño">
             </div>
             <div class="form-group">
-              <input type="text" name="Mascota" class="form-control" value="<?php echo $row['Nombre_Mascota']; ?>" placeholder="Actualizar Mascota">
+              <input type="text" name="Nombre_Mascota" class="form-control" value="<?php echo $row['Nombre_Mascota']; ?>" placeholder="Actualizar Mascota">
             </div>
             <div class="form-group">
             <input type="text" name="Raza" class="form-control" value="<?php echo $row['Raza']; ?>" placeholder="Actualizar Raza">
             </div>
             <div class="form-group">
-              <input type="date" name="Fecha_Nac" class="form-control" value="<?php echo $row['Fecha_Nac_Edad']; ?>" placeholder="Actualizar Fecha nacimiento">
+              <input type="date" name="Fecha_Nac_Edad" class="form-control" value="<?php echo $row['Fecha_Nac_Edad']; ?>" placeholder="Actualizar Fecha nacimiento">
             </div>
             <div class="form-group">
             <input type="text" name="Sexo" class="form-control" value="<?php echo $row['Sexo']; ?>" placeholder="Actualizar Sexo">

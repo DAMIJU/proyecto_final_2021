@@ -193,19 +193,22 @@ if (!isset($_SESSION['loggedin'])) {
                 </div>
                 <form action="Añadir_Mascota.php" method="POST">
             <div class="form-group">
-              <input type="text" name="Registro" class="form-control" placeholder="Registro" autofocus>
+              <input type="text" name="Num_Registro" class="form-control" placeholder="Registro" autofocus>
             </div>
             <div class="form-group">
-            <input type="text" name="Dueño" class="form-control" placeholder="Dueño" autofocus>
+            <input type="text" name="Doc_Dueño" class="form-control" placeholder="Doc Dueño" autofocus>
             </div>
             <div class="form-group">
-              <input type="text" name="Mascota" class="form-control" placeholder="Mascota" autofocus>
+            <input type="text" name="Nombre_Dueño" class="form-control" placeholder="Dueño" autofocus>
+            </div>
+            <div class="form-group">
+              <input type="text" name="Nombre_Mascota" class="form-control" placeholder="Mascota" autofocus>
             </div>
             <div class="form-group">
             <input type="text" name="Raza" class="form-control" placeholder="Raza" autofocus>
             </div>
             <div class="form-group">
-              <input type="text" name="Fecha Nac" class="form-control" placeholder="Fecha Nac" autofocus>
+              <input type="date" name="Fecha_Nac_Edad" class="form-control" placeholder="Fecha Nac" autofocus>
             </div>
             <div class="form-group">
             <input type="text" name="Sexo" class="form-control" placeholder="Sexo" autofocus>
@@ -213,7 +216,7 @@ if (!isset($_SESSION['loggedin'])) {
             <div class="form-group">
             <input type="date" name="Fecha_Registro" class="form-control" placeholder="Fecha_Registro" autofocus>
             </div>
-            <input type="submit" name="save_task" class="btn btn-success btn-block" value="Save Task">
+            <input type="submit" name="Agregar_Mascota" class="btn btn-success btn-block" value="Agregar">
           </form>
               <div class="modal-footer">
                 <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
@@ -246,7 +249,7 @@ if (!isset($_SESSION['loggedin'])) {
                   <td><?php echo $mostrar['Nombre_Dueño']?></td>
                   <td><?php echo $mostrar['Nombre_Mascota']?></td>
                   <td><?php echo $mostrar['Raza']?></td>
-                  <td><?php echo $mostrar['Fecha/Nac-Edad']?></td>
+                  <td><?php echo $mostrar['Fecha_Nac_Edad']?></td>
                   <td><?php echo $mostrar['Sexo']?></td>
                   <td>
                     <a href="Edit_Mascota.php?Num_Registro=<?php echo $mostrar['Num_Registro']?>" class="btn btn-secondary">
