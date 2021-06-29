@@ -2078,7 +2078,21 @@ Full screen Modal
   margin: 15px 10px;
   padding: 10px;
   border: black 2px solid;
-  border-radius: 8px;
+  border-radius: 5px;
+}
+.modal-content{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: red;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
 }
 
 
