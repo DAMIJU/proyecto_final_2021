@@ -187,46 +187,41 @@ if (!isset($_SESSION['loggedin'])) {
 
       <!-- FORMULARIO AÑADIR MASCOTA -->
       <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Añadir Mascota</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-          <form action="Añadir_Mascota.php" method="POST">
-            <div class="form-group">
-              <input type="text" name="Num_Registro" class="form-control" placeholder="Registro" autofocus>
-            </div>
-            <div class="form-group">
-            <input type="text" name="Doc_Dueño" class="form-control" placeholder="Doc Dueño" autofocus>
-            </div>
-            <div class="form-group">
-            <input type="text" name="Nombre_Dueño" class="form-control" placeholder="Dueño" autofocus>
-            </div>
-            <div class="form-group">
-              <input type="text" name="Nombre_Mascota" class="form-control" placeholder="Mascota" autofocus>
-            </div>
-            <div class="form-group">
-            <input type="text" name="Raza" class="form-control" placeholder="Raza" autofocus>
-            </div>
-            <div class="form-group">
-              <input type="date" name="Fecha_Nac_Edad" class="form-control" placeholder="Fecha Nac" autofocus>
-            </div>
-            <div class="form-group">
-            <input type="text" name="Sexo" class="form-control" placeholder="Sexo" autofocus>
-            </div>      
-            <div class="form-group">
-            <input type="date" name="Fecha_Registro" class="form-control" placeholder="Fecha_Registro" autofocus>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <input type="submit" name="Agregar_Mascota" class="btn btn-success " value="Agregar">
-                <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Añadir Mascota</h3>
               </div>
-            </div>
-          </form>           
+              <form action="Añadir_Mascota.php" method="POST">
+                <div class="form-group">
+                  <input type="text" name="Num_Registro" class="form-control" placeholder="Registro" autofocus>
+                </div>
+                <div class="form-group">
+                <input type="text" name="Doc_Dueño" class="form-control" placeholder="Doc Dueño" autofocus>
+                </div>
+                <div class="form-group">
+                <input type="text" name="Nombre_Dueño" class="form-control" placeholder="Dueño" autofocus>
+                </div>
+                <div class="form-group">
+                  <input type="text" name="Nombre_Mascota" class="form-control" placeholder="Mascota" autofocus>
+                </div>
+                <div class="form-group">
+                <input type="text" name="Raza" class="form-control" placeholder="Raza" autofocus>
+                </div>
+                <div class="form-group">
+                  <input type="date" name="Fecha_Nac_Edad" class="form-control" placeholder="Fecha Nac" autofocus>
+                </div>
+                <div class="form-group">
+                <input type="text" name="Sexo" class="form-control" placeholder="Sexo" autofocus>
+                </div>      
+                <div class="form-group">
+                <input type="date" name="Fecha_Registro" class="form-control" placeholder="Fecha_Registro" autofocus>
+                </div>
+                <div class="modal-footer">
+                  <input type="submit" name="Agregar_Mascota" class="btn btn-success" value="Agregar">
+                  <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>          
+                </div>   
+              </form>
             </div>
           </div>
         </div>

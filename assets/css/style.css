@@ -2094,6 +2094,7 @@ Full screen Modal
   border-radius: 0.3rem;
   outline: 0;
 }
+
 .modal-content .btn-success{
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
@@ -2113,20 +2114,19 @@ Full screen Modal
   color: #2C2E27;
   border-color: #9ACD32;
 }
-.modal-content .col-md-6{
-  flex: 0 0 50%;
-  max-width: 50%;
-  min-width: 100%;
-  margin:12px;
+.modal-content .modal-footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .modal-content .modal-header{
-  background-color: #007bff;
+  background-color: #2D92CB;
+  text-align: center;
 }
 .modal-content .row{
   display: flex;
   flex-wrap: wrap;
-  margin-right: 250px;
-  margin-left: 250px;
+  
 }
 .modal-content .form-group{
   margin-bottom: 1rem;
@@ -2137,13 +2137,9 @@ Full screen Modal
   background-color: #2D92CB;
   color: #fff;
 }
-.sidebar-dark-primary .nav-sidebar .nav-item .nav-link{
-  background-color: #343A40;
-  color: #c2c7d0;
-}
 .page-item.active .page-link {
   z-index: 3;
-  color: #c2c7d0;
+  color: #fff;
   background-color: #2D92CB;
   border-color: #2D92CB;
 }
@@ -2152,7 +2148,7 @@ Full screen Modal
   color: #c2c7d0;
 }
 [class*=sidebar-dark-] .nav-sidebar>.nav-item.menu-open>.nav-link.active, [class*=sidebar-dark-] .nav-sidebar>.nav-item:hover>.nav-link, [class*=sidebar-dark-] .nav-sidebar>.nav-item>.nav-link:focus {
-  background-color:rgba(255,255,255,.1);
+  background-color:#2D92CB;
   color: #fff;
 }
 

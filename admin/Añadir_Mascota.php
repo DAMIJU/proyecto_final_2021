@@ -14,9 +14,9 @@ if (isset($_POST['Agregar_Mascota'])) {
   $ResultadoInsertMascota = mysqli_query($con, $query);
 
   if($ResultadoInsertMascota){
-    echo "<script>alert('La mascota ha sido añadida a la base de datos');window.location='Mascota.php'</script>";
+    echo "<script>alert('La mascota se ha agregado satisfactoriamente');window.location='Mascota.php'</script>";
     }else{
-      echo "<script>alert('La mascota no se ha podido ingresar a la base de datos');</script>";
+      echo "<script>alert('los datos no se han podido guardar correctamente');</script>";
     }  
 }
 ?>
