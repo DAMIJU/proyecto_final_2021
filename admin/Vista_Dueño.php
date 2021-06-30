@@ -178,7 +178,7 @@ if (!isset($_SESSION['loggedin'])) {
 </div>
   </div>
   <div class="content-wrapper">
-  <div class="text-left">
+  <div class="text-center">
   <h1>DUEÑO</h1>
   <!-- <button class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Dueño</button>
   <button class="btn btn-warning" id="" data-toggle="" data-target="">Info</button> -->
@@ -207,7 +207,8 @@ if (!isset($_SESSION['loggedin'])) {
 
       ?>
   
-
+  <div class="row">
+    <div class="col-md-8">
 <div class="datatable-responsive datatable-box">
 <table class="table table-sm  non-top-border">
                 <tbody>
@@ -249,7 +250,52 @@ if (!isset($_SESSION['loggedin'])) {
                     </tr>
                 </tbody>
             </table>
+   </div> 
+   </div> 
+   <div class="col-md-4"> 
+   <div class="datatable-responsive datatable-box">
+<table class="table table-sm  non-top-border">
+                <tbody>
+                                            <tr>
+                            <th>Documento</th>
+                            <td> <?php echo $row['Doc']; ?></td>
+                        </tr>
+                                        <tr>
+                        <th>Nombre</th>
+                        <td>
+                         <?php echo $row['Nombre']; ?>
+                                                    </td>
+                    </tr>
+                                            <tr>
+                            <th>Celular</th>
+                            <td><a href="tel:<?php echo $row['Celular']; ?>"><?php echo $row['Celular']; ?></a></td>
+                        </tr>
+                                                                                                                    <tr>
+                                <th>Telefono_Fijo</th>
+                                <td><a href="tel:<?php echo $row['Telefono_Fijo']; ?>"><?php echo $row['Telefono_Fijo']; ?></a></td>
+                            </tr>
+                                                <tr>
+                            <th>Dirección</th>
+                            <td><?php echo $row['Dirección']; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Ciudad</th>
+                            <td><?php echo $row['Ciudad']; ?></td>
+                        </tr>
+                                                    <tr>
+                                <th>
+                                    Correo
+                                                                    </th>
+                                <td><a target="_blank" href="mailto:<?php echo $row['Correo']; ?>"><?php echo $row['Correo']; ?> <i class="fa fa-external-link-alt"></i></a> </td>
+                            </tr>
+                    <tr>
+                        <th>Fecha_Registro</th>
+                        <td><?php echo $row['Fecha_Registro']; ?></td>
+                    </tr>
+                </tbody>
+            </table>
    </div>  
+   </div>   
    </div>  
    </div> 
    <footer class="main-footer">
