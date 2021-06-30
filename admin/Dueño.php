@@ -169,9 +169,9 @@ if (!isset($_SESSION['loggedin'])) {
               </li>
             </ul>
           </li>
-          <div class="Footer">
+          <!-- <div class="Footer">
             <button class="btn btn-danger" onclick="location.href='#'">Cerrar sesión</button>
-          </div>
+          </div> -->
       </nav>
     </div>
   </aside>
@@ -180,7 +180,7 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="content-wrapper">
   <div class="text-center">
   <h1>DUEÑO</h1>
-  <button class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Dueño</button>
+  <button class="btn-add-dueño" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Dueño</button>
   <button class="btn btn-warning" id="" data-toggle="" data-target="">Info</button>
     </div>
       <!-- MESSAGES -->
@@ -194,16 +194,13 @@ if (!isset($_SESSION['loggedin'])) {
       <?php session_unset(); } ?>
 
       <!-- FORMULARIO AÑADIR DUEÑO -->
-      <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <div class="modal-header" style="background-color:#9ACD32">
-                  <h5 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Añadir Dueño</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <form action="Añadir_Dueño.php" method="POST">
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Añadir Dueño</h3>           
+      </div>
+        <form action="Añadir_Dueño.php" method="POST">
           <div class="form-group">
             <input type="text" name="Doc" class="form-control" placeholder="Documento" autofocus>
           </div>
@@ -220,23 +217,23 @@ if (!isset($_SESSION['loggedin'])) {
             <input type="text" name="Dirección" class="form-control" placeholder="Dirección" autofocus>
           </div>
           <div class="form-group">
-          <input type="text" name="Ciudad" class="form-control" placeholder="Ciudad" autofocus>
+            <input type="text" name="Ciudad" class="form-control" placeholder="Ciudad" autofocus>
           </div>
           <div class="form-group">
             <input type="text" name="Correo" class="form-control" placeholder="Correo" autofocus>
           </div>
           <div class="form-group">
-          <input type="date" name="Fecha_Registro" class="form-control" placeholder="Fecha_Registro" autofocus>
+            <input type="date" name="Fecha_Registro" class="form-control" placeholder="Fecha_Registro" autofocus>
           </div>
-          <input type="submit" name="agregar_dueño" class="btn btn-success btn-block" value="Agregar">
+          <div class="modal-footer">
+            <input type="submit" name="agregar_dueño" class="btn btn-success" value="Agregar">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+          </div>
         </form>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>
-</div>
-<div class="datatable-responsive datatable-box">
+  <div class="datatable-responsive datatable-box">
   <table id="dueño" class="table table-striped table-sm non-top-border " width="100%" cellspacing="0">
         <thead>
             <tr>
@@ -283,7 +280,7 @@ if (!isset($_SESSION['loggedin'])) {
               }
             ?>   
         </tbody>
-        <tfoot>
+        <!-- <tfoot>
             <tr>
                 <th>Doc</th>
                 <th>Nombre</th>
@@ -295,11 +292,10 @@ if (!isset($_SESSION['loggedin'])) {
                 <th>Fecha_Registro</th>  
                 <th>Acción</th>        
             </tr>
-        </tfoot>
+      </tfoot> -->
     </table>
-   </div>  
-   </div>  
-   </div> 
+  </div>  
+</div> 
    <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
         <b>Servicios Caninos Casme.</b> 
