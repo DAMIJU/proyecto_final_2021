@@ -118,14 +118,14 @@ if (!isset($_SESSION['loggedin'])) {
             </a>
           </li>
           <li class="nav-item">
-            <a href="Dueño.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Dueño')"">
+            <a href="Dueño.php" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Dueño            
               </p>
             </a>    
           <li class="nav-item">
-            <a href="Mascota.php" class="nav-link">
+            <a href="Mascota.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Vista Mascota')">
               <i class="nav-icon fas fa-dog"></i>
               <p>
                 Mascota             
@@ -169,9 +169,9 @@ if (!isset($_SESSION['loggedin'])) {
               </li>
             </ul>
           </li>
-          <div class="Footer">
+          <!-- <div class="Footer">
             <button class="btn btn-danger" onclick="location.href='#'">Cerrar sesión</button>
-          </div>
+          </div> -->
       </nav>
     </div>
   </aside>
@@ -179,7 +179,7 @@ if (!isset($_SESSION['loggedin'])) {
   </div>
   <div class="content-wrapper">
   <div class="text-center">
-  <h1>DUEÑO</h1>
+  <h1>Datos Mascota</h1>
   <!-- <button class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Dueño</button>
   <button class="btn btn-warning" id="" data-toggle="" data-target="">Info</button> -->
     </div>
@@ -198,105 +198,47 @@ if (!isset($_SESSION['loggedin'])) {
       <?php
       include("DB/conexion.php");
 
-      $Doc = $_REQUEST['Doc'];
+      $Num_Registro = $_REQUEST['Num_Registro'];
       
-      
-      $query="SELECT * FROM dueño WHERE Doc='$Doc'";
+      $query="SELECT * FROM tabla_mascotas WHERE Num_Registro='$Num_Registro'";
       $resultado= $con->query($query);
       $row=$resultado->fetch_assoc();
 
       ?>
   
-  <div class="row">
-    <div class="col-md-8">
+  
 <div class="datatable-responsive datatable-box">
 <table class="table table-sm  non-top-border">
-                <tbody>
-                                            <tr>
-                            <th>Documento</th>
-                            <td> <?php echo $row['Doc']; ?></td>
-                        </tr>
-                                        <tr>
-                        <th>Nombre</th>
-                        <td>
-                         <?php echo $row['Nombre']; ?>
-                                                    </td>
-                    </tr>
-                                            <tr>
-                            <th>Celular</th>
-                            <td><a href="tel:<?php echo $row['Celular']; ?>"><?php echo $row['Celular']; ?></a></td>
-                        </tr>
-                                                                                                                    <tr>
-                                <th>Telefono_Fijo</th>
-                                <td><a href="tel:<?php echo $row['Telefono_Fijo']; ?>"><?php echo $row['Telefono_Fijo']; ?></a></td>
-                            </tr>
-                                                <tr>
-                            <th>Dirección</th>
-                            <td><?php echo $row['Dirección']; ?></td>
-                        </tr>
-                        <tr>
-                            <th>Ciudad</th>
-                            <td><?php echo $row['Ciudad']; ?></td>
-                        </tr>
-                                                    <tr>
-                                <th>
-                                    Correo
-                                                                    </th>
-                                <td><a target="_blank" href="mailto:<?php echo $row['Correo']; ?>"><?php echo $row['Correo']; ?> <i class="fa fa-external-link-alt"></i></a> </td>
-                            </tr>
+            <tbody>
                     <tr>
-                        <th>Fecha_Registro</th>
-                        <td><?php echo $row['Fecha_Registro']; ?></td>
+                        <th>Registro</th>
+                        <td> <?php echo $row['Num_Registro']; ?></td>
                     </tr>
-                </tbody>
+                                    <tr>
+                    <th>Mascota</th>
+                    <td>
+                      <?php echo $row['Nombre_Mascota']; ?>
+                                                </td>
+                    <tr>
+                        <th>Dueño</th>
+                        <td><?php echo $row['Nombre_Dueño']; ?></td>
+                    </tr>
+              
+                    <tr>
+                        <th>Raza</th>
+                        <td><?php echo $row['Raza']; ?></td>
+                    </tr>
+                    <tr>
+                        <th>Fecha Nac</th>
+                        <td><?php echo $row['Fecha_Nac_Edad']; ?></td>
+                    </tr>
+                    <tr>
+                        <th>Sexo</th>
+                        <td><?php echo $row['Sexo']; ?></td>
+                    </tr>                       
+            </tbody>
             </table>
    </div> 
-   </div> 
-   <div class="col-md-4"> 
-   <div class="datatable-responsive datatable-box">
-<table class="table table-sm  non-top-border">
-                <tbody>
-                                            <tr>
-                            <th>Documento</th>
-                            <td> <?php echo $row['Doc']; ?></td>
-                        </tr>
-                                        <tr>
-                        <th>Nombre</th>
-                        <td>
-                         <?php echo $row['Nombre']; ?>
-                                                    </td>
-                    </tr>
-                                            <tr>
-                            <th>Celular</th>
-                            <td><a href="tel:<?php echo $row['Celular']; ?>"><?php echo $row['Celular']; ?></a></td>
-                        </tr>
-                                                                                                                    <tr>
-                                <th>Telefono_Fijo</th>
-                                <td><a href="tel:<?php echo $row['Telefono_Fijo']; ?>"><?php echo $row['Telefono_Fijo']; ?></a></td>
-                            </tr>
-                                                <tr>
-                            <th>Dirección</th>
-                            <td><?php echo $row['Dirección']; ?></td>
-                        </tr>
-                        <tr>
-                            <th>Ciudad</th>
-                            <td><?php echo $row['Ciudad']; ?></td>
-                        </tr>
-                                                    <tr>
-                                <th>
-                                    Correo
-                                                                    </th>
-                                <td><a target="_blank" href="mailto:<?php echo $row['Correo']; ?>"><?php echo $row['Correo']; ?> <i class="fa fa-external-link-alt"></i></a> </td>
-                            </tr>
-                    <tr>
-                        <th>Fecha_Registro</th>
-                        <td><?php echo $row['Fecha_Registro']; ?></td>
-                    </tr>
-                </tbody>
-            </table>
-   </div>  
-   </div>   
-   </div>  
    </div> 
    <footer class="main-footer">
       <div class="float-right d-none d-sm-block">

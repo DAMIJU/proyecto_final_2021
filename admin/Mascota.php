@@ -169,17 +169,17 @@ if (!isset($_SESSION['loggedin'])) {
               </li>
             </ul>
           </li>
-          <div class="Footer">
+          <!-- <div class="Footer">
             <button class="btn btn-danger" onclick="location.href='#'">Cerrar sesión</button>
-          </div>
+          </div> -->
       </nav>
     </div>
   </aside>
 </div>
-  <div class="content-wrapper">
+<div class="content-wrapper">
     <div class="text-center">
   <h1>MASCOTA</h1>
-  <button class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Mascota</button>
+  <button class="btn-add-mascota" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Mascota</button>
   <button class="btn btn-warning" id="" data-toggle="" data-target="">Cumpleaños</button>
     </div>
       <!-- MESSAGES -->
@@ -252,7 +252,7 @@ if (!isset($_SESSION['loggedin'])) {
               $query="SELECT * FROM tabla_mascotas";
               $resultado= $con->query($query);
               while($mostrar=$resultado->fetch_assoc()){
-            ?>   
+            ?>
                 <tr>
                     <td><?php echo $mostrar['Num_Registro']?></td>
                     <td><?php echo $mostrar['Nombre_Dueño']?></td>
@@ -268,7 +268,7 @@ if (!isset($_SESSION['loggedin'])) {
                          <i class="far fa-trash-alt"></i>
                       </a>
                       <a href="Vista_Mascota.php?Num_Registro=<?php echo $mostrar['Num_Registro']?>" class="btn btn-primary">
-              <i class="icofont-eye-alt"></i>
+                      <i class="icofont-eye-alt"></i>
                       </a>
                     </td>
                 </tr>
@@ -276,7 +276,7 @@ if (!isset($_SESSION['loggedin'])) {
                   }
                 ?>   
             </tbody>
-            <tfoot>
+            <!-- <tfoot>
                 <tr>
                     <th>Registro</th>
                     <th>Dueño</th>
@@ -286,7 +286,7 @@ if (!isset($_SESSION['loggedin'])) {
                     <th>Sexo</th>
                     <th>Acción</th>
                 </tr>
-            </tfoot>
+            </tfoot> -->
           </table>
         </div>
       </div>

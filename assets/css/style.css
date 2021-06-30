@@ -2075,8 +2075,8 @@ Full screen Modal
   width: auto;
 }
 .content-wrapper .datatable-box {
-  margin: 15px 10px;
-  padding: 10px;
+  margin: 25px 100px;
+  padding: 20px 1px 20px 1px;
   border: 3px solid #ced4da;
   border-radius: 5px;
 }
@@ -2094,7 +2094,12 @@ Full screen Modal
   border-radius: 0.3rem;
   outline: 0;
 }
-
+.content-wrapper .table-sm td, .table-sm th {
+  padding: 19px;
+}
+.content-wrapper .table-sm th{
+  color:#2F6858;
+}
 .modal-content .btn-success{
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
@@ -2108,6 +2113,46 @@ Full screen Modal
   background-color: #9ACD32;
   color: #2C2E27;
   border-color: #9ACD32;
+}
+#Tabla_mascotas .btn-primary{
+  color: #fff;
+  background-color: #25A745;
+  border-color: #25A745;
+}
+#Tabla_mascotas .btn-primary:hover{
+  color: #fff;
+  background-color: #1F8436;
+  border-color: #1F8436;
+}
+#Tabla_mascotas .btn-secondary{
+  color: #fff;
+  background-color: #474B4F;
+  border-color: #474B4F;
+}
+#dueño_wrapper .btn-secondary{
+  color: #fff;
+  background-color: #474B4F;
+  border-color: #474B4F;
+}
+#dueño_wrapper .btn-secondary:hover{
+  color: #fff;
+  background-color: #343A40;
+  border-color: #343A40;
+}
+#Tabla_mascotas .btn-secondary:hover{
+  color: #fff;
+  background-color: #343A40;
+  border-color: #343A40;
+}
+#dueño_wrapper .btn-primary{
+  color: #fff;
+  background-color: #25A745;
+  border-color: #25A745;
+}
+#dueño_wrapper .btn-primary:hover{
+  color: #fff;
+  background-color: #1F8436;
+  border-color: #1F8436;
 }
 .modal-content .btn-success:hover{
   background:  #83AE2A;
@@ -2126,7 +2171,6 @@ Full screen Modal
 .modal-content .row{
   display: flex;
   flex-wrap: wrap;
-  
 }
 .modal-content .form-group{
   margin-bottom: 1rem;
@@ -2137,11 +2181,59 @@ Full screen Modal
   background-color: #2D92CB;
   color: #fff;
 }
-.page-item.active .page-link {
+#Tabla_mascotas_wrapper .page-item.active .page-link {
   z-index: 3;
   color: #fff;
   background-color: #2D92CB;
   border-color: #2D92CB;
+}
+#Tabla_mascotas_wrapper .page-item.active .page-link:hover {
+  z-index: 3;
+  color: #fff;
+  background-color: #1F74A3;
+  border-color: #1F74A3;
+}
+#Tabla_mascotas_wrapper .page-link {
+  position: relative;
+  display: block;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #2D92CB;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+#Tabla_mascotas_wrapper .page-link:hover {
+  position: relative;
+  display: block;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #2D92CB;
+  background-color: #fff;
+  border: 2px solid #2D92CB;
+}
+#dueño_wrapper .page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #2D92CB;
+  border-color: #2D92CB;
+}
+#dueño_wrapper .page-item.active .page-link:hover {
+  z-index: 3;
+  color: #fff;
+  background-color: #1F74A3;
+  border-color: #1F74A3;
+}
+#dueño_wrapper .page-link {
+  position: relative;
+  display: block;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #2D92CB;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
 }
 [class*=sidebar-dark-] .nav-sidebar>.nav-item.menu-open>.nav-link, [class*=sidebar-dark-] .nav-sidebar>.nav-item:hover>.nav-link, [class*=sidebar-dark-] .nav-sidebar>.nav-item>.nav-link:focus{
   background-color:#343A40;
@@ -2151,6 +2243,110 @@ Full screen Modal
   background-color:#2D92CB;
   color: #fff;
 }
+div.dataTables_wrapper div.dataTables_length label {
+  font-weight: normal;
+  text-align: left;
+  white-space: nowrap;
+  padding-left: 10px;
+}
+div.dataTables_wrapper div.dataTables_filter label {
+  font-weight: normal;
+  white-space: nowrap;
+  text-align: left;
+  padding-right: 10px;
+}
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+  margin: 2px 0;
+  white-space: nowrap;
+  justify-content: flex-end;
+  padding: 10px 10px 0px 0px;
+}
+.content-wrapper .btn-add-mascota{
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  color: #212529;
+  background-color: #2D92CB;
+  border-color: #2D92CB;
+}
+.content-wrapper .btn-add-mascota:hover{
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  color: #212529;
+  background-color: #1F74A3;
+  border-color: #1F74A3;
+}
+.content-wrapper .btn-add-dueño{
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  color: #212529;
+  background-color: #2D92CB;
+  border-color: #2D92CB;
+}
+.content-wrapper .btn-add-dueño:hover{
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  color: #212529;
+  background-color: #1F74A3;
+  border-color: #1F74A3;
+}
+
+
 
 
 

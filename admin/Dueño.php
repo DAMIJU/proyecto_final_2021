@@ -169,9 +169,9 @@ if (!isset($_SESSION['loggedin'])) {
               </li>
             </ul>
           </li>
-          <div class="Footer">
+          <!-- <div class="Footer">
             <button class="btn btn-danger" onclick="location.href='#'">Cerrar sesión</button>
-          </div>
+          </div> -->
       </nav>
     </div>
   </aside>
@@ -180,7 +180,7 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="content-wrapper">
   <div class="text-center">
   <h1>DUEÑO</h1>
-  <button class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Dueño</button>
+  <button class="btn-add-dueño" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Dueño</button>
   <button class="btn btn-warning" id="" data-toggle="" data-target="">Info</button>
     </div>
       <!-- MESSAGES -->
@@ -280,7 +280,7 @@ if (!isset($_SESSION['loggedin'])) {
               }
             ?>   
         </tbody>
-        <tfoot>
+        <!-- <tfoot>
             <tr>
                 <th>Doc</th>
                 <th>Nombre</th>
@@ -292,7 +292,7 @@ if (!isset($_SESSION['loggedin'])) {
                 <th>Fecha_Registro</th>  
                 <th>Acción</th>        
             </tr>
-      </tfoot>
+      </tfoot> -->
     </table>
   </div>  
 </div> 

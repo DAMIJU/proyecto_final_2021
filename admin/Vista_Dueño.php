@@ -169,9 +169,9 @@ if (!isset($_SESSION['loggedin'])) {
               </li>
             </ul>
           </li>
-          <div class="Footer">
+          <!-- <div class="Footer">
             <button class="btn btn-danger" onclick="location.href='#'">Cerrar sesión</button>
-          </div>
+          </div> -->
       </nav>
     </div>
   </aside>
