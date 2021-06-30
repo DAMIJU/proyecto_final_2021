@@ -58,6 +58,13 @@ if (!isset($_SESSION['loggedin'])) {
   <!-- Bootstrap para DataTables -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <style>
     li{
       list-style: none;
@@ -260,6 +267,9 @@ if (!isset($_SESSION['loggedin'])) {
                       <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro']?>)" class="btn btn-danger">
                          <i class="far fa-trash-alt"></i>
                       </a>
+                      <a href="Vista_Mascota.php?Num_Registro=<?php echo $mostrar['Num_Registro']?>" class="btn btn-primary">
+              <i class="icofont-eye-alt"></i>
+                      </a>
                     </td>
                 </tr>
                 <?php
@@ -369,4 +379,5 @@ if (!isset($_SESSION['loggedin'])) {
         }
       }
 </script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </body>
