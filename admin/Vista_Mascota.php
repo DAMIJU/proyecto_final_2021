@@ -54,12 +54,12 @@ if (!isset($_SESSION['loggedin'])) {
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <!-- Template Main CSS File -->
-  <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+  <link href="../assets/css/style.css" rel="stylesheet">
   <!-- Bootstrap para DataTables -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
-    <!-- Vendor CSS Files -->
-    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
   <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
@@ -118,14 +118,14 @@ if (!isset($_SESSION['loggedin'])) {
             </a>
           </li>
           <li class="nav-item">
-            <a href="Dueño.php" class="nav-link">
+            <a href="Dueño.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Dueño')"">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Dueño            
               </p>
             </a>    
           <li class="nav-item">
-            <a href="Mascota.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Mascota')">
+            <a href="Mascota.php" class="nav-link">
               <i class="nav-icon fas fa-dog"></i>
               <p>
                 Mascota             
@@ -176,11 +176,12 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </aside>
 </div>
+  </div>
   <div class="content-wrapper">
-    <div class="text-center">
-  <h1>MASCOTA</h1>
-  <button class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Mascota</button>
-  <button class="btn btn-warning" id="" data-toggle="" data-target="">Cumpleaños</button>
+  <div class="text-center">
+  <h1>DUEÑO</h1>
+  <!-- <button class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Dueño</button>
+  <button class="btn btn-warning" id="" data-toggle="" data-target="">Info</button> -->
     </div>
       <!-- MESSAGES -->
       <?php if (isset($_SESSION['message'])) { ?>
@@ -192,110 +193,112 @@ if (!isset($_SESSION['loggedin'])) {
       </div>
       <?php session_unset(); } ?>
 
-      <!-- FORMULARIO AÑADIR MASCOTA -->
-      <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Añadir Mascota</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-          <form action="Añadir_Mascota.php" method="POST">
-            <div class="form-group">
-              <input type="text" name="Num_Registro" class="form-control" placeholder="Registro" autofocus>
-            </div>
-            <div class="form-group">
-            <input type="text" name="Doc_Dueño" class="form-control" placeholder="Doc Dueño" autofocus>
-            </div>
-            <div class="form-group">
-            <input type="text" name="Nombre_Dueño" class="form-control" placeholder="Dueño" autofocus>
-            </div>
-            <div class="form-group">
-              <input type="text" name="Nombre_Mascota" class="form-control" placeholder="Mascota" autofocus>
-            </div>
-            <div class="form-group">
-            <input type="text" name="Raza" class="form-control" placeholder="Raza" autofocus>
-            </div>
-            <div class="form-group">
-              <input type="date" name="Fecha_Nac_Edad" class="form-control" placeholder="Fecha Nac" autofocus>
-            </div>
-            <div class="form-group">
-            <input type="text" name="Sexo" class="form-control" placeholder="Sexo" autofocus>
-            </div>      
-            <div class="form-group">
-            <input type="date" name="Fecha_Registro" class="form-control" placeholder="Fecha_Registro" autofocus>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <input type="submit" name="Agregar_Mascota" class="btn btn-success " value="Agregar">
-                <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
-              </div>
-            </div>
-          </form>           
-            </div>
-          </div>
-        </div>
-        <!-- DATATABLE MASCOTA -->
-        <div class="datatable-responsive datatable-box">
-          <table id="Tabla_mascotas" class="table table-striped table-sm non-top-border" cellspacing="0">
-            <thead>
-                <tr>
-                    <th>Registro</th>
-                    <th>Dueño</th>
-                    <th>Mascota</th>
-                    <th>Raza</th>
-                    <th>Fecha Nac</th>
-                    <th>Sexo</th>
-                    <th>Acción</th>         
-                </tr>
-            </thead>
-            <tbody>
-            <?php  
-              include("DB/conexion.php");
-              $query="SELECT * FROM tabla_mascotas";
-              $resultado= $con->query($query);
-              while($mostrar=$resultado->fetch_assoc()){
-            ?>   
-                <tr>
-                    <td><?php echo $mostrar['Num_Registro']?></td>
-                    <td><?php echo $mostrar['Nombre_Dueño']?></td>
-                    <td><?php echo $mostrar['Nombre_Mascota']?></td>
-                    <td><?php echo $mostrar['Raza']?></td>
-                    <td><?php echo $mostrar['Fecha_Nac_Edad']?></td>
-                    <td><?php echo $mostrar['Sexo']?></td>
-                    <td>
-                      <a href="Edit_Mascota.php?Num_Registro=<?php echo $mostrar['Num_Registro']?>" class="btn btn-secondary">
-                        <i class="fas fa-marker"></i>
-                      </a>
-                      <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro']?>)" class="btn btn-danger">
-                         <i class="far fa-trash-alt"></i>
-                      </a>
-                      <a href="Vista_Mascota.php?Num_Registro=<?php echo $mostrar['Num_Registro']?>" class="btn btn-primary">
-              <i class="icofont-eye-alt"></i>
-                      </a>
-                    </td>
-                </tr>
-                <?php
-                  }
-                ?>   
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th>Registro</th>
-                    <th>Dueño</th>
-                    <th>Mascota</th>
-                    <th>Raza</th>
-                    <th>Fecha Nac</th>
-                    <th>Sexo</th>
-                    <th>Acción</th>
-                </tr>
-            </tfoot>
-          </table>
-        </div>
-      </div>
-    <footer class="main-footer">
+      <!-- FORMULARIO AÑADIR DUEÑO -->
+      
+      <?php
+      include("DB/conexion.php");
+
+      $Doc = $_REQUEST['Doc'];
+      
+      
+      $query="SELECT * FROM dueño WHERE Doc='$Doc'";
+      $resultado= $con->query($query);
+      $row=$resultado->fetch_assoc();
+
+      ?>
+  
+  <div class="row">
+    <div class="col-md-8">
+<div class="datatable-responsive datatable-box">
+<table class="table table-sm  non-top-border">
+                <tbody>
+                                            <tr>
+                            <th>Documento</th>
+                            <td> <?php echo $row['Doc']; ?></td>
+                        </tr>
+                                        <tr>
+                        <th>Nombre</th>
+                        <td>
+                         <?php echo $row['Nombre']; ?>
+                                                    </td>
+                    </tr>
+                                            <tr>
+                            <th>Celular</th>
+                            <td><a href="tel:<?php echo $row['Celular']; ?>"><?php echo $row['Celular']; ?></a></td>
+                        </tr>
+                                                                                                                    <tr>
+                                <th>Telefono_Fijo</th>
+                                <td><a href="tel:<?php echo $row['Telefono_Fijo']; ?>"><?php echo $row['Telefono_Fijo']; ?></a></td>
+                            </tr>
+                                                <tr>
+                            <th>Dirección</th>
+                            <td><?php echo $row['Dirección']; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Ciudad</th>
+                            <td><?php echo $row['Ciudad']; ?></td>
+                        </tr>
+                                                    <tr>
+                                <th>
+                                    Correo
+                                                                    </th>
+                                <td><a target="_blank" href="mailto:<?php echo $row['Correo']; ?>"><?php echo $row['Correo']; ?> <i class="fa fa-external-link-alt"></i></a> </td>
+                            </tr>
+                    <tr>
+                        <th>Fecha_Registro</th>
+                        <td><?php echo $row['Fecha_Registro']; ?></td>
+                    </tr>
+                </tbody>
+            </table>
+   </div> 
+   </div> 
+   <div class="col-md-4"> 
+   <div class="datatable-responsive datatable-box">
+<table class="table table-sm  non-top-border">
+                <tbody>
+                                            <tr>
+                            <th>Documento</th>
+                            <td> <?php echo $row['Doc']; ?></td>
+                        </tr>
+                                        <tr>
+                        <th>Nombre</th>
+                        <td>
+                         <?php echo $row['Nombre']; ?>
+                                                    </td>
+                    </tr>
+                                            <tr>
+                            <th>Celular</th>
+                            <td><a href="tel:<?php echo $row['Celular']; ?>"><?php echo $row['Celular']; ?></a></td>
+                        </tr>
+                                                                                                                    <tr>
+                                <th>Telefono_Fijo</th>
+                                <td><a href="tel:<?php echo $row['Telefono_Fijo']; ?>"><?php echo $row['Telefono_Fijo']; ?></a></td>
+                            </tr>
+                                                <tr>
+                            <th>Dirección</th>
+                            <td><?php echo $row['Dirección']; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Ciudad</th>
+                            <td><?php echo $row['Ciudad']; ?></td>
+                        </tr>
+                                                    <tr>
+                                <th>
+                                    Correo
+                                                                    </th>
+                                <td><a target="_blank" href="mailto:<?php echo $row['Correo']; ?>"><?php echo $row['Correo']; ?> <i class="fa fa-external-link-alt"></i></a> </td>
+                            </tr>
+                    <tr>
+                        <th>Fecha_Registro</th>
+                        <td><?php echo $row['Fecha_Registro']; ?></td>
+                    </tr>
+                </tbody>
+            </table>
+   </div>  
+   </div>   
+   </div>  
+   </div> 
+   <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
         <b>Servicios Caninos Casme.</b> 
       </div>
@@ -368,7 +371,7 @@ if (!isset($_SESSION['loggedin'])) {
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
 <script> $(document).ready(function() {
-    $('#Tabla_mascotas').DataTable( {
+    $('#dueño').DataTable( {
         language: {
             url: 'https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
         }
@@ -376,13 +379,13 @@ if (!isset($_SESSION['loggedin'])) {
 } );
 </script>
 <script type="text/javascript">
-      function preguntar(Num_Registro)
+      function preguntar(Doc)
       {
-        if(confirm('¿Está seguro que desea eliminar esta mascota?'))
+        if(confirm('¿Estás seguro que quieres eliminar al cliente?'))
         {
-          window.location.href = "Delete_Mascota.php?Num_Registro="+Num_Registro;
+          window.location.href = "Delete_Dueño.php?Doc="+Doc;
         }
       }
 </script>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-</body>
+</body>s
