@@ -2116,13 +2116,13 @@ Full screen Modal
 }
 #Tabla_mascotas .btn-primary{
   color: #fff;
-  background-color: #25A745;
-  border-color: #25A745;
+  background-color: #9ACD32;
+  border-color: #9ACD32;
 }
 #Tabla_mascotas .btn-primary:hover{
   color: #fff;
-  background-color: #1F8436;
-  border-color: #1F8436;
+  background-color: #83AE2A;
+  border-color: #83AE2A;
 }
 #Tabla_mascotas .btn-secondary{
   color: #fff;
@@ -2146,13 +2146,13 @@ Full screen Modal
 }
 #dueño_wrapper .btn-primary{
   color: #fff;
-  background-color: #25A745;
-  border-color: #25A745;
+  background-color: #9ACD32;
+  border-color: #9ACD32;
 }
 #dueño_wrapper .btn-primary:hover{
   color: #fff;
-  background-color: #1F8436;
-  border-color: #1F8436;
+  background-color: #83AE2A;
+  border-color: #83AE2A;
 }
 .modal-content .btn-success:hover{
   background:  #83AE2A;
