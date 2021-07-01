@@ -70,10 +70,8 @@
       </nav><!-- .nav-menu -->
     </div>
   </header><!-- End Header -->
-</sesion>
-  <br><br>
   <section class="admin">
-    <div class="modal-dialog text-center">
+    <div class="modal-dialog text-center" style="height:10%">
         <div class="col-sm-8 main-section">
             <div class="modal-content">
                 <div class="col-12 user-img">
