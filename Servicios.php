@@ -193,16 +193,35 @@
               </button>
             </div>
             <div class="modal-body">
-            <center><h3 style="color:#2D92CB">Duración variable - Spa</h3></center>
-              <p style="color:black">La mejor opción para NUESTROS PERROS en Tantoyuca y la región, Nuestro servicio incluye: Desenredado Recuperación de pelaje, baño control caída de pelo,, baño con shampoo hipo alergénico y aromaterapia, lavanda y romero, masaje relajante durante el baño, limpieza de glándulas anales, acondicionado y texturizado de pelo según la raza, secado rápido y a conciencia, corte de uñas ya reblandecidas por el baño, limpieza de oídos, corte y arreglo estético que puede ser clásico, diseño de imagen, cambio de look o arreglo de fantasía, adorno y perfume si es de su agrado.</p><center><p style="font-weight:bold">Quedamos a sus órdenes.</p>
-              <img class="Img_EsteticaCanina img-fluid" src="https://scontent.feoh3-1.fna.fbcdn.net/v/t45.5328-4/c0.1.960.960a/p960x960/60676998_2260992997320018_2832629320822816768_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=c48759&_nc_eui2=AeEMTa9R1egLTe7JELtUKeTjPzHXzjTwmOA_MdfONPCY4MYpA28bnaYsJ7Kim5vU50SBDN3EGM0AjkYSyfpTx7XD&_nc_ohc=ocmU715rJ-4AX_0IlfZ&tn=C-qNvwX96CU2PIeK&_nc_ht=scontent.feoh3-1.fna&tp=27&oh=fdecca95c016efbcb676c390516479ce&oe=60DFBFB3" alt="Estética Canina">
-            </center>
+              <p>La mejor opción para nuestros perros en Tantoyuca y la región, nuestro servicio incluye:</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <li>Desenredado</li>
+                  <li>Recuperación de pelaje</li>
+                  <li>Baño control caída de pelo</li>
+                  <li>Baño con shampoo hipo alergénico y aromaterapia</li>
+                  <li>Lavanda y romero</li>
+                  <li>Masaje relajante durante el baño</li>
+                  <li>Limpieza de glándulas anales</li>
+                  <li>Acondicionado y texturizado de pelo según la raza</li>
+                </div>
+                <div class="col-md-6">
+                  <li>Secado rápido y a conciencia</li>
+                  <li>Corte de uñas ya reblandecidas por el baño</li>
+                  <li>Limpieza de oídos</li>
+                  <li>Corte y arreglo estético que puede ser clásico</li>
+                  <li>Diseño de imagen</li>
+                  <li>Cambio de look o arreglo de fantasía</li>
+                  <li>Adorno y perfume si es de su agrado</li>
+                </div>
+              </div>
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button style="margin-left:85%" type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             </div>
           </div>
         </div>
+      </div>
   <!-- End Services Section -->
  <!-- ======= Footer ======= -->
  <footer id="footer">
