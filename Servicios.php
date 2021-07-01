@@ -23,7 +23,6 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <a href="https://icons8.com/icon/121380/corazon-de-perro"></a>
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
@@ -262,6 +261,4 @@
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-<script src="popup.js"></script>
-<script src="modal.js"></script>
 </body>

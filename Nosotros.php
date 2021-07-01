@@ -36,20 +36,22 @@
   ======================================================== -->
 </head>
 <body>
-  <!-- <button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button> -->
+  
+ <!-- <button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button> -->
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
+
       <h1 class="logo mr-auto"><a href="index.php"><img src="assets/img/Logo sin fondo.png" alt="Caninos Casme"></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li><a href="index.php">Inicio</a></li>
-          <li class="active"><a href="Nosotros.php">Nosotros</a></li>
-          <li><a href="Servicios.php">Servicios</a></li>      
-          <li><a href="Galeria.php">Galería</a></li>            
-          <li><a href="Login.php">Admin</a></li>
+          <li><a href="Nosotros.php">Nosotros</a></li>
+          <li><a href="Servicios.php">Servicios</a></li>
+          <li><a href="Galeria.php">Galería</a></li>                  
+          <li ><a href="Login.php">Admin</a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -57,7 +59,7 @@
   <!-- End Header -->
   <!-- <br><br><br><br><br><br><br> -->
 <!-- ======= About Section ======= -->
-<section id="about" class="about">
+<section id="" class="about">
   <div class="container">
       <!-- <div class="section-title">     
         <h3><span></span></h3>
@@ -88,10 +90,9 @@
     </div>
   </div>
 </section>
-<!-- Button trigger modal -->
-<!-- End About Section -->
-    <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <!-- End Services Section -->
+ <!-- ======= Footer ======= -->
+ <footer id="footer">
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
@@ -114,8 +115,8 @@
       </div>
     </div>
   </footer><!-- End Footer -->
-    
-    <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
 
 <!-- Vendor JS Files -->
 <script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -127,8 +128,7 @@
 <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
 
 <!-- Template Main JS File -->
-
+<script src="assets/js/main.js"></script>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </body>
 </html>
-
