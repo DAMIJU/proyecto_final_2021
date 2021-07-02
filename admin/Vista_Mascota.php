@@ -211,7 +211,7 @@ if (!isset($_SESSION['loggedin'])) {
   
   
 <div class="datatable-responsive datatable-box">
-<table class="table table-sm  non-top-border">
+<table class="table table-responsive table-sm  non-top-border">
             <tbody>
                     <tr>
                         <th>Registro</th>
