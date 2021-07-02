@@ -243,8 +243,8 @@ if (!isset($_SESSION['loggedin'])) {
             </table>
    </div>
           <div class="botones">
-            <a href="Edit_Mascota.php?Num_Registro=<?php echo $mostrar['Num_Registro']?>" class="btn btn-success">Editar</a>
-            <button type="button" class="btn btn-danger">Eliminar</button>
+            <a href="Edit_Mascota.php?Num_Registro=<?php echo $row['Num_Registro']?>" class="btn btn-success">Editar</a>
+            <a href="#" onclick="preguntar(<?php echo $row['Num_Registro']?>)" class="btn btn-danger">Eliminar</a>
             <a href="Mascota.php" role="button" class="btn btn-primary">Volver</a>
           </div>
 </div> 
@@ -329,11 +329,11 @@ if (!isset($_SESSION['loggedin'])) {
 } );
 </script>
 <script type="text/javascript">
-      function preguntar(Doc)
+      function preguntar(Num_Registro)
       {
-        if(confirm('¿Estás seguro que quieres eliminar al cliente?'))
+        if(confirm('¿Estás seguro que quieres eliminar esta mascota?'))
         {
-          window.location.href = "Delete_Dueño.php?Doc="+Doc;
+          window.location.href = "Delete_Mascota.php?Num_Registro="+Num_Registro;
         }
       }
 </script>

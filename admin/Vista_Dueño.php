@@ -255,8 +255,8 @@ if (!isset($_SESSION['loggedin'])) {
             </table>
    </div>
           <div class="botones">
-            <button type="button" class="btn btn-success">Editar</button>
-            <button type="button" class="btn btn-danger">Eliminar</button>
+            <a href="Edit_Dueño.php?Doc=<?php echo $row['Doc']?>" class="btn btn-success">Editar</a>
+            <a href="#" onclick="preguntar(<?php echo $row['Doc']?>)" class="btn btn-danger">Eliminar</a>
             <a href="Dueño.php" role="button" class="btn btn-primary">Volver</a>
           </div>
    </div> 
