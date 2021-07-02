@@ -29,7 +29,11 @@ if (!isset($_SESSION['loggedin'])) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Panel de Control</title>
+  <title>Panel de admin</title>
+
+  <!-- Favicons -->
+  <link href="../assets/img/Logo.ico" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -202,16 +206,16 @@ if (!isset($_SESSION['loggedin'])) {
       </div>
         <form action="Añadir_Dueño.php" method="POST">
           <div class="form-group">
-            <input type="text" name="Doc" class="form-control" placeholder="Documento" autofocus>
+            <input type="number" name="Doc" class="form-control" placeholder="Documento" autofocus>
           </div>
           <div class="form-group">
           <input type="text" name="Nombre" class="form-control" placeholder="Nombre" autofocus>
           </div>
           <div class="form-group">
-            <input type="text" name="Celular" class="form-control" placeholder="Celular" autofocus>
+            <input type="number" name="Celular" class="form-control" placeholder="Celular" autofocus>
           </div>
           <div class="form-group">
-          <input type="text" name="Telefono_Fijo" class="form-control" placeholder="Telefono FIjo" autofocus>
+          <input type="number" name="Telefono_Fijo" class="form-control" placeholder="Telefono FIjo" autofocus>
           </div>
           <div class="form-group">
             <input type="text" name="Dirección" class="form-control" placeholder="Dirección" autofocus>
@@ -234,7 +238,7 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </div>
   <div class="datatable-responsive datatable-box">
-  <table id="dueño" class="table table-striped table-sm non-top-border " width="100%" cellspacing="0">
+  <table id="dueño" class="table table-responsive table-sm non-top-border " width="100%" cellspacing="0">
         <thead>
             <tr>
                 <th>Doc</th>

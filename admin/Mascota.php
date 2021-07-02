@@ -29,7 +29,11 @@ if (!isset($_SESSION['loggedin'])) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Panel de Control</title>
+  <title>Panel de admin</title>
+
+    <!-- Favicons -->
+  <link href="../assets/img/Logo.ico" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -204,7 +208,7 @@ if (!isset($_SESSION['loggedin'])) {
                   <input type="text" name="Num_Registro" class="form-control" placeholder="Registro" autofocus>
                 </div>
                 <div class="form-group">
-                <input type="text" name="Doc_Dueño" class="form-control" placeholder="Doc Dueño" autofocus>
+                <input type="number" name="Doc_Dueño" class="form-control" placeholder="Doc Dueño" autofocus>
                 </div>
                 <div class="form-group">
                 <input type="text" name="Nombre_Dueño" class="form-control" placeholder="Dueño" autofocus>
@@ -234,7 +238,7 @@ if (!isset($_SESSION['loggedin'])) {
         </div>
         <!-- DATATABLE MASCOTA -->
         <div class="datatable-responsive datatable-box">
-          <table id="Tabla_mascotas" class="table table-striped table-sm non-top-border" cellspacing="0">
+          <table id="Tabla_mascotas" class="table table-responsive table-sm non-top-border dt-responsive" cellspacing="0">
             <thead>
                 <tr>
                     <th>Registro</th>
@@ -243,7 +247,7 @@ if (!isset($_SESSION['loggedin'])) {
                     <th>Raza</th>
                     <th>Fecha Nac</th>
                     <th>Sexo</th>
-                    <th>Acción</th>         
+                    <th>Acción</th>             
                 </tr>
             </thead>
             <tbody>
@@ -259,7 +263,7 @@ if (!isset($_SESSION['loggedin'])) {
                     <td><?php echo $mostrar['Nombre_Mascota']?></td>
                     <td><?php echo $mostrar['Raza']?></td>
                     <td><?php echo $mostrar['Fecha_Nac_Edad']?></td>
-                    <td><?php echo $mostrar['Sexo']?></td>
+                    <td><?php echo $mostrar['Sexo']?></td>          
                     <td>
                       <a href="Edit_Mascota.php?Num_Registro=<?php echo $mostrar['Num_Registro']?>" class="btn btn-secondary">
                         <i class="fas fa-marker"></i>
