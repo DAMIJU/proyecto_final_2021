@@ -211,9 +211,9 @@ if (!isset($_SESSION['loggedin'])) {
       ?>
   
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-6">
 <div class="datatable-responsive datatable-box">
-<table class="table table-sm  non-top-border">
+<table class="table table-responsive table-sm  non-top-border">
                 <tbody>
                                             <tr>
                             <th>Documento</th>
@@ -260,9 +260,9 @@ if (!isset($_SESSION['loggedin'])) {
             <a href="Dueño.php" role="button" class="btn btn-primary">Volver</a>
           </div>
    </div> 
-   <div class="col-md-4"> 
+   <div class="col-md-6"> 
    <div class="datatable-responsive datatable-box">
-<table class="table table-sm  non-top-border">
+<table class="table table-responsive table-sm   non-top-border">
                 <tbody>
                                             <tr>
                             <th>Documento</th>
@@ -304,8 +304,14 @@ if (!isset($_SESSION['loggedin'])) {
             </table>
    </div>  
    </div>   
-   </div>  
    </div> 
+   <div class="botones">
+            <button type="button" class="btn btn-success">Editar</button>
+            <button type="button" class="btn btn-danger">Eliminar</button>
+            <a href="Dueño.php" role="button" class="btn btn-primary">Volver</a>
+          </div> 
+   </div> 
+   
    <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
         <b>Servicios Caninos Casme.</b> 
