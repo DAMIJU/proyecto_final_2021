@@ -2114,6 +2114,26 @@ Full screen Modal
   color: #2C2E27;
   border-color: #9ACD32;
 }
+.botones .btn-success{
+  color: #fff;
+  background-color: #9ACD32;
+  border-color: #9ACD32;
+}
+.botones .btn-success:hover{
+  color: #fff;
+  background-color: #83AE2A;
+  border-color: #83AE2A;
+}
+.botones .btn-primary{
+  color: #fff;
+  background-color: #2D92CB;
+  border-color: #2D92CB;
+}
+.botones .btn-primary:hover{
+  color: #fff;
+  background-color: #1F74A3;
+  border-color: #1F74A3;
+}
 #Tabla_mascotas .btn-primary{
   color: #fff;
   background-color: #9ACD32;
@@ -2264,7 +2284,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 .content-wrapper .btn-add-mascota{
   display: inline-block;
   font-weight: 400;
-  color: #212529;
+  color: #fff;
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -2278,14 +2298,13 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   line-height: 1.5;
   border-radius: .25rem;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  color: #212529;
   background-color: #2D92CB;
   border-color: #2D92CB;
 }
 .content-wrapper .btn-add-mascota:hover{
   display: inline-block;
   font-weight: 400;
-  color: #212529;
+  color: #fff;
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -2299,14 +2318,13 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   line-height: 1.5;
   border-radius: .25rem;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  color: #212529;
   background-color: #1F74A3;
   border-color: #1F74A3;
 }
 .content-wrapper .btn-add-dueño{
   display: inline-block;
   font-weight: 400;
-  color: #212529;
+  color: #fff;
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -2320,14 +2338,13 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   line-height: 1.5;
   border-radius: .25rem;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  color: #212529;
   background-color: #2D92CB;
   border-color: #2D92CB;
 }
 .content-wrapper .btn-add-dueño:hover{
   display: inline-block;
   font-weight: 400;
-  color: #212529;
+  color: #fff;
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -2341,7 +2358,6 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   line-height: 1.5;
   border-radius: .25rem;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  color: #212529;
   background-color: #1F74A3;
   border-color: #1F74A3;
 }
@@ -2375,14 +2391,23 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 #Tabla_mascotas_wrapper .table td, .table th {
   padding: .75rem;
   vertical-align: top;
- /*  border-top: 1px solid #dee2e6; */
-  border-bottom: 2px solid #dee2e6;
+  border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
 }
 #dueño_wrapper .table td, .table th {
   padding: .75rem;
   vertical-align: top;
- /*  border-top: 1px solid #dee2e6; */
-  border-bottom: 2px solid #dee2e6;
+  border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+}
+.datatable-responsive .table td, .table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+}
+.botones{
+  margin: 25px 100px;
 }
 
 

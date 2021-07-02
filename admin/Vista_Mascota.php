@@ -30,6 +30,9 @@ if (!isset($_SESSION['loggedin'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Panel de Control</title>
+     <!-- Favicons -->
+  <link href="../assets/img/Logo.ico" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -75,7 +78,7 @@ if (!isset($_SESSION['loggedin'])) {
 <div class="wrapper">
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__shake" src="../assets/img/Logo sin fondo.png" alt="Casme Logo" height="90px" width="100px">
   </div>
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -238,8 +241,13 @@ if (!isset($_SESSION['loggedin'])) {
                     </tr>                       
             </tbody>
             </table>
-   </div> 
-   </div> 
+   </div>
+          <div class="botones">
+            <a href="Edit_Mascota.php?Num_Registro=<?php echo $mostrar['Num_Registro']?>" class="btn btn-success">Editar</a>
+            <button type="button" class="btn btn-danger">Eliminar</button>
+            <a href="Mascota.php" role="button" class="btn btn-primary">Volver</a>
+          </div>
+</div> 
    <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
         <b>Servicios Caninos Casme.</b> 
