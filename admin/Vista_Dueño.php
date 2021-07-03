@@ -228,7 +228,7 @@ if (!isset($_SESSION['loggedin'])) {
                         </td>
                     </tr>         
                     <tr>
-                        <th>Telefono_Fijo</th>
+                        <th>Telefono Fijo</th>
                         <td>
                         <a href="tel:<?php echo $row['Telefono_Fijo']; ?>"><?php echo $row['Telefono_Fijo']; ?></a>
                         </td>
@@ -252,7 +252,7 @@ if (!isset($_SESSION['loggedin'])) {
                         </td>
                     </tr>
                     <tr>
-                        <th>Fecha_Registro</th>
+                        <th>Fecha Registro</th>
                         <td>
                         <?php echo $row['Fecha_Registro_Dueño']; ?>
                         </td>
