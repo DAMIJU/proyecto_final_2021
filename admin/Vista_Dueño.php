@@ -201,10 +201,10 @@ if (!isset($_SESSION['loggedin'])) {
       <?php
       include("DB/conexion.php");
 
-      $Doc = $_REQUEST['Doc'];
+      $Celular = $_REQUEST['Celular'];
       
       
-      $query="SELECT * FROM dueño WHERE Doc='$Doc'";
+      $query="SELECT * FROM tabla_dueño INNER JOIN tabla_mascotas ON tabla_dueño.Celular = tabla_mascotas.Cel_Dueño WHERE Celular='$Celular'";
       $resultado= $con->query($query);
       $row=$resultado->fetch_assoc();
 
@@ -215,48 +215,54 @@ if (!isset($_SESSION['loggedin'])) {
 <div class="datatable-responsive datatable-box">
 <table class="table table-responsive table-sm  non-top-border">
                 <tbody>
-                                            <tr>
-                            <th>Documento</th>
-                            <td> <?php echo $row['Doc']; ?></td>
-                        </tr>
-                                        <tr>
+                    <tr>
+                            <th>Celular</th>
+                            <td>
+                            <a href="tel:<?php echo $row['Celular']; ?>"><?php echo $row['Celular']; ?></a>
+                            </td>
+                    </tr>          
+                    <tr>
                         <th>Nombre</th>
                         <td>
-                         <?php echo $row['Nombre']; ?>
-                                                    </td>
+                         <?php echo $row['Nombre_Dueño']; ?>
+                        </td>
+                    </tr>         
+                    <tr>
+                        <th>Telefono_Fijo</th>
+                        <td>
+                        <a href="tel:<?php echo $row['Telefono_Fijo']; ?>"><?php echo $row['Telefono_Fijo']; ?></a>
+                        </td>
                     </tr>
-                                            <tr>
-                            <th>Celular</th>
-                            <td><a href="tel:<?php echo $row['Celular']; ?>"><?php echo $row['Celular']; ?></a></td>
-                        </tr>
-                                                                                                                    <tr>
-                                <th>Telefono_Fijo</th>
-                                <td><a href="tel:<?php echo $row['Telefono_Fijo']; ?>"><?php echo $row['Telefono_Fijo']; ?></a></td>
-                            </tr>
-                                                <tr>
-                            <th>Dirección</th>
-                            <td><?php echo $row['Dirección']; ?></td>
-                        </tr>
-                        <tr>
-                            <th>Ciudad</th>
-                            <td><?php echo $row['Ciudad']; ?></td>
-                        </tr>
-                                                    <tr>
-                                <th>
-                                    Correo
-                                                                    </th>
-                                <td><a target="_blank" href="mailto:<?php echo $row['Correo']; ?>"><?php echo $row['Correo']; ?> <i class="fa fa-external-link-alt"></i></a> </td>
-                            </tr>
+                    <tr>
+                        <th>Dirección</th>
+                        <td>
+                        <?php echo $row['Dirección']; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Ciudad</th>
+                        <td>
+                        <?php echo $row['Ciudad']; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Correo</th>
+                        <td>
+                        <a target="_blank" href="mailto:<?php echo $row['Correo']; ?>"><?php echo $row['Correo']; ?> <i class="fa fa-external-link-alt"></i></a> 
+                        </td>
+                    </tr>
                     <tr>
                         <th>Fecha_Registro</th>
-                        <td><?php echo $row['Fecha_Registro']; ?></td>
+                        <td>
+                        <?php echo $row['Fecha_Registro_Dueño']; ?>
+                        </td>
                     </tr>
                 </tbody>
             </table>
    </div>
           <div class="botones">
-            <a href="Edit_Dueño.php?Doc=<?php echo $row['Doc']?>" class="btn btn-success">Editar</a>
-            <a href="#" onclick="preguntar(<?php echo $row['Doc']?>)" class="btn btn-danger">Eliminar</a>
+            <a href="Edit_Dueño.php?Celular=<?php echo $row['Celular']?>" class="btn btn-success">Editar</a>
+            <a href="#" onclick="preguntar(<?php echo $row['Celular']?>)" class="btn btn-danger">Eliminar</a>
             <a href="Dueño.php" role="button" class="btn btn-primary">Volver</a>
           </div>
    </div> 
@@ -265,8 +271,8 @@ if (!isset($_SESSION['loggedin'])) {
 <table class="table table-responsive table-sm   non-top-border">
                 <tbody>
                                             <tr>
-                            <th>Documento</th>
-                            <td> <?php echo $row['Doc']; ?></td>
+                            <th>Numero de Registro</th>
+                            <td> <?php echo $row['4']; ?></td>
                         </tr>
                                         <tr>
                         <th>Nombre</th>
@@ -393,11 +399,11 @@ if (!isset($_SESSION['loggedin'])) {
 } );
 </script>
 <script type="text/javascript">
-      function preguntar(Doc)
+      function preguntar(Celular)
       {
         if(confirm('¿Estás seguro que quieres eliminar al cliente?'))
         {
-          window.location.href = "Delete_Dueño.php?Doc="+Doc;
+          window.location.href = "Delete_Dueño.php?Celular="+Celular;
         }
       }
 </script>

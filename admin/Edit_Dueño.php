@@ -68,25 +68,22 @@ if (!isset($_SESSION['loggedin'])) {
 <?php
 include("DB/conexion.php");
 
-$Doc = $_REQUEST['Doc'];
+$Celular = $_REQUEST['Celular'];
 
-
-$query="SELECT * FROM dueño WHERE Doc='$Doc'";
+$query="SELECT * FROM tabla_dueño WHERE Celular='$Celular'";
 $resultado= $con->query($query);
 $row=$resultado->fetch_assoc();
 
 if(isset($_POST['update'])){
-  
-  $Doc = $_REQUEST['Doc'];
+  $Celular = $_REQUEST['Celular'];
   $Id = $_POST['Id'];
-  $Nombre= $_POST['Nombre'];
-  $Celular = $_POST['Celular'];
+  $Nombre_Dueño= $_POST['Nombre_Dueño'];
   $Telefono_Fijo = $_POST['Telefono_Fijo'];
   $Dirección = $_POST['Dirección'];
   $Ciudad = $_POST['Ciudad'];
   $Correo = $_POST['Correo'];
-  $Fecha_Registro = $_POST['Fecha_Registro'];
-  $query = "UPDATE dueño set Doc = '$Doc', Nombre = '$Nombre', Celular = '$Celular', Telefono_Fijo = '$Telefono_Fijo', Dirección = '$Dirección', Ciudad = '$Ciudad', Correo = '$Correo', Fecha_Registro = '$Fecha_Registro' WHERE Doc=$Doc";
+  $Fecha_Registro_Dueño = $_POST['Fecha_Registro_Dueño'];
+  $query = "UPDATE tabla_dueño set Celular = '$Id', Nombre_Dueño = '$Nombre', Telefono_Fijo = '$Telefono_Fijo', Dirección = '$Dirección', Ciudad = '$Ciudad', Correo = '$Correo', Fecha_Registro_Dueño = '$Fecha_Registro' WHERE Celular=$Celular";
   $ResultadoEditDueño = $con->query($query);
 
   if($ResultadoEditDueño){
@@ -102,13 +99,10 @@ if(isset($_POST['update'])){
       <div class="card card-body">
       <form action="" method="POST">
         <div class="form-group">
-        <input name="Id" type="number" class="form-control" value="<?php echo $row['Doc']; ?>" placeholder="Documento">
+        <input name="Id" type="text" class="form-control" value="<?php echo $row['Celular'];  ?>" placeholder="Celular">
         </div>
         <div class="form-group">
-        <input name="Nombre" type="text" class="form-control" value="<?php echo $row['Nombre']; ?>" placeholder="Nombre">
-        </div>
-        <div class="form-group">
-        <input name="Celular" type="text" class="form-control" value="<?php echo $row['Celular'];  ?>" placeholder="Celular">
+        <input name="Nombre_Dueño" type="text" class="form-control" value="<?php echo $row['Nombre_Dueño']; ?>" placeholder="Nombre">
         </div>
         <div class="form-group">
         <input name="Telefono_Fijo" type="text" class="form-control" value="<?php echo $row['Telefono_Fijo'];  ?>" placeholder="Telefono_Fijo">
@@ -123,7 +117,7 @@ if(isset($_POST['update'])){
         <input name="Correo" type="text" class="form-control" value="<?php echo $row['Correo'];  ?>" placeholder="Correo">
         </div>
         <div class="form-group">
-        <input name="Fecha_Registro" type="date" class="form-control" value="<?php echo $row['Fecha_Registro'];  ?>" placeholder="Fecha_Registro">
+        <input name="Fecha_Registro_Dueño" type="date" class="form-control" value="<?php echo $row['Fecha_Registro_Dueño'];  ?>" placeholder="Fecha_Registro">
         </div>
         
         <button class="btn-success" name="update">

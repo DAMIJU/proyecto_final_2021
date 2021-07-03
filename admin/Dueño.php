@@ -206,28 +206,59 @@ if (!isset($_SESSION['loggedin'])) {
       </div>
         <form action="Añadir_Dueño.php" method="POST">
           <div class="form-group">
-            <input type="number" name="Doc" class="form-control" placeholder="Documento" autofocus>
+            <input type="text" name="Celular" class="form-control" placeholder="Celular" autofocus>
           </div>
           <div class="form-group">
-          <input type="text" name="Nombre" class="form-control" placeholder="Nombre" autofocus>
+          <input type="text" name="Nombre_Dueño" class="form-control" placeholder="Nombre" autofocus>
           </div>
           <div class="form-group">
-            <input type="number" name="Celular" class="form-control" placeholder="Celular" autofocus>
-          </div>
-          <div class="form-group">
-          <input type="number" name="Telefono_Fijo" class="form-control" placeholder="Telefono FIjo" autofocus>
+          <input type="text" name="Telefono_Fijo" class="form-control" placeholder="Telefono FIjo" autofocus>
           </div>
           <div class="form-group">
             <input type="text" name="Dirección" class="form-control" placeholder="Dirección" autofocus>
           </div>
           <div class="form-group">
-            <input type="text" name="Ciudad" class="form-control" placeholder="Ciudad" autofocus>
+              <select name="Ciudad">
+                        <option value="no">Seleccione Estado...</option>
+                        <option value="Aguascalientes">Aguascalientes</option>
+                        <option value="Baja California">Baja California</option>
+                        <option value="Baja California Sur">Baja California Sur</option>
+                        <option value="Campeche">Campeche</option>
+                        <option value="Chiapas">Chiapas</option>
+                        <option value="Chihuahua">Chihuahua</option>
+                        <option value="CDMX">Ciudad de México</option>
+                        <option value="Coahuila">Coahuila</option>
+                        <option value="Colima">Colima</option>
+                        <option value="Durango">Durango</option>
+                        <option value="Estado de México">Estado de México</option>
+                        <option value="Guanajuato">Guanajuato</option>
+                        <option value="Guerrero">Guerrero</option>
+                        <option value="Hidalgo">Hidalgo</option>
+                        <option value="Jalisco">Jalisco</option>
+                        <option value="Michoacán">Michoacán</option>
+                        <option value="Morelos">Morelos</option>
+                        <option value="Nayarit">Nayarit</option>
+                        <option value="Nuevo León">Nuevo León</option>
+                        <option value="Oaxaca">Oaxaca</option>
+                        <option value="Puebla">Puebla</option>
+                        <option value="Querétaro">Querétaro</option>
+                        <option value="Quintana Roo">Quintana Roo</option>
+                        <option value="San Luis Potosí">San Luis Potosí</option>
+                        <option value="Sinaloa">Sinaloa</option>
+                        <option value="Sonora">Sonora</option>
+                        <option value="Tabasco">Tabasco</option>
+                        <option value="Tamaulipas">Tamaulipas</option>
+                        <option value="Tlaxcala">Tlaxcala</option>
+                        <option value="Veracruz">Veracruz</option>
+                        <option value="Yucatán">Yucatán</option>
+                        <option value="Zacatecas">Zacatecas</option>
+               </select>
           </div>
           <div class="form-group">
             <input type="text" name="Correo" class="form-control" placeholder="Correo" autofocus>
           </div>
           <div class="form-group">
-            <input type="date" name="Fecha_Registro" class="form-control" placeholder="Fecha_Registro" autofocus>
+            <input type="date" name="Fecha_Registro_Dueño" class="form-control" placeholder="Fecha_Registro" autofocus>
           </div>
           <div class="modal-footer">
             <input type="submit" name="agregar_dueño" class="btn btn-success" value="Agregar">
@@ -241,9 +272,8 @@ if (!isset($_SESSION['loggedin'])) {
   <table id="dueño" class="table table-responsive table-sm non-top-border " width="100%" cellspacing="0">
         <thead>
             <tr>
-                <th>Doc</th>
-                <th>Nombre</th>
                 <th>Celular</th>
+                <th>Nombre</th>
                 <th>Telefono_Fijo</th>
                 <th>Dirección</th>
                 <th>Ciudad</th>
@@ -255,27 +285,26 @@ if (!isset($_SESSION['loggedin'])) {
         <tbody>
         <?php  
           include("DB/conexion.php");
-          $query="SELECT * FROM dueño";
+          $query="SELECT * FROM tabla_dueño";
           $resultado= $con->query($query);
           while($mostrar=$resultado->fetch_assoc()){
         ?>   
             <tr>
-                <td><?php echo $mostrar['Doc'] ?></td>
-                <td><a href="Vista_Dueño.php?Doc=<?php echo $mostrar['Doc']?>"><?php echo $mostrar['Nombre'] ?></a></td>
                 <td><?php echo $mostrar['Celular'] ?></td>
+                <td><a href="Vista_Dueño.php?Celular=<?php echo $mostrar['Celular']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
                 <td><?php echo $mostrar['Telefono_Fijo'] ?></td>
                 <td><?php echo $mostrar['Dirección'] ?></td>
                 <td><?php echo $mostrar['Ciudad'] ?></td>
                 <td><?php echo $mostrar['Correo'] ?></td>
-                <td><?php echo $mostrar['Fecha_Registro'] ?></td>
+                <td><?php echo $mostrar['Fecha_Registro_Dueño'] ?></td>
                 <td>
-              <a href="Edit_Dueño.php?Doc=<?php echo $mostrar['Doc']?>" class="btn btn-secondary">
+              <a href="Edit_Dueño.php?Celular=<?php echo $mostrar['Celular']?>" class="btn btn-secondary">
                 <i class="fas fa-marker"></i>
               </a>
-              <a href="#" onclick="preguntar(<?php echo $mostrar['Doc']?>)" class="btn btn-danger">
+              <a href="#" onclick="preguntar(<?php echo $mostrar['Celular']?>)" class="btn btn-danger">
                 <i class="far fa-trash-alt"></i>
               </a>
-              <a href="Vista_Dueño.php?Doc=<?php echo $mostrar['Doc']?>" class="btn btn-primary">
+              <a href="Vista_Dueño.php?Celular=<?php echo $mostrar['Celular']?>" class="btn btn-primary">
               <i class="icofont-eye-alt"></i>
               </a>
             </td>
@@ -381,11 +410,11 @@ if (!isset($_SESSION['loggedin'])) {
 } );
 </script>
 <script type="text/javascript">
-      function preguntar(Doc)
+      function preguntar(Celular)
       {
         if(confirm('¿Está seguro que desea eliminar este cliente?'))
         {
-          window.location.href = "Delete_Dueño.php?Doc="+Doc;
+          window.location.href = "Delete_Dueño.php?Celular="+Celular;
         }
       }
 </script>
