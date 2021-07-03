@@ -3,14 +3,13 @@
 include('DB/conexion.php');
 
 if (isset($_POST['Agregar_Mascota'])) {
-  $Doc_Dueño = $_POST['Doc_Dueño'];
-  $NombreDueño = $_POST['Nombre_Dueño'];
-  $NombreMascota = $_POST['Nombre_Mascota'];
+  $Cel_Dueño = $_POST['Cel_Dueño'];
+  $Nombre_Mascota = $_POST['Nombre_Mascota'];
   $Raza = $_POST['Raza'];
-  $Fecha_Nac_Edad = $_POST['Fecha_Nac_Edad'];
+  $Fecha_Nac = $_POST['Fecha_Nac'];
   $Sexo = $_POST['Sexo'];
-  $Fecha_Registro = $_POST['Fecha_Registro'];
-  $query = "INSERT INTO tabla_mascotas(Num_Registro, Doc_Dueño, Nombre_Dueño, Nombre_Mascota, Raza, Fecha_Nac_Edad, Sexo, Fecha_Registro ) VALUES (null, $Doc_Dueño, '$NombreDueño', '$NombreMascota', '$Raza',  '$Fecha_Nac_Edad', '$Sexo', '$Fecha_Registro')";
+  $Fecha_Registro_Mascota = $_POST['Fecha_Registro_Mascota'];
+  $query = "INSERT INTO tabla_mascotas(Num_Registro_Mascota, Cel_Dueño, Nombre_Mascota, Raza, Fecha_Nac, Sexo, Fecha_Registro_Mascota) VALUES (null, $Cel_Dueño, '$Nombre_Mascota', '$Raza',  '$Fecha_Nac', '$Sexo', '$Fecha_Registro_Mascota')";
   $ResultadoInsertMascota = mysqli_query($con, $query);
 
   if($ResultadoInsertMascota){

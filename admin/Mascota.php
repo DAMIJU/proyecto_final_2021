@@ -205,13 +205,7 @@ if (!isset($_SESSION['loggedin'])) {
               </div>
               <form action="Añadir_Mascota.php" method="POST">
                 <div class="form-group">
-                  <input type="text" name="Num_Registro" class="form-control" placeholder="Registro" autofocus>
-                </div>
-                <div class="form-group">
-                <input type="number" name="Doc_Dueño" class="form-control" placeholder="Doc Dueño" autofocus>
-                </div>
-                <div class="form-group">
-                <input type="text" name="Nombre_Dueño" class="form-control" placeholder="Dueño" autofocus>
+                <input type="number" name="Cel_Dueño" class="form-control" placeholder="Celular dueño" autofocus>
                 </div>
                 <div class="form-group">
                   <input type="text" name="Nombre_Mascota" class="form-control" placeholder="Mascota" autofocus>
@@ -220,13 +214,13 @@ if (!isset($_SESSION['loggedin'])) {
                 <input type="text" name="Raza" class="form-control" placeholder="Raza" autofocus>
                 </div>
                 <div class="form-group">
-                  <input type="date" name="Fecha_Nac_Edad" class="form-control" placeholder="Fecha Nac" autofocus>
+                  <input type="date" name="Fecha_Nac" class="form-control" placeholder="Fecha de nacimiento" autofocus>
                 </div>
                 <div class="form-group">
                 <input type="text" name="Sexo" class="form-control" placeholder="Sexo" autofocus>
                 </div>      
                 <div class="form-group">
-                <input type="date" name="Fecha_Registro" class="form-control" placeholder="Fecha_Registro" autofocus>
+                <input type="date" name="Fecha_Registro_Mascota" class="form-control" placeholder="Fecha de registro" autofocus>
                 </div>
                 <div class="modal-footer">
                   <input type="submit" name="Agregar_Mascota" class="btn btn-success" value="Agregar">
@@ -258,20 +252,20 @@ if (!isset($_SESSION['loggedin'])) {
               while($mostrar=$resultado->fetch_assoc()){
             ?>
                 <tr>
-                    <td><?php echo $mostrar['Num_Registro']?></td>
+                    <td><?php echo $mostrar['Num_Registro_Mascota']?></td>
                     <td><?php echo $mostrar['Nombre_Dueño']?></td>
                     <td><?php echo $mostrar['Nombre_Mascota']?></td>
                     <td><?php echo $mostrar['Raza']?></td>
-                    <td><?php echo $mostrar['Fecha_Nac_Edad']?></td>
+                    <td><?php echo $mostrar['Fecha_Nac']?></td>
                     <td><?php echo $mostrar['Sexo']?></td>          
                     <td>
-                      <a href="Edit_Mascota.php?Num_Registro=<?php echo $mostrar['Num_Registro']?>" class="btn btn-secondary">
+                      <a href="Edit_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>" class="btn btn-secondary">
                         <i class="fas fa-marker"></i>
                       </a>
-                      <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro']?>)" class="btn btn-danger">
+                      <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro_Mascota']?>)" class="btn btn-danger">
                          <i class="far fa-trash-alt"></i>
                       </a>
-                      <a href="Vista_Mascota.php?Num_Registro=<?php echo $mostrar['Num_Registro']?>" class="btn btn-primary">
+                      <a href="Vista_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>" class="btn btn-primary">
                       <i class="icofont-eye-alt"></i>
                       </a>
                     </td>
@@ -375,11 +369,11 @@ if (!isset($_SESSION['loggedin'])) {
 } );
 </script>
 <script type="text/javascript">
-      function preguntar(Num_Registro)
+      function preguntar(Num_Registro_Mascota)
       {
         if(confirm('¿Está seguro que desea eliminar esta mascota?'))
         {
-          window.location.href = "Delete_Mascota.php?Num_Registro="+Num_Registro;
+          window.location.href = "Delete_Mascota.php?Num_Registro_Mascota="+Num_Registro_Mascota;
         }
       }
 </script>

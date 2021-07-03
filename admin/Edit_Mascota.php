@@ -68,21 +68,20 @@ if (!isset($_SESSION['loggedin'])) {
 <?php
 include("DB/conexion.php");
 
-$Num_Registro = $_REQUEST['Num_Registro'];
-$query="SELECT * FROM tabla_mascotas WHERE Num_Registro='$Num_Registro'";
+$Num_Registro_Mascota = $_REQUEST['Num_Registro_Mascota'];
+$query="SELECT * FROM tabla_mascotas WHERE Num_Registro_Mascota='$Num_Registro_Mascota'";
 $resultado= $con->query($query);
 $row=$resultado->fetch_assoc();
 
 if(isset($_POST['update'])){
   
-  $Num_Registro = $_REQUEST['Num_Registro'];
-  $NombreDueño = $_POST['Nombre_Dueño'];
-  $NombreMascota = $_POST['Nombre_Mascota'];
+  $Num_Registro_Mascota = $_REQUEST['Num_Registro_Mascota'];
+  $Nombre_Mascota = $_POST['Nombre_Mascota'];
   $Raza = $_POST['Raza'];
-  $Fecha_Nac_Edad = $_POST['Fecha_Nac_Edad'];
+  $Fecha_Nac_Edad = $_POST['Fecha_Nac'];
   $Sexo = $_POST['Sexo'];
 
-  $query="UPDATE tabla_mascotas SET Nombre_Dueño='$NombreDueño', Nombre_Mascota='$NombreMascota', Raza='$Raza', Fecha_Nac_Edad='$Fecha_Nac_Edad', Sexo='$Sexo' WHERE Num_Registro='$Num_Registro'";
+  $query="UPDATE tabla_mascotas SET Nombre_Mascota='$Nombre_Mascota', Raza='$Raza', Fecha_Nac='$Fecha_Nac', Sexo='$Sexo' WHERE Num_Registro_Mascota='$Num_Registro_Mascota'";
   $ResultadoEditMascota = $con->query($query);
 
   if($ResultadoEditMascota){
@@ -107,7 +106,7 @@ if(isset($_POST['update'])){
             <input type="text" name="Raza" class="form-control" value="<?php echo $row['Raza']; ?>" placeholder="Actualizar Raza">
             </div>
             <div class="form-group">
-              <input type="date" name="Fecha_Nac_Edad" class="form-control" value="<?php echo $row['Fecha_Nac_Edad']; ?>" placeholder="Actualizar Fecha nacimiento">
+              <input type="date" name="Fecha_Nac" class="form-control" value="<?php echo $row['Fecha_Nac']; ?>" placeholder="Actualizar Fecha nacimiento">
             </div>
             <div class="form-group">
             <input type="text" name="Sexo" class="form-control" value="<?php echo $row['Sexo']; ?>" placeholder="Actualizar Sexo">

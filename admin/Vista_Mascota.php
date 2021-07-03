@@ -201,9 +201,9 @@ if (!isset($_SESSION['loggedin'])) {
       <?php
       include("DB/conexion.php");
 
-      $Num_Registro = $_REQUEST['Num_Registro'];
+      $Num_Registro_Mascota = $_REQUEST['Num_Registro_Mascota'];
       
-      $query="SELECT * FROM tabla_mascotas WHERE Num_Registro='$Num_Registro'";
+      $query="SELECT * FROM tabla_mascotas WHERE Num_Registro_Mascota='$Num_Registro_Mascota'";
       $resultado= $con->query($query);
       $row=$resultado->fetch_assoc();
 
@@ -215,7 +215,7 @@ if (!isset($_SESSION['loggedin'])) {
             <tbody>
                     <tr>
                         <th>Registro</th>
-                        <td> <?php echo $row['Num_Registro']; ?></td>
+                        <td> <?php echo $row['Num_Registro_Mascota']; ?></td>
                     </tr>
                                     <tr>
                     <th>Mascota</th>
@@ -233,7 +233,7 @@ if (!isset($_SESSION['loggedin'])) {
                     </tr>
                     <tr>
                         <th>Fecha Nac</th>
-                        <td><?php echo $row['Fecha_Nac_Edad']; ?></td>
+                        <td><?php echo $row['Fecha_Nac']; ?></td>
                     </tr>
                     <tr>
                         <th>Sexo</th>
@@ -243,8 +243,8 @@ if (!isset($_SESSION['loggedin'])) {
             </table>
    </div>
           <div class="botones">
-            <a href="Edit_Mascota.php?Num_Registro=<?php echo $row['Num_Registro']?>" class="btn btn-success">Editar</a>
-            <a href="#" onclick="preguntar(<?php echo $row['Num_Registro']?>)" class="btn btn-danger">Eliminar</a>
+            <a href="Edit_Mascota.php?Num_Registro_Mascota=<?php echo $row['Num_Registro_Mascota']?>" class="btn btn-success">Editar</a>
+            <a href="#" onclick="preguntar(<?php echo $row['Num_Registro_Mascota']?>)" class="btn btn-danger">Eliminar</a>
             <a href="Mascota.php" role="button" class="btn btn-primary">Volver</a>
           </div>
 </div> 
@@ -329,11 +329,11 @@ if (!isset($_SESSION['loggedin'])) {
 } );
 </script>
 <script type="text/javascript">
-      function preguntar(Num_Registro)
+      function preguntar(Num_Registro_Mascota)
       {
         if(confirm('¿Estás seguro que quieres eliminar esta mascota?'))
         {
-          window.location.href = "Delete_Mascota.php?Num_Registro="+Num_Registro;
+          window.location.href = "Delete_Mascota.php?Num_Registro_Mascota="+Num_Registro_Mascota;
         }
       }
 </script>
