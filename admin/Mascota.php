@@ -217,8 +217,12 @@ if (!isset($_SESSION['loggedin'])) {
                   <input type="date" name="Fecha_Nac" class="form-control" placeholder="Fecha de nacimiento" autofocus>
                 </div>
                 <div class="form-group">
-                <input type="text" name="Sexo" class="form-control" placeholder="Sexo" autofocus>
-                </div>      
+                <select name="Sexo" placeholder="Sexo">
+                <option disabled selected>Seleccione sexo</option>
+                <option value="Macho">Macho</option>
+                <option value="Hembra">Hembra</option>
+               </select>
+                </div>
                 <div class="form-group">
                 <input type="date" name="Fecha_Registro_Mascota" class="form-control" placeholder="Fecha de registro" autofocus>
                 </div>
@@ -237,9 +241,9 @@ if (!isset($_SESSION['loggedin'])) {
                 <tr>
                     <th>Registro</th>
                     <th>Dueño</th>
+                    <th>Celular</th>
                     <th>Mascota</th>
                     <th>Raza</th>
-                    <th>Fecha Nac</th>
                     <th>Sexo</th>
                     <th>Acción</th>             
                 </tr>
@@ -247,16 +251,19 @@ if (!isset($_SESSION['loggedin'])) {
             <tbody>
             <?php  
               include("DB/conexion.php");
-              $query="SELECT * FROM tabla_mascotas";
+              $query="SELECT * FROM tabla_mascotas
+              INNER JOIN tabla_dueño
+              ON tabla_mascotas.Cel_Dueño = tabla_dueño.Celular";
               $resultado= $con->query($query);
               while($mostrar=$resultado->fetch_assoc()){
+
             ?>
                 <tr>
                     <td><?php echo $mostrar['Num_Registro_Mascota']?></td>
-                    <td><?php echo $mostrar['Nombre_Dueño']?></td>
+                    <td><a id="hrefvista" target="_blank" href="Vista_Dueño.php?Celular=<?php echo $mostrar['Celular']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
+                    <td><?php echo $mostrar['Cel_Dueño']?></td>
                     <td><?php echo $mostrar['Nombre_Mascota']?></td>
                     <td><?php echo $mostrar['Raza']?></td>
-                    <td><?php echo $mostrar['Fecha_Nac']?></td>
                     <td><?php echo $mostrar['Sexo']?></td>          
                     <td>
                       <a href="Edit_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>" class="btn btn-secondary">
@@ -265,13 +272,13 @@ if (!isset($_SESSION['loggedin'])) {
                       <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro_Mascota']?>)" class="btn btn-danger">
                          <i class="far fa-trash-alt"></i>
                       </a>
-                      <a href="Vista_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>" class="btn btn-primary">
+                      <a target="_blank" href="Vista_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>" class="btn btn-primary">
                       <i class="icofont-eye-alt"></i>
                       </a>
                     </td>
                 </tr>
                 <?php
-                  }
+                  } 
                 ?>   
             </tbody>
             <!-- <tfoot>

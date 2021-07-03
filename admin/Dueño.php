@@ -271,14 +271,13 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="datatable-responsive datatable-box">
   <table id="dueño" class="table table-responsive table-sm non-top-border " width="100%" cellspacing="0">
         <thead>
-            <tr>
+            <tr>       
                 <th>Celular</th>
                 <th>Nombre</th>
-                <th>Telefono_Fijo</th>
+                <th>Telefono fijo</th>
                 <th>Dirección</th>
                 <th>Ciudad</th>
                 <th>Correo</th>
-                <th>Fecha_Registro</th> 
                 <th>Acción</th>                 
             </tr>
         </thead>
@@ -289,14 +288,13 @@ if (!isset($_SESSION['loggedin'])) {
           $resultado= $con->query($query);
           while($mostrar=$resultado->fetch_assoc()){
         ?>   
-            <tr>
+            <tr>            
                 <td><?php echo $mostrar['Celular'] ?></td>
-                <td><a href="Vista_Dueño.php?Celular=<?php echo $mostrar['Celular']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
+                <td><a id="hrefvista" target="_blank" href="Vista_Dueño.php?Celular=<?php echo $mostrar['Celular']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
                 <td><?php echo $mostrar['Telefono_Fijo'] ?></td>
                 <td><?php echo $mostrar['Dirección'] ?></td>
                 <td><?php echo $mostrar['Ciudad'] ?></td>
-                <td><?php echo $mostrar['Correo'] ?></td>
-                <td><?php echo $mostrar['Fecha_Registro_Dueño'] ?></td>
+                <td><?php echo $mostrar['Correo'] ?></td>  
                 <td>
               <a href="Edit_Dueño.php?Celular=<?php echo $mostrar['Celular']?>" class="btn btn-secondary">
                 <i class="fas fa-marker"></i>

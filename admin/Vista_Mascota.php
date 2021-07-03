@@ -29,7 +29,7 @@ if (!isset($_SESSION['loggedin'])) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Panel de Control</title>
+  <title>Panel de admin</title>
      <!-- Favicons -->
   <link href="../assets/img/Logo.ico" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -203,10 +203,9 @@ if (!isset($_SESSION['loggedin'])) {
 
       $Num_Registro_Mascota = $_REQUEST['Num_Registro_Mascota'];
       
-      $query="SELECT * FROM tabla_mascotas WHERE Num_Registro_Mascota='$Num_Registro_Mascota'";
+      $query="SELECT * FROM tabla_mascotas INNER JOIN tabla_dueño ON tabla_mascotas.Cel_Dueño = tabla_dueño.Celular WHERE Num_Registro_Mascota='$Num_Registro_Mascota'";
       $resultado= $con->query($query);
       $row=$resultado->fetch_assoc();
-
       ?>
   
   

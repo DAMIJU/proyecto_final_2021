@@ -30,7 +30,11 @@ if (!isset($_SESSION['loggedin'])) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Panel de Control</title>
+  <title>Panel de admin</title>
+
+  <!-- Favicons -->
+  <link href="../assets/img/Logo.ico" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -83,7 +87,7 @@ if(isset($_POST['update'])){
   $Ciudad = $_POST['Ciudad'];
   $Correo = $_POST['Correo'];
   $Fecha_Registro_Dueño = $_POST['Fecha_Registro_Dueño'];
-  $query = "UPDATE tabla_dueño set Celular = '$Id', Nombre_Dueño = '$Nombre', Telefono_Fijo = '$Telefono_Fijo', Dirección = '$Dirección', Ciudad = '$Ciudad', Correo = '$Correo', Fecha_Registro_Dueño = '$Fecha_Registro' WHERE Celular=$Celular";
+  $query = "UPDATE tabla_dueño set Celular = '$Celular', Nombre_Dueño = '$Nombre_Dueño', Telefono_Fijo = '$Telefono_Fijo', Dirección = '$Dirección', Ciudad = '$Ciudad', Correo = '$Correo', Fecha_Registro_Dueño = '$Fecha_Registro_Dueño' WHERE Celular=$Celular";
   $ResultadoEditDueño = $con->query($query);
 
   if($ResultadoEditDueño){

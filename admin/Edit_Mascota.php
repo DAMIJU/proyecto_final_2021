@@ -30,7 +30,11 @@ if (!isset($_SESSION['loggedin'])) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Panel de Control</title>
+  <title>Panel de admin</title>
+
+  <!-- Favicons -->
+  <link href="../assets/img/Logo.ico" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -78,7 +82,7 @@ if(isset($_POST['update'])){
   $Num_Registro_Mascota = $_REQUEST['Num_Registro_Mascota'];
   $Nombre_Mascota = $_POST['Nombre_Mascota'];
   $Raza = $_POST['Raza'];
-  $Fecha_Nac_Edad = $_POST['Fecha_Nac'];
+  $Fecha_Nac = $_POST['Fecha_Nac'];
   $Sexo = $_POST['Sexo'];
 
   $query="UPDATE tabla_mascotas SET Nombre_Mascota='$Nombre_Mascota', Raza='$Raza', Fecha_Nac='$Fecha_Nac', Sexo='$Sexo' WHERE Num_Registro_Mascota='$Num_Registro_Mascota'";
@@ -96,9 +100,6 @@ if(isset($_POST['update'])){
     <div class="col-md-4 mx-auto">
       <div class="card card-body">
       <form action="" method="POST">
-        <div class="form-group">
-        <input type="text" name="Nombre_Dueño" class="form-control" value="<?php echo $row['Nombre_Dueño']; ?>" placeholder="Actualizar Dueño">
-            </div>
             <div class="form-group">
               <input type="text" name="Nombre_Mascota" class="form-control" value="<?php echo $row['Nombre_Mascota']; ?>" placeholder="Actualizar Mascota">
             </div>

@@ -29,7 +29,7 @@ if (!isset($_SESSION['loggedin'])) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Panel de Control</title>
+  <title>Panel de admin</title>
  <!-- Favicons -->
   <link href="../assets/img/Logo.ico" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
