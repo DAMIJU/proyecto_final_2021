@@ -83,7 +83,7 @@ if(isset($_POST['update'])){
   $Ciudad = $_POST['Ciudad'];
   $Correo = $_POST['Correo'];
   $Fecha_Registro_Dueño = $_POST['Fecha_Registro_Dueño'];
-  $query = "UPDATE tabla_dueño set Celular = '$Id', Nombre_Dueño = '$Nombre', Telefono_Fijo = '$Telefono_Fijo', Dirección = '$Dirección', Ciudad = '$Ciudad', Correo = '$Correo', Fecha_Registro_Dueño = '$Fecha_Registro' WHERE Celular=$Celular";
+  $query = "UPDATE tabla_dueño set Celular = '$Id', Nombre_Dueño = '$Nombre_Dueño', Telefono_Fijo = '$Telefono_Fijo', Dirección = '$Dirección', Ciudad = '$Ciudad', Correo = '$Correo', Fecha_Registro_Dueño = '$Fecha_Registro_Dueño' WHERE Celular=$Celular";
   $ResultadoEditDueño = $con->query($query);
 
   if($ResultadoEditDueño){
