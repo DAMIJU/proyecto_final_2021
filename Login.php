@@ -43,6 +43,49 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+      html,body { 
+	height: 100%; 
+}
+
+.global-container{
+	height:100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f5f5f5;
+}
+
+form{
+	padding-top: 10px;
+	font-size: 14px;
+	margin-top: 30px;
+}
+
+.card-title{ font-weight:300; }
+
+.btn{
+	font-size: 14px;
+	margin-top:20px;
+}
+
+
+.login-form{ 
+	width:330px;
+	margin:20px;
+}
+
+.sign-up{
+	text-align:center;
+	padding:20px 0 0;
+}
+
+.alert{
+	margin-bottom:-30px;
+	font-size: 13px;
+	margin-top:20px;
+}
+    </style>
 
   <!-- =======================================================
   * Template Name: Tempo - v2.2.1
@@ -70,38 +113,29 @@
       </nav><!-- .nav-menu -->
     </div>
   </header><!-- End Header -->
-  <section class="admin">
-    <div class="modal-dialog text-center" style="height:10%">
-        <div class="col-sm-8 main-section">
-            <div class="modal-content">
-                <div class="col-12 user-img">
-                    <img src="https://login.santisimatrinidadacolitos.com/ingreso/1/static/img/user.png" th:src="@{/img/user.png}"/>
-                    <br>       
-                    <h4 style="color:#9ACD32">Panel administrador</h4>
-                </div>
-                <form class="col-12" action="admin/validar.php" method="POST" id="Form_InicioSesion">
-                    <div class="form-group" id="user-group">
-                        <input type="text" name="username" class="login-field form-control" value="" placeholder="Usuario" maxlength="10" id="login-name">
-                    </div>
-                    <div class="form-group" id="contrasena-group">
-                        <input type="password" name="password" class="login-field form-control" value="" placeholder="Contraseña" maxlength="" id="login-pass">
-                    </div>             
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Acceder </button>
-                </form>
-                <br>
-                <div class="col-12 forgot">    
-                    <div class="col-12 forgot">
-                        <a href="#" style="color:#9ACD32">¿Olvidó su contraseña?</a>
-                    </div>
-                <!-- <div th:if="${param.error}" class="alert alert-danger" role="alert">
-		            
-		        </div> --><br><br>
-                </div> <br><br>
-            </div>
-        </div>
-    </div>
+  <div class="global-container">
+	<div class="card login-form" style="margin-top:-100px">
+	<div class="card-body">
+		<h4 style="font-weight:bold" class="card-title text-center">Panel Administrador</h4>
+		<div class="card-text">
+			<!--
+			<div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div> -->
+			<form action="admin/validar.php" method="POST" id="Form_InicioSesion">
+				<!-- to error: add class "has-danger" -->
+				<div class="form-group">
+					<label for="exampleInputEmail1">Nombre de usuario<span style="color:red">*</span></label>
+					<input type="text" name="username" class="form-control form-control-sm" placeholder="Usuario" maxlength="10" id="login-name">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Contraseña<span style="color:red">*</span></label>
+					<a href="#" style="float:right;font-size:12px;">¿Olvidó su contraseña?</a>
+					<input type="password" name="password" class="form-control form-control-sm" placeholder="Contraseña" maxlength="" id="login-pass">
+				</div>
+				<button type="submit" class="btn btn-primary btn-block">Acceder</button>
+			</form>
+		</div>
+	</div>
 </div>
-  </section>
 <!-- Vendor JS Files -->
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

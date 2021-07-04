@@ -2532,14 +2532,14 @@ select{
   border-radius: 50%;
 }
 
-.modal-dialog .modal-dialog .form-group input[type=text],[type=password]{
+/* .modal-dialog .modal-dialog .form-group input[type=text],[type=password]{
   height: 42px;
   font-size: 18px;
-  border:0;
+  
   padding-left: 54px;
   color: black;
   border-radius: 5px;
-}
+} */
 
 .modal-dialog .modal-dialog .form-group::before{
   font-family: "Font Awesome\ 5 Free";
