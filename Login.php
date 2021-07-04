@@ -43,49 +43,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
-    <style>
-      html,body { 
-	height: 100%; 
-}
-
-.global-container{
-	height:100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #f5f5f5;
-}
-
-form{
-	padding-top: 10px;
-	font-size: 14px;
-	margin-top: 30px;
-}
-
-.card-title{ font-weight:300; }
-
-.btn{
-	font-size: 14px;
-	margin-top:20px;
-}
-
-
-.login-form{ 
-	width:330px;
-	margin:20px;
-}
-
-.sign-up{
-	text-align:center;
-	padding:20px 0 0;
-}
-
-.alert{
-	margin-bottom:-30px;
-	font-size: 13px;
-	margin-top:20px;
-}
-    </style>
+    <link href="assets/css/LoginStyles.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Tempo - v2.2.1
