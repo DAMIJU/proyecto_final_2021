@@ -180,7 +180,7 @@ if (!isset($_SESSION['loggedin'])) {
   </aside>
 </div>
   </div>
-  <div class="content-wrapper">
+<div class="content-wrapper">
   <div class="text-center">
   <h1>Datos Mascota</h1>
   <!-- <button class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Dueño</button>
@@ -208,9 +208,11 @@ if (!isset($_SESSION['loggedin'])) {
       $row=$resultado->fetch_assoc();
       ?>
   
-  
-<div class="datatable-responsive datatable-box">
-<table class="table table-responsive table-sm  non-top-border">
+  <div class="row" id="Vista">
+        <div class="col-md">
+            <div class="section-box">
+        <div class="table-responsive col-sm">
+            <table class="table table-sm  non-top-border">
             <tbody>
                     <tr>
                         <th>Registro</th>
@@ -240,7 +242,10 @@ if (!isset($_SESSION['loggedin'])) {
                     </tr>                       
             </tbody>
             </table>
-   </div>
+          </div>
+      </div>
+    </div>
+  </div>
           <div class="botones">
             <a href="Edit_Mascota.php?Num_Registro_Mascota=<?php echo $row['Num_Registro_Mascota']?>" class="btn btn-success">Editar</a>
             <a href="#" onclick="preguntar(<?php echo $row['Num_Registro_Mascota']?>)" class="btn btn-danger">Eliminar</a>

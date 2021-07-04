@@ -2408,7 +2408,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   border-bottom: 1px solid #dee2e6;
 }
 .botones{
-  margin: 25px 100px;
+  margin: 25px 50px;
 }
 select{
   word-wrap: normal;
@@ -2431,17 +2431,60 @@ select{
   text-decoration: underline;
   background-color: transparent;
 }
+#Vista a{
+  color:#2D92CB;
+  text-decoration: underline;
+  background-color: transparent;
+}
 #hrefvista:hover{
   color:#1F74A3;
   text-decoration: underline;
   background-color: transparent;
 }
-
-
-
-
-
-
+#Vista .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+ @media (min-width: 768px){
+#Vista .col-md {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+ }
+ #Vista .section-box {
+  margin: 25px 50px;
+  background: #fff;
+  padding: 10px 0px 0px 0px;
+  box-shadow: 0 0 10px grey;
+  overflow: hidden;
+}
+@media (min-width: 576px){
+#Vista .col-sm {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+}
+#Vista .table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+#Vista .table td, .table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-bottom: 1px solid #dee2e6;
+  border-top: none;
+  border-top: none;
+}
+#Vista .table-sm th{
+  color:#2F6858;
+  border-top: none;
+}
 
 
 

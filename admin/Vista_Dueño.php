@@ -208,20 +208,16 @@ if (!isset($_SESSION['loggedin'])) {
       $resultado= $con->query($query);
       $row=$resultado->fetch_assoc();
 
-      
-      
-
       ?>
       <div class="text-center">
-      <h1>Cliente <?php echo $row['Nombre_Dueño']; ?></h1>
+      <h1>Datos del cliente <?php echo $row['Nombre_Dueño']; ?></h1>
       </div>
-  
-  <div class="row">
-    <div class="col-md-6">
-<div class="datatable-responsive datatable-box">
-<table class="table table-responsive table-sm  non-top-border">
-                <h3>Su Información</h3>
-                <tbody>
+      <div class="row" id="Vista">
+        <div class="col-md">
+            <div class="section-box">
+        <div class="table-responsive col-sm">
+            <table class="table table-sm  non-top-border">
+            <tbody>
                     <tr>
                             <th>Celular</th>
                             <td>
@@ -266,12 +262,13 @@ if (!isset($_SESSION['loggedin'])) {
                     </tr>
                 </tbody>
             </table>
-   </div>
-   </div> 
-   <div class="col-md-6"> 
-   <div class="datatable-responsive datatable-box">
-<table class="table table-responsive table-sm   non-top-border">
-        <h3>Sus Mascotas</h3>
+        </div>
+    </div>               
+        </div>
+        <div class="col-md-5">
+            <div class="section-box">
+            <table class="table table-sm  non-top-border" id="Intento">      
+                <!-- <h3>Sus Mascotas</h3> -->
         <thead>
             <tr>       
                 <th>Registro</th>
@@ -296,17 +293,16 @@ if (!isset($_SESSION['loggedin'])) {
               }
             ?>   
         </tbody>
- </table>
-   </div>  
-   </div>   
-   </div> 
+            </table>
+                </div>
+            </div>
+        </div>
    <div class="botones">
             <button type="button" class="btn btn-success">Editar</button>
             <button type="button" class="btn btn-danger">Eliminar</button>
             <a href="Dueño.php" role="button" class="btn btn-primary">Volver</a>
-          </div> 
-   </div> 
-   
+    </div> 
+</div> 
    <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
         <b>Servicios Caninos Casme.</b> 
