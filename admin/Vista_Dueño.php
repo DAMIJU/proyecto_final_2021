@@ -181,11 +181,11 @@ if (!isset($_SESSION['loggedin'])) {
 </div>
   </div>
   <div class="content-wrapper">
-  <div class="text-center">
-  <h1>DUEÑO</h1>
+  
+  
   <!-- <button class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Dueño</button>
   <button class="btn btn-warning" id="" data-toggle="" data-target="">Info</button> -->
-    </div>
+    
       <!-- MESSAGES -->
       <?php if (isset($_SESSION['message'])) { ?>
       <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
@@ -208,12 +208,19 @@ if (!isset($_SESSION['loggedin'])) {
       $resultado= $con->query($query);
       $row=$resultado->fetch_assoc();
 
+      
+      
+
       ?>
+      <div class="text-center">
+      <h1>Cliente <?php echo $row['Nombre_Dueño']; ?></h1>
+      </div>
   
   <div class="row">
     <div class="col-md-6">
 <div class="datatable-responsive datatable-box">
 <table class="table table-responsive table-sm  non-top-border">
+                <h3>Su Información</h3>
                 <tbody>
                     <tr>
                             <th>Celular</th>
@@ -228,7 +235,7 @@ if (!isset($_SESSION['loggedin'])) {
                         </td>
                     </tr>         
                     <tr>
-                        <th>Telefono_Fijo</th>
+                        <th>Telefono Fijo</th>
                         <td>
                         <a href="tel:<?php echo $row['Telefono_Fijo']; ?>"><?php echo $row['Telefono_Fijo']; ?></a>
                         </td>
@@ -252,7 +259,7 @@ if (!isset($_SESSION['loggedin'])) {
                         </td>
                     </tr>
                     <tr>
-                        <th>Fecha_Registro</th>
+                        <th>Fecha Registro</th>
                         <td>
                         <?php echo $row['Fecha_Registro_Dueño']; ?>
                         </td>
@@ -260,54 +267,36 @@ if (!isset($_SESSION['loggedin'])) {
                 </tbody>
             </table>
    </div>
-          <div class="botones">
-            <a href="Edit_Dueño.php?Celular=<?php echo $row['Celular']?>" class="btn btn-success">Editar</a>
-            <a href="#" onclick="preguntar(<?php echo $row['Celular']?>)" class="btn btn-danger">Eliminar</a>
-            <a href="Dueño.php" role="button" class="btn btn-primary">Volver</a>
-          </div>
    </div> 
    <div class="col-md-6"> 
    <div class="datatable-responsive datatable-box">
 <table class="table table-responsive table-sm   non-top-border">
-                <tbody>
-                                            <tr>
-                            <th>Numero de Registro</th>
-                            <td> <?php echo $row['4']; ?></td>
-                        </tr>
-                                        <tr>
-                        <th>Nombre</th>
-                        <td>
-                         <?php echo $row['Nombre']; ?>
-                                                    </td>
-                    </tr>
-                                            <tr>
-                            <th>Celular</th>
-                            <td><a href="tel:<?php echo $row['Celular']; ?>"><?php echo $row['Celular']; ?></a></td>
-                        </tr>
-                                                                                                                    <tr>
-                                <th>Telefono_Fijo</th>
-                                <td><a href="tel:<?php echo $row['Telefono_Fijo']; ?>"><?php echo $row['Telefono_Fijo']; ?></a></td>
-                            </tr>
-                                                <tr>
-                            <th>Dirección</th>
-                            <td><?php echo $row['Dirección']; ?></td>
-                        </tr>
-                        <tr>
-                            <th>Ciudad</th>
-                            <td><?php echo $row['Ciudad']; ?></td>
-                        </tr>
-                                                    <tr>
-                                <th>
-                                    Correo
-                                                                    </th>
-                                <td><a target="_blank" href="mailto:<?php echo $row['Correo']; ?>"><?php echo $row['Correo']; ?> <i class="fa fa-external-link-alt"></i></a> </td>
-                            </tr>
-                    <tr>
-                        <th>Fecha_Registro</th>
-                        <td><?php echo $row['Fecha_Registro']; ?></td>
-                    </tr>
-                </tbody>
-            </table>
+        <h3>Sus Mascotas</h3>
+        <thead>
+            <tr>       
+                <th>Registro</th>
+                <th>Nombre</th>
+                <th>Raza</th>
+                <th>Sexo</th>             
+            </tr>
+        </thead>
+        <tbody>
+          <?php  
+          $query2="SELECT * FROM tabla_mascotas WHERE Cel_Dueño LIKE $Celular ";
+          $resultado2= $con->query($query2);
+          while($mostrar=$resultado2->fetch_assoc()){
+          ?>   
+            <tr>            
+                <td><?php echo $mostrar['Num_Registro_Mascota'] ?></td>
+                <td><a id="hrefvista" target="_blank" href="Vista_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>"><?php echo $mostrar['Nombre_Mascota'] ?></a></td>
+                <td><?php echo $mostrar['Raza'] ?></td>
+                <td><?php echo $mostrar['Sexo'] ?></td>
+            </tr>
+            <?php
+              }
+            ?>   
+        </tbody>
+ </table>
    </div>  
    </div>   
    </div> 
