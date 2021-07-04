@@ -39,3 +39,13 @@ form{
 	font-size: 13px;
 	margin-top:20px;
 }
+
+.btn_AccederNewLogin{
+    background-color:#9ACD32;
+    color:black;
+}
+
+.btn_AccederNewLogin:hover{
+    background-color:#83AE2A;
+    color:white;
+}
