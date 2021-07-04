@@ -225,7 +225,7 @@ if (!isset($_SESSION['loggedin'])) {
                                                 </td>
                     <tr>
                         <th>Dueño</th>
-                        <td><?php echo $row['Nombre_Dueño']; ?></td>
+                        <td><a id="hrefvista" href="Vista_Dueño.php?Celular=<?php echo $row['Celular']?>"><?php echo $row['Nombre_Dueño'] ?></a></td>
                     </tr>
               
                     <tr>
