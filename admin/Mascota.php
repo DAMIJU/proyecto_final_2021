@@ -260,7 +260,7 @@ if (!isset($_SESSION['loggedin'])) {
             ?>
                 <tr>
                     <td><?php echo $mostrar['Num_Registro_Mascota']?></td>
-                    <td><a id="hrefvista" target="_blank" href="Vista_Dueño.php?Celular=<?php echo $mostrar['Celular']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
+                    <td><a id="hrefvista" href="Vista_Dueño.php?Celular=<?php echo $mostrar['Celular']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
                     <td><?php echo $mostrar['Cel_Dueño']?></td>
                     <td><?php echo $mostrar['Nombre_Mascota']?></td>
                     <td><?php echo $mostrar['Raza']?></td>
@@ -272,7 +272,7 @@ if (!isset($_SESSION['loggedin'])) {
                       <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro_Mascota']?>)" class="btn btn-danger">
                          <i class="far fa-trash-alt"></i>
                       </a>
-                      <a target="_blank" href="Vista_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>" class="btn btn-primary">
+                      <a href="Vista_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>" class="btn btn-primary">
                       <i class="icofont-eye-alt"></i>
                       </a>
                     </td>

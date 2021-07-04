@@ -290,7 +290,7 @@ if (!isset($_SESSION['loggedin'])) {
         ?>   
             <tr>            
                 <td><?php echo $mostrar['Celular'] ?></td>
-                <td><a id="hrefvista" target="_blank" href="Vista_Dueño.php?Celular=<?php echo $mostrar['Celular']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
+                <td><a id="hrefvista" href="Vista_Dueño.php?Celular=<?php echo $mostrar['Celular']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
                 <td><?php echo $mostrar['Telefono_Fijo'] ?></td>
                 <td><?php echo $mostrar['Dirección'] ?></td>
                 <td><?php echo $mostrar['Ciudad'] ?></td>
