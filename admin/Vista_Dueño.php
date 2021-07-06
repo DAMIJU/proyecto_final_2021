@@ -201,8 +201,7 @@ if (!isset($_SESSION['loggedin'])) {
       <?php
       include("DB/conexion.php");
 
-      $Celular = $_REQUEST['Celular'];
-      
+      $Num_Registro_Dueño = $_REQUEST['Num_Registro_Dueño'];
       
       $query="SELECT * FROM tabla_dueño INNER JOIN tabla_mascotas ON tabla_dueño.Celular = tabla_mascotas.Cel_Dueño WHERE Celular='$Celular'";
       $resultado= $con->query($query);

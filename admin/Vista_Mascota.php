@@ -203,7 +203,7 @@ if (!isset($_SESSION['loggedin'])) {
 
       $Num_Registro_Mascota = $_REQUEST['Num_Registro_Mascota'];
       
-      $query="SELECT * FROM tabla_mascotas INNER JOIN tabla_dueño ON tabla_mascotas.Cel_Dueño = tabla_dueño.Celular WHERE Num_Registro_Mascota='$Num_Registro_Mascota'";
+      $query="SELECT * FROM tabla_mascotas INNER JOIN tabla_dueño ON tabla_mascotas.Registro_Dueño = tabla_dueño.Num_Registro_Dueño WHERE Num_Registro_Mascota='$Num_Registro_Mascota'";
       $resultado= $con->query($query);
       $row=$resultado->fetch_assoc();
       ?>
@@ -225,9 +225,9 @@ if (!isset($_SESSION['loggedin'])) {
                                                 </td>
                     <tr>
                         <th>Dueño</th>
-                        <td><a id="hrefvista" href="Vista_Dueño.php?Celular=<?php echo $row['Celular']?>"><?php echo $row['Nombre_Dueño'] ?></a></td>
+                        <td><a id="hrefvista" href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $row['Num_Registro_Dueño']?>"><?php echo $row['Num_Registro_Dueño'] ?></a></td>
                     </tr>
-              
+
                     <tr>
                         <th>Raza</th>
                         <td><?php echo $row['Raza']; ?></td>
@@ -243,7 +243,7 @@ if (!isset($_SESSION['loggedin'])) {
                     <tr>
                         <th>Fecha de registro</th>
                         <td><?php echo $row['Fecha_Registro_Mascota']; ?></td>
-                    </tr>                      
+                    </tr>
             </tbody>
             </table>
           </div>

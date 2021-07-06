@@ -204,9 +204,9 @@ if (!isset($_SESSION['loggedin'])) {
                 <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Añadir Mascota</h3>
               </div>
               <form action="Añadir_Mascota.php" method="POST">
-                <div class="form-group">
-                <input type="number" name="Cel_Dueño" class="form-control" placeholder="Celular dueño" autofocus>
-                </div>
+                <!-- <div class="form-group">
+                <input type="number" name="Celular" class="form-control" placeholder="Celular dueño" autofocus>
+                </div> -->
                 <div class="form-group">
                   <input type="text" name="Nombre_Mascota" class="form-control" placeholder="Mascota" autofocus>
                 </div>
@@ -251,17 +251,15 @@ if (!isset($_SESSION['loggedin'])) {
             <tbody>
             <?php  
               include("DB/conexion.php");
-              $query="SELECT * FROM tabla_mascotas
-              INNER JOIN tabla_dueño
-              ON tabla_mascotas.Cel_Dueño = tabla_dueño.Celular";
+              $query="SELECT * FROM tabla_mascotas INNER JOIN tabla_dueño ON tabla_mascotas.Registro_Dueño = tabla_dueño.Num_Registro_Dueño";
               $resultado= $con->query($query);
               while($mostrar=$resultado->fetch_assoc()){
 
             ?>
                 <tr>
                     <td><?php echo $mostrar['Num_Registro_Mascota']?></td>
-                    <td><a id="hrefvista" href="Vista_Dueño.php?Celular=<?php echo $mostrar['Celular']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
-                    <td><?php echo $mostrar['Cel_Dueño']?></td>
+                    <td><a id="hrefvista" href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
+                    <td><?php echo $mostrar['Celular']?></td>
                     <td><?php echo $mostrar['Nombre_Mascota']?></td>
                     <td><?php echo $mostrar['Raza']?></td>
                     <td><?php echo $mostrar['Sexo']?></td>          
