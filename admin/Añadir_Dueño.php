@@ -7,7 +7,6 @@ if(isset($_POST['agregar_dueño'])){
 
 $Celular = $_POST['Celular'];
 $Nombre_Dueño= $_POST['Nombre_Dueño'];
-$Celular = $_POST['Celular'];
 $Telefono_Fijo = $_POST['Telefono_Fijo'];
 $Dirección = $_POST['Dirección'];
 $Ciudad = $_POST['Ciudad'];
@@ -17,7 +16,7 @@ $query = "INSERT INTO tabla_dueño (Celular,Nombre_Dueño,Telefono_Fijo,Direcci�
 $ResultadoAgregarDueño = $con->query($query);
 
 if($ResultadoAgregarDueño){
-echo "<script>alert('El cliente se ha agregado satisfactoriamente');window.location='Dueño.php'</script>";
+echo "<script>alert('El cliente <? echo $Nombre_Dueño ?> se ha agregado satisfactoriamente');window.location='Dueño.php'</script>";
 }else{
   echo "<script>alert('los datos no se han podido guardar correctamente');</script>";
 }

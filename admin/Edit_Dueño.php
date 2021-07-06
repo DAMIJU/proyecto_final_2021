@@ -80,14 +80,14 @@ $row=$resultado->fetch_assoc();
 
 if(isset($_POST['update'])){
   $Celular = $_REQUEST['Celular'];
-  $Id = $_POST['Id'];
+  $celular = $_POST['celular'];
   $Nombre_Dueño= $_POST['Nombre_Dueño'];
   $Telefono_Fijo = $_POST['Telefono_Fijo'];
   $Dirección = $_POST['Dirección'];
   $Ciudad = $_POST['Ciudad'];
   $Correo = $_POST['Correo'];
   $Fecha_Registro_Dueño = $_POST['Fecha_Registro_Dueño'];
-  $query = "UPDATE tabla_dueño set Celular = '$Celular', Nombre_Dueño = '$Nombre_Dueño', Telefono_Fijo = '$Telefono_Fijo', Dirección = '$Dirección', Ciudad = '$Ciudad', Correo = '$Correo', Fecha_Registro_Dueño = '$Fecha_Registro_Dueño' WHERE Celular=$Celular";
+  $query = "UPDATE tabla_dueño set Celular = '$celular', Nombre_Dueño = '$Nombre_Dueño', Telefono_Fijo = '$Telefono_Fijo', Dirección = '$Dirección', Ciudad = '$Ciudad', Correo = '$Correo', Fecha_Registro_Dueño = '$Fecha_Registro_Dueño' WHERE Celular=$Celular";
   $ResultadoEditDueño = $con->query($query);
 
   if($ResultadoEditDueño){
@@ -103,7 +103,7 @@ if(isset($_POST['update'])){
       <div class="card card-body">
       <form action="" method="POST">
         <div class="form-group">
-        <input name="Id" type="text" class="form-control" value="<?php echo $row['Celular'];  ?>" placeholder="Celular">
+        <input name="celular" type="text" class="form-control" value="<?php echo $row['Celular'];  ?>" placeholder="Celular">
         </div>
         <div class="form-group">
         <input name="Nombre_Dueño" type="text" class="form-control" value="<?php echo $row['Nombre_Dueño']; ?>" placeholder="Nombre">

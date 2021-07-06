@@ -204,7 +204,7 @@ if (!isset($_SESSION['loggedin'])) {
       $Celular = $_REQUEST['Celular'];
       
       
-      $query="SELECT * FROM tabla_dueño INNER JOIN tabla_mascotas ON tabla_dueño.Celular = tabla_mascotas.Cel_Dueño WHERE Celular='$Celular'";
+      $query="SELECT * FROM tabla_dueño WHERE Celular = '$Celular'";
       $resultado= $con->query($query);
       $row=$resultado->fetch_assoc();
 
