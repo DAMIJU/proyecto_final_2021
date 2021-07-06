@@ -253,7 +253,7 @@ if (!isset($_SESSION['loggedin'])) {
           <div class="botones">
             <a href="Edit_Mascota.php?Num_Registro_Mascota=<?php echo $row['Num_Registro_Mascota']?>" class="btn btn-success">Editar</a>
             <a href="#" onclick="preguntar(<?php echo $row['Num_Registro_Mascota']?>)" class="btn btn-danger">Eliminar</a>
-            <a href="Mascota.php" role="button" class="btn btn-primary">Volver</a>
+            <a href="javascript: history.go(-1)" role="button" class="btn btn-primary">Volver</a>
           </div>
 </div> 
    <footer class="main-footer">
