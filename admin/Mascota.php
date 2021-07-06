@@ -213,6 +213,7 @@ if (!isset($_SESSION['loggedin'])) {
                 <div class="form-group">
                  <select name="Registro_Dueño" id="controlBuscador" style="width: 50%" >
                    <option disabled selected>Selecciona un Dueño</option>
+                   <option value="4">Epa</option>
 		               	<?php while ($ver=mysqli_fetch_row($result)) {?>
 		              	<option value="<?php echo $ver[0] ?>">
 			             	   <?php echo $ver[2] ?> <?php echo $ver[1] ?> 
@@ -375,6 +376,21 @@ if (!isset($_SESSION['loggedin'])) {
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
+<!-- SCRIPTS DataTables -->
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+<script> $(document).ready(function() {
+    $('#Tabla_mascotas').DataTable( {
+        language: {
+            url: 'https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
+        }
+    } );
+} );
+</script>
 
 <script type="text/javascript">
       function preguntar(Num_Registro_Mascota)
@@ -386,27 +402,12 @@ if (!isset($_SESSION['loggedin'])) {
       }
 </script>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
 	<script src="select2/select2.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('#controlBuscador').select2({ dropdownParent: "#staticBackdrop" });
 	});
 </script>
-<!-- SCRIPTS DataTables -->
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
-<script> $(document).ready(function() {
-    $('#Tabla_mascotas').DataTable( {
-        language: {
-            url: 'https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
-        }
-    } );
-} );
-</script>
+
 
 </body>
