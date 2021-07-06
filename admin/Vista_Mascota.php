@@ -233,13 +233,17 @@ if (!isset($_SESSION['loggedin'])) {
                         <td><?php echo $row['Raza']; ?></td>
                     </tr>
                     <tr>
-                        <th>Fecha Nac</th>
+                        <th>Fecha de nacimiento</th>
                         <td><?php echo $row['Fecha_Nac']; ?></td>
                     </tr>
                     <tr>
                         <th>Sexo</th>
                         <td><?php echo $row['Sexo']; ?></td>
-                    </tr>                       
+                    </tr>
+                    <tr>
+                        <th>Fecha de registro</th>
+                        <td><?php echo $row['Fecha_Registro_Mascota']; ?></td>
+                    </tr>                      
             </tbody>
             </table>
           </div>

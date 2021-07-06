@@ -223,9 +223,9 @@ if (!isset($_SESSION['loggedin'])) {
                 <option value="Hembra">Hembra</option>
                </select>
                 </div>
-                <div class="form-group">
+               <!--  <div class="form-group">
                 <input type="date" name="Fecha_Registro_Mascota" class="form-control" placeholder="Fecha de registro" autofocus>
-                </div>
+                </div> -->
                 <div class="modal-footer">
                   <input type="submit" name="Agregar_Mascota" class="btn btn-success" value="Agregar">
                   <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>          
