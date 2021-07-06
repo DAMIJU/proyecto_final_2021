@@ -204,9 +204,9 @@ if (!isset($_SESSION['loggedin'])) {
                 <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Añadir Mascota</h3>
               </div>
               <form action="Añadir_Mascota.php" method="POST">
-                <!-- <div class="form-group">
-                <input type="number" name="Celular" class="form-control" placeholder="Celular dueño" autofocus>
-                </div> -->
+                <div class="form-group">
+                <input type="text" name="city" id="search_city" placeholder="Type to search..." class="form-control" autofocus>  
+                </div>
                 <div class="form-group">
                   <input type="text" name="Nombre_Mascota" class="form-control" placeholder="Mascota" autofocus>
                 </div>
