@@ -257,9 +257,9 @@ if (!isset($_SESSION['loggedin'])) {
           <div class="form-group">
             <input type="text" name="Correo" class="form-control" placeholder="Correo" autofocus>
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <input type="date" name="Fecha_Registro_Dueño" class="form-control" placeholder="Fecha_Registro" autofocus>
-          </div>
+          </div> -->
           <div class="modal-footer">
             <input type="submit" name="agregar_dueño" class="btn btn-success" value="Agregar">
             <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>

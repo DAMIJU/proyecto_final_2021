@@ -11,8 +11,7 @@ $Telefono_Fijo = $_POST['Telefono_Fijo'];
 $Dirección = $_POST['Dirección'];
 $Ciudad = $_POST['Ciudad'];
 $Correo = $_POST['Correo'];
-$Fecha_Registro_Dueño = $_POST['Fecha_Registro_Dueño'];
-$query = "INSERT INTO tabla_dueño (Num_Registro_Dueño,Celular,Nombre_Dueño,Telefono_Fijo,Dirección,Ciudad,Correo,Fecha_Registro_Dueño) VALUES (NULL,'$Celular', '$Nombre_Dueño', '$Telefono_Fijo', '$Dirección', '$Ciudad', '$Correo', '$Fecha_Registro_Dueño')" ;
+$query = "INSERT INTO tabla_dueño (Num_Registro_Dueño,Celular,Nombre_Dueño,Telefono_Fijo,Dirección,Ciudad,Correo,Fecha_Registro_Dueño) VALUES (NULL,'$Celular', '$Nombre_Dueño', '$Telefono_Fijo', '$Dirección', '$Ciudad', '$Correo', CURDATE())";
 $ResultadoAgregarDueño = $con->query($query);
 
 if($ResultadoAgregarDueño){

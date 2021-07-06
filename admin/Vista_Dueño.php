@@ -211,7 +211,7 @@ if (!isset($_SESSION['loggedin'])) {
       <div class="text-center">
       <h1>Datos del cliente <?php echo $row['Nombre_Dueño']; ?></h1>
       </div>
-      <div class="row" id="Vista">
+  <div class="row" id="Vista">
         <div class="col-md">
             <div class="section-box">
         <div class="table-responsive col-sm">
@@ -262,10 +262,11 @@ if (!isset($_SESSION['loggedin'])) {
                 </tbody>
             </table>
         </div>
-    </div>               
+    </div>             
         </div>
         <div class="col-md-5">
             <div class="section-box">
+        <div class="table-responsive col-sm">
             <table class="table table-sm  non-top-border" id="Intento">      
                 <!-- <h3>Sus Mascotas</h3> -->
         <thead>
@@ -296,6 +297,7 @@ if (!isset($_SESSION['loggedin'])) {
                 </div>
             </div>
         </div>
+  </div>
    <div class="botones">
             <button type="button" class="btn btn-success">Editar</button>
             <button type="button" class="btn btn-danger">Eliminar</button>
