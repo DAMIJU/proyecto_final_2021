@@ -30,7 +30,6 @@ if (!isset($_SESSION['loggedin'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Panel de admin</title>
-
     <!-- Favicons -->
   <link href="../assets/img/Logo.ico" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -73,15 +72,8 @@ if (!isset($_SESSION['loggedin'])) {
     li{
       list-style: none;
     }
-  </style>
-  <!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- 
- <!-- jQuery UI -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
- <!-- Bootstrap CSS -->
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  </style> 
+  <link rel="stylesheet" type="text/css" href="select2/select2.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -205,6 +197,12 @@ if (!isset($_SESSION['loggedin'])) {
       <?php session_unset(); } ?>
 
       <!-- FORMULARIO AÑADIR MASCOTA -->
+      <?php  
+              include("DB/conexion.php");
+              $sql="SELECT Num_Registro_Dueño,Celular,Nombre_Dueño from tabla_dueño";
+	            $result=mysqli_query($con,$sql);
+      ?>
+      <div></div>
       <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -213,7 +211,15 @@ if (!isset($_SESSION['loggedin'])) {
               </div>
               <form action="Añadir_Mascota.php" method="POST">
                 <div class="form-group">
-                <input type="text" name="Nombre_Dueño" id="Search_Dueño" placeholder="Type to search..." class="form-control" autofocus>  
+                 <select name="Registro_Dueño" id="controlBuscador" style="width: 50%" >
+                   <option disabled selected>Selecciona un Dueño</option>
+		               	<?php while ($ver=mysqli_fetch_row($result)) {?>
+		              	<option value="<?php echo $ver[0] ?>">
+			             	   <?php echo $ver[2] ?> <?php echo $ver[1] ?> 
+			              </option>
+
+			          <?php  }?>
+                </select>
                 </div>
                 <div class="form-group">
                   <input type="text" name="Nombre_Mascota" class="form-control" placeholder="Mascota" autofocus>
@@ -369,6 +375,27 @@ if (!isset($_SESSION['loggedin'])) {
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
+
+<script type="text/javascript">
+      function preguntar(Num_Registro_Mascota)
+      {
+        if(confirm('¿Está seguro que desea eliminar esta mascota?'))
+        {
+          window.location.href = "Delete_Mascota.php?Num_Registro_Mascota="+Num_Registro_Mascota;
+        }
+      }
+</script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+	<script src="select2/select2.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#controlBuscador').select2({ dropdownParent: "#staticBackdrop" });
+	});
+</script>
 <!-- SCRIPTS DataTables -->
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
@@ -381,21 +408,5 @@ if (!isset($_SESSION['loggedin'])) {
     } );
 } );
 </script>
-<script type="text/javascript">
-      function preguntar(Num_Registro_Mascota)
-      {
-        if(confirm('¿Está seguro que desea eliminar esta mascota?'))
-        {
-          window.location.href = "Delete_Mascota.php?Num_Registro_Mascota="+Num_Registro_Mascota;
-        }
-      }
-</script>
-<script type="text/javascript">
-  $(function() {
-     $( "#Search_Dueño" ).autocomplete({
-       source: 'dueñoenmascota.php',
-     });
-  });
-</script>
-<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
 </body>
