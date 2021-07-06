@@ -3,13 +3,14 @@
 include('DB/conexion.php');
 
 if (isset($_POST['Agregar_Mascota'])) {
-  /* $Cel_Dueño = $_POST['Cel_Dueño']; */
+  /* AQUI VA EL SELECT PARA EL QUE PAREZCA EL NOMBRE Y EL CELULAR */
+  /* $Cel_Dueño = $_POST['Cel_Dueño']; */ 
   $Nombre_Mascota = $_POST['Nombre_Mascota'];
   $Raza = $_POST['Raza'];
   $Fecha_Nac = $_POST['Fecha_Nac'];
   $Sexo = $_POST['Sexo'];
   /* $Fecha_Registro_Mascota = $_POST['Fecha_Registro_Mascota']; */
-  $Fecha_Registro_Mascota = date('m/d/Y h:i:s', time());
+  $Fecha_Registro_Mascota = date("Y-m-d");
   $query = "INSERT INTO tabla_mascotas(Num_Registro_Mascota, Nombre_Mascota, Raza, Fecha_Nac, Sexo, Fecha_Registro_Mascota) VALUES (null, '$Nombre_Mascota', '$Raza',  '$Fecha_Nac', '$Sexo', '$Fecha_Registro_Mascota')";
   $ResultadoInsertMascota = mysqli_query($con, $query);
 
