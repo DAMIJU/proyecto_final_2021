@@ -290,22 +290,22 @@ if (!isset($_SESSION['loggedin'])) {
         ?>   
             <tr>            
                 <td><?php echo $mostrar['Celular'] ?></td>
-                <td><a id="hrefvista" href="Vista_Dueño.php?Celular=<?php echo $mostrar['Celular']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
+                <td><a id="hrefvista" href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
                 <td><?php echo $mostrar['Telefono_Fijo'] ?></td>
                 <td><?php echo $mostrar['Dirección'] ?></td>
                 <td><?php echo $mostrar['Ciudad'] ?></td>
                 <td><?php echo $mostrar['Correo'] ?></td>  
                 <td>
-              <a href="Edit_Dueño.php?Celular=<?php echo $mostrar['Celular']?>" class="btn btn-secondary">
+              <a href="Edit_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>" class="btn btn-secondary">
                 <i class="fas fa-marker"></i>
               </a>
-              <a href="#" onclick="preguntar(<?php echo $mostrar['Celular']?>)" class="btn btn-danger">
+              <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro_Dueño']?>)" class="btn btn-danger">
                 <i class="far fa-trash-alt"></i>
               </a>
-              <a href="Vista_Dueño.php?Celular=<?php echo $mostrar['Celular']?>" class="btn btn-primary">
+              <a href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>" class="btn btn-primary">
               <i class="icofont-eye-alt"></i>
               </a>
-            </td>
+               </td>
             </tr>
             <?php
               }
@@ -408,11 +408,11 @@ if (!isset($_SESSION['loggedin'])) {
 } );
 </script>
 <script type="text/javascript">
-      function preguntar(Celular)
+      function preguntar(Num_Registro_Dueño)
       {
         if(confirm('¿Está seguro que desea eliminar este cliente?'))
         {
-          window.location.href = "Delete_Dueño.php?Celular="+Celular;
+          window.location.href = "Delete_Dueño.php?Num_Registro_Dueño="+Num_Registro_Dueño;
         }
       }
 </script>

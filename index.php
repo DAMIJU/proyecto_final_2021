@@ -150,7 +150,7 @@
         </div>
         <!---Se abre código de modal que muestra info sobre Caninos Casme-->
         <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header" style="background-color:#9ACD32">
                 <h5 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Adiestrador canino</h5>

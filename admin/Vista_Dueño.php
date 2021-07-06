@@ -203,7 +203,7 @@ if (!isset($_SESSION['loggedin'])) {
 
       $Num_Registro_Dueño = $_REQUEST['Num_Registro_Dueño'];
       
-      $query="SELECT * FROM tabla_dueño INNER JOIN tabla_mascotas ON tabla_dueño.Celular = tabla_mascotas.Cel_Dueño WHERE Celular='$Celular'";
+      $query="SELECT * FROM tabla_dueño WHERE Num_Registro_Dueño = '$Num_Registro_Dueño'";
       $resultado= $con->query($query);
       $row=$resultado->fetch_assoc();
 
@@ -278,7 +278,7 @@ if (!isset($_SESSION['loggedin'])) {
         </thead>
         <tbody>
           <?php  
-          $query2="SELECT * FROM tabla_mascotas WHERE Cel_Dueño LIKE $Celular ";
+          $query2="SELECT * FROM tabla_mascotas WHERE 	Registro_Dueño  LIKE $Num_Registro_Dueño ";
           $resultado2= $con->query($query2);
           while($mostrar=$resultado2->fetch_assoc()){
           ?>   

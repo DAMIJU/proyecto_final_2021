@@ -72,22 +72,22 @@ if (!isset($_SESSION['loggedin'])) {
 <?php
 include("DB/conexion.php");
 
-$Celular = $_REQUEST['Celular'];
+$Num_Registro_Dueño = $_REQUEST['Num_Registro_Dueño'];
 
-$query="SELECT * FROM tabla_dueño WHERE Celular='$Celular'";
+$query="SELECT * FROM tabla_dueño WHERE Num_Registro_Dueño='$Num_Registro_Dueño'";
 $resultado= $con->query($query);
 $row=$resultado->fetch_assoc();
 
 if(isset($_POST['update'])){
-  $Celular = $_REQUEST['Celular'];
-  $Id = $_POST['Id'];
+  $Num_Registro_Dueño = $_REQUEST['Num_Registro_Dueño'];
+  $celular = $_POST['celular'];
   $Nombre_Dueño= $_POST['Nombre_Dueño'];
   $Telefono_Fijo = $_POST['Telefono_Fijo'];
   $Dirección = $_POST['Dirección'];
   $Ciudad = $_POST['Ciudad'];
   $Correo = $_POST['Correo'];
   $Fecha_Registro_Dueño = $_POST['Fecha_Registro_Dueño'];
-  $query = "UPDATE tabla_dueño set Celular = '$Celular', Nombre_Dueño = '$Nombre_Dueño', Telefono_Fijo = '$Telefono_Fijo', Dirección = '$Dirección', Ciudad = '$Ciudad', Correo = '$Correo', Fecha_Registro_Dueño = '$Fecha_Registro_Dueño' WHERE Celular=$Celular";
+  $query = "UPDATE tabla_dueño set Celular = '$celular', Nombre_Dueño = '$Nombre_Dueño', Telefono_Fijo = '$Telefono_Fijo', Dirección = '$Dirección', Ciudad = '$Ciudad', Correo = '$Correo', Fecha_Registro_Dueño = '$Fecha_Registro_Dueño' WHERE Num_Registro_Dueño=$Num_Registro_Dueño";
   $ResultadoEditDueño = $con->query($query);
 
   if($ResultadoEditDueño){
@@ -103,7 +103,7 @@ if(isset($_POST['update'])){
       <div class="card card-body">
       <form action="" method="POST">
         <div class="form-group">
-        <input name="Id" type="text" class="form-control" value="<?php echo $row['Celular'];  ?>" placeholder="Celular">
+        <input name="celular" type="text" class="form-control" value="<?php echo $row['Celular'];  ?>" placeholder="Celular">
         </div>
         <div class="form-group">
         <input name="Nombre_Dueño" type="text" class="form-control" value="<?php echo $row['Nombre_Dueño']; ?>" placeholder="Nombre">
