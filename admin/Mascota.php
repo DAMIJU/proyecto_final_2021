@@ -74,6 +74,14 @@ if (!isset($_SESSION['loggedin'])) {
       list-style: none;
     }
   </style>
+  <!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 
+ <!-- jQuery UI -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+ <!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -205,7 +213,7 @@ if (!isset($_SESSION['loggedin'])) {
               </div>
               <form action="Añadir_Mascota.php" method="POST">
                 <div class="form-group">
-                <input type="text" name="city" id="search_city" placeholder="Type to search..." class="form-control" autofocus>  
+                <input type="text" name="Nombre_Dueño" id="Search_Dueño" placeholder="Type to search..." class="form-control" autofocus>  
                 </div>
                 <div class="form-group">
                   <input type="text" name="Nombre_Mascota" class="form-control" placeholder="Mascota" autofocus>
@@ -381,6 +389,13 @@ if (!isset($_SESSION['loggedin'])) {
           window.location.href = "Delete_Mascota.php?Num_Registro_Mascota="+Num_Registro_Mascota;
         }
       }
+</script>
+<script type="text/javascript">
+  $(function() {
+     $( "#Search_Dueño" ).autocomplete({
+       source: 'dueñoenmascota.php',
+     });
+  });
 </script>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </body>
