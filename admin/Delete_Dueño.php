@@ -2,9 +2,9 @@
 
 include("DB/conexion.php");
 
-if(isset($_GET['Celular'])) {
-  $Celular = $_GET['Celular'];
-  $query = "DELETE FROM tabla_dueño WHERE Celular = $Celular";
+if(isset($_GET['Num_Registro_Dueño'])) {
+  $Num_Registro_Dueño = $_GET['Num_Registro_Dueño'];
+  $query = "DELETE FROM tabla_dueño WHERE Num_Registro_Dueño = $Num_Registro_Dueño";
   $result = mysqli_query($con, $query);
   if(!$result) {
     die("Query Failed.");

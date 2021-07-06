@@ -12,7 +12,7 @@ $Dirección = $_POST['Dirección'];
 $Ciudad = $_POST['Ciudad'];
 $Correo = $_POST['Correo'];
 $Fecha_Registro_Dueño = $_POST['Fecha_Registro_Dueño'];
-$query = "INSERT INTO tabla_dueño (Celular,Nombre_Dueño,Telefono_Fijo,Dirección,Ciudad,Correo,Fecha_Registro_Dueño) VALUES ('$Celular', '$Nombre_Dueño', '$Telefono_Fijo', '$Dirección', '$Ciudad', '$Correo', '$Fecha_Registro_Dueño')" ;
+$query = "INSERT INTO tabla_dueño (Num_Registro_Dueño,Celular,Nombre_Dueño,Telefono_Fijo,Dirección,Ciudad,Correo,Fecha_Registro_Dueño) VALUES (NULL,'$Celular', '$Nombre_Dueño', '$Telefono_Fijo', '$Dirección', '$Ciudad', '$Correo', '$Fecha_Registro_Dueño')" ;
 $ResultadoAgregarDueño = $con->query($query);
 
 if($ResultadoAgregarDueño){
