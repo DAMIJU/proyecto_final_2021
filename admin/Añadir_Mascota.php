@@ -14,9 +14,9 @@ if (isset($_POST['Agregar_Mascota'])) {
   
 
   if($ResultadoInsertMascota){
-    echo "<script>alert('La mascota se ha agregado satisfactoriamente');window.location='Mascota.php'</script>";
+    echo "<script>alert('La mascota $Nombre_Mascota se ha agregado satisfactoriamente');window.location='Mascota.php'</script>";
     }else{
-      echo "<script>alert('los datos no se han podido guardar $Registro_Dueño correctamente');</script>";
+      echo "<script>alert('los datos no se han podido guardar  correctamente');</script>";
     }  
 }
 ?>

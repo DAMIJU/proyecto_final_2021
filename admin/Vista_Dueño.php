@@ -299,9 +299,9 @@ if (!isset($_SESSION['loggedin'])) {
         </div>
   </div>
    <div class="botones">
-            <button type="button" class="btn btn-success">Editar</button>
-            <button type="button" class="btn btn-danger">Eliminar</button>
-            <a href="Dueño.php" role="button" class="btn btn-primary">Volver</a>
+            <a href="Edit_Dueño.php?Num_Registro_Dueño=<?php echo $row['Num_Registro_Dueño']?>" class="btn btn-success">Editar</a>
+            <a href="#" onclick="preguntar(<?php echo $row['Num_Registro_Dueño']?>)" class="btn btn-danger">Eliminar</a>
+            <a href="javascript: history.go(-1)" role="button" class="btn btn-primary">Volver</a>
     </div> 
 </div> 
    <footer class="main-footer">
@@ -385,11 +385,11 @@ if (!isset($_SESSION['loggedin'])) {
 } );
 </script>
 <script type="text/javascript">
-      function preguntar(Celular)
+      function preguntar(Num_Registro_Dueño)
       {
         if(confirm('¿Estás seguro que quieres eliminar al cliente?'))
         {
-          window.location.href = "Delete_Dueño.php?Celular="+Celular;
+          window.location.href = "Delete_Dueño.php?Num_Registro_Dueño="+Num_Registro_Dueño;
         }
       }
 </script>

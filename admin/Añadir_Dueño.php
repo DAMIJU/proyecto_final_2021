@@ -15,7 +15,7 @@ $query = "INSERT INTO tabla_dueño (Num_Registro_Dueño,Celular,Nombre_Dueño,Te
 $ResultadoAgregarDueño = $con->query($query);
 
 if($ResultadoAgregarDueño){
-echo "<script>alert('El cliente <? echo $Nombre_Dueño ?> se ha agregado satisfactoriamente');window.location='Dueño.php'</script>";
+echo "<script>alert('El cliente $Nombre_Dueño se ha agregado satisfactoriamente');window.location='Dueño.php'</script>";
 }else{
   echo "<script>alert('los datos no se han podido guardar correctamente');</script>";
 }
