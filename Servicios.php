@@ -8,8 +8,7 @@
   <title>Servicios</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
-  <!-- Favicons -->
+  
   <link href="assets/img/Logo.ico" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -23,14 +22,27 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
   <style>
     .activo {
-    text-decoration: none;
-    background-color: red;
+      box-shadow: inset 0 -1px 0 #9ACD32, inset 0 -4px 0 #9ACD32;
 }
   </style>
+  <script>
+    $('#menu li a').on('click', function(){
+    $('li a.activo').removeClass('activo');
+    $(this).addClass('activo');
+});
+  </script>
+  
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Tempo - v2.2.1
+  * Template URL: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 <body>
   
@@ -46,19 +58,13 @@
         <ul>
           <li><a href="index.php">Inicio</a></li>
           <li><a href="Nosotros.php">Nosotros</a></li>
-          <li><a class="activo" href="Servicios.php">Servicios</a></li>
+          <li class="activo"><a href="Servicios.php">Servicios</a></li>
           <li><a href="Galeria.php">Galería</a></li>                  
-          <li"><a href="Login.php">Admin</a></li>
+          <li ><a href="Login.php">Admin</a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
   </header>
-  <script>
-    $('#menu li a').on('click', function(){
-    $('li a.activo').removeClass('activo');
-    $(this).addClass('activo');
-});
-  </script>
   <!-- End Header -->
   <br><br><br><br><br><br><br>
 <main id="main">
@@ -262,6 +268,8 @@
   <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
 
 <!-- Vendor JS Files -->
+<!-- Vendor JS Files -->
+<script src="assets/vendor/jquery/jquery.min.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
 <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -273,3 +281,4 @@
 <script src="assets/js/main.js"></script>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </body>
+</html>

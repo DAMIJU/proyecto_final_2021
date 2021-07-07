@@ -30,6 +30,17 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .activo {
+      box-shadow: inset 0 -1px 0 #9ACD32, inset 0 -4px 0 #9ACD32;
+}
+  </style>
+  <script>
+    $('#menu li a').on('click', function(){
+    $('li a.activo').removeClass('activo');
+    $(this).addClass('activo');
+});
+  </script>
 
   <!-- =======================================================
   * Template Name: Tempo - v2.2.1
@@ -51,13 +62,12 @@
           <li><a href="index.php">Inicio</a></li>
           <li><a href="Nosotros.php">Nosotros</a></li>
           <li><a href="Servicios.php">Servicios</a></li>         
-          <li class="active"><a href="Galeria.php">Galería</a></li>                       
+          <li class="activo"><a href="Galeria.php">Galería</a></li>                       
           <li ><a href="Login.php">Admin</a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
   </header>
-  <!-- End Header -->
  <!-- ======= Portfolio Section ======= -->
  <section id="portfolio" class="portfolio">
       <div class="container text-center">
@@ -558,6 +568,4 @@ document.querySelectorAll(".container").forEach(el=>{
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-<script src="popup.js"></script>
-<script src="modal.js"></script>
 </body>
