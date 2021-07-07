@@ -211,7 +211,7 @@ if (!isset($_SESSION['loggedin'])) {
               </div>
               <form action="Añadir_Mascota.php" method="POST">
                 <div class="form-group">
-                 <select name="Registro_Dueño" id="controlBuscador" style="width: 50%" >
+                 <select name="Registro_Dueño" id="controlBuscador" style="width: 100%" >
                    <option disabled selected>Selecciona un Dueño</option>
 		               	<?php while ($ver=mysqli_fetch_row($result)) {?>
 		              	<option value="<?php echo $ver[0] ?>">

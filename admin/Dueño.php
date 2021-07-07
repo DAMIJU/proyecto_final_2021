@@ -224,7 +224,7 @@ if (!isset($_SESSION['loggedin'])) {
             <input type="text" name="Dirección" class="form-control" placeholder="Dirección" autofocus>
           </div>
           <div class="form-group">
-                 <select name="Ciudad" id="controlBuscador" style="width: 50%">
+                 <select name="Ciudad" id="controlBuscador" style="width: 100%">
                    <option disabled selected>Seleccione localidad</option>
 		               	<?php while ($ver=mysqli_fetch_row($result)) {?>
 		              	<option value="<?php echo $ver[1] ?>">
