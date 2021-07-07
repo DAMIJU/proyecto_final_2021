@@ -213,10 +213,12 @@ if (!isset($_SESSION['loggedin'])) {
                 <div class="form-group">
                  <select name="Registro_Dueño" id="controlBuscador" style="width: 50%" >
                    <option disabled selected>Selecciona un Dueño</option>
+                   <option value="4">Epa</option>
 		               	<?php while ($ver=mysqli_fetch_row($result)) {?>
 		              	<option value="<?php echo $ver[0] ?>">
 			             	   <?php echo $ver[2] ?> <?php echo $ver[1] ?> 
 			              </option>
+
 			          <?php  }?>
                 </select>
                 </div>
@@ -406,6 +408,4 @@ if (!isset($_SESSION['loggedin'])) {
 		$('#controlBuscador').select2({ dropdownParent: "#staticBackdrop" });
 	});
 </script>
-
-
 </body>
