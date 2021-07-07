@@ -25,6 +25,12 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .activo {
+    text-decoration: none;
+    background-color: red;
+}
+  </style>
 </head>
 <body>
   
@@ -40,13 +46,19 @@
         <ul>
           <li><a href="index.php">Inicio</a></li>
           <li><a href="Nosotros.php">Nosotros</a></li>
-          <li class="active"><a href="Servicios.php">Servicios</a></li>
+          <li><a class="activo" href="Servicios.php">Servicios</a></li>
           <li><a href="Galeria.php">Galería</a></li>                  
-          <li ><a href="Login.php">Admin</a></li>
+          <li"><a href="Login.php">Admin</a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
   </header>
+  <script>
+    $('#menu li a').on('click', function(){
+    $('li a.activo').removeClass('activo');
+    $(this).addClass('activo');
+});
+  </script>
   <!-- End Header -->
   <br><br><br><br><br><br><br>
 <main id="main">
