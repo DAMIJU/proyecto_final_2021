@@ -74,6 +74,7 @@ if (!isset($_SESSION['loggedin'])) {
       list-style: none;
     }
   </style>
+  <link rel="stylesheet" type="text/css" href="select2/select2.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -198,6 +199,11 @@ if (!isset($_SESSION['loggedin'])) {
       <?php session_unset(); } ?>
 
       <!-- FORMULARIO AÑADIR DUEÑO -->
+      <?php  
+              include("DB/conexion.php");
+              $sql="SELECT * from tabla_localidad";
+	            $result=mysqli_query($con,$sql);
+      ?>
 <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -218,42 +224,15 @@ if (!isset($_SESSION['loggedin'])) {
             <input type="text" name="Dirección" class="form-control" placeholder="Dirección" autofocus>
           </div>
           <div class="form-group">
-              <select name="Ciudad">
-                        <option value="no">Seleccione Estado...</option>
-                        <option value="Aguascalientes">Aguascalientes</option>
-                        <option value="Baja California">Baja California</option>
-                        <option value="Baja California Sur">Baja California Sur</option>
-                        <option value="Campeche">Campeche</option>
-                        <option value="Chiapas">Chiapas</option>
-                        <option value="Chihuahua">Chihuahua</option>
-                        <option value="CDMX">Ciudad de México</option>
-                        <option value="Coahuila">Coahuila</option>
-                        <option value="Colima">Colima</option>
-                        <option value="Durango">Durango</option>
-                        <option value="Estado de México">Estado de México</option>
-                        <option value="Guanajuato">Guanajuato</option>
-                        <option value="Guerrero">Guerrero</option>
-                        <option value="Hidalgo">Hidalgo</option>
-                        <option value="Jalisco">Jalisco</option>
-                        <option value="Michoacán">Michoacán</option>
-                        <option value="Morelos">Morelos</option>
-                        <option value="Nayarit">Nayarit</option>
-                        <option value="Nuevo León">Nuevo León</option>
-                        <option value="Oaxaca">Oaxaca</option>
-                        <option value="Puebla">Puebla</option>
-                        <option value="Querétaro">Querétaro</option>
-                        <option value="Quintana Roo">Quintana Roo</option>
-                        <option value="San Luis Potosí">San Luis Potosí</option>
-                        <option value="Sinaloa">Sinaloa</option>
-                        <option value="Sonora">Sonora</option>
-                        <option value="Tabasco">Tabasco</option>
-                        <option value="Tamaulipas">Tamaulipas</option>
-                        <option value="Tlaxcala">Tlaxcala</option>
-                        <option value="Veracruz">Veracruz</option>
-                        <option value="Yucatán">Yucatán</option>
-                        <option value="Zacatecas">Zacatecas</option>
-               </select>
-          </div>
+                 <select name="Ciudad" id="controlBuscador" style="width: 50%">
+                   <option disabled selected>Seleccione localidad</option>
+		               	<?php while ($ver=mysqli_fetch_row($result)) {?>
+		              	<option value="<?php echo $ver[1] ?>">
+			             	    <?php echo $ver[1] ?>
+			              </option>
+			          <?php  }?>
+                </select>
+                </div>
           <div class="form-group">
             <input type="text" name="Correo" class="form-control" placeholder="Correo" autofocus>
           </div>
@@ -396,7 +375,10 @@ if (!isset($_SESSION['loggedin'])) {
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- SCRIPTS DataTables -->
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
 <script> $(document).ready(function() {
@@ -417,4 +399,10 @@ if (!isset($_SESSION['loggedin'])) {
       }
 </script>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script src="select2/select2.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#controlBuscador').select2({ dropdownParent: "#staticBackdrop" });
+	});
+</script>
 </body>
