@@ -273,7 +273,7 @@ if (!isset($_SESSION['loggedin'])) {
                     <td><?php echo $mostrar['Num_Registro_Mascota']?></td>
                     <td><a id="hrefvista" href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
                     <td><?php echo $mostrar['Celular']?></td>
-                    <td><?php echo $mostrar['Nombre_Mascota']?></td>
+                    <td><a id="hrefvista" href="Vista_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>"><?php echo $mostrar['Nombre_Mascota'] ?></a></td>
                     <td><?php echo $mostrar['Raza']?></td>
                     <td><?php echo $mostrar['Sexo']?></td>          
                     <td>

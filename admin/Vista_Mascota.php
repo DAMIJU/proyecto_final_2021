@@ -181,11 +181,6 @@ if (!isset($_SESSION['loggedin'])) {
 </div>
   </div>
 <div class="content-wrapper">
-  <div class="text-center">
-  <h1>Datos Mascota</h1>
-  <!-- <button class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Dueño</button>
-  <button class="btn btn-warning" id="" data-toggle="" data-target="">Info</button> -->
-    </div>
       <!-- MESSAGES -->
       <?php if (isset($_SESSION['message'])) { ?>
       <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
@@ -207,7 +202,9 @@ if (!isset($_SESSION['loggedin'])) {
       $resultado= $con->query($query);
       $row=$resultado->fetch_assoc();
       ?>
-  
+      <div class="text-center">
+  <h1>Datos de <?php echo $row['Nombre_Mascota']; ?></h1>
+      </div>
   <div class="row" id="Vista">
         <div class="col-md">
             <div class="section-box">
@@ -225,7 +222,7 @@ if (!isset($_SESSION['loggedin'])) {
                                                 </td>
                     <tr>
                         <th>Dueño</th>
-                        <td><a id="hrefvista" href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $row['Num_Registro_Dueño']?>"><?php echo $row['Num_Registro_Dueño'] ?></a></td>
+                        <td><a id="hrefvista" href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $row['Num_Registro_Dueño']?>"><?php echo $row['Nombre_Dueño'] ?></a></td>
                     </tr>
 
                     <tr>
