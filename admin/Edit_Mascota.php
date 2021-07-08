@@ -118,6 +118,7 @@ if(isset($_POST['update'])){
     </div>
   </div>
 </div>
+
         
         <!-- jQuery -->
 <script src="../plugins/jquery/jquery.min.js"></script>

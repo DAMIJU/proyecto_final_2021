@@ -202,7 +202,6 @@ if (!isset($_SESSION['loggedin'])) {
               $sql="SELECT Num_Registro_Dueño,Celular,Nombre_Dueño from tabla_dueño";
 	            $result=mysqli_query($con,$sql);
       ?>
-      <div></div>
       <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -215,7 +214,7 @@ if (!isset($_SESSION['loggedin'])) {
                    <option disabled selected>Seleccione un Dueño</option>
 		               	<?php while ($ver=mysqli_fetch_row($result)) {?>
 		              	<option value="<?php echo $ver[0] ?>">
-			             	   <?php echo $ver[2] ?> <?php echo $ver[1] ?> 
+			             	   <?php echo $ver[2] ?> - <?php echo $ver[1] ?> 
 			              </option>
 
 			          <?php  }?>
