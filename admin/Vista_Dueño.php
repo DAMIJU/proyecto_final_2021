@@ -217,6 +217,7 @@ if (!isset($_SESSION['loggedin'])) {
         <div class="table-responsive col-sm">
             <table class="table table-sm  non-top-border">
             <tbody>
+                                                                                         
                     <tr>
                             <th>Celular</th>
                             <td>
@@ -270,6 +271,7 @@ if (!isset($_SESSION['loggedin'])) {
             <table class="table table-sm  non-top-border" id="Intento">      
                 <!-- <h3>Sus Mascotas</h3> -->
         <thead>
+             <h4 style="text-align:center">Sus Mascotas</h4>
             <tr>       
                 <th>Registro</th>
                 <th>Nombre</th>

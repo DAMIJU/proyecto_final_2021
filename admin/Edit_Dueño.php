@@ -14,11 +14,10 @@ if (!isset($_SESSION['loggedin'])) {
     $vida_session = time() - $_SESSION['tiempo'];
 		if($vida_session > $inactivo)
 		{
-		
+			session_destroy();
 			echo "<script>alert('La sesión ha caducado');window.location='../Login.php'</script>";
 		}
     }
-
     $_SESSION['tiempo'] = time();
     $NombreSesion_User = $_SESSION['name'];
     $Consulta_DatosSesion = "SELECT * FROM usuarios WHERE usuario ='$NombreSesion_User'";
@@ -59,10 +58,17 @@ if (!isset($_SESSION['loggedin'])) {
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
   <!-- Bootstrap para DataTables -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <style>
     li{
       list-style: none;
@@ -210,9 +216,9 @@ if(isset($_POST['update'])){
 
   <div class="container p-4">
   <div class="row">
-    <div class="col-md-4 mx-auto">
-      <div class="card card-body" style="background-color: #00AA9E;">
-      <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Añadir Dueño</h3> 
+    <div class="col-md-5 mx-auto">
+      <div class="card card-body" style="background-color: #2D92CB;">
+      <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Editando a <?php echo $row['Nombre_Dueño']; ?></h3> 
       <form action="" method="POST">
         <div class="form-group">
         <input name="celular" type="text" class="form-control" value="<?php echo $row['Celular'];  ?>" placeholder="Celular">
@@ -240,19 +246,22 @@ if(isset($_POST['update'])){
         <input name="Correo" type="text" class="form-control" value="<?php echo $row['Correo'];  ?>" placeholder="Correo">
         </div>
         <div class="form-group">
-        <input name="Fecha_Registro_Dueño" type="date" class="form-control" value="<?php echo $row['Fecha_Registro_Dueño'];  ?>" placeholder="Fecha_Registro">
+        <input id="fecha" type="date" name="Fecha_Registro_Dueño" class="form-control" value="<?php echo $row['Fecha_Registro_Dueño'];  ?>" placeholder="Fecha_Registro" autofocus>
         </div>
+        <div class="botones">
+            <button name="update" class="btn btn-success">Actualizar</button>
+            <a href="javascript: history.go(-1)" role="button" class="btn btn-danger">Cancelar</a>
+        </div> 
         
-        <button class="btn-success" name="update">
-          Actualizar
-</button>
+        
       </form>
       </div>
     </div>
   </div>
 </div>
 </div>
-<footer class="main-footer">
+
+   <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
         <b>Servicios Caninos Casme.</b> 
       </div>
@@ -262,9 +271,10 @@ if(isset($_POST['update'])){
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
   </aside>
-
-        
-        <!-- jQuery -->
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+<!-- jQuery -->
 <script src="../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
 <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -327,12 +337,21 @@ if(isset($_POST['update'])){
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
 <script> $(document).ready(function() {
-    $('#Tabla_mascotas').DataTable( {
+    $('#dueño').DataTable( {
         language: {
             url: 'https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
         }
     } );
 } );
+</script>
+<script type="text/javascript">
+      function preguntar(Num_Registro_Dueño)
+      {
+        if(confirm('¿Está seguro que desea eliminar este cliente?'))
+        {
+          window.location.href = "Delete_Dueño.php?Num_Registro_Dueño="+Num_Registro_Dueño;
+        }
+      }
 </script>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 <script src="select2/select2.min.js"></script>
@@ -340,6 +359,17 @@ if(isset($_POST['update'])){
 	$(document).ready(function(){
 		$('#controlBuscador').select2();
 	});
+</script>
+<script>
+window.addEventListener('load',function(){
+document.getElementById('fecha').type= 'text';
+document.getElementById('fecha').addEventListener('blur',function(){
+document.getElementById('fecha').type= 'text';
+});
+document.getElementById('fecha').addEventListener('focus',function(){
+document.getElementById('fecha').type= 'date';
+});
+});
 </script>
 </body>
 
