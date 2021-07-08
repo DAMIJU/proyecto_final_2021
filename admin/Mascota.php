@@ -202,7 +202,6 @@ if (!isset($_SESSION['loggedin'])) {
               $sql="SELECT Num_Registro_Dueño,Celular,Nombre_Dueño from tabla_dueño";
 	            $result=mysqli_query($con,$sql);
       ?>
-      <div></div>
       <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
