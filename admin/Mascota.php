@@ -212,7 +212,7 @@ if (!isset($_SESSION['loggedin'])) {
               <form action="Añadir_Mascota.php" method="POST">
                 <div class="form-group">
                  <select name="Registro_Dueño" id="controlBuscador" style="width: 100%" >
-                   <option disabled selected>Selecciona un Dueño</option>
+                   <option disabled selected>Seleccione un Dueño</option>
 		               	<?php while ($ver=mysqli_fetch_row($result)) {?>
 		              	<option value="<?php echo $ver[0] ?>">
 			             	   <?php echo $ver[2] ?> <?php echo $ver[1] ?> 
@@ -228,7 +228,7 @@ if (!isset($_SESSION['loggedin'])) {
                 <input type="text" name="Raza" class="form-control" placeholder="Raza" autofocus>
                 </div>
                 <div class="form-group">
-                  <input type="date" name="Fecha_Nac" class="form-control" placeholder="Fecha de nacimiento" autofocus>
+                  <input id="fecha" type="date" name="Fecha_Nac" class="form-control" placeholder="Fecha de nacimiento" autofocus>
                 </div>
                 <div class="form-group">
                 <select name="Sexo" placeholder="Sexo">
@@ -254,9 +254,9 @@ if (!isset($_SESSION['loggedin'])) {
             <thead>
                 <tr>
                     <th>Registro</th>
-                    <th>Dueño</th>
-                    <th>Celular</th>
                     <th>Mascota</th>
+                    <th>Dueño</th>
+                    <th>Celular</th>         
                     <th>Raza</th>
                     <th>Sexo</th>
                     <th>Acción</th>             
@@ -272,9 +272,9 @@ if (!isset($_SESSION['loggedin'])) {
             ?>
                 <tr>
                     <td><?php echo $mostrar['Num_Registro_Mascota']?></td>
+                    <td><a id="hrefvista" href="Vista_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>"><?php echo $mostrar['Nombre_Mascota'] ?></a></td>
                     <td><a id="hrefvista" href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
                     <td><?php echo $mostrar['Celular']?></td>
-                    <td><a id="hrefvista" href="Vista_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>"><?php echo $mostrar['Nombre_Mascota'] ?></a></td>
                     <td><?php echo $mostrar['Raza']?></td>
                     <td><?php echo $mostrar['Sexo']?></td>          
                     <td>
@@ -406,5 +406,16 @@ if (!isset($_SESSION['loggedin'])) {
 	$(document).ready(function(){
 		$('#controlBuscador').select2({ dropdownParent: "#staticBackdrop" });
 	});
+</script>
+<script>
+window.addEventListener('load',function(){
+document.getElementById('fecha').type= 'text';
+document.getElementById('fecha').addEventListener('blur',function(){
+document.getElementById('fecha').type= 'text';
+});
+document.getElementById('fecha').addEventListener('focus',function(){
+document.getElementById('fecha').type= 'date';
+});
+});
 </script>
 </body>
