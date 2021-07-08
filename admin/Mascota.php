@@ -215,7 +215,7 @@ if (!isset($_SESSION['loggedin'])) {
                    <option disabled selected>Seleccione un Dueño</option>
 		               	<?php while ($ver=mysqli_fetch_row($result)) {?>
 		              	<option value="<?php echo $ver[0] ?>">
-			             	   <?php echo $ver[2] ?> <?php echo $ver[1] ?> 
+			             	   <?php echo $ver[2] ?> - <?php echo $ver[1] ?> 
 			              </option>
 
 			          <?php  }?>
