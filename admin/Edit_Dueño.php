@@ -68,7 +68,115 @@ if (!isset($_SESSION['loggedin'])) {
       list-style: none;
     }
   </style>
+  <link rel="stylesheet" type="text/css" href="select2/select2.min.css">
 </head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+  <img class="animation__shake" src="../assets/img/Logo sin fondo.png" alt="Casme Logo" height="90px" width="100px">
+  </div>
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <!-- <a href="../index.php" class="nav-link">Inicio</a> -->
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->      
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="color:white">  
+    <div class="sidebar">
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+        <img src="../assets/img/Logo.ico" rel="icon" class="brand-image img-circle elevation-4" style="opacity: .8">
+        </div>
+        <div class="info">
+        <span class="brand-text font-weight-light" style="font-size:2.5vh"><?php echo $row['Apellidos_Usuario']?><br><?php echo $row['Nombre_Usuario']?></span>
+        </div>
+      </div>
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">       
+          <li class="nav-item menu-open">
+            <a href="Admin.php" class="nav-link">
+              <i class="nav-icon fa fa-dashboard"></i>
+              <p>
+                Inicio
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="Dueño.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Dueño')"">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Dueño            
+              </p>
+            </a>    
+          <li class="nav-item">
+            <a href="Mascota.php" class="nav-link">
+              <i class="nav-icon fas fa-dog"></i>
+              <p>
+                Mascota             
+              </p>
+            </a>     
+          </li>   
+          <li class="nav-item">
+            <a href="Citas.php" class="nav-link">
+              <i class="nav-icon fa fa-calendar-alt"></i>
+              <p>
+                Citas
+              </p>
+            </a>
+          </li>  
+          <li class="nav-item">
+            <a href="Configuracion.php" class="nav-link">
+            <i class="nav-icon fas fa-cogs"></i>
+              <p>
+                Configuración
+              </p>
+              <i class="fas fa-angle-left right"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-bars nav-icon"></i>
+                  <p>Menú</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                <i class="fas fa-building nav-icon"></i>
+                  <p>Datos de la empresa</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                <i class="fas fa-photo-video nav-icon"></i>
+                  <p>Galería de imágenes</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- <div class="Footer">
+            <button class="btn btn-danger" onclick="location.href='#'">Cerrar sesión</button>
+          </div> -->
+      </nav>
+    </div>
+  </aside>
+</div>
+  </div>
+  <div class="content-wrapper">
 <?php
 include("DB/conexion.php");
 
@@ -77,6 +185,8 @@ $Num_Registro_Dueño = $_REQUEST['Num_Registro_Dueño'];
 $query="SELECT * FROM tabla_dueño WHERE Num_Registro_Dueño='$Num_Registro_Dueño'";
 $resultado= $con->query($query);
 $row=$resultado->fetch_assoc();
+$sql="SELECT * from tabla_localidad";
+$result=mysqli_query($con,$sql);
 
 if(isset($_POST['update'])){
   $Num_Registro_Dueño = $_REQUEST['Num_Registro_Dueño'];
@@ -97,10 +207,12 @@ if(isset($_POST['update'])){
   }
 }
 ?>
-        <div class="container p-4">
+
+  <div class="container p-4">
   <div class="row">
     <div class="col-md-4 mx-auto">
-      <div class="card card-body">
+      <div class="card card-body" style="background-color: #00AA9E;">
+      <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Añadir Dueño</h3> 
       <form action="" method="POST">
         <div class="form-group">
         <input name="celular" type="text" class="form-control" value="<?php echo $row['Celular'];  ?>" placeholder="Celular">
@@ -115,7 +227,14 @@ if(isset($_POST['update'])){
         <input name="Dirección" type="text" class="form-control" value="<?php echo $row['Dirección'];  ?>" placeholder="Dirección">
         </div>
         <div class="form-group">
-        <input name="Ciudad" type="text" class="form-control" value="<?php echo $row['Ciudad'];  ?>" placeholder="Ciudad">
+        <select name="Ciudad" id="controlBuscador" style="width: 100%">
+                   <option value="<?php echo  $row['Ciudad']; ?>" ><?php echo  $row['Ciudad']; ?> (ACTUAL)</option>
+		               	<?php while ($ver=mysqli_fetch_row($result)) {?>
+		              	<option value="<?php echo $ver[1] ?>">
+			             	    <?php echo $ver[1] ?>
+			              </option>
+			          <?php  }?>
+                </select>
         </div>
         <div class="form-group">
         <input name="Correo" type="text" class="form-control" value="<?php echo $row['Correo'];  ?>" placeholder="Correo">
@@ -132,6 +251,18 @@ if(isset($_POST['update'])){
     </div>
   </div>
 </div>
+</div>
+<footer class="main-footer">
+      <div class="float-right d-none d-sm-block">
+        <b>Servicios Caninos Casme.</b> 
+      </div>
+        <strong>Panel de administrador</a></strong> 
+    </footer>
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+
         
         <!-- jQuery -->
 <script src="../plugins/jquery/jquery.min.js"></script>
@@ -189,7 +320,10 @@ if(isset($_POST['update'])){
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- SCRIPTS DataTables -->
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
 <script> $(document).ready(function() {
@@ -199,6 +333,13 @@ if(isset($_POST['update'])){
         }
     } );
 } );
+</script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script src="select2/select2.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#controlBuscador').select2();
+	});
 </script>
 </body>
 
