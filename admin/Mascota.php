@@ -216,7 +216,6 @@ if (!isset($_SESSION['loggedin'])) {
 		              	<option value="<?php echo $ver[0] ?>">
 			             	   <?php echo $ver[2] ?> - <?php echo $ver[1] ?> 
 			              </option>
-
 			          <?php  }?>
                 </select>
                 </div>

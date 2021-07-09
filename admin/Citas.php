@@ -210,41 +210,31 @@ if (!isset($_SESSION['loggedin'])) {
               </div>
               <form action="Añadir_Cita.php" method="POST">
                 <div class="form-group">
-                 <select name="Registro_Dueño" id="controlBuscador" style="width: 100%" >
+                 <select name="Num_Dueño" id="controlBuscador" style="width: 100%" >
                    <option disabled selected>Seleccione un Dueño</option>
 		               	<?php while ($ver=mysqli_fetch_row($result)) {?>
 		              	<option value="<?php echo $ver[0] ?>">
 			             	   <?php echo $ver[2] ?> - <?php echo $ver[1] ?> 
 			              </option>
-
 			          <?php  }?>
                 </select>
                 </div>
-                <div class="form-group">
-                 <select name="Registro_Dueño" id="controlBuscador" style="width: 100%" >
-                   <option disabled selected>Seleccione la mascota</option>
-		               	<?php while ($ver=mysqli_fetch_row($result)) {?>
-		              	<option value="<?php echo $ver[0] ?>">
-			             	   <?php echo $ver[2] ?> - <?php echo $ver[1] ?> 
-			              </option>
-
-			          <?php  }?>
-                </select>
+                <div  id="select2lista" class="form-group">
                 </div>
                 <div class="form-group">
-                  <select name="Tipo_Cita" placeholder="Tipo de cita">
-                  <option disabled selected>Seleccione tipo de cita</option>
-                <option value="Macho">Peluqueria</option>
-                <option value="Vacunación">Vacunación</option>
+                <select name="Tipo_Cita" placeholder="Tipo de cita">
+                <option disabled selected>Tipo de cita</option>
+                <option value="Peluqueria">Peluqueria</option>
+                <option value="Vacunacion">Vacunacion</option>
                 <option value="Adiestramiento">Adiestramiento</option>
                </select>
-                </div>           
+                </div>        
                 <div class="form-group">
                   <input id="fecha" type="date" name="Fecha_Cita" class="form-control" placeholder="Fecha de cita" autofocus>
                 </div>
                 <div class="form-group">
-                  <input id="fecha" type="hour" name="Hora_Cita" class="form-control" placeholder="Hora de la cita" autofocus>
-                </div>     
+                <input id="hora" type="time" name="Hora_Cita" id="hora" max="22:30" min="10:00" step="1" placeholder="Hora de la cita">
+                </div>
                 <div class="modal-footer">
                   <input type="submit" name="agregar_cita" class="btn btn-success" value="Agregar">
                   <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>          
@@ -425,5 +415,27 @@ document.getElementById('fecha').addEventListener('focus',function(){
 document.getElementById('fecha').type= 'date';
 });
 });
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#controlBuscador').val(1);
+		recargarLista();
+
+		$('#controlBuscador').change(function(){
+			recargarLista();
+		});
+	})
+</script>
+<script type="text/javascript">
+	function recargarLista(){
+		$.ajax({
+			type:"POST",
+			url:"Añadir_Select_Mascota.php",
+			data:"dueño=" + $('#controlBuscador').val(),
+			success:function(r){
+				$('#select2lista').html(r);
+			}
+		});
+	}
 </script>
 </body>
