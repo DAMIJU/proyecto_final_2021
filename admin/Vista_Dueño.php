@@ -209,7 +209,7 @@ if (!isset($_SESSION['loggedin'])) {
 
       ?>
       <div class="text-center">
-      <h1>Datos del cliente <?php echo $row['Nombre_Dueño']; ?></h1>
+      <h1>DATOS DEL CLIENTE <?php echo $row['Nombre_Dueño']; ?></h1>
       </div>
   <div class="row" id="Vista">
         <div class="col-md">
@@ -217,18 +217,19 @@ if (!isset($_SESSION['loggedin'])) {
         <div class="table-responsive col-sm">
             <table class="table table-sm  non-top-border">
             <tbody>
-                    <tr>
-                            <th>Celular</th>
-                            <td>
-                            <a href="tel:<?php echo $row['Celular']; ?>"><?php echo $row['Celular']; ?></a>
-                            </td>
-                    </tr>          
+                                                                                   
                     <tr>
                         <th>Nombre</th>
                         <td>
                          <?php echo $row['Nombre_Dueño']; ?>
                         </td>
-                    </tr>         
+                    </tr>  
+                    <tr>
+                            <th>Celular</th>
+                            <td>
+                            <a href="tel:<?php echo $row['Celular']; ?>"><?php echo $row['Celular']; ?></a>
+                            </td>
+                    </tr>            
                     <tr>
                         <th>Telefono Fijo</th>
                         <td>
@@ -270,6 +271,7 @@ if (!isset($_SESSION['loggedin'])) {
             <table class="table table-sm  non-top-border" id="Intento">      
                 <!-- <h3>Sus Mascotas</h3> -->
         <thead>
+             <h4 style="text-align:center">Sus Mascotas</h4>
             <tr>       
                 <th>Registro</th>
                 <th>Nombre</th>

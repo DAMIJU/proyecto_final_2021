@@ -21,7 +21,9 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
   
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -57,16 +59,51 @@
   <!-- End Header -->
   <!-- <br><br><br><br><br><br><br> -->
 <!-- ======= About Section ======= -->
-<section id="" class="about">
+<br><br><br><br><br><br>
+<section class="page-title" style="background-image:url('assets/img/Galeria_opt/Galeria-4-min.jpg')">
+        <div class="auto-container">
+           <br> <h1 style="color:white;text-align:center;font-weight:bold">CONÓCENOS</h1>
+        </div>
+</section>
+<section>
   <div class="container">
-      <!-- <div class="section-title">     
-        <h3><span></span></h3>
-        <br><br>
-      </div>  -->
+    <div class="row">
+      <div class="col-md-6">
+        <h2 style="color:#138fcb;font-family:Roboto Condensed;font-weight:bold">Nuestra misión</h2>
+        <p>Consentir y embellecer a tu mascota mediante un servicio de calidad y profesionalismo, suminiestrando accesorios de calidad necesarios para una sana y alegre convivencia</p>       
+        <h2 style="color:#138fcb;font-family:Roboto Condensed;font-weight:bold">Nuestra visión</h2>
+        <p>Ser una empresa reconocida por toda la región y recomendada por su calidad y buen servicio donde se encuentre la solución a necesidades como: elección de mascota, embellecimiento, orientación psicosocial e integración familiar.</p>  
+      </div>
+      <div class="col-md-6"><img src="assets/img/Galeria_opt/Galeria-4-min.jpg" alt="Imagen_Casme Conocenos" class="img-fluid" style="width:100%;border-radius:5px;"></div>
+    </div>
+  </div>
+</section><br>
+<section class="page-title" style="background-image:url('https://image.freepik.com/foto-gratis/fondo-textura-papel-arrugado-azul_118047-1342.jpg')">
+  <div class="auto-container">
+     <br> <h2 style="color:white;text-align:center;font-weight:bold">Escuela profesional de adiestramiento canino</h2>
+  </div>
+</section><br>
+<div class="container">
+    <div class="row">
+      <div class="col-md-21">
+        <div class="card mb-21" style="max-width: 10000px;box-shadow: rgb(100, 100, 111) 0px 7px 29px 0px;">
+          <div class="row no-gutters">
+           <div class="col-md-4">
+             <img src="assets/img/Galeria_opt/Galeria-12-min.jpg" class="card-img" alt="...">
+           </div>
+           <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="card-title" style="color:#138fcb;font-weight:bold;font-family: Roboto Condensed">¡Conoce más sobre Casme!</h3>
+              <p class="card-text"> Casme es un centro de servicios caninos, ubicado en Tantoyuca Veracruz México, es un lugar que cuenta con más de 16 años de experiencia, donde se prestan servicios como estética canina, educación y modificación de conducta, asesorías, venta de mascotas y productos. Se ha mantenido un crecimiento en lo que respecta al número de clientes y nivel de ingreso, lo cual es producto de una constante búsqueda de satisfacción al cliente, entregándoles una mayor variedad de servicios y prestaciones.</p>       
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+  </div><br><br>
+<!-- <section id="" class="about">
+  <div class="container">  
     <div class="row content">
-      <!-- <div class="col-lg-6">
-      <img src="assets/img/Perroasd2.png" class="img-sepia" alt="">
-      </div> -->
       <div class="et_pb_row et_pb_row_0">
         <p> Casme es un centro de servicios caninos, ubicado en Tantoyuca Veracruz México, es un lugar que cuenta con más de 16 años de experiencia, donde se prestan servicios como estética canina, educación y modificación de conducta, asesorías, venta de mascotas y productos. Se ha mantenido un crecimiento en lo que respecta al número de clientes y nivel de ingreso, lo cual es producto de una constante búsqueda de satisfacción al cliente, entregándoles una mayor variedad de servicios y prestaciones.</p>       
       </div>
@@ -87,7 +124,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
   <!-- End Services Section -->
  <!-- ======= Footer ======= -->
  <footer id="footer">
