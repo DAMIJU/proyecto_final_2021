@@ -31,7 +31,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <style>
-    .activo {
+     {
       box-shadow: inset 0 -1px 0 #9ACD32, inset 0 -4px 0 #9ACD32;
 }
   </style>
