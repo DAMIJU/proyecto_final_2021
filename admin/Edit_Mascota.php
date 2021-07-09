@@ -14,11 +14,10 @@ if (!isset($_SESSION['loggedin'])) {
     $vida_session = time() - $_SESSION['tiempo'];
 		if($vida_session > $inactivo)
 		{
-		
+			session_destroy();
 			echo "<script>alert('La sesión ha caducado');window.location='../Login.php'</script>";
 		}
     }
-
     $_SESSION['tiempo'] = time();
     $NombreSesion_User = $_SESSION['name'];
     $Consulta_DatosSesion = "SELECT * FROM usuarios WHERE usuario ='$NombreSesion_User'";
@@ -31,8 +30,7 @@ if (!isset($_SESSION['loggedin'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Panel de admin</title>
-
-  <!-- Favicons -->
+    <!-- Favicons -->
   <link href="../assets/img/Logo.ico" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -59,16 +57,130 @@ if (!isset($_SESSION['loggedin'])) {
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
   <!-- Bootstrap para DataTables -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <style>
     li{
       list-style: none;
     }
-  </style>
+  </style> 
+  <link rel="stylesheet" type="text/css" href="select2/select2.min.css">
 </head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+  <img class="animation__shake" src="../assets/img/Logo sin fondo.png" alt="Casme Logo" height="90px" width="100px">
+  </div>
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <!-- <a href="../index.php" class="nav-link">Inicio</a> -->
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->      
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="color:white">  
+    <div class="sidebar">
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+        <img src="../assets/img/Logo.ico" rel="icon" class="brand-image img-circle elevation-4" style="opacity: .8">
+        </div>
+        <div class="info">
+        <span class="brand-text font-weight-light" style="font-size:2.5vh"><?php echo $row['Apellidos_Usuario']?><br><?php echo $row['Nombre_Usuario']?></span>
+        </div>
+      </div>
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">       
+          <li class="nav-item menu-open">
+            <a href="Admin.php" class="nav-link">
+              <i class="nav-icon fa fa-dashboard"></i>
+              <p>
+                Inicio
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="Dueño.php" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Dueño            
+              </p>
+            </a>    
+          <li class="nav-item">
+            <a href="Mascota.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Mascota')">
+              <i class="nav-icon fas fa-dog"></i>
+              <p>
+                Mascota             
+              </p>
+            </a>     
+          </li>   
+          <li class="nav-item">
+            <a href="Citas.php" class="nav-link">
+              <i class="nav-icon fa fa-calendar-alt"></i>
+              <p>
+                Citas
+              </p>
+            </a>
+          </li>  
+          <li class="nav-item">
+            <a href="Configuracion.php" class="nav-link">
+            <i class="nav-icon fas fa-cogs"></i>
+              <p>
+                Configuración
+              </p>
+              <i class="fas fa-angle-left right"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-bars nav-icon"></i>
+                  <p>Menú</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                <i class="fas fa-building nav-icon"></i>
+                  <p>Datos de la empresa</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                <i class="fas fa-photo-video nav-icon"></i>
+                  <p>Galería de imágenes</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- <div class="Footer">
+            <button class="btn btn-danger" onclick="location.href='#'">Cerrar sesión</button>
+          </div> -->
+      </nav>
+    </div>
+  </aside>
+</div>
+<div class="content-wrapper">
 <?php
 include("DB/conexion.php");
 
@@ -97,8 +209,9 @@ if(isset($_POST['update'])){
 ?>
         <div class="container p-4">
   <div class="row">
-    <div class="col-md-4 mx-auto">
-      <div class="card card-body">
+    <div class="col-md-5 mx-auto">
+      <div class="card card-body" style="background-color: #2D92CB;">
+      <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Editando a <?php echo $row['Nombre_Mascota']; ?></h3>   
       <form action="" method="POST">
             <div class="form-group">
               <input type="text" name="Nombre_Mascota" class="form-control" value="<?php echo $row['Nombre_Mascota']; ?>" placeholder="Actualizar Mascota">
@@ -107,20 +220,35 @@ if(isset($_POST['update'])){
             <input type="text" name="Raza" class="form-control" value="<?php echo $row['Raza']; ?>" placeholder="Actualizar Raza">
             </div>
             <div class="form-group">
-              <input type="date" name="Fecha_Nac" class="form-control" value="<?php echo $row['Fecha_Nac']; ?>" placeholder="Actualizar Fecha nacimiento">
+              <input id="fecha" type="date" name="Fecha_Nac" class="form-control" value="<?php echo $row['Fecha_Nac']; ?>" placeholder="Actualizar Fecha nacimiento" autofocus>
             </div>
             <div class="form-group">
             <input type="text" name="Sexo" class="form-control" value="<?php echo $row['Sexo']; ?>" placeholder="Actualizar Sexo">
             </div>
-            <input type="submit" class="btn btn-success" id="Guardar_Actualizar" name="update" value="Actualizar">            
+            <div class="botones">
+            <button name="update" class="btn btn-success">Actualizar</button>
+            <a href="javascript: history.go(-1)" role="button" class="btn btn-danger">Cancelar</a>
+        </div>             
       </form>
       </div>
     </div>
   </div>
 </div>
-
-        
-        <!-- jQuery -->
+</div>
+    <footer class="main-footer">
+      <div class="float-right d-none d-sm-block">
+        <b>Servicios Caninos Casme.</b> 
+      </div>
+        <strong>Panel de administrador</a></strong> 
+    </footer>
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+<!-- jQuery -->
 <script src="../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
 <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -176,7 +304,10 @@ if(isset($_POST['update'])){
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- SCRIPTS DataTables -->
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
 <script> $(document).ready(function() {
@@ -187,5 +318,32 @@ if(isset($_POST['update'])){
     } );
 } );
 </script>
-</body>
 
+<script type="text/javascript">
+      function preguntar(Num_Registro_Mascota)
+      {
+        if(confirm('¿Está seguro que desea eliminar esta mascota?'))
+        {
+          window.location.href = "Delete_Mascota.php?Num_Registro_Mascota="+Num_Registro_Mascota;
+        }
+      }
+</script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+	<script src="select2/select2.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#controlBuscador').select2({ dropdownParent: "#staticBackdrop" });
+	});
+</script>
+<script>
+window.addEventListener('load',function(){
+document.getElementById('fecha').type= 'text';
+document.getElementById('fecha').addEventListener('blur',function(){
+document.getElementById('fecha').type= 'text';
+});
+document.getElementById('fecha').addEventListener('focus',function(){
+document.getElementById('fecha').type= 'date';
+});
+});
+</script>
+</body>
