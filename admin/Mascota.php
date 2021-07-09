@@ -276,13 +276,13 @@ if (!isset($_SESSION['loggedin'])) {
                     <td><?php echo $mostrar['Raza']?></td>
                     <td><?php echo $mostrar['Sexo']?></td>          
                     <td>
-                      <a href="Edit_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>" class="btn btn-secondary">
-                        <i class="fas fa-marker"></i>
+                      <a href="Edit_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>" title="Editar mascota" class="btn btn-secondary">
+                        <i class="icofont-ui-edit"></i>
                       </a>
-                      <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro_Mascota']?>)" class="btn btn-danger">
+                      <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro_Mascota']?>)" title="Eliminar mascota" class="btn btn-danger">
                          <i class="far fa-trash-alt"></i>
                       </a>
-                      <a href="Vista_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>" class="btn btn-primary">
+                      <a href="Vista_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>" title="Ver detalles de mascota" class="btn btn-primary">
                       <i class="icofont-eye-alt"></i>
                       </a>
                     </td>
