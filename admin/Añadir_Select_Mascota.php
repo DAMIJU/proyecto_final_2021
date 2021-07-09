@@ -11,7 +11,7 @@ $dueño=$_POST['dueño'];
 	$resultados=mysqli_query($con,$sql2);
 
 	$cadena=" 
-	<select name='Num_Mascota' id='controlBuscadora' style='width: 100%' >
+	<select name='Num_Mascota' style='width: 100%' >
 	<option disabled selected>Seleccione Mascota</option>";
 
 	while ($vermascota=mysqli_fetch_row($resultados)) {
