@@ -51,7 +51,7 @@
           <li class="active"><a href="Nosotros.php">Nosotros</a></li>
           <li><a href="Servicios.php">Servicios</a></li>
           <li><a href="Galeria.php">Galería</a></li>                  
-          <li ><a href="Login.php">Admin</a></li>
+          <li><a href="Login.php">Admin</a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -60,7 +60,7 @@
   <!-- <br><br><br><br><br><br><br> -->
 <!-- ======= About Section ======= -->
 <br><br><br><br><br><br>
-<section class="page-title" style="background-image:url('assets/img/Galeria_opt/Galeria-4-min.jpg')">
+<section class="page-title" style="background-image:url('assets/img/Galeria_opt/Galeria-4-min.jpg');background-repeat: no-repeat;background-size: cover;">
         <div class="auto-container">
            <br> <h1 style="color:white;text-align:center;font-weight:bold">CONÓCENOS</h1>
         </div>
@@ -89,7 +89,7 @@
         <div class="card mb-21" style="max-width: 10000px;box-shadow: rgb(100, 100, 111) 0px 7px 29px 0px;">
           <div class="row no-gutters">
            <div class="col-md-4">
-             <img src="assets/img/Galeria_opt/Galeria-12-min.jpg" class="card-img" alt="...">
+             <img src="assets/img/Galeria_opt/Galeria-12-min.jpg" class="card-img" alt="Conoce más sobre Caninos Casme">
            </div>
            <div class="col-md-8">
             <div class="card-body">
@@ -127,6 +127,7 @@
 </section> -->
   <!-- End Services Section -->
  <!-- ======= Footer ======= -->
+ 
  <footer id="footer">
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
