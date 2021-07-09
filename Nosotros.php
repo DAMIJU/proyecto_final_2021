@@ -89,7 +89,7 @@
         <div class="card mb-21" style="max-width: 10000px;box-shadow: rgb(100, 100, 111) 0px 7px 29px 0px;">
           <div class="row no-gutters">
            <div class="col-md-4">
-             <img src="assets/img/Galeria_opt/Galeria-12-min.jpg" class="card-img" alt="...">
+             <img src="assets/img/Galeria_opt/Galeria-12-min.jpg" class="card-img" alt="Conoce más sobre Caninos Casme">
            </div>
            <div class="col-md-8">
             <div class="card-body">
