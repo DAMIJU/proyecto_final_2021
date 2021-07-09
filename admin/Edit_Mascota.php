@@ -201,9 +201,9 @@ if(isset($_POST['update'])){
   $ResultadoEditMascota = $con->query($query);
 
   if($ResultadoEditMascota){
-  echo "<script>alert('Los datos se han guardado correctamente');window.location='Mascota.php'</script>";
+  echo "<script>alert('Los datos se han actualizado correctamente');window.location='Mascota.php'</script>";
   }else{
-    echo "<script>alert('los datos no se han podido guardar correctamente');</script>";
+    echo "<script>alert('los datos no se han podido actualizar correctamente');</script>";
   }
 }
 ?>

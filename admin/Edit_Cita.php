@@ -30,8 +30,7 @@ if (!isset($_SESSION['loggedin'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Panel de admin</title>
-
-  <!-- Favicons -->
+    <!-- Favicons -->
   <link href="../assets/img/Logo.ico" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -58,12 +57,12 @@ if (!isset($_SESSION['loggedin'])) {
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <!-- Template Main CSS File -->
-  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
   <!-- Bootstrap para DataTables -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
-  <!-- Vendor CSS Files -->
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
   <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
@@ -73,7 +72,7 @@ if (!isset($_SESSION['loggedin'])) {
     li{
       list-style: none;
     }
-  </style>
+  </style> 
   <link rel="stylesheet" type="text/css" href="select2/select2.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -123,14 +122,14 @@ if (!isset($_SESSION['loggedin'])) {
             </a>
           </li>
           <li class="nav-item">
-            <a href="Dueño.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Dueño')"">
+            <a href="Dueño.php" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Dueño            
               </p>
             </a>    
           <li class="nav-item">
-            <a href="Mascota.php" class="nav-link">
+            <a href="Mascota.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Mascota')">
               <i class="nav-icon fas fa-dog"></i>
               <p>
                 Mascota             
@@ -181,87 +180,64 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </aside>
 </div>
-  </div>
-  <div class="content-wrapper">
+<div class="content-wrapper">
 <?php
 include("DB/conexion.php");
 
-$Num_Registro_Dueño = $_REQUEST['Num_Registro_Dueño'];
-
-$query="SELECT * FROM tabla_dueño WHERE Num_Registro_Dueño='$Num_Registro_Dueño'";
+$Num_Registro_Cita = $_REQUEST['Num_Registro_Cita'];
+$query="SELECT * FROM tabla_citas 
+INNER JOIN tabla_mascotas ON tabla_citas.Num_Mascota = tabla_mascotas.Num_Registro_Mascota
+WHERE Num_Registro_Cita='$Num_Registro_Cita'";
 $resultado= $con->query($query);
 $row=$resultado->fetch_assoc();
-$sql="SELECT * from tabla_localidad";
-$result=mysqli_query($con,$sql);
 
 if(isset($_POST['update'])){
-  $Num_Registro_Dueño = $_REQUEST['Num_Registro_Dueño'];
-  $celular = $_POST['celular'];
-  $Nombre_Dueño= $_POST['Nombre_Dueño'];
-  $Telefono_Fijo = $_POST['Telefono_Fijo'];
-  $Dirección = $_POST['Dirección'];
-  $Ciudad = $_POST['Ciudad'];
-  $Correo = $_POST['Correo'];
-  $Fecha_Registro_Dueño = $_POST['Fecha_Registro_Dueño'];
-  $query = "UPDATE tabla_dueño set Celular = '$celular', Nombre_Dueño = '$Nombre_Dueño', Telefono_Fijo = '$Telefono_Fijo', Dirección = '$Dirección', Ciudad = '$Ciudad', Correo = '$Correo', Fecha_Registro_Dueño = '$Fecha_Registro_Dueño' WHERE Num_Registro_Dueño=$Num_Registro_Dueño";
-  $ResultadoEditDueño = $con->query($query);
+  
+  $Tipo_Cita = $_POST['Tipo_Cita'];
+  $Fecha_Cita = $_POST['Fecha_Cita'];
+  $Hora_Cita = $_POST['Hora_Cita'];
 
-  if($ResultadoEditDueño){
-  echo "<script>alert('Los datos se han actualizado correctamente');window.location='Dueño.php'</script>";
+  $query="UPDATE tabla_citas SET Tipo_Cita='$Tipo_Cita', Fecha_Cita='$Fecha_Cita', Hora_Cita='$Hora_Cita' WHERE Num_Registro_Cita='$Num_Registro_Cita'";
+  $ResultadoEditMascota = $con->query($query);
+
+  if($ResultadoEditMascota){
+  echo "<script>alert('Los datos se han actualizado correctamente');window.location='Citas.php'</script>";
   }else{
     echo "<script>alert('los datos no se han podido actualizar correctamente');</script>";
   }
 }
 ?>
-
-  <div class="container p-4">
+        <div class="container p-4">
   <div class="row">
     <div class="col-md-5 mx-auto">
       <div class="card card-body" style="background-color: #2D92CB;">
-      <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Editando a <?php echo $row['Nombre_Dueño']; ?></h3> 
+      <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Editando la cita de <?php echo $row['Nombre_Mascota']; ?></h3>   
       <form action="" method="POST">
-        <div class="form-group">
-        <input name="celular" type="text" class="form-control" value="<?php echo $row['Celular'];  ?>" placeholder="Celular">
-        </div>
-        <div class="form-group">
-        <input name="Nombre_Dueño" type="text" class="form-control" value="<?php echo $row['Nombre_Dueño']; ?>" placeholder="Nombre">
-        </div>
-        <div class="form-group">
-        <input name="Telefono_Fijo" type="text" class="form-control" value="<?php echo $row['Telefono_Fijo'];  ?>" placeholder="Telefono_Fijo">
-        </div>
-        <div class="form-group">
-        <input name="Dirección" type="text" class="form-control" value="<?php echo $row['Dirección'];  ?>" placeholder="Dirección">
-        </div>
-        <div class="form-group">
-        <select name="Ciudad" id="controlBuscador" style="width: 100%">
-                   <option value="<?php echo  $row['Ciudad']; ?>" ><?php echo  $row['Ciudad']; ?> (ACTUAL)</option>
-		               	<?php while ($ver=mysqli_fetch_row($result)) {?>
-		              	<option value="<?php echo $ver[1] ?>">
-			             	    <?php echo $ver[1] ?>
-			              </option>
-			          <?php  }?>
-                </select>
-        </div>
-        <div class="form-group">
-        <input name="Correo" type="text" class="form-control" value="<?php echo $row['Correo'];  ?>" placeholder="Correo">
-        </div>
-        <div class="form-group">
-        <input id="fecha" type="date" name="Fecha_Registro_Dueño" class="form-control" value="<?php echo $row['Fecha_Registro_Dueño'];  ?>" placeholder="Fecha_Registro" autofocus>
-        </div>
-        <div class="botones">
+            <div class="form-group">
+                <select name="Tipo_Cita">
+                <option value="<?php echo  $row['Tipo_Cita']; ?>" ><?php echo  $row['Tipo_Cita']; ?> (ACTUAL)</option>
+                <option value="Peluqueria">Peluqueria</option>
+                <option value="Vacunacion">Vacunacion</option>
+                <option value="Adiestramiento">Adiestramiento</option>
+               </select>
+                </div>  
+            <div class="form-group">
+            <input type="date" name="Fecha_Cita" class="form-control" value="<?php echo $row['Fecha_Cita']; ?>" placeholder="Actualizar fecha de cita">
+            </div>
+            <div class="form-group">
+              <input type="time" name="Hora_Cita" class="form-control" value="<?php echo $row['Hora_Cita']; ?>" placeholder="Actualizar hora de cita">
+            </div>
+            <div class="botones">
             <button name="update" class="btn btn-success">Actualizar</button>
             <a href="javascript: history.go(-1)" role="button" class="btn btn-danger">Cancelar</a>
-        </div> 
-        
-        
+        </div>             
       </form>
       </div>
     </div>
   </div>
 </div>
 </div>
-
-   <footer class="main-footer">
+    <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
         <b>Servicios Caninos Casme.</b> 
       </div>
@@ -337,27 +313,28 @@ if(isset($_POST['update'])){
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
 <script> $(document).ready(function() {
-    $('#dueño').DataTable( {
+    $('#Tabla_mascotas').DataTable( {
         language: {
             url: 'https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
         }
     } );
 } );
 </script>
+
 <script type="text/javascript">
-      function preguntar(Num_Registro_Dueño)
+      function preguntar(Num_Registro_Mascota)
       {
-        if(confirm('¿Está seguro que desea eliminar este cliente?'))
+        if(confirm('¿Está seguro que desea eliminar esta mascota?'))
         {
-          window.location.href = "Delete_Dueño.php?Num_Registro_Dueño="+Num_Registro_Dueño;
+          window.location.href = "Delete_Mascota.php?Num_Registro_Mascota="+Num_Registro_Mascota;
         }
       }
 </script>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-<script src="select2/select2.min.js"></script>
+	<script src="select2/select2.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$('#controlBuscador').select2();
+		$('#controlBuscador').select2({ dropdownParent: "#staticBackdrop" });
 	});
 </script>
 <script>
@@ -372,4 +349,3 @@ document.getElementById('fecha').type= 'date';
 });
 </script>
 </body>
-

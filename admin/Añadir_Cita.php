@@ -17,9 +17,9 @@ if (isset($_POST['agregar_cita'])) {
   $ResultadoInsertCita = mysqli_query($con, $query);
   
   if($ResultadoInsertCita){
-    echo "<script>alert('La cita para $Nombre_Mascota se ha agregado satisfactoriamente');window.location='Citas.php'</script>";
+    echo "<script>alert('La cita para ?????? se ha agregado satisfactoriamente');window.location='Citas.php'</script>";
     }else{
-      echo "<script>alert('La cita para $Nombre_Mascota no se han podido guardar correctamente');</script>";
+      echo "<script>alert('La cita para ??????? no se han podido guardar correctamente');</script>";
     }
 }
 ?>

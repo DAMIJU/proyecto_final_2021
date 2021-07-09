@@ -243,6 +243,45 @@ if (!isset($_SESSION['loggedin'])) {
             </div>
           </div>
         </div>
+
+        <!-- DETALLES CITA -->
+        <div class="modal fade" id="staticBackdrop2" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+          <div class="modal-header">
+                <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Detalles de la cita</h3>
+              </div>
+              <div class="modal-body text-left">
+            <?php
+            include("DB/conexion.php");
+
+             $query="SELECT * FROM tabla_citas 
+             INNER JOIN tabla_dueño ON tabla_citas.Num_Dueño = tabla_dueño.Num_Registro_Dueño
+             INNER JOIN tabla_mascotas ON tabla_citas.Num_Mascota = tabla_mascotas.Num_Registro_Mascota";
+      $resultado= $con->query($query);
+      $row=$resultado->fetch_assoc();
+      ?>
+                <p>
+                  <b>Dueño:</b> <?php echo $row['Nombre_Dueño'];?><br>
+                  <b>Mascota:</b> <?php echo $row['Nombre_Mascota'];?><br>
+                  <b>Tipo de cita:</b> <?php echo $row['Tipo_Cita'];?><br>
+                  <b>Fecha:</b> <?php echo $row['Fecha_Cita'];?><br>
+                  <b>Hora:</b> <?php echo $row['Hora_Cita'];?><br>
+                  <b>Celular:</b> <?php echo $row['Cel_Dueño'];?><br>
+                  <b>Correo:</b> <?php echo $row['Correo'];?>        
+                </p>  
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar </button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      
+
+
         <!-- DATATABLE MASCOTA -->
         <div class="datatable-responsive datatable-box">
           <table id="Tabla_mascotas" class="table table-responsive table-sm non-top-border dt-responsive" cellspacing="0">
@@ -279,13 +318,13 @@ if (!isset($_SESSION['loggedin'])) {
                     <a href="Edit_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>" title="Completar cita" class="btn btn-warning">
                         <i class="icofont-ui-check"></i>
                       </a>
-                      <a href="Edit_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>" title="Editar cita" class="btn btn-secondary">
+                      <a href="Edit_Cita.php?Num_Registro_Cita=<?php echo $mostrar['Num_Registro_Cita']?>" title="Editar cita" class="btn btn-secondary">
                         <i class="icofont-ui-edit"></i>
                       </a>
                       <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro_Cita']?>)" title="Eliminar cita" class="btn btn-danger">
                          <i class="far fa-trash-alt"></i>
                       </a>
-                      <a href="Vista_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>" title="Ver detalles de la cita" class="btn btn-primary">
+                      <a href="#"<?php echo $mostrar['Num_Registro_Cita']?> data-toggle="modal" data-target="#staticBackdrop2" title="Ver detalles de la cita" class="btn btn-primary">
                       <i class="icofont-eye-alt"></i>
                       </a>
                     </td>
@@ -393,11 +432,11 @@ if (!isset($_SESSION['loggedin'])) {
 </script>
 
 <script type="text/javascript">
-      function preguntar(Num_Registro_Mascota)
+      function preguntar(Num_Registro_Cita)
       {
-        if(confirm('¿Está seguro que desea eliminar esta mascota?'))
+        if(confirm('¿Está seguro que desea eliminar la cita?'))
         {
-          window.location.href = "Delete_Mascota.php?Num_Registro_Mascota="+Num_Registro_Mascota;
+          window.location.href = "Delete_Cita.php?Num_Registro_Cita="+Num_Registro_Cita;
         }
       }
 </script>
@@ -440,5 +479,16 @@ document.getElementById('fecha').type= 'date';
 			}
 		});
 	}
+</script>
+<script>
+    $(document).on('click', '.btn-primary', function () {
+
+        var descr = $(this).attr('data-descr');
+        $('#miModal input[name=nombre]').val(descr);
+
+        // aquí es cuando tienes que mirar la documentación de tu framework
+        $('#miModal').showModal(); // o similar
+
+    });
 </script>
 </body>
