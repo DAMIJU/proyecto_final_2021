@@ -51,7 +51,7 @@
           <li class="active"><a href="Nosotros.php">Nosotros</a></li>
           <li><a href="Servicios.php">Servicios</a></li>
           <li><a href="Galeria.php">Galería</a></li>                  
-          <li ><a href="Login.php">Admin</a></li>
+          <li><a href="Login.php">Admin</a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -127,6 +127,7 @@
 </section> -->
   <!-- End Services Section -->
  <!-- ======= Footer ======= -->
+ 
  <footer id="footer">
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
