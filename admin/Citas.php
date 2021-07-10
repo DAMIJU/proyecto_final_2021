@@ -315,7 +315,7 @@ if (!isset($_SESSION['loggedin'])) {
                     <td><?php echo $mostrar['Hora_Cita']?></td>
                     <td><?php echo $mostrar['Estado_Cita']?></td>             
                     <td>
-                    <a href="Edit_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>" title="Completar cita" class="btn btn-warning">
+                    <a href="#" onclick="preguntar2(<?php echo $mostrar['Num_Registro_Cita']?>)" title="Completar cita" class="btn btn-warning">
                         <i class="icofont-ui-check"></i>
                       </a>
                       <a href="Edit_Cita.php?Num_Registro_Cita=<?php echo $mostrar['Num_Registro_Cita']?>" title="Editar cita" class="btn btn-secondary">
@@ -437,6 +437,15 @@ if (!isset($_SESSION['loggedin'])) {
         if(confirm('¿Está seguro que desea eliminar la cita?'))
         {
           window.location.href = "Delete_Cita.php?Num_Registro_Cita="+Num_Registro_Cita;
+        }
+      }
+</script>
+<script type="text/javascript">
+      function preguntar2(Num_Registro_Cita)
+      {
+        if(confirm('¿La cita ya fue completada?'))
+        {
+          window.location.href = "Completar_Cita.php?Num_Registro_Cita="+Num_Registro_Cita;
         }
       }
 </script>
