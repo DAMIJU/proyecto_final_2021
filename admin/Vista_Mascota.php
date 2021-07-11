@@ -253,12 +253,12 @@ if (!isset($_SESSION['loggedin'])) {
                 <!-- <h3>Sus Mascotas</h3> -->
         <thead>
              <h4 style="text-align:center">Historial</h4>
-            <tr>       
-                <th>Número de cita</th>
+            <tr>                  
                 <th>Dueño</th>
                 <th>Celular</th>
                 <th>Cita</th>   
-                <th>Fecha</th>             
+                <th>Fecha</th>    
+                <th>Acción</th>         
             </tr>
         </thead>
         <tbody>
@@ -271,7 +271,6 @@ if (!isset($_SESSION['loggedin'])) {
           while($mostrar=$resultado2->fetch_assoc()){
           ?>   
             <tr>       
-              <td><?php echo $mostrar['Num_Historial_Cita'];?></td>
               <td><?php echo $mostrar['Nombre_Dueño'];?></td>
               <td><?php echo $mostrar['Cel_Dueño'];?></td>  
               <td><?php echo $mostrar['Tipo_Cita'];?></td>
