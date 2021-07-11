@@ -180,7 +180,7 @@ if (!isset($_SESSION['loggedin'])) {
   </aside>
 </div>
   </div>
-<div class="content-wrapper">
+  <div class="content-wrapper">
       <!-- MESSAGES -->
       <?php if (isset($_SESSION['message'])) { ?>
       <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
@@ -243,15 +243,55 @@ if (!isset($_SESSION['loggedin'])) {
                     </tr>
             </tbody>
             </table>
-          </div>
-      </div>
-    </div>
+        </div>
+    </div>             
+        </div>
+        <div class="col-md-7">
+            <div class="section-box">
+        <div class="table-responsive col-sm">
+            <table class="table table-sm  non-top-border" id="Intento">      
+                <!-- <h3>Sus Mascotas</h3> -->
+        <thead>
+             <h4 style="text-align:center">Historial</h4>
+            <tr>       
+                <th>Número de cita</th>
+                <th>Dueño</th>
+                <th>Celular</th>
+                <th>Cita</th>   
+                <th>Fecha</th>             
+            </tr>
+        </thead>
+        <tbody>
+          <?php  
+          include("DB/conexion.php");
+          $query2="SELECT * FROM historial_mascota
+          INNER JOIN tabla_dueño ON historial_mascota.Num_Dueño = tabla_dueño.Num_Registro_Dueño
+          INNER JOIN tabla_mascotas ON historial_mascota.Num_Mascota = tabla_mascotas.Num_Registro_Mascota WHERE Num_Mascota = $Num_Registro_Mascota";
+          $resultado2= $con->query($query2);
+          while($mostrar=$resultado2->fetch_assoc()){
+          ?>   
+            <tr>       
+              <td><?php echo $mostrar['Num_Historial_Cita'];?></td>
+              <td><?php echo $mostrar['Nombre_Dueño'];?></td>
+              <td><?php echo $mostrar['Cel_Dueño'];?></td>  
+              <td><?php echo $mostrar['Tipo_Cita'];?></td>
+              <td><?php echo $mostrar['Fecha_Cita'];?></td>      
+               
+            </tr>
+            <?php
+              }
+            ?>   
+        </tbody>
+            </table>
+                </div>
+            </div>
+        </div>
   </div>
-          <div class="botones">
+  <div class="botones">
             <a href="Edit_Mascota.php?Num_Registro_Mascota=<?php echo $row['Num_Registro_Mascota']?>" class="btn btn-success">Editar</a>
             <a href="#" onclick="preguntar(<?php echo $row['Num_Registro_Mascota']?>)" class="btn btn-danger">Eliminar</a>
             <a href="javascript: history.go(-1)" role="button" class="btn btn-primary">Volver</a>
-          </div>
+  </div>
 </div> 
    <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
