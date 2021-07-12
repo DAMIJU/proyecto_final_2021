@@ -128,15 +128,15 @@
   </div> -->
 </div>
 
-<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-  <img src="assets/img/Galeria_opt/Tienda1.jpg" loading="lazy"  class="img-fluid" alt="Imagen Casme">
+<!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria_opt/Tienda1.jpg" loading="lazy"  class="img-fluid" alt="Imagen Casme"> -->
   <!-- <div class="portfolio-info">
     <h4>Web 3</h4>
     <p>Web</p>
     <a href="assets/img/Galeria_opt/Galeria-1-min.jpg.jpg" loading="lazy" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
     <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
   </div> -->
-</div>
+<!-- </div> -->
 
 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
   <img src="assets/img/Galeria_opt/Galeria-10-min.jpg"  loading="lazy" mg prueba.png" class="img-fluid" alt="Imagen Casme">
@@ -178,15 +178,15 @@
   </div> -->
 </div>
 
-<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-  <img src="assets/img/Galeria_opt/Peces3.jpg" loading="lazy"  class="img-fluid" alt="Imagen Casme">
+<!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria_opt/Peces3.jpg" loading="lazy"  class="img-fluid" alt="Imagen Casme"> -->
   <!-- <div class="portfolio-info">
     <h4>Web 3</h4>
     <p>Web</p>
     <a href="assets/img/Galeria_opt/Galeria-1-min.jpg.jpg" loading="lazy" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
     <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
   </div> -->
-</div>
+<!-- </div> -->
 
 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
   <img src="assets/img/Galeria_opt/Galeria-6-min.jpg"  loading="lazy" class="img-fluid" alt="Imagen Casme">
@@ -258,15 +258,15 @@
   </div>   -->    
 </div>
 
-<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-  <img src="assets/img/Galeria_opt/Peces1.jpg" loading="lazy"  class="img-fluid" alt="Imagen Casme">
+<!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria_opt/Peces1.jpg" loading="lazy"  class="img-fluid" alt="Imagen Casme"> -->
   <!-- <div class="portfolio-info">
     <h4>Web 3</h4>
     <p>Web</p>
     <a href="assets/img/Galeria_opt/Galeria-1-min.jpg.jpg" loading="lazy" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
     <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
   </div> -->
-</div>
+<!-- </div> -->
 
 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
   <img src="assets/img/Galeria_opt/Galeria-18-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
@@ -298,15 +298,15 @@
   </div>   -->    
 </div>
 
-<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-  <img src="assets/img/Galeria_opt/Peces4.jpg" loading="lazy"  class="img-fluid" alt="Imagen Casme">
+<!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria_opt/Peces4.jpg" loading="lazy"  class="img-fluid" alt="Imagen Casme"> -->
   <!-- <div class="portfolio-info">
     <h4>Web 3</h4>
     <p>Web</p>
     <a href="assets/img/Galeria_opt/Galeria-1-min.jpg.jpg" loading="lazy" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
     <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
   </div> -->
-</div>
+<!-- </div> -->
 
 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
   <img src="assets/img/Galeria_opt/Galeria-23-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
@@ -318,15 +318,15 @@
   </div> -->
 </div>
 
-<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-  <img src="assets/img/Galeria_opt/Perro4.jpeg" loading="lazy"  class="img-fluid" alt="Imagen Casme">
+<!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria_opt/Perro4.jpeg" loading="lazy"  class="img-fluid" alt="Imagen Casme"> -->
   <!-- <div class="portfolio-info">
     <h4>Web 3</h4>
     <p>Web</p>
     <a href="assets/img/Galeria_opt/Galeria-1-min.jpg.jpg" loading="lazy" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
     <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
   </div> -->
-</div>
+<!-- </div> -->
 
 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
   <img src="assets/img/Galeria_opt/Galeria-25-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
@@ -358,15 +358,15 @@
   </div> -->
 </div>
 
-<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-  <img src="assets/img/Galeria_opt/Perro5.jpeg" loading="lazy"  class="img-fluid" alt="Imagen Casme">
+<!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria_opt/Perro5.jpeg" loading="lazy"  class="img-fluid" alt="Imagen Casme"> -->
   <!-- <div class="portfolio-info">
     <h4>Web 3</h4>
     <p>Web</p>
     <a href="assets/img/Galeria_opt/Galeria-1-min.jpg.jpg" loading="lazy" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
     <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
   </div> -->
-</div>
+<!-- </div> -->
 
 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
   <img src="assets/img/Galeria_opt/Galeria-29-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
@@ -408,15 +408,15 @@
   </div> -->
 </div>
 
-<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-  <img src="assets/img/Galeria_opt/Perro1.jpeg" loading="lazy"  class="img-fluid" alt="Imagen Casme">
+<!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria_opt/Perro1.jpeg" loading="lazy"  class="img-fluid" alt="Imagen Casme" -->
   <!-- <div class="portfolio-info">
     <h4>Web 3</h4>
     <p>Web</p>
     <a href="assets/img/Galeria_opt/Galeria-1-min.jpg.jpg" loading="lazy" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
     <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
   </div> -->
-</div>
+<!-- </div> -->
 
 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
   <img src="assets/img/Galeria_opt/Galeria-5-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
@@ -458,15 +458,15 @@
   </div> -->
 </div>
 
-<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-  <img src="assets/img/Galeria_opt/Peces2.jpg" loading="lazy"  class="img-fluid" alt="Imagen Casme">
+<!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="assets/img/Galeria_opt/Peces2.jpg" loading="lazy"  class="img-fluid" alt="Imagen Casme"> -->
   <!-- <div class="portfolio-info">
     <h4>Web 3</h4>
     <p>Web</p>
     <a href="assets/img/Galeria_opt/Galeria-1-min.jpg.jpg" loading="lazy" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
     <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
   </div> -->
-</div>
+<!-- </div> -->
 
 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
   <img src="assets/img/Galeria_opt/Galeria-9-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
@@ -537,18 +537,18 @@ document.querySelectorAll(".container").forEach(el=>{
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
-          &copy; Copyright <strong><span>Caninos Casme</span></strong>. Todos los derechos reservados.
+          &copy; Copyright <strong><span>Casme</span></strong>. Todos los derechos reservados.
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
           <!-- You can delete the links only if you purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/ -->
-          Diseñado por <a href="#">Caninos Casme</a>
+          <!-- Diseñado por <a href="#">Caninos Casme</a> -->
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://www.tiktok.com/@diego_casme?lang=es" target="_blank" class="tiktok"><iconify-icon data-icon="simple-icons:tiktok"></iconify-icon></a> 
+      <a href="https://www.tiktok.com/@diego_casme?lang=es" target="_blank" class="tiktok"><iconify-icon data-icon="simple-icons:tiktok" style="font-size:14px"></iconify-icon></a> 
         <a href="https://www.facebook.com/Servicios-caninos-Casme-905518146207815" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>     
         <a href="https://www.instagram.com/servicioscaninoscasme/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
         <a href="https://wa.me/527891017905" target="_blank" class="google-plus"><i class="bx bxl-whatsapp"></i></a>

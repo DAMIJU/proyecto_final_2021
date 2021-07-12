@@ -250,7 +250,7 @@ if (!isset($_SESSION['loggedin'])) {
                   <input id="fecha" type="date" name="Fecha_Cita" class="form-control" placeholder="Fecha de cita" autofocus>
                 </div>
                 <div class="form-group">
-                <input id="hora" type="time" name="Hora_Cita" id="hora" max="22:30" min="10:00" step="1" placeholder="Hora de la cita">
+                <input id="hora" type="time" name="Hora_Cita" placeholder="Hora de la cita">
                 </div>
                 <div class="modal-footer">
                   <input type="submit" name="agregar_cita" class="btn btn-success" value="Agregar">
@@ -483,6 +483,17 @@ document.getElementById('fecha').type= 'text';
 });
 document.getElementById('fecha').addEventListener('focus',function(){
 document.getElementById('fecha').type= 'date';
+});
+});
+</script>
+<script>
+window.addEventListener('load',function(){
+document.getElementById('hora').type= 'text';
+document.getElementById('hora').addEventListener('blur',function(){
+document.getElementById('hora').type= 'text';
+});
+document.getElementById('hora').addEventListener('focus',function(){
+document.getElementById('hora').type= 'time';
 });
 });
 </script>
