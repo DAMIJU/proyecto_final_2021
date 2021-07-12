@@ -7,6 +7,7 @@ if (isset($_POST['agregar_cita'])) {
   $Num_Dueño = $_POST['Num_Dueño'];
   $Num_Mascota = $_POST['Num_Mascota'];
   $Tipo_Cita = $_POST['Tipo_Cita'];
+  $Notas_Internas = $_POST['Notas_Internas'];
   $Fecha_Cita = $_POST['Fecha_Cita'];
   $Hora_Cita = $_POST['Hora_Cita'];
   $query2="SELECT * FROM tabla_dueño WHERE Num_Registro_Dueño = '$Num_Dueño'";
@@ -18,7 +19,7 @@ if (isset($_POST['agregar_cita'])) {
   $row3=$resultado3->fetch_assoc();
   $Nombre_Mascota = $row3['Nombre_Mascota'];
 
-  $query = "INSERT INTO tabla_citas(Cel_Dueño, Num_Registro_Cita, Num_Dueño, Num_Mascota, Tipo_Cita, Fecha_Cita, Hora_Cita, Estado_Cita) VALUES ('$Cel_Dueño', null, '$Num_Dueño', '$Num_Mascota', '$Tipo_Cita', '$Fecha_Cita', '$Hora_Cita', 'Pendiente')";
+  $query = "INSERT INTO tabla_citas(Cel_Dueño, Num_Registro_Cita, Num_Dueño, Num_Mascota, Tipo_Cita, Notas_Internas, Fecha_Cita, Hora_Cita, Estado_Cita) VALUES ('$Cel_Dueño', null, '$Num_Dueño', '$Num_Mascota', '$Tipo_Cita', '$Notas_Internas', '$Fecha_Cita', '$Hora_Cita', 'Pendiente')";
   $ResultadoInsertCita = mysqli_query($con, $query);
   
   if($ResultadoInsertCita){

@@ -254,11 +254,11 @@ if (!isset($_SESSION['loggedin'])) {
         <thead>
              <h4 style="text-align:center">Historial</h4>
             <tr>                  
-                <th>Dueño</th>
-                <th>Celular</th>
-                <th>Cita</th>   
+                <th>Tipo de cita</th>
+                <th>Notas internas</th>  
                 <th>Fecha</th>    
-                <th>Acción</th>         
+                <th>Acción</th>
+                       
             </tr>
         </thead>
         <tbody>
@@ -271,11 +271,15 @@ if (!isset($_SESSION['loggedin'])) {
           while($mostrar=$resultado2->fetch_assoc()){
           ?>   
             <tr>       
-              <td><?php echo $mostrar['Nombre_Dueño'];?></td>
-              <td><?php echo $mostrar['Cel_Dueño'];?></td>  
               <td><?php echo $mostrar['Tipo_Cita'];?></td>
+              <td><?php echo $mostrar['Notas_Internas'];?></td>
               <td><?php echo $mostrar['Fecha_Cita'];?></td>      
-               
+              <td>
+                      <a id="a_delete" href="#" onclick="preguntar(<?php echo $mostrar['Num_Historial_Cita']?>)" title="Eliminar registro">
+                          Eliminar
+                      </a> /
+                      <a id="a_edit" href="Edit_Historial.php?Num_Historial_Cita=<?php echo $mostrar['Num_Historial_Cita']?>" title="Editar registro">Editar</a>
+                    </td>
             </tr>
             <?php
               }
@@ -287,7 +291,7 @@ if (!isset($_SESSION['loggedin'])) {
         </div>
   </div>
   <div class="botones">
-            <a href="Edit_Mascota.php?Num_Registro_Mascota=<?php echo $row['Num_Registro_Mascota']?>" class="btn btn-success">Editar</a>
+            <a href="Edit_Mascota.php?Num_Registro_Mascota=<?php echo $row['Num_Registro_Mascota']?>" class="btn btn-secondary">Editar</a>
             <a href="#" onclick="preguntar(<?php echo $row['Num_Registro_Mascota']?>)" class="btn btn-danger">Eliminar</a>
             <a href="javascript: history.go(-1)" role="button" class="btn btn-primary">Volver</a>
   </div>
@@ -378,6 +382,15 @@ if (!isset($_SESSION['loggedin'])) {
         if(confirm('¿Estás seguro que quieres eliminar esta mascota?'))
         {
           window.location.href = "Delete_Mascota.php?Num_Registro_Mascota="+Num_Registro_Mascota;
+        }
+      }
+</script>
+<script type="text/javascript">
+      function preguntar(Num_Historial_Cita)
+      {
+        if(confirm('¿Estás seguro que quieres eliminar este registro?'))
+        {
+          window.location.href = "Delete_Historial.php?Num_Historial_Cita="+Num_Historial_Cita;
         }
       }
 </script>

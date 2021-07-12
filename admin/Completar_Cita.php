@@ -10,9 +10,10 @@ if(isset($_GET['Num_Registro_Cita'])) {
   $Num_Dueño = $mostrar['Num_Dueño'];
   $Num_Mascota = $mostrar['Num_Mascota'];
   $Tipo_Cita = $mostrar['Tipo_Cita'];
+  $Notas_Internas = $mostrar['Notas_Internas'];
   $Fecha_Cita = $mostrar['Fecha_Cita'];
   $Hora_Cita = $mostrar['Hora_Cita'];
-  $query3 = "INSERT INTO historial_mascota (Cel_Dueño, Num_Historial_Cita, Num_Dueño, Num_Mascota, Tipo_Cita, Fecha_Cita, Hora_Cita, Estado_Cita) VALUES ('$Cel_Dueño', '$Num_Registro_Cita', '$Num_Dueño', '$Num_Mascota', '$Tipo_Cita', '$Fecha_Cita', '$Hora_Cita', 'Completada')";
+  $query3 = "INSERT INTO historial_mascota (Cel_Dueño, Num_Historial_Cita, Num_Dueño, Num_Mascota, Tipo_Cita, Notas_Internas, Fecha_Cita, Hora_Cita, Estado_Cita) VALUES ('$Cel_Dueño', '$Num_Registro_Cita', '$Num_Dueño', '$Num_Mascota', '$Tipo_Cita', '$Notas_Internas', '$Fecha_Cita', '$Hora_Cita', 'Completada')";
   $ResultadoInsertHistorial = mysqli_query($con, $query3);
   if(!$ResultadoInsertHistorial) {
     die("Query Failed.");

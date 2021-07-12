@@ -95,9 +95,9 @@ if (!isset($_SESSION['loggedin'])) {
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->      
       <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
+          <a class="nav-link" data-toggle="modal" data-target="#exitModal">
+              <i class="icofont-exit" aria-hidden="true"></i> Salir
+          </a>
       </li>
     </ul>
   </nav>
@@ -180,11 +180,25 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </aside>
 </div>
+<div class="modal fade" id="exitModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">¿Desea salir?</h3>
+              </div>
+              <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
+                            <div class="modal-footer">
+                                <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
+                                <a class="btn btn-raised btn-danger" href="/logout">Cerrar Sesión</a>
+                            </div>
+            </div>
+          </div>
+        </div>
 <div class="content-wrapper">
     <div class="text-center">
   <h1>CITAS</h1>
   <button class="btn-add-mascota" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Cita</button>
-  <button class="btn btn-warning" id="" data-toggle="" data-target="">Cumpleaños</button>
+  <!-- <button class="btn btn-warning" id="" data-toggle="" data-target="">Cumpleaños</button> -->
     </div>
       <!-- MESSAGES -->
       <?php if (isset($_SESSION['message'])) { ?>
@@ -228,7 +242,10 @@ if (!isset($_SESSION['loggedin'])) {
                 <option value="Vacunacion">Vacunacion</option>
                 <option value="Adiestramiento">Adiestramiento</option>
                </select>
-                </div>        
+                </div>
+                <div class="form-group">
+                  <input id="Notas_Internas" type="text" name="Notas_Internas" class="form-control" placeholder="Notas internas" autofocus>
+                </div>
                 <div class="form-group">
                   <input id="fecha" type="date" name="Fecha_Cita" class="form-control" placeholder="Fecha de cita" autofocus>
                 </div>
@@ -290,7 +307,8 @@ if (!isset($_SESSION['loggedin'])) {
                     <th>Mascota</th>
                     <th>Dueño</th>
                     <th>Celular</th>
-                    <th>Tipo</th>         
+                    <th>Tipo</th>
+                    <th>Notas internas</th>        
                     <th>Dia</th>
                     <th>Hora</th>
                     <th>Estado</th>
@@ -311,6 +329,7 @@ if (!isset($_SESSION['loggedin'])) {
                     <td><a id="hrefvista" href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
                     <td><?php echo $mostrar['Cel_Dueño']?></td>
                     <td><?php echo $mostrar['Tipo_Cita']?></td>
+                    <td><?php echo $mostrar['Notas_Internas']?></td>
                     <td><?php echo $mostrar['Fecha_Cita']?></td>
                     <td><?php echo $mostrar['Hora_Cita']?></td>
                     <td><?php echo $mostrar['Estado_Cita']?></td>             
@@ -443,7 +462,7 @@ if (!isset($_SESSION['loggedin'])) {
 <script type="text/javascript">
       function preguntar2(Num_Registro_Cita)
       {
-        if(confirm('¿La cita ya fue completada?'))
+        if(confirm('¿Seguro que quieres completar la cita? Esta desaparecerá del listado'))
         {
           window.location.href = "Completar_Cita.php?Num_Registro_Cita="+Num_Registro_Cita;
         }

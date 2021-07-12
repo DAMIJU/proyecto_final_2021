@@ -533,7 +533,9 @@ body {
 .mobile-nav-active .mobile-nav-toggle i {
   color: #fff;
 }
-
+.navbar-nav .nav-item .nav-link {
+  cursor: pointer;
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -2096,22 +2098,12 @@ Full screen Modal
   color: #2C2E27;
   border-color: #9ACD32;
 }
-.botones .btn-success{
-  color: #fff;
-  background-color: #9ACD32;
-  border-color: #9ACD32;
-}
-.botones .btn-success:hover{
-  color: #fff;
-  background-color: #83AE2A;
-  border-color: #83AE2A;
-}
-.botones .btn-primary{
+.content-wrapper .botones .btn-primary{
   color: #fff;
   background-color: #2D92CB;
   border-color: #2D92CB;
 }
-.botones .btn-primary:hover{
+.content-wrapper .botones .btn-primary:hover{
   color: #fff;
   background-color: #1F74A3;
   border-color: #1F74A3;
@@ -2475,6 +2467,16 @@ select{
 #Vista .table-sm th{
   color:#2F6858;
   border-top: none;
+}
+.content-wrapper #a_delete{
+  color: #dc3545;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.content-wrapper #a_edit{
+  color: #474B4F;
+  text-decoration: underline;
+  background-color: transparent;
 }
 
 

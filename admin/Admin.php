@@ -63,7 +63,13 @@ if (!isset($_SESSION['loggedin'])) {
   <!-- Bootstrap para DataTables -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
-
+<!-- Vendor CSS Files -->
+<link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <style>
     li{
       list-style: none;
@@ -90,9 +96,9 @@ if (!isset($_SESSION['loggedin'])) {
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->      
       <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
+          <a class="nav-link" data-toggle="modal" data-target="#exitModal">
+              <i class="icofont-exit" aria-hidden="true"></i> Salir
+          </a>
       </li>
     </ul>
   </nav>
@@ -176,6 +182,20 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </aside>
 </div>
+<div class="modal fade" id="exitModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">¿Desea salir?</h3>
+              </div>
+              <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
+                            <div class="modal-footer">
+                                <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
+                                <a class="btn btn-raised btn-danger" href="/logout">Cerrar Sesión</a>
+                            </div>
+            </div>
+          </div>
+        </div>
   <div class="content-wrapper">
     <!-- Aqui va el contenido -->
   </div>   
