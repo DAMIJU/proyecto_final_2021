@@ -60,7 +60,7 @@
   <!-- <br><br><br><br><br><br><br> -->
 <!-- ======= About Section ======= -->
 <br><br><br><br><br><br>
-<section class="page-title" style="background-image:url('assets/img/Galeria_opt/Galeria-4-min.jpg');background-repeat: no-repeat;background-size: cover;">
+<section class="page-title" style="background-image:url('assets/img/Banner_Conocenos.png');background-repeat: no-repeat;background-size: cover;">
         <div class="auto-container">
            <br> <h1 style="color:white;text-align:center;font-weight:bold">CONÓCENOS</h1>
         </div>
