@@ -24,7 +24,7 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <style>
     .activo {
-      box-shadow: inset 0 -1px 0 #9ACD32, inset 0 -4px 0 #9ACD32;
+      
 }
   </style>
   <script>
@@ -54,17 +54,17 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Nosotros</a></li>
-          <li class="activo"><a href="#">Servicios</a></li>
-          <li><a href="#">Galería</a></li>
-          <li><a href="#">Admin</a></li>
+          <li><a href="index.php">Inicio</a></li>
+          <li><a href="Nosotros.php">Nosotros</a></li>
+          <li class="active"><a href="Servicios.php">Servicios</a></li>
+          <li><a href="Galeria.php">Galería</a></li>
+          <li><a href="Login.php">Admin</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <!-- End Header -->
-  <br><br><br><br><br><br><br>
+  <br>
 <main id="main">
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
@@ -239,7 +239,7 @@
       </div>
   <!-- End Services Section -->
  <!-- ======= Footer ======= -->
- <footer class="footer">
+ <footer id="footer">
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
