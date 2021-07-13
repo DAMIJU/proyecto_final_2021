@@ -198,10 +198,7 @@ if (!isset($_SESSION['loggedin'])) {
     <div class="text-center">
   <h1>CITAS</h1>
   <button class="btn-add-mascota" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Cita</button>
-<<<<<<< Updated upstream
   <!-- <button class="btn btn-warning" id="" data-toggle="" data-target="">Cumpleaños</button> -->
-=======
->>>>>>> Stashed changes
     </div>
       <!-- MESSAGES -->
       <?php if (isset($_SESSION['message'])) { ?>
