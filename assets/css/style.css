@@ -2354,6 +2354,12 @@ select{
   margin-right: -15px;
   margin-left: -15px;
 }
+.content-wrapper .row-admin {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 15px;
+  margin-left: 15px;
+}
  @media (min-width: 768px){
 #Vista .col-md {
     flex-basis: 0;
@@ -2402,6 +2408,137 @@ select{
   text-decoration: underline;
   background-color: transparent;
 }
+.content-wrapper .admin-panel{
+  padding: 15px .8rem;
+}
+ .row-admin .bg-info, .bg-info>a {
+  color: whitesmoke!important;
+}
+ .row-admin .bg-danger, .bg-danger>a {
+  color: whitesmoke!important;
+}
+ .row-admin .bg-success, .bg-success>a {
+  color: whitesmoke!important;
+}
+.row-admin .bg-warning, .bg-warning>a {
+  color: whitesmoke!important;
+}
+.row-admin .bg-success { 
+  background-color: #2D92CB!important;
+}
+.row-admin .bg-info {
+  background-color: #9ACD32!important;
+}
+@media (min-width: 1200px){
+  .col-lg-3 .small-box h3, .col-md-3 .small-box h3, .col-xl-3 .small-box h3 {
+    font-size: 2.2rem;
+    -webkit-text-stroke: 1px black;
+}
+}
+.wrapper2 {
+  padding: 25px 30px;
+  background: #FFF;
+  box-shadow: 0 2px 5px rgba(0,0,0,.3);
+  border-radius: 3px;
+  margin: 20px;
+}
+
+.wrapper2 .title {
+  font-weight: 600;
+  text-align: left;
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.wrapper2 .inputFields {
+  margin: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.wrapper2 .inputFields input[type="text"] {
+  border: 1px solid rgba(0,0,0,.3);
+  outline: none;
+  width: calc(100% - 60px);
+  height: 100%;
+  border-radius: 3px;
+  padding: 0 10px;
+  font-size: 1rem;
+  transition: .3s;
+}
+
+.wrapper2 .inputFields input[type="text"]:focus {
+  border-color: #2D92CB;
+}
+
+.wrapper2 .inputFields button.btn {
+  width: 50px;
+  height: 100%;
+  background: #2D92CB;
+  color: #FFF;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 5px rgba(0,0,0,.1);
+  border-radius: 3px;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: .8;
+  transition: .3s;
+}
+
+.wrapper2 .inputFields button.btn:hover {
+  opacity: 1;
+}
+
+.wrapper2 .content ul li {
+  background: #f1f1f1;
+  border-radius: 3px;
+  margin: 8px 0;
+  padding: 10px 0;
+  border: 1px solid rgba(0,0,0,.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper2 .content ul li .text {
+  color: #111;
+  padding-left: 10px;
+}
+
+.wrapper2 .content ul li .icon {
+  width: 50px;
+  height: 100%;
+  background: #dc3545;
+  position: absolute;
+  right: -50px;
+  top: 0;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 0 3px 3px 0;
+  transition: .2s linear;
+}
+
+.wrapper2 .content ul li:hover .icon {
+  right: 0;
+}
+
+.wrapper2 .content .pending-text {
+  color: #111;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+
 
 
 

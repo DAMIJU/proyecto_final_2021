@@ -198,6 +198,91 @@ if (!isset($_SESSION['loggedin'])) {
         </div>
   <div class="content-wrapper">
     <!-- Aqui va el contenido -->
+    <div class="content-header admin-panel">
+     
+       
+          
+           
+            <div class="text-center">
+  <h1>PANEL DE ADMINISTRADOR</h1>
+  <!-- <button class="btn btn-warning" id="" data-toggle="" data-target="">Cumpleaños</button> -->
+    </div>
+       
+    </div>
+    <div class="row row-admin">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>Dueño</h3>
+
+                <p>Registrar un dueño</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-user-plus"></i>
+              </div>
+              <a href="Dueño.php" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>Mascota<sup style="font-size: 20px"></sup></h3>
+
+                <p>Registrar mascota</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-paw"></i>
+              </div>
+              <a href="Mascota.php" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3>Citas</h3>
+
+                <p>Añadir citas</p>
+              </div>
+              <div class="icon">
+                <i class="far fa-calendar-check"></i>
+              </div>
+              <a href="Citas.php" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h3>Configuración</h3>
+
+                <p>Configure su paginas</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-cog"></i>
+              </div>
+              <a href="#" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+        </div>
+        <div class="wrapper2">
+        <h2 class="title">Lista de pendientes</h2>
+		<div class="inputFields">
+			<input type="text" id="taskValue" placeholder="Ingrese un pendiente">
+			<button type="submit" id="addBtn" class="btn"><i class="fa fa-plus"></i></button>
+		</div>
+		<div class="content">
+			<ul id="tasks">
+				
+			</ul>
+		</div>
+	</div>
   </div>   
   <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
@@ -267,5 +352,59 @@ if (!isset($_SESSION['loggedin'])) {
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
+<script>
+		$(document).ready(function() {
+			// Show Tasks
+			function loadTasks() {
+				$.ajax({
+					url: "show-tasks.php",
+					type: "POST",
+					success: function(data) {
+						$("#tasks").html(data);
+					}
+				});
+			}
+
+			loadTasks();
+
+			// Add Task
+			$("#addBtn").on("click", function(e) {
+				e.preventDefault();
+
+				var task = $("#taskValue").val();
+
+				$.ajax({
+					url: "add-task.php",
+					type: "POST",
+					data: {task: task},
+					success: function(data) {
+						loadTasks();
+						$("#taskValue").val('');
+						if (data == 0) {
+							alert("Something wrong went. Please try again.");
+						}
+					}
+				});
+			});
+
+			// Remove Task
+			$(document).on("click", "#removeBtn", function(e) {
+				e.preventDefault();
+				var id = $(this).data('id');
+				
+				$.ajax({
+					url: "remove-task.php",
+					type: "POST",
+					data: {id: id},
+					success: function(data) {
+						loadTasks();
+						if (data == 0) {
+							alert("Something wrong went. Please try again.");
+						}
+					}
+				});
+			});
+		});
+	</script>
 </body>
 </html>
