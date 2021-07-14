@@ -460,7 +460,7 @@ if (!isset($_SESSION['loggedin'])) {
       }
 </script>
 <script type="text/javascript">
-      function preguntar(Num_Registro_Cita)
+      function preguntar2(Num_Registro_Cita)
       {
         if(confirm('¿Seguro que quieres completar la cita? Esta desaparecerá del listado'))
         {

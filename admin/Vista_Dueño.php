@@ -209,7 +209,7 @@ if (!isset($_SESSION['loggedin'])) {
 
       ?>
       <div class="text-center">
-      <h1>DATOS DEL CLIENTE <?php echo $row['Nombre_Dueño']; ?></h1>
+      <h1>Datos del cliente <?php echo $row['Nombre_Dueño']; ?></h1>
       </div>
   <div class="row" id="Vista">
         <div class="col-md">
