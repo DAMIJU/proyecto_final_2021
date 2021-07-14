@@ -46,7 +46,7 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li><a href="index.php">Inicio</a></li>
-          <li class="active"><a href="Nosotros.php">Nosotros</a></li>
+          <li><a href="Nosotros.php">Nosotros</a></li>
           <li><a href="Servicios.php">Servicios</a></li>
           <li><a href="Galeria.php">Galería</a></li>
           <li><a href="Login.php">Admin</a></li>
@@ -56,6 +56,8 @@
   </header>
   <!-- End Header -->
   <br>
+<!-- End Header -->
+<br>
 <section class="page-title" style="background-image:url('assets/img/Banner_Conocenos.png');background-repeat: no-repeat;background-size: cover;">
         <div class="auto-container">
            <br> <h1 style="color:white;text-align:center;font-weight:bold">CONÓCENOS</h1>
@@ -150,7 +152,6 @@
 
   <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
 
-<!-- Vendor JS Files -->
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>

@@ -24,7 +24,7 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <style>
     .activo {
-      
+     color: #9ACD32;
 }
   </style>
   <script>
@@ -56,7 +56,7 @@
         <ul>
           <li><a href="index.php">Inicio</a></li>
           <li><a href="Nosotros.php">Nosotros</a></li>
-          <li class="active"><a href="Servicios.php">Servicios</a></li>
+          <li class="activo"><a href="Servicios.php">Servicios</a></li>
           <li><a href="Galeria.php">Galería</a></li>
           <li><a href="Login.php">Admin</a></li>
         </ul>
@@ -165,7 +165,7 @@
             <div class="modal-body">
               <center><p style="color:red;font-size:20px">¡Ejercita a tu perro!</p>
               <p>Ejercitamos a tu perro, llevamos un plan cardiobascular en caminadora, canina.</p>
-              <img class="Img_GimnasiaCanina img-fluid" style="width:40%" src="https://scontent.feoh3-1.fna.fbcdn.net/v/t45.5328-4/c110.0.740.740a/37025879_1715583431888680_7715288291993452544_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=c48759&_nc_eui2=AeHqLHI5rg-5geqXKax4zqZPj0zqbcxuilqPTOptzG6KWkegtyQkBUqHHNVycEsnesihdEnHKeRWmbRaxXdLhF1c&_nc_ohc=qeID1SBwHTYAX8By1gC&tn=C-qNvwX96CU2PIeK&_nc_ht=scontent.feoh3-1.fna&tp=29&oh=17402068e672a24e3b7ec48030f14e19&oe=60DF9C9D" alt="Gimnasia Canina"></center>
+              <img class="Img_GimnasiaCanina img-fluid" style="width:40%" src="assets/img/Gimnasia_Casme.jpg" alt="Gimnasia Canina"></center>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -187,7 +187,7 @@
             </div>
             <div class="modal-body">
               <center>¡Vacunamos a tu perrito según la edad!</p>
-              <img class="Img_VacunamosTuPerrito img-fluid" src="https://scontent.feoh3-1.fna.fbcdn.net/v/t45.5328-4/c120.0.720.720a/37018219_1909743955779661_9157509958911131648_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=c48759&_nc_eui2=AeH45JFicbD640mMoIiLq1mf0I2f1WIrjWbQjZ_VYiuNZq4vWjFxyv_cK8I-N0EtaPxw4san6tZnNxdlwcihX8UA&_nc_ohc=YASxGsbQSDsAX8-3J7F&_nc_ht=scontent.feoh3-1.fna&tp=29&oh=f2e9301eb5afdc163d62d8c7cc66cef7&oe=60DF6DE8" style="width:40%" alt="Vacunamos tu perrito">
+              <img class="Img_VacunamosTuPerrito img-fluid" src="assets/img/Vacunacion_Casme.jpg" style="width:40%" alt="Vacunamos tu perrito">
               </center>
             </div>
             <div class="modal-footer">

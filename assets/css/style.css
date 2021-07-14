@@ -345,7 +345,7 @@ body {
   font-family: "Roboto",sans-serif;
   padding: 0 4px;
 }
-
+/* 
 .nav-menu > ul > li a::before{
   content: "";
   position: absolute;
@@ -357,7 +357,7 @@ body {
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out;
-}
+} */
 
 .nav-menu a:hover::before,
 .nav-menu li:hover > a::before,
