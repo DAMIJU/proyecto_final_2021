@@ -41,7 +41,7 @@
 <!-- ======= Header ======= -->
 <header id="header" class="">
     <div class="container d-flex align-items-center">
-      <h1 class="logo mr-auto"><a href="#"><img src="assets/img/Logo.png" alt="Logo Caninos Casmes"></a></h1>
+      <h1 class="logo mr-auto"><a href="index.php"><img src="assets/img/Logo.png" alt="Logo Caninos Casmes"></a></h1>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
