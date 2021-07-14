@@ -271,12 +271,11 @@ if (!isset($_SESSION['loggedin'])) {
           while($mostrar=$resultado2->fetch_assoc()){
           ?>   
             <tr>       
-<<<<<<< Updated upstream
-=======
+
+
               <td><?php echo $mostrar['Num_Historial_Cita'];?></td>
               <td><a id="hrefvista" href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>"><?php echo $mostrar['Nombre_Dueño'];?></td>
               <td><?php echo $mostrar['Cel_Dueño'];?></td>  
->>>>>>> Stashed changes
               <td><?php echo $mostrar['Tipo_Cita'];?></td>
               <td><?php echo $mostrar['Notas_Internas'];?></td>
               <td><?php echo $mostrar['Fecha_Cita'];?></td>      
