@@ -96,9 +96,9 @@ if (!isset($_SESSION['loggedin'])) {
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->      
       <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
+          <a class="nav-link" data-toggle="modal" data-target="#exitModal">
+              <i class="icofont-exit" aria-hidden="true"></i> Salir
+          </a>
       </li>
     </ul>
   </nav>
@@ -181,7 +181,20 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </aside>
 </div>
-  </div>
+<div class="modal fade" id="exitModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">¿Desea salir?</h3>
+              </div>
+              <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
+                            <div class="modal-footer">
+                                <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
+                                <a class="btn btn-raised btn-danger" href="logout.php">Cerrar Sesión</a>
+                            </div>
+            </div>
+          </div>
+        </div>
   <div class="content-wrapper">
 <?php
 include("DB/conexion.php");

@@ -190,7 +190,7 @@ if (!isset($_SESSION['loggedin'])) {
               <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
                             <div class="modal-footer">
                                 <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
-                                <a class="btn btn-raised btn-danger" href="/logout">Cerrar Sesión</a>
+                                <a class="btn btn-raised btn-danger" href="logout.php">Cerrar Sesión</a>
                             </div>
             </div>
           </div>

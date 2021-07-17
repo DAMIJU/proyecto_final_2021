@@ -30,7 +30,7 @@ if (!isset($_SESSION['loggedin'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Panel de admin</title>
-     <!-- Favicons -->
+ <!-- Favicons -->
   <link href="../assets/img/Logo.ico" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -121,14 +121,14 @@ if (!isset($_SESSION['loggedin'])) {
             </a>
           </li>
           <li class="nav-item">
-            <a href="Dueño.php" class="nav-link">
+            <a href="Dueño.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Dueño')"">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Dueño            
               </p>
             </a>    
           <li class="nav-item">
-            <a href="Mascota.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Vista Mascota')">
+            <a href="Mascota.php" class="nav-link">
               <i class="nav-icon fas fa-dog"></i>
               <p>
                 Mascota             
@@ -179,7 +179,9 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </aside>
 </div>
-<div class="modal fade" id="exitModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+  <div class="content-wrapper">
+  <div class="modal fade" id="exitModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">
@@ -193,7 +195,10 @@ if (!isset($_SESSION['loggedin'])) {
             </div>
           </div>
         </div>
-  <div class="content-wrapper">
+  
+  <!-- <button class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Dueño</button>
+  <button class="btn btn-warning" id="" data-toggle="" data-target="">Info</button> -->
+    
       <!-- MESSAGES -->
       <?php if (isset($_SESSION['message'])) { ?>
       <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
@@ -209,14 +214,17 @@ if (!isset($_SESSION['loggedin'])) {
       <?php
       include("DB/conexion.php");
 
-      $Num_Registro_Mascota = $_REQUEST['Num_Registro_Mascota'];
+      $Num_Registro_Cita = $_REQUEST['Num_Registro_Cita'];
       
-      $query="SELECT * FROM tabla_mascotas INNER JOIN tabla_dueño ON tabla_mascotas.Registro_Dueño = tabla_dueño.Num_Registro_Dueño WHERE Num_Registro_Mascota='$Num_Registro_Mascota'";
-      $resultado= $con->query($query);
-      $row=$resultado->fetch_assoc();
+      
+      $query="SELECT * FROM tabla_citas
+      INNER JOIN tabla_mascotas ON tabla_citas.Num_Mascota = tabla_mascotas.Num_Registro_Mascota
+      INNER JOIN tabla_dueño ON tabla_citas.Num_Dueño = tabla_dueño.Num_Registro_Dueño WHERE Num_Registro_Cita = $Num_Registro_Cita";
+        $resultado= $con->query($query);
+        $row=$resultado->fetch_assoc();
       ?>
       <div class="text-center">
-  <h1>Datos de <?php echo $row['Nombre_Mascota']; ?></h1>
+      <h1>Detalles cita <?php echo $row['Nombre_Mascota']; ?></h1>
       </div>
   <div class="row" id="Vista">
         <div class="col-md">
@@ -224,94 +232,61 @@ if (!isset($_SESSION['loggedin'])) {
         <div class="table-responsive col-sm">
             <table class="table table-sm  non-top-border">
             <tbody>
-                    <tr>
-                        <th>Registro</th>
-                        <td> <?php echo $row['Num_Registro_Mascota']; ?></td>
-                    </tr>
-                                    <tr>
-                    <th>Mascota</th>
-                    <td>
-                      <?php echo $row['Nombre_Mascota']; ?>
-                                                </td>
+                                                                                   
                     <tr>
                         <th>Dueño</th>
-                        <td><a id="hrefvista" href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $row['Num_Registro_Dueño']?>"><?php echo $row['Nombre_Dueño'] ?></a></td>
-                    </tr>
-
+                        <td>
+                         <?php echo $row['Nombre_Dueño']; ?>
+                        </td>
+                    </tr>            
                     <tr>
-                        <th>Raza</th>
-                        <td><?php echo $row['Raza']; ?></td>
-                    </tr>
-                    <tr>
-                        <th>Fecha de nacimiento</th>
-                        <td><?php echo $row['Fecha_Nac']; ?></td>
-                    </tr>
-                    <tr>
-                        <th>Sexo</th>
-                        <td><?php echo $row['Sexo']; ?></td>
+                        <th>Celular</th>
+                        <td>
+                        <a href="tel:<?php echo $row['Cel_Dueño']; ?>"><?php echo $row['Telefono_Fijo']; ?></a>
+                        </td>
                     </tr>
                     <tr>
-                        <th>Fecha de registro</th>
-                        <td><?php echo $row['Fecha_Registro_Mascota']; ?></td>
+                        <th>Tipo de cita</th>
+                        <td>
+                        <?php echo $row['Tipo_Cita']; ?>
+                        </td>
                     </tr>
-            </tbody>
+                    <tr>
+                        <th>Notas internas</th>
+                        <td>
+                        <?php echo $row['Notas_Internas']; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Fecha</th>
+                        <td>
+                        <?php echo $row['Fecha_Cita']; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Hora</th>
+                        <td>
+                        <?php echo $row['Hora_Cita']; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Estado</th>
+                        <td>
+                        <?php echo $row['Estado_Cita']; ?>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>             
         </div>
-      </div>
-      <div class="botones">
-            <a href="Edit_Mascota.php?Num_Registro_Mascota=<?php echo $row['Num_Registro_Mascota']?>" class="btn btn-success">Editar</a>
-            <a href="#" onclick="preguntar(<?php echo $row['Num_Registro_Mascota']?>)" class="btn btn-danger">Eliminar</a>
+      
+  </div>
+   <div class="botones">
+            <a href="Edit_Cita.php?Num_Registro_Cita=<?php echo $row['Num_Registro_Cita']?>" class="btn btn-success">Editar</a>
+            <a href="#" onclick="preguntar(<?php echo $row['Num_Registro_Cita']?>)" class="btn btn-danger">Eliminar</a>
             <a href="javascript: history.go(-1)" role="button" class="btn btn-primary">Volver</a>
-  </div>
-  <div class="text-center">
-  <h1> Historial</h1>
-      </div>
-      <div class="row" id="Vista2">
-        <div class="col-md">
-            <div class="section-box">
-        <div class="table-responsive col-sm">
-            <table class="table table-sm  non-top-border" id="Intento">      
-                <!-- <h3>Sus Mascotas</h3> -->
-        <thead>
-            <tr>                  
-                <th>Tipo de cita</th>
-                <th>Notas internas</th>  
-                <th>Fecha</th>    
-                <th>Acción</th>
-                       
-            </tr>
-        </thead>
-        <tbody>
-          <?php  
-          include("DB/conexion.php");
-          $query2="SELECT * FROM historial_mascota
-          INNER JOIN tabla_dueño ON historial_mascota.Num_Dueño = tabla_dueño.Num_Registro_Dueño
-          INNER JOIN tabla_mascotas ON historial_mascota.Num_Mascota = tabla_mascotas.Num_Registro_Mascota WHERE Num_Mascota = $Num_Registro_Mascota";
-          $resultado2= $con->query($query2);
-          while($mostrar=$resultado2->fetch_assoc()){
-          ?>   
-            <tr>       
-              <td><?php echo $mostrar['Tipo_Cita'];?></td>
-              <td><?php echo $mostrar['Notas_Internas'];?></td>
-              <td><?php echo $mostrar['Fecha_Cita'];?></td>      
-              <td>
-                      <a id="a_delete" href="#" onclick="preguntar(<?php echo $mostrar['Num_Historial_Cita']?>)" title="Eliminar registro">
-                          Eliminar
-                      </a> /
-                      <a id="a_edit" href="Edit_Historial.php?Num_Historial_Cita=<?php echo $mostrar['Num_Historial_Cita']?>" title="Editar registro">Editar</a>
-                    </td>
-            </tr>
-            <?php
-              }
-            ?>   
-        </tbody>
-            </table>
-                </div>
-            </div>
-        </div>
-  </div>
+    </div> 
 </div> 
    <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
@@ -394,20 +369,11 @@ if (!isset($_SESSION['loggedin'])) {
 } );
 </script>
 <script type="text/javascript">
-      function preguntar(Num_Registro_Mascota)
+      function preguntar(Num_Registro_Cita)
       {
-        if(confirm('¿Estás seguro que quieres eliminar esta mascota?'))
+        if(confirm('¿Estás seguro que quieres eliminar esta cita?'))
         {
-          window.location.href = "Delete_Mascota.php?Num_Registro_Mascota="+Num_Registro_Mascota;
-        }
-      }
-</script>
-<script type="text/javascript">
-      function preguntar(Num_Historial_Cita)
-      {
-        if(confirm('¿Estás seguro que quieres eliminar este registro?'))
-        {
-          window.location.href = "Delete_Historial.php?Num_Historial_Cita="+Num_Historial_Cita;
+          window.location.href = "Delete_Cita.php?Num_Registro_Cita="+Num_Registro_Cita;
         }
       }
 </script>

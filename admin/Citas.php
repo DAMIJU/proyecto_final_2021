@@ -189,7 +189,7 @@ if (!isset($_SESSION['loggedin'])) {
               <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
                             <div class="modal-footer">
                                 <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
-                                <a class="btn btn-raised btn-danger" href="/logout">Cerrar Sesión</a>
+                                <a class="btn btn-raised btn-danger" href="logout.php">Cerrar Sesión</a>
                             </div>
             </div>
           </div>
@@ -252,6 +252,11 @@ if (!isset($_SESSION['loggedin'])) {
                 <div class="form-group">
                 <input id="hora" type="time" name="Hora_Cita" placeholder="Hora de la cita">
                 </div>
+                <div class="md-form md-outline input-with-post-icon timepicker" twelvehour="true">
+  <input type="text" id="twelve-hour-clock" class="form-control" placeholder="Select time">
+  <label for="twelve-hour-clock">Twelve hour clock</label>
+  <i class="fas fa-envelope input-prefix"></i>
+</div>
                 <div class="modal-footer">
                   <input type="submit" name="agregar_cita" class="btn btn-success" value="Agregar">
                   <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>          
@@ -343,7 +348,7 @@ if (!isset($_SESSION['loggedin'])) {
                       <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro_Cita']?>)" title="Eliminar cita" class="btn btn-danger">
                          <i class="far fa-trash-alt"></i>
                       </a>
-                      <a href="#"<?php echo $mostrar['Num_Registro_Cita']?> data-toggle="modal" data-target="#staticBackdrop2" title="Ver detalles de la cita" class="btn btn-primary">
+                      <a href="Vista_Cita.php?Num_Registro_Cita=<?php echo $mostrar['Num_Registro_Cita']?>" title="Ver detalles cita" class="btn btn-primary">
                       <i class="icofont-eye-alt"></i>
                       </a>
                     </td>
