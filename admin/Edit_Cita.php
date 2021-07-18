@@ -1,7 +1,9 @@
 <?php
+
 // Solo se permite el ingreso con el inicio de sesion.
 session_start();
 require_once("ConectarBD_Mysql.php");
+
 // Si el usuario no se ha logueado se le regresa al inicio.
 if (!isset($_SESSION['loggedin'])) {
 	echo "<script>alert('No has iniciado sesión');window.location='../Login.php'</script>";
@@ -23,7 +25,9 @@ if (!isset($_SESSION['loggedin'])) {
     $Consulta_DatosSesion = "SELECT * FROM usuarios WHERE usuario ='$NombreSesion_User'";
     $ejecuta = $conn->query($Consulta_DatosSesion);
     $row = $ejecuta->fetch_assoc()
+
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -173,44 +177,49 @@ if (!isset($_SESSION['loggedin'])) {
               </li>
             </ul>
           </li>
-          <!-- <div class="Footer">
-            <button class="btn btn-danger" onclick="location.href='#'">Cerrar sesión</button>
-          </div> -->
       </nav>
     </div>
   </aside>
 </div>
 <div class="modal fade" id="exitModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">¿Desea salir?</h3>
-              </div>
-              <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
-                            <div class="modal-footer">
-                                <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
-                                <a class="btn btn-raised btn-danger" href="logout.php">Cerrar Sesión</a>
-                            </div>
-            </div>
+                 <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">¿Desea salir?</h3>
+                    </div>
+                     <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
+                     <div class="modal-footer">
+                       <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
+                       <a class="btn btn-raised btn-danger" href="logout.php">Cerrar Sesión</a>
+                    </div>
+                 </div>
           </div>
-        </div>
+</div>
 <div class="content-wrapper">
 <?php
 include("DB/conexion.php");
 
-$Num_Registro_Cita = $_REQUEST['Num_Registro_Cita'];
-$query="SELECT * FROM tabla_citas 
-INNER JOIN tabla_mascotas ON tabla_citas.Num_Mascota = tabla_mascotas.Num_Registro_Mascota
-WHERE Num_Registro_Cita='$Num_Registro_Cita'";
-$resultado= $con->query($query);
-$row=$resultado->fetch_assoc();
+  /* AQUI SE ATRAPAN LOS DATOS */
+  $Num_Registro_Cita = $_REQUEST['Num_Registro_Cita'];
+
+  /* AQUI REALIZAMOS UNA CONSULTAD EN LA TABLA CITAS PARA DEACUERDO AL NUMERO DEL
+     REGISTRO DE LA CITA SELECCIONADO PARA AUTOCOMPLEMENTAR LOS DATOS DEL
+     FORMULARIO QUE ESTA DENTRO DEL MODAL staticBackdropLabel
+      */
+  $query="SELECT * FROM tabla_citas 
+  INNER JOIN tabla_mascotas ON tabla_citas.Num_Mascota = tabla_mascotas.Num_Registro_Mascota
+  WHERE Num_Registro_Cita='$Num_Registro_Cita'";
+  $resultado= $con->query($query);
+  $row=$resultado->fetch_assoc();
 
 if(isset($_POST['update'])){
-  
+
+  /* AQUI SE RECIBEN LOS DATOS DEL FORMULARIO */
   $Tipo_Cita = $_POST['Tipo_Cita'];
   $Fecha_Cita = $_POST['Fecha_Cita'];
   $Hora_Cita = $_POST['Hora_Cita'];
-
+ 
+  /* AQUI REALIZAMOS EL UPDATE DEL REGISTRO QUE SE SELECCIONÓ */
   $query="UPDATE tabla_citas SET Tipo_Cita='$Tipo_Cita', Fecha_Cita='$Fecha_Cita', Hora_Cita='$Hora_Cita' WHERE Num_Registro_Cita='$Num_Registro_Cita'";
   $ResultadoEditMascota = $con->query($query);
 
@@ -221,45 +230,49 @@ if(isset($_POST['update'])){
   }
 }
 ?>
-        <div class="container p-4">
-  <div class="row">
-    <div class="col-md-5 mx-auto">
-      <div class="card card-body" style="background-color: #2D92CB;">
-      <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Editando la cita de <?php echo $row['Nombre_Mascota']; ?></h3>   
-      <form action="" method="POST">
-            <div class="form-group">
-                <select name="Tipo_Cita">
-                <option value="<?php echo  $row['Tipo_Cita']; ?>" ><?php echo  $row['Tipo_Cita']; ?> (ACTUAL)</option>
-                <option value="Peluqueria">Peluqueria</option>
-                <option value="Vacunacion">Vacunacion</option>
-                <option value="Adiestramiento">Adiestramiento</option>
-               </select>
-                </div>  
-            <div class="form-group">
-            <input type="date" name="Fecha_Cita" class="form-control" value="<?php echo $row['Fecha_Cita']; ?>" placeholder="Actualizar fecha de cita">
-            </div>
-            <div class="form-group">
-              <input type="time" name="Hora_Cita" class="form-control" value="<?php echo $row['Hora_Cita']; ?>" placeholder="Actualizar hora de cita">
-            </div>
-            <div class="form-group">
+ 
+ <div class="container p-4">
+   <div class="row">
+     <div class="col-md-5 mx-auto">
+       <div class="card card-body" style="background-color: #2D92CB;">
+        <!-- AQUI ESTA EL MODAL QUE CONTIENE EL FORMULARIO QUE REALIZA LA ACCIÓN DE LA PÁGINA -->
+        <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Editando la cita de <?php echo $row['Nombre_Mascota']; ?></h3>   
+        <form action="" method="POST">
+              <div class="form-group">
+                  <select name="Tipo_Cita">
+                   <option value="<?php echo  $row['Tipo_Cita']; ?>" ><?php echo  $row['Tipo_Cita']; ?> (ACTUAL)</option>
+                   <option value="Peluqueria">Peluqueria</option>
+                   <option value="Vacunacion">Vacunacion</option>
+                   <option value="Adiestramiento">Adiestramiento</option>
+                  </select>
+              </div>  
+              <div class="form-group">
+                  <input type="date" name="Fecha_Cita" class="form-control" value="<?php echo $row['Fecha_Cita']; ?>" placeholder="Actualizar fecha de cita">
+              </div>
+              <div class="form-group">
+                  <input type="time" name="Hora_Cita" class="form-control" value="<?php echo $row['Hora_Cita']; ?>" placeholder="Actualizar hora de cita">
+              </div>
+              <div class="form-group">
                   <input id="Notas_Internas" type="text" name="Notas_Internas" class="form-control" value="<?php echo $row['Notas_Internas']; ?>" placeholder="Notas internas" autofocus>
-            </div>
-            <div class="botones">
-            <button name="update" class="btn btn-success">Actualizar</button>
-            <a href="javascript: history.go(-1)" role="button" class="btn btn-danger">Cancelar</a>
-        </div>             
-      </form>
-      </div>
-    </div>
-  </div>
+              </div>
+              <div class="botones">
+                  <button name="update" class="btn btn-success">Actualizar</button>
+                  <a href="javascript: history.go(-1)" role="button" class="btn btn-danger">Cancelar</a>
+              </div>             
+        </form>
+       </div>
+     </div>
+   </div>
+ </div>
 </div>
-</div>
-    <footer class="main-footer">
+
+<footer class="main-footer">
       <div class="float-right d-none d-sm-block">
         <b>Servicios Caninos Casme.</b> 
       </div>
         <strong>Panel de administrador</a></strong> 
-    </footer>
+</footer>
+
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -322,38 +335,10 @@ if(isset($_POST['update'])){
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
-<!-- SCRIPTS DataTables -->
 <script
   src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
   crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
-<script> $(document).ready(function() {
-    $('#Tabla_mascotas').DataTable( {
-        language: {
-            url: 'https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
-        }
-    } );
-} );
-</script>
-
-<script type="text/javascript">
-      function preguntar(Num_Registro_Mascota)
-      {
-        if(confirm('¿Está seguro que desea eliminar esta mascota?'))
-        {
-          window.location.href = "Delete_Mascota.php?Num_Registro_Mascota="+Num_Registro_Mascota;
-        }
-      }
-</script>
-<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-	<script src="select2/select2.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('#controlBuscador').select2({ dropdownParent: "#staticBackdrop" });
-	});
-</script>
 <script>
 window.addEventListener('load',function(){
 document.getElementById('fecha').type= 'text';
@@ -365,4 +350,5 @@ document.getElementById('fecha').type= 'date';
 });
 });
 </script>
+
 </body>
