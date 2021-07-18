@@ -79,7 +79,7 @@ if (!isset($_SESSION['loggedin'])) {
 <div class="wrapper">
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-  <img class="animation__shake" src="../assets/img/Logo.png" alt="Casme Logo" height="90px" width="100px">
+    <img class="animation__shake" src="../assets/img/Logo.png" alt="Casme Logo" height="90px" width="100px">
   </div>
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -89,15 +89,14 @@ if (!isset($_SESSION['loggedin'])) {
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <!-- <a href="../index.php" class="nav-link">Inicio</a> -->
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->      
       <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#exitModal">
-              <i class="icofont-exit" aria-hidden="true"></i> Salir
-          </a>
+        <a class="nav-link" data-toggle="modal" data-target="#exitModal">
+          <i class="icofont-exit" aria-hidden="true"></i> Salir
+        </a>
       </li>
     </ul>
   </nav>
@@ -105,10 +104,10 @@ if (!isset($_SESSION['loggedin'])) {
     <div class="sidebar">
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-        <img src="../assets/img/Logo.ico" rel="icon" class="brand-image img-circle elevation-4" style="opacity: .8">
+          <img src="../assets/img/Logo.ico" rel="icon" class="brand-image img-circle elevation-4" style="opacity: .8">
         </div>
         <div class="info">
-        <span class="brand-text font-weight-light" style="font-size:2.5vh"><?php echo $row['Apellidos_Usuario']?><br><?php echo $row['Nombre_Usuario']?></span>
+          <span class="brand-text font-weight-light" style="font-size:2.5vh"><?php echo $row['Apellidos_Usuario']?><br><?php echo $row['Nombre_Usuario']?></span>
         </div>
       </div>
       <nav class="mt-2">
@@ -173,217 +172,190 @@ if (!isset($_SESSION['loggedin'])) {
               </li>
             </ul>
           </li>
-          <!-- <div class="Footer">
-            <button class="btn btn-danger" onclick="location.href='#'">Cerrar sesión</button>
-          </div> -->
       </nav>
     </div>
   </aside>
 </div>
+<!-- MODAL PARA CERRAR SESIÓN -->
 <div class="modal fade" id="exitModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">¿Desea salir?</h3>
-              </div>
-              <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
-                            <div class="modal-footer">
-                                <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
-                                <a class="btn btn-raised btn-danger" href="logout.php">Cerrar Sesión</a>
-                            </div>
-            </div>
-          </div>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">¿Desea salir?</h3>
+      </div>
+        <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
+        <div class="modal-footer">
+          <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
+          <a class="btn btn-raised btn-danger" href="logout.php">Cerrar Sesión</a>
         </div>
-<div class="content-wrapper">
-    <div class="text-center">
-  <h1>CITAS</h1>
-  <button class="btn-add-mascota" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Cita</button>
-  <!-- <button class="btn btn-warning" id="" data-toggle="" data-target="">Cumpleaños</button> -->
     </div>
-      <!-- MESSAGES -->
-      <?php if (isset($_SESSION['message'])) { ?>
+  </div>
+</div>
+<!-- MODAL PARA AÑADIR MASCOTA -->
+<div class="content-wrapper">
+  <div class="text-center">
+    <h1>CITAS</h1>
+    <button class="btn-add-mascota" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Cita</button>
+  </div>
+  <!-- MESSAGES -->
+    <?php if (isset($_SESSION['message'])) { ?>
       <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
         <?= $_SESSION['message']?>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <?php session_unset(); } ?>
-
-      <!-- FORMULARIO AÑADIR MASCOTA -->
-      <?php  
-              include("DB/conexion.php");
-              $sql="SELECT Num_Registro_Dueño,Celular,Nombre_Dueño from tabla_dueño";
-	            $result=mysqli_query($con,$sql);
-      ?>
-      <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Añadir Cita</h3>
-              </div>
-              <form action="Añadir_Cita.php" method="POST">
-                <div class="form-group">
-                 <select name="Num_Dueño" id="controlBuscador" style="width: 100%" >
-                   <option disabled selected>Seleccione un Dueño</option>
-		               	<?php while ($ver=mysqli_fetch_row($result)) {?>
-		              	<option value="<?php echo $ver[0] ?>">
-			             	   <?php echo $ver[2] ?> - <?php echo $ver[1] ?> 
-			              </option>
-			          <?php  }?>
-                </select>
-                </div>
-                <div  id="select2lista" class="form-group">
-                </div>
-                <div class="form-group">
-                <select name="Tipo_Cita" placeholder="Tipo de cita">
-                <option disabled selected>Tipo de cita</option>
-                <option value="Peluqueria">Peluqueria</option>
-                <option value="Vacunacion">Vacunacion</option>
-                <option value="Adiestramiento">Adiestramiento</option>
-               </select>
-                </div>
-                <div class="form-group">
-                  <input id="Notas_Internas" type="text" name="Notas_Internas" class="form-control" placeholder="Notas internas" autofocus>
-                </div>
-                <div class="form-group">
-                  <input id="fecha" type="date" name="Fecha_Cita" class="form-control" placeholder="Fecha de cita" autofocus>
-                </div>
-                <div class="form-group">
-                <input id="hora" type="time" name="Hora_Cita" placeholder="Hora de la cita">
-                </div>
-                <div class="md-form md-outline input-with-post-icon timepicker" twelvehour="true">
-  <input type="text" id="twelve-hour-clock" class="form-control" placeholder="Select time">
-  <label for="twelve-hour-clock">Twelve hour clock</label>
-  <i class="fas fa-envelope input-prefix"></i>
-</div>
-                <div class="modal-footer">
-                  <input type="submit" name="agregar_cita" class="btn btn-success" value="Agregar">
-                  <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>          
-                </div>   
-              </form>
-            </div>
-          </div>
+    <?php session_unset(); } ?>
+  <!-- FORMULARIO AÑADIR MASCOTA -->
+    <?php  
+      include("DB/conexion.php");
+      $sql="SELECT Num_Registro_Dueño,Celular,Nombre_Dueño from tabla_dueño";
+      $result=mysqli_query($con,$sql);
+    ?>
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Añadir Cita</h3>
         </div>
-
-        <!-- DETALLES CITA -->
-        <div class="modal fade" id="staticBackdrop2" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-          <div class="modal-header">
-                <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Detalles de la cita</h3>
-              </div>
-              <div class="modal-body text-left">
+        <form action="Añadir_Cita.php" method="POST">
+          <div class="form-group">
+            <select name="Num_Dueño" id="controlBuscador" style="width: 100%" >
+              <option disabled selected>Seleccione un Dueño</option>
+                <?php while ($ver=mysqli_fetch_row($result)) {?>
+              <option value="<?php echo $ver[0] ?>">
+                  <?php echo $ver[2] ?> - <?php echo $ver[1] ?> 
+              </option>
+              <?php  }?>
+            </select>
+          </div>
+          <div  id="select2lista" class="form-group">
+          </div>
+          <div class="form-group">
+            <select name="Tipo_Cita" placeholder="Tipo de cita">
+              <option disabled selected>Tipo de cita</option>
+              <option value="Peluqueria">Peluqueria</option>
+              <option value="Vacunacion">Vacunacion</option>
+              <option value="Adiestramiento">Adiestramiento</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input id="Notas_Internas" type="text" name="Notas_Internas" class="form-control" placeholder="Notas internas" autofocus>
+          </div>
+          <div class="form-group">
+            <input id="fecha" type="date" name="Fecha_Cita" class="form-control" placeholder="Fecha de cita" autofocus>
+          </div>
+          <div class="form-group">
+            <input id="hora" type="time" name="Hora_Cita" placeholder="Hora de la cita">
+          </div>
+          <div class="modal-footer">
+            <input type="submit" name="agregar_cita" class="btn btn-success" value="Agregar">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>          
+          </div>   
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- DETALLES CITA -->
+  <div class="modal fade" id="staticBackdrop2" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Detalles de la cita</h3>
+        </div>
+          <div class="modal-body text-left">
             <?php
-            include("DB/conexion.php");
-
-             $query="SELECT * FROM tabla_citas 
-             INNER JOIN tabla_dueño ON tabla_citas.Num_Dueño = tabla_dueño.Num_Registro_Dueño
-             INNER JOIN tabla_mascotas ON tabla_citas.Num_Mascota = tabla_mascotas.Num_Registro_Mascota";
-      $resultado= $con->query($query);
-      $row=$resultado->fetch_assoc();
-      ?>
-                <p>
-                  <b>Dueño:</b> <?php echo $row['Nombre_Dueño'];?><br>
-                  <b>Mascota:</b> <?php echo $row['Nombre_Mascota'];?><br>
-                  <b>Tipo de cita:</b> <?php echo $row['Tipo_Cita'];?><br>
-                  <b>Fecha:</b> <?php echo $row['Fecha_Cita'];?><br>
-                  <b>Hora:</b> <?php echo $row['Hora_Cita'];?><br>
-                  <b>Celular:</b> <?php echo $row['Cel_Dueño'];?><br>
-                  <b>Correo:</b> <?php echo $row['Correo'];?>        
-                </p>  
-              </div>
-
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar </button>
-              </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      
-
-
-        <!-- DATATABLE MASCOTA -->
-        <div class="datatable-responsive datatable-box">
-          <table id="Tabla_mascotas" class="table table-responsive table-sm non-top-border dt-responsive" cellspacing="0">
-            <thead>
-                <tr>
-                    <th>Mascota</th>
-                    <th>Dueño</th>
-                    <th>Celular</th>
-                    <th>Tipo</th>
-                    <th>Notas internas</th>        
-                    <th>Dia</th>
-                    <th>Hora</th>
-                    <th>Estado</th>
-                    <th>Acción</th>           
-                </tr>
-            </thead>
-            <tbody>
-            <?php  
               include("DB/conexion.php");
               $query="SELECT * FROM tabla_citas 
               INNER JOIN tabla_dueño ON tabla_citas.Num_Dueño = tabla_dueño.Num_Registro_Dueño
               INNER JOIN tabla_mascotas ON tabla_citas.Num_Mascota = tabla_mascotas.Num_Registro_Mascota";
               $resultado= $con->query($query);
-              while($mostrar=$resultado->fetch_assoc()){
+              $row=$resultado->fetch_assoc();
             ?>
-                <tr>
-                    <td><a id="hrefvista" href="Vista_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>"><?php echo $mostrar['Nombre_Mascota'] ?></a></td>
-                    <td><a id="hrefvista" href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
-                    <td><?php echo $mostrar['Cel_Dueño']?></td>
-                    <td><?php echo $mostrar['Tipo_Cita']?></td>
-                    <td><?php echo $mostrar['Notas_Internas']?></td>
-                    <td><?php echo $mostrar['Fecha_Cita']?></td>
-                    <td><?php echo $mostrar['Hora_Cita']?></td>
-                    <td><?php echo $mostrar['Estado_Cita']?></td>             
-                    <td>
-                    <a href="#" onclick="preguntar2(<?php echo $mostrar['Num_Registro_Cita']?>)" title="Completar cita" class="btn btn-warning">
-                        <i class="icofont-ui-check"></i>
-                      </a>
-                      <a href="Edit_Cita.php?Num_Registro_Cita=<?php echo $mostrar['Num_Registro_Cita']?>" title="Editar cita" class="btn btn-secondary">
-                        <i class="icofont-ui-edit"></i>
-                      </a>
-                      <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro_Cita']?>)" title="Eliminar cita" class="btn btn-danger">
-                         <i class="far fa-trash-alt"></i>
-                      </a>
-                      <a href="Vista_Cita.php?Num_Registro_Cita=<?php echo $mostrar['Num_Registro_Cita']?>" title="Ver detalles cita" class="btn btn-primary">
-                      <i class="icofont-eye-alt"></i>
-                      </a>
-                    </td>
-                </tr>
-                <?php
-                  } 
-                ?>   
-            </tbody>
-            <!-- <tfoot>
-                <tr>
-                    <th>Registro</th>
-                    <th>Dueño</th>
-                    <th>Mascota</th>
-                    <th>Raza</th>
-                    <th>Fecha Nac</th>
-                    <th>Sexo</th>
-                    <th>Acción</th>
-                </tr>
-            </tfoot> -->
-          </table>
-        </div>
+              <p>
+                <b>Dueño:</b> <?php echo $row['Nombre_Dueño'];?><br>
+                <b>Mascota:</b> <?php echo $row['Nombre_Mascota'];?><br>
+                <b>Tipo de cita:</b> <?php echo $row['Tipo_Cita'];?><br>
+                <b>Fecha:</b> <?php echo $row['Fecha_Cita'];?><br>
+                <b>Hora:</b> <?php echo $row['Hora_Cita'];?><br>
+                <b>Celular:</b> <?php echo $row['Cel_Dueño'];?><br>
+                <b>Correo:</b> <?php echo $row['Correo'];?>        
+              </p>  
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar </button>
+          </div>
       </div>
-    <footer class="main-footer">
-      <div class="float-right d-none d-sm-block">
-        <b>Servicios Caninos Casme.</b> 
-      </div>
-        <strong>Panel de administrador</a></strong> 
-    </footer>
+    </div>
+  </div>
+  <!-- DATATABLE MASCOTA -->
+  <div class="datatable-responsive datatable-box">
+    <table id="Tabla_mascotas" class="table table-responsive table-sm non-top-border dt-responsive" cellspacing="0">
+      <thead>
+          <tr>
+            <th>Mascota</th>
+            <th>Dueño</th>
+            <th>Celular</th>
+            <th>Tipo</th>
+            <th>Notas internas</th>        
+            <th>Dia</th>
+            <th>Hora</th>
+            <th>Estado</th>
+            <th>Acción</th>           
+          </tr>
+      </thead>
+      <tbody>
+        <?php  
+          include("DB/conexion.php");
+          $query="SELECT * FROM tabla_citas 
+          INNER JOIN tabla_dueño ON tabla_citas.Num_Dueño = tabla_dueño.Num_Registro_Dueño
+          INNER JOIN tabla_mascotas ON tabla_citas.Num_Mascota = tabla_mascotas.Num_Registro_Mascota";
+          $resultado= $con->query($query);
+          while($mostrar=$resultado->fetch_assoc()){
+        ?>
+          <tr>
+              <td><a id="hrefvista" href="Vista_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>"><?php echo $mostrar['Nombre_Mascota'] ?></a></td>
+              <td><a id="hrefvista" href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
+              <td><?php echo $mostrar['Cel_Dueño']?></td>
+              <td><?php echo $mostrar['Tipo_Cita']?></td>
+              <td><?php echo $mostrar['Notas_Internas']?></td>
+              <td><?php echo $mostrar['Fecha_Cita']?></td>
+              <td><?php echo $mostrar['Hora_Cita']?></td>
+              <td><?php echo $mostrar['Estado_Cita']?></td>             
+              <td>
+                <a href="#" onclick="preguntar2(<?php echo $mostrar['Num_Registro_Cita']?>)" title="Completar cita" class="btn btn-warning">
+                  <i class="icofont-ui-check"></i>
+                </a>
+                <a href="Edit_Cita.php?Num_Registro_Cita=<?php echo $mostrar['Num_Registro_Cita']?>" title="Editar cita" class="btn btn-secondary">
+                  <i class="icofont-ui-edit"></i>
+                </a>
+                <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro_Cita']?>)" title="Eliminar cita" class="btn btn-danger">
+                  <i class="far fa-trash-alt"></i>
+                </a>
+                <a href="Vista_Cita.php?Num_Registro_Cita=<?php echo $mostrar['Num_Registro_Cita']?>" title="Ver detalles cita" class="btn btn-primary">
+                  <i class="icofont-eye-alt"></i>
+                </a>
+              </td>
+          </tr>
+            <?php
+              } 
+            ?>   
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- FOOTER -->
+<footer class="main-footer">
+  <div class="float-right d-none d-sm-block">
+    <b>Servicios Caninos Casme.</b> 
+  </div>
+    <strong>Panel de administrador</a></strong> 
+</footer>
+
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
   </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
 <!-- jQuery -->
 <script src="../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
@@ -402,9 +374,6 @@ if (!isset($_SESSION['loggedin'])) {
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
   </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->

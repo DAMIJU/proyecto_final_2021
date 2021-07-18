@@ -89,16 +89,14 @@ if (!isset($_SESSION['loggedin'])) {
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <!-- <a href="../index.php" class="nav-link">Inicio</a> -->
-      </li>
+      <li class="nav-item d-none d-sm-inline-block"></li>  
     </ul>
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->      
       <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#exitModal">
-              <i class="icofont-exit" aria-hidden="true"></i> Salir
-          </a>
+        <a class="nav-link" data-toggle="modal" data-target="#exitModal">
+          <i class="icofont-exit" aria-hidden="true"></i> Salir
+        </a>
       </li>
     </ul>
   </nav>
@@ -106,190 +104,171 @@ if (!isset($_SESSION['loggedin'])) {
     <div class="sidebar">
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-        <img src="../assets/img/Logo.ico" rel="icon" class="brand-image img-circle elevation-4" style="opacity: .8">
+          <img src="../assets/img/Logo.ico" rel="icon" class="brand-image img-circle elevation-4" style="opacity: .8">
         </div>
         <div class="info">
-        <span class="brand-text font-weight-light" style="font-size:2.5vh"><?php echo $row['Apellidos_Usuario']?><br><?php echo $row['Nombre_Usuario']?></span>
+          <span class="brand-text font-weight-light" style="font-size:2.5vh"><?php echo $row['Apellidos_Usuario']?><br><?php echo $row['Nombre_Usuario']?></span>
         </div>
       </div>
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">       
-          <li class="nav-item menu-open">
-            <a href="Admin.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Inicio')">
-              <i class="nav-icon fa fa-dashboard"></i>
-              <p>
-                Inicio
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="Dueño.php" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
-              <p>
-                Dueño            
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="Mascota.php" class="nav-link">
-              <i class="nav-icon fas fa-dog"></i>
-              <p>
-                Mascota             
-              </p>
-            </a>     
-          </li>   
-          <li class="nav-item">
-            <a href="Citas.php" class="nav-link">
-              <i class="nav-icon fa fa-calendar-alt"></i>
-              <p>
-                Citas
-              </p>
-            </a>
-          </li>  
-          <li class="nav-item">
-            <a href="Configuracion.php" class="nav-link">
+        <li class="nav-item menu-open">
+          <a href="Admin.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Inicio')">
+            <i class="nav-icon fa fa-dashboard"></i>
+            <p>
+              Inicio
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="Dueño.php" class="nav-link">
+            <i class="nav-icon fas fa-users"></i>
+            <p>
+              Dueño            
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="Mascota.php" class="nav-link">
+            <i class="nav-icon fas fa-dog"></i>
+            <p>
+              Mascota             
+            </p>
+          </a>     
+        </li>   
+        <li class="nav-item">
+          <a href="Citas.php" class="nav-link">
+            <i class="nav-icon fa fa-calendar-alt"></i>
+            <p>
+              Citas
+            </p>
+          </a>
+        </li>  
+        <li class="nav-item">
+          <a href="Configuracion.php" class="nav-link">
             <i class="nav-icon fas fa-cogs"></i>
-              <p>
-                Configuración
-              </p>
-              <i class="fas fa-angle-left right"></i>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fas fa-bars nav-icon"></i>
-                  <p>Menú</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
+            <p>
+              Configuración
+            </p>
+            <i class="fas fa-angle-left right"></i>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-bars nav-icon"></i>
+                <p>Menú</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
                 <i class="fas fa-building nav-icon"></i>
-                  <p>Datos de la empresa</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
+                <p>Datos de la empresa</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
                 <i class="fas fa-photo-video nav-icon"></i>
-                  <p>Galería de imágenes</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!-- <div class="Footer">
-            <button class="btn btn-danger" onclick="location.href='#'">Cerrar sesión</button>
-          </div> -->
+                <p>Galería de imágenes</p>
+              </a>
+            </li>
+          </ul>
+        </li>
       </nav>
     </div>
   </aside>
 </div>
+<!-- MODAL PARA CERRAR SESIÓN -->
 <div class="modal fade" id="exitModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">¿Desea salir?</h3>
-              </div>
-              <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
-                            <div class="modal-footer">
-                                <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
-                                <a class="btn btn-raised btn-danger" href="logout.php">Cerrar Sesión</a>
-                            </div>
-            </div>
-          </div>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">¿Desea salir?</h3>
+      </div>
+      <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
+        <div class="modal-footer">
+          <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
+          <a class="btn btn-raised btn-danger" href="logout.php">Cerrar Sesión</a>
         </div>
-  <div class="content-wrapper">
-    <!-- Aqui va el contenido -->
-    <div class="content-header admin-panel">
-     
-       
-          
-           
-            <div class="text-center">
-  <h1>PANEL DE ADMINISTRADOR</h1>
-  <!-- <button class="btn btn-warning" id="" data-toggle="" data-target="">Cumpleaños</button> -->
     </div>
-       
-    </div>
+  </div>
+</div>
+<div class="content-wrapper">
+  <div class="content-header admin-panel">      
+    <div class="text-center">
+      <h1>PANEL DE ADMINISTRADOR</h1>
+    </div>   
+  </div>
     <div class="row row-admin">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>Dueño</h3>
-
-                <p>Registrar un dueño</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-user-plus"></i>
-              </div>
-              <a href="Dueño.php" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
+      <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-info">
+          <div class="inner">
+            <h3>Dueño</h3>
+            <p>Registrar un dueño</p>
           </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>Mascota<sup style="font-size: 20px"></sup></h3>
-
-                <p>Registrar mascota</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-paw"></i>
-              </div>
-              <a href="Mascota.php" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
+          <div class="icon">
+            <i class="fas fa-user-plus"></i>
           </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>Citas</h3>
-
-                <p>Añadir citas</p>
-              </div>
-              <div class="icon">
-                <i class="far fa-calendar-check"></i>
-              </div>
-              <a href="Citas.php" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>Configuración</h3>
-
-                <p>Configure su paginas</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-cog"></i>
-              </div>
-              <a href="#" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
+          <a href="Dueño.php" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
         </div>
-        <div class="wrapper2">
-        <h2 class="title">Lista de pendientes</h2>
-		<div class="inputFields">
+      </div>
+      <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-success">
+          <div class="inner">
+            <h3>Mascota<sup style="font-size: 20px"></sup></h3>
+            <p>Registrar mascota</p>
+          </div>
+          <div class="icon">
+            <i class="fas fa-paw"></i>
+          </div>
+          <a href="Mascota.php" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-warning">
+          <div class="inner">
+            <h3>Citas</h3>
+            <p>Añadir citas</p>
+          </div>
+          <div class="icon">
+            <i class="far fa-calendar-check"></i>
+          </div>
+          <a href="Citas.php" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-danger">
+          <div class="inner">
+            <h3>Configuración</h3>
+            <p>Configure su paginas</p>
+          </div>
+          <div class="icon">
+            <i class="fas fa-cog"></i>
+          </div>
+          <a href="#" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+    </div>
+  <div class="wrapper2">
+      <h2 class="title">Lista de pendientes</h2>
+    <div class="inputFields">
 			<input type="text" id="taskValue" placeholder="Ingrese un pendiente">
 			<button type="submit" id="addBtn" class="btn"><i class="fa fa-plus"></i></button>
 		</div>
 		<div class="content">
-			<ul id="tasks">
-				
-			</ul>
+			<ul id="tasks"></ul>		
 		</div>
 	</div>
-  </div>   
+</div>   
   <footer class="main-footer">
-      <div class="float-right d-none d-sm-block">
-        <b>Servicios Caninos Casme.</b> 
-      </div>
-        <strong>Panel de administrador</a></strong> 
-    </footer>
+    <div class="float-right d-none d-sm-block">
+      <b>Servicios Caninos Casme.</b> 
+    </div>
+      <strong>Panel de administrador</a></strong> 
+  </footer>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->

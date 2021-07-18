@@ -79,7 +79,7 @@ if (!isset($_SESSION['loggedin'])) {
 <div class="wrapper">
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-  <img class="animation__shake" src="../assets/img/Logo.png" alt="Casme Logo" height="90px" width="100px">
+    <img class="animation__shake" src="../assets/img/Logo.png" alt="Casme Logo" height="90px" width="100px">
   </div>
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -88,15 +88,13 @@ if (!isset($_SESSION['loggedin'])) {
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <!-- <a href="../index.php" class="nav-link">Inicio</a> -->
-      </li>
+      <li class="nav-item d-none d-sm-inline-block"></li> 
     </ul>
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->      
       <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
+        <a class="nav-link" data-toggle="modal" data-target="#exitModal">
+          <i class="icofont-exit" aria-hidden="true"></i> Salir
         </a>
       </li>
     </ul>
@@ -105,143 +103,156 @@ if (!isset($_SESSION['loggedin'])) {
     <div class="sidebar">
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-        <img src="../assets/img/Logo.ico" rel="icon" class="brand-image img-circle elevation-4" style="opacity: .8">
+          <img src="../assets/img/Logo.ico" rel="icon" class="brand-image img-circle elevation-4" style="opacity: .8">
         </div>
         <div class="info">
-        <span class="brand-text font-weight-light" style="font-size:2.5vh"><?php echo $row['Apellidos_Usuario']?><br><?php echo $row['Nombre_Usuario']?></span>
+          <span class="brand-text font-weight-light" style="font-size:2.5vh"><?php echo $row['Apellidos_Usuario']?><br><?php echo $row['Nombre_Usuario']?></span>
         </div>
       </div>
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">       
-          <li class="nav-item menu-open">
-            <a href="Admin.php" class="nav-link">
-              <i class="nav-icon fa fa-dashboard"></i>
-              <p>
-                Inicio
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="Dueño.php" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
-              <p>
-                Dueño            
-              </p>
-            </a>    
-          <li class="nav-item">
-            <a href="Mascota.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Mascota')">
-              <i class="nav-icon fas fa-dog"></i>
-              <p>
-                Mascota             
-              </p>
-            </a>     
-          </li>   
-          <li class="nav-item">
-            <a href="Citas.php" class="nav-link">
-              <i class="nav-icon fa fa-calendar-alt"></i>
-              <p>
-                Citas
-              </p>
-            </a>
-          </li>  
-          <li class="nav-item">
-            <a href="Configuracion.php" class="nav-link">
-            <i class="nav-icon fas fa-cogs"></i>
-              <p>
-                Configuración
-              </p>
-              <i class="fas fa-angle-left right"></i>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fas fa-bars nav-icon"></i>
-                  <p>Menú</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                <i class="fas fa-building nav-icon"></i>
-                  <p>Datos de la empresa</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                <i class="fas fa-photo-video nav-icon"></i>
-                  <p>Galería de imágenes</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!-- <div class="Footer">
-            <button class="btn btn-danger" onclick="location.href='#'">Cerrar sesión</button>
-          </div> -->
+        <li class="nav-item menu-open">
+          <a href="Admin.php" class="nav-link">
+            <i class="nav-icon fa fa-dashboard"></i>
+            <p>
+              Inicio
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="Dueño.php" class="nav-link">
+            <i class="nav-icon fas fa-users"></i>
+            <p>
+              Dueño            
+            </p>
+          </a>
+        </li>   
+        <li class="nav-item">
+          <a href="Mascota.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Mascota')">
+            <i class="nav-icon fas fa-dog"></i>
+            <p>
+              Mascota             
+            </p>
+          </a>     
+        </li>   
+        <li class="nav-item">
+          <a href="Citas.php" class="nav-link">
+            <i class="nav-icon fa fa-calendar-alt"></i>
+            <p>
+              Citas
+            </p>
+          </a>
+        </li>  
+        <li class="nav-item">
+          <a href="Configuracion.php" class="nav-link">
+          <i class="nav-icon fas fa-cogs"></i>
+            <p>
+              Configuración
+            </p>
+            <i class="fas fa-angle-left right"></i>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-bars nav-icon"></i>
+                <p>Menú</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+              <i class="fas fa-building nav-icon"></i>
+                <p>Datos de la empresa</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+              <i class="fas fa-photo-video nav-icon"></i>
+                <p>Galería de imágenes</p>
+              </a>
+            </li>
+          </ul>
+        </li>
       </nav>
     </div>
   </aside>
 </div>
+<!-- MODAL PARA CERRAR SESIÓN -->
+<div class="modal fade" id="exitModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">¿Desea salir?</h3>
+      </div>
+      <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
+        <div class="modal-footer">
+          <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
+          <a class="btn btn-raised btn-danger" href="logout.php">Cerrar Sesión</a>
+        </div>
+    </div>
+  </div>
+</div>
 <div class="content-wrapper">
-<?php
-include("DB/conexion.php");
+  <?php
+    include("DB/conexion.php");
 
-$Num_Historial_Cita = $_REQUEST['Num_Historial_Cita'];
-$query="SELECT * FROM historial_mascota
-WHERE Num_Historial_Cita='$Num_Historial_Cita'";
-$resultado= $con->query($query);
-$row=$resultado->fetch_assoc();
+    $Num_Historial_Cita = $_REQUEST['Num_Historial_Cita'];
+    $query="SELECT * FROM historial_mascota
+    WHERE Num_Historial_Cita='$Num_Historial_Cita'";
+    $resultado= $con->query($query);
+    $row=$resultado->fetch_assoc();
 
-if(isset($_POST['update'])){
-  
-  $Tipo_Cita = $_POST['Tipo_Cita'];
-  $Notas_Internas = $_POST['Notas_Internas'];
-  $Fecha_Cita = $_POST['Fecha_Cita'];
-  
-  $query="UPDATE historial_mascota SET Tipo_Cita='$Tipo_Cita', Notas_Internas='$Notas_Internas', Fecha_Cita='$Fecha_Cita' WHERE Num_Historial_Cita='$Num_Historial_Cita'";
-  $ResultadoEditMascota = $con->query($query);
+    if(isset($_POST['update'])){
+      
+      $Tipo_Cita = $_POST['Tipo_Cita'];
+      $Notas_Internas = $_POST['Notas_Internas'];
+      $Fecha_Cita = $_POST['Fecha_Cita'];
+      
+      $query="UPDATE historial_mascota SET Tipo_Cita='$Tipo_Cita', Notas_Internas='$Notas_Internas', Fecha_Cita='$Fecha_Cita' WHERE Num_Historial_Cita='$Num_Historial_Cita'";
+      $ResultadoEditMascota = $con->query($query);
 
-  if($ResultadoEditMascota){
-    echo "<script>alert('Los datos se han actualizado correctamente');window.location='Mascota.php'</script>";
-  }else{
-    echo "<script>alert('los datos no se han podido actualizar correctamente');</script>";
-  }
-}
-?>
-        <div class="container p-4">
-  <div class="row">
-    <div class="col-md-5 mx-auto">
-      <div class="card card-body" style="background-color: #2D92CB;">
-      <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Editando historial</h3>   
-      <form action="" method="POST">
-      <div class="form-group">
-                <select name="Tipo_Cita" placeholder="Tipo de cita">
+      if($ResultadoEditMascota){
+        echo "<script>alert('Los datos se han actualizado correctamente');window.location='Mascota.php'</script>";
+      }else{
+        echo "<script>alert('los datos no se han podido actualizar correctamente');</script>";
+      }
+    }
+  ?>
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-md-5 mx-auto">
+        <div class="card card-body" style="background-color: #2D92CB;">
+          <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Editando historial</h3>   
+          <form action="" method="POST">
+            <div class="form-group">
+              <select name="Tipo_Cita" placeholder="Tipo de cita">
                 <option value="<?php echo $row['Tipo_Cita']; ?>"><?php echo $row['Tipo_Cita']; ?> (ACTUAL)</option>
                 <option value="Peluqueria">Peluqueria</option>
                 <option value="Vacunacion">Vacunacion</option>
                 <option value="Adiestramiento">Adiestramiento</option>
-               </select>
-                </div>
-                <div class="form-group">
-                  <input id="Notas_Internas" type="text" name="Notas_Internas" class="form-control" value="<?php echo $row['Notas_Internas']; ?>" placeholder="Notas internas" autofocus>
-                </div>
-                <div class="form-group">
-                  <input id="fecha" type="date" name="Fecha_Cita" class="form-control" value="<?php echo $row['Fecha_Cita']; ?>" placeholder="Fecha de cita" autofocus>
-                </div>
+              </select>
+            </div>
+            <div class="form-group">
+              <input id="Notas_Internas" type="text" name="Notas_Internas" class="form-control" value="<?php echo $row['Notas_Internas']; ?>" placeholder="Notas internas" autofocus>
+            </div>
+            <div class="form-group">
+              <input id="fecha" type="date" name="Fecha_Cita" class="form-control" value="<?php echo $row['Fecha_Cita']; ?>" placeholder="Fecha de cita" autofocus>
+            </div>
             <div class="botones">
-            <button name="update" class="btn btn-success">Actualizar</button>
-            <a href="javascript: history.go(-1)" role="button" class="btn btn-danger">Cancelar</a>
-        </div>             
-      </form>
+              <button name="update" class="btn btn-success">Actualizar</button>
+              <a href="javascript: history.go(-1)" role="button" class="btn btn-danger">Cancelar</a>
+            </div>             
+          </form>
+        </div>
       </div>
     </div>
   </div>
 </div>
-</div>
-    <footer class="main-footer">
-      <div class="float-right d-none d-sm-block">
-        <b>Servicios Caninos Casme.</b> 
-      </div>
-        <strong>Panel de administrador</a></strong> 
-    </footer>
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Servicios Caninos Casme.</b> 
+    </div>
+      <strong>Panel de administrador</a></strong> 
+  </footer>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->

@@ -79,7 +79,7 @@ if (!isset($_SESSION['loggedin'])) {
 <div class="wrapper">
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-  <img class="animation__shake" src="../assets/img/Logo.png" alt="Casme Logo" height="90px" width="100px">
+    <img class="animation__shake" src="../assets/img/Logo.png" alt="Casme Logo" height="90px" width="100px">
   </div>
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -88,16 +88,14 @@ if (!isset($_SESSION['loggedin'])) {
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <!-- <a href="../index.php" class="nav-link">Inicio</a> -->
-      </li>
+      <li class="nav-item d-none d-sm-inline-block"></li>  
     </ul>
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->      
       <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#exitModal">
-              <i class="icofont-exit" aria-hidden="true"></i> Salir
-          </a>
+        <a class="nav-link" data-toggle="modal" data-target="#exitModal">
+          <i class="icofont-exit" aria-hidden="true"></i> Salir
+        </a>
       </li>
     </ul>
   </nav>
@@ -144,181 +142,163 @@ if (!isset($_SESSION['loggedin'])) {
               </p>
             </a>
           </li>  
-          <li class="nav-item">
-            <a href="Configuracion.php" class="nav-link">
-            <i class="nav-icon fas fa-cogs"></i>
-              <p>
-                Configuración
-              </p>
-              <i class="fas fa-angle-left right"></i>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fas fa-bars nav-icon"></i>
-                  <p>Menú</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                <i class="fas fa-building nav-icon"></i>
-                  <p>Datos de la empresa</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                <i class="fas fa-photo-video nav-icon"></i>
-                  <p>Galería de imágenes</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!-- <div class="Footer">
-            <button class="btn btn-danger" onclick="location.href='#'">Cerrar sesión</button>
-          </div> -->
+        <li class="nav-item">
+          <a href="Configuracion.php" class="nav-link">
+          <i class="nav-icon fas fa-cogs"></i>
+            <p>
+              Configuración
+            </p>
+            <i class="fas fa-angle-left right"></i>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-bars nav-icon"></i>
+                <p>Menú</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+              <i class="fas fa-building nav-icon"></i>
+                <p>Datos de la empresa</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+              <i class="fas fa-photo-video nav-icon"></i>
+                <p>Galería de imágenes</p>
+              </a>
+            </li>
+          </ul>
+        </li>
       </nav>
     </div>
   </aside>
 </div>
-                <div class="modal fade" id="exitModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">¿Desea salir?</h3>
-              </div>
-              <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
-                            <div class="modal-footer">
-                                <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
-                                <a class="btn btn-raised btn-danger" href="logout.php">Cerrar Sesión</a>
-                            </div>
-            </div>
-          </div>
-        </div>
-<div class="content-wrapper">
-    <div class="text-center">
-  <h1>MASCOTA</h1>
-  <button class="btn-add-mascota" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Mascota</button>
-  <button class="btn btn-warning" id="" data-toggle="" data-target="">Cumpleaños</button>
+<!-- MODAL PARA CERRAR SESIÓN -->
+<div class="modal fade" id="exitModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">¿Desea salir?</h3>
+      </div>
+        <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
+      <div class="modal-footer">
+        <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
+        <a class="btn btn-raised btn-danger" href="logout.php">Cerrar Sesión</a>
+      </div>
     </div>
-      <!-- MESSAGES -->
-      <?php if (isset($_SESSION['message'])) { ?>
+  </div>
+</div>
+<div class="content-wrapper">
+  <div class="text-center">
+    <h1>MASCOTA</h1>
+    <button class="btn-add-mascota" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Mascota</button>
+    <button class="btn btn-warning" id="" data-toggle="" data-target="">Cumpleaños</button>
+  </div>
+  <!-- MESSAGES -->
+    <?php if (isset($_SESSION['message'])) { ?>
       <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
         <?= $_SESSION['message']?>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <?php session_unset(); } ?>
-
-      <!-- FORMULARIO AÑADIR MASCOTA -->
-      <?php  
-              include("DB/conexion.php");
-              $sql="SELECT Num_Registro_Dueño,Celular,Nombre_Dueño from tabla_dueño";
-	            $result=mysqli_query($con,$sql);
-      ?>
-      <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Añadir Mascota</h3>
-              </div>
-              <form action="Añadir_Mascota.php" method="POST">
-                <div class="form-group">
-                 <select name="Registro_Dueño" id="controlBuscador" style="width: 100%" >
-                   <option disabled selected>Seleccione un Dueño</option>
-		               	<?php while ($ver=mysqli_fetch_row($result)) {?>
-		              	<option value="<?php echo $ver[0] ?>">
-			             	   <?php echo $ver[2] ?> - <?php echo $ver[1] ?> 
-			              </option>
-			          <?php  }?>
-                </select>
-                </div>
-                <div class="form-group">
-                  <input type="text" name="Nombre_Mascota" class="form-control" placeholder="Mascota" autofocus>
-                </div>
-                <div class="form-group">
-                <input type="text" name="Raza" class="form-control" placeholder="Raza" autofocus>
-                </div>
-                <div class="form-group">
-                  <input id="fecha" type="date" name="Fecha_Nac" class="form-control" placeholder="Fecha de nacimiento" autofocus>
-                </div>
-                <div class="form-group">
-                <select name="Sexo" placeholder="Sexo">
+    <?php session_unset(); } ?>
+  <!-- FORMULARIO AÑADIR MASCOTA -->
+    <?php  
+      include("DB/conexion.php");
+      $sql="SELECT Num_Registro_Dueño,Celular,Nombre_Dueño from tabla_dueño";
+      $result=mysqli_query($con,$sql);
+    ?>
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Añadir Mascota</h3>
+        </div>
+          <form action="Añadir_Mascota.php" method="POST">
+            <div class="form-group">
+              <select name="Registro_Dueño" id="controlBuscador" style="width: 100%" >
+                <option disabled selected>Seleccione un Dueño</option>
+                <?php while ($ver=mysqli_fetch_row($result)) {?>
+                <option value="<?php echo $ver[0] ?>">
+                  <?php echo $ver[2] ?> - <?php echo $ver[1] ?> 
+                </option>
+                <?php  }?>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="text" name="Nombre_Mascota" class="form-control" placeholder="Mascota" autofocus>
+            </div>
+            <div class="form-group">
+              <input type="text" name="Raza" class="form-control" placeholder="Raza" autofocus>
+            </div>
+            <div class="form-group">
+              <input id="fecha" type="date" name="Fecha_Nac" class="form-control" placeholder="Fecha de nacimiento" autofocus>
+            </div>
+            <div class="form-group">
+              <select name="Sexo" placeholder="Sexo">
                 <option disabled selected>Seleccione sexo</option>
                 <option value="Macho">Macho</option>
                 <option value="Hembra">Hembra</option>
-               </select>
-                </div>
-               <!--  <div class="form-group">
-                <input type="date" name="Fecha_Registro_Mascota" class="form-control" placeholder="Fecha de registro" autofocus>
-                </div> -->
-                <div class="modal-footer">
-                  <input type="submit" name="Agregar_Mascota" class="btn btn-success" value="Agregar">
-                  <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>          
-                </div>   
-              </form>
+              </select>
             </div>
-          </div>
-        </div>
-        <!-- DATATABLE MASCOTA -->
-        <div class="datatable-responsive datatable-box">
-          <table id="Tabla_mascotas" class="table table-responsive table-sm non-top-border dt-responsive" cellspacing="0">
-            <thead>
-                <tr>
-                    <th>Registro</th>
-                    <th>Mascota</th>
-                    <th>Dueño</th>
-                    <th>Celular</th>         
-                    <th>Raza</th>
-                    <th>Sexo</th>
-                    <th>Acción</th>             
-                </tr>
-            </thead>
-            <tbody>
-            <?php  
-              include("DB/conexion.php");
-              $query="SELECT * FROM tabla_mascotas INNER JOIN tabla_dueño ON tabla_mascotas.Registro_Dueño = tabla_dueño.Num_Registro_Dueño";
-              $resultado= $con->query($query);
-              while($mostrar=$resultado->fetch_assoc()){
-
-            ?>
-                <tr>
-                    <td><?php echo $mostrar['Num_Registro_Mascota']?></td>
-                    <td><a id="hrefvista" href="Vista_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>"><?php echo $mostrar['Nombre_Mascota'] ?></a></td>
-                    <td><a id="hrefvista" href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
-                    <td><?php echo $mostrar['Celular']?></td>
-                    <td><?php echo $mostrar['Raza']?></td>
-                    <td><?php echo $mostrar['Sexo']?></td>          
-                    <td>
-                      <a href="Edit_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>" title="Editar mascota" class="btn btn-secondary">
-                        <i class="icofont-ui-edit"></i>
-                      </a>
-                      <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro_Mascota']?>)" title="Eliminar mascota" class="btn btn-danger">
-                         <i class="far fa-trash-alt"></i>
-                      </a>
-                      <a href="Vista_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>" title="Ver detalles de mascota" class="btn btn-primary">
-                      <i class="icofont-eye-alt"></i>
-                      </a>
-                    </td>
-                </tr>
-                <?php
-                  } 
-                ?>   
-            </tbody>
-            <!-- <tfoot>
-                <tr>
-                    <th>Registro</th>
-                    <th>Dueño</th>
-                    <th>Mascota</th>
-                    <th>Raza</th>
-                    <th>Fecha Nac</th>
-                    <th>Sexo</th>
-                    <th>Acción</th>
-                </tr>
-            </tfoot> -->
-          </table>
+            <div class="modal-footer">
+              <input type="submit" name="Agregar_Mascota" class="btn btn-success" value="Agregar">
+              <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>          
+            </div>   
+          </form>
         </div>
       </div>
+    </div>
+  <!-- DATATABLE MASCOTA -->
+  <div class="datatable-responsive datatable-box">
+    <table id="Tabla_mascotas" class="table table-responsive table-sm non-top-border dt-responsive" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Registro</th>
+          <th>Mascota</th>
+          <th>Dueño</th>
+          <th>Celular</th>         
+          <th>Raza</th>
+          <th>Sexo</th>
+          <th>Acción</th>             
+        </tr>
+      </thead>
+      <tbody>
+        <?php  
+          include("DB/conexion.php");
+          $query="SELECT * FROM tabla_mascotas INNER JOIN tabla_dueño ON tabla_mascotas.Registro_Dueño = tabla_dueño.Num_Registro_Dueño";
+          $resultado= $con->query($query);
+          while($mostrar=$resultado->fetch_assoc()){
+        ?>
+          <tr>
+            <td><?php echo $mostrar['Num_Registro_Mascota']?></td>
+            <td><a id="hrefvista" href="Vista_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>"><?php echo $mostrar['Nombre_Mascota'] ?></a></td>
+            <td><a id="hrefvista" href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
+            <td><?php echo $mostrar['Celular']?></td>
+            <td><?php echo $mostrar['Raza']?></td>
+            <td><?php echo $mostrar['Sexo']?></td>          
+            <td>
+              <a href="Edit_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>" title="Editar mascota" class="btn btn-secondary">
+                <i class="icofont-ui-edit"></i>
+              </a>
+              <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro_Mascota']?>)" title="Eliminar mascota" class="btn btn-danger">
+                <i class="far fa-trash-alt"></i>
+              </a>
+              <a href="Vista_Mascota.php?Num_Registro_Mascota=<?php echo $mostrar['Num_Registro_Mascota']?>" title="Ver detalles de mascota" class="btn btn-primary">
+                <i class="icofont-eye-alt"></i>
+              </a>
+            </td>
+          </tr>
+        <?php
+          } 
+        ?>   
+      </tbody>
+    </table>
+  </div>
+</div>
     <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
         <b>Servicios Caninos Casme.</b> 

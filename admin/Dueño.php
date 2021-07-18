@@ -77,41 +77,40 @@ if (!isset($_SESSION['loggedin'])) {
   <link rel="stylesheet" type="text/css" href="select2/select2.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
-  <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
-  <img class="animation__shake" src="../assets/img/Logo.png" alt="Casme Logo" height="90px" width="100px">
-  </div>
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <!-- <a href="../index.php" class="nav-link">Inicio</a> -->
-      </li>
-    </ul>
-    <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->      
-      <li class="nav-item">
+  <div class="wrapper">
+    <!-- Preloader -->
+    <div class="preloader flex-column justify-content-center align-items-center">
+      <img class="animation__shake" src="../assets/img/Logo.png" alt="Casme Logo" height="90px" width="100px">
+    </div>
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <!-- Navbar Search -->      
+        <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exitModal">
-              <i class="icofont-exit" aria-hidden="true"></i> Salir
+            <i class="icofont-exit" aria-hidden="true"></i> Salir
           </a>
-      </li>
-    </ul>
-  </nav>
+        </li>
+      </ul>
+    </nav>
   <aside class="main-sidebar sidebar-dark-primary elevation-4" style="color:white">  
     <div class="sidebar">
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-        <img src="../assets/img/Logo.ico" rel="icon" class="brand-image img-circle elevation-4" style="opacity: .8">
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+          <img src="../assets/img/Logo.ico" rel="icon" class="brand-image img-circle elevation-4" style="opacity: .8">
+          </div>
+          <div class="info">
+          <span class="brand-text font-weight-light" style="font-size:2.5vh"><?php echo $row['Apellidos_Usuario']?><br><?php echo $row['Nombre_Usuario']?></span>
+          </div>
         </div>
-        <div class="info">
-        <span class="brand-text font-weight-light" style="font-size:2.5vh"><?php echo $row['Apellidos_Usuario']?><br><?php echo $row['Nombre_Usuario']?></span>
-        </div>
-      </div>
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">       
           <li class="nav-item menu-open">
@@ -123,173 +122,166 @@ if (!isset($_SESSION['loggedin'])) {
             </a>
           </li>
           <li class="nav-item">
-            <a href="Dueño.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Dueño')"">
-              <i class="nav-icon fas fa-users"></i>
-              <p>
-                Dueño            
-              </p>
-            </a>    
-          <li class="nav-item">
-            <a href="Mascota.php" class="nav-link">
-              <i class="nav-icon fas fa-dog"></i>
-              <p>
-                Mascota             
-              </p>
-            </a>     
-          </li>   
-          <li class="nav-item">
-            <a href="Citas.php" class="nav-link">
-              <i class="nav-icon fa fa-calendar-alt"></i>
-              <p>
-                Citas
-              </p>
-            </a>
-          </li>  
-          <li class="nav-item">
-            <a href="Configuracion.php" class="nav-link">
-            <i class="nav-icon fas fa-cogs"></i>
-              <p>
-                Configuración
-              </p>
-              <i class="fas fa-angle-left right"></i>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fas fa-bars nav-icon"></i>
-                  <p>Menú</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                <i class="fas fa-building nav-icon"></i>
-                  <p>Datos de la empresa</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                <i class="fas fa-photo-video nav-icon"></i>
-                  <p>Galería de imágenes</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!-- <div class="Footer">
-            <button class="btn btn-danger" onclick="location.href='#'">Cerrar sesión</button>
-          </div> -->
+          <a href="Dueño.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Dueño')"">
+            <i class="nav-icon fas fa-users"></i>
+            <p>
+              Dueño            
+            </p>
+          </a>    
+        <li class="nav-item">
+          <a href="Mascota.php" class="nav-link">
+            <i class="nav-icon fas fa-dog"></i>
+            <p>
+              Mascota             
+            </p>
+          </a>     
+        </li>   
+        <li class="nav-item">
+          <a href="Citas.php" class="nav-link">
+            <i class="nav-icon fa fa-calendar-alt"></i>
+            <p>
+              Citas
+            </p>
+          </a>
+        </li>  
+        <li class="nav-item">
+          <a href="Configuracion.php" class="nav-link">
+          <i class="nav-icon fas fa-cogs"></i>
+            <p>
+              Configuración
+            </p>
+            <i class="fas fa-angle-left right"></i>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-bars nav-icon"></i>
+                <p>Menú</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+              <i class="fas fa-building nav-icon"></i>
+                <p>Datos de la empresa</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+              <i class="fas fa-photo-video nav-icon"></i>
+                <p>Galería de imágenes</p>
+              </a>
+            </li>
+          </ul>
+        </li>
       </nav>
     </div>
   </aside>
 </div>
+<!-- MODAL PARA CERRAR SESIÓN -->
 <div class="modal fade" id="exitModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">¿Desea salir?</h3>
-              </div>
-              <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
-                            <div class="modal-footer">
-                                <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
-                                <a class="btn btn-raised btn-danger" href="logout.php">Cerrar Sesión</a>
-                            </div>
-            </div>
-          </div>
-        </div>
-  </div>
-  <div class="content-wrapper">
-  <div class="text-center">
-  <h1>DUEÑO</h1>
-  <button class="btn-add-dueño" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Dueño</button>
-  <button class="btn btn-warning" id="" data-toggle="" data-target="">Info</button>
-    </div>
-      <!-- MESSAGES -->
-      <?php if (isset($_SESSION['message'])) { ?>
-      <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
-        <?= $_SESSION['message']?>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <?php session_unset(); } ?>
-
-      <!-- FORMULARIO AÑADIR DUEÑO -->
-      <?php  
-              include("DB/conexion.php");
-              $sql="SELECT * from tabla_localidad";
-	            $result=mysqli_query($con,$sql);
-      ?>
-<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Añadir Dueño</h3>           
+        <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">¿Desea salir?</h3>
       </div>
-        <form action="Añadir_Dueño.php" method="POST">
-          <div class="form-group">
-            <input type="text" name="Celular" class="form-control" placeholder="Celular" autofocus>
-          </div>
-          <div class="form-group">
-          <input type="text" name="Nombre_Dueño" class="form-control" placeholder="Nombre" autofocus>
-          </div>
-          <div class="form-group">
-          <input type="text" name="Telefono_Fijo" class="form-control" placeholder="Telefono FIjo" autofocus>
-          </div>
-          <div class="form-group">
-            <input type="text" name="Dirección" class="form-control" placeholder="Dirección" autofocus>
-          </div>
-          <div class="form-group">
-                 <select name="Ciudad" id="controlBuscador" style="width: 100%">
-                   <option disabled selected>Seleccione localidad</option>
-		               	<?php while ($ver=mysqli_fetch_row($result)) {?>
-		              	<option value="<?php echo $ver[1] ?>">
-			             	    <?php echo $ver[1] ?>
-			              </option>
-			          <?php  }?>
-                </select>
-                </div>
-          <div class="form-group">
-            <input type="text" name="Correo" class="form-control" placeholder="Correo" autofocus>
-          </div>
-          <!-- <div class="form-group">
-            <input type="date" name="Fecha_Registro_Dueño" class="form-control" placeholder="Fecha_Registro" autofocus>
-          </div> -->
-          <div class="modal-footer">
-            <input type="submit" name="agregar_dueño" class="btn btn-success" value="Agregar">
-            <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
-          </div>
-        </form>
+      <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
+      <div class="modal-footer">
+        <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
+        <a class="btn btn-raised btn-danger" href="logout.php">Cerrar Sesión</a>
       </div>
     </div>
   </div>
-  
+</div>
+<div class="content-wrapper">
+  <div class="text-center">
+    <h1>DUEÑO</h1>
+    <button class="btn-add-dueño" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Dueño</button>
+    <button class="btn btn-warning" id="" data-toggle="" data-target="">Info</button>
+  </div> 
+  <!-- MESSAGES -->
+    <?php if (isset($_SESSION['message'])) { ?>
+    <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
+      <?= $_SESSION['message']?>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <?php session_unset(); } ?>
+  <!-- FORMULARIO AÑADIR DUEÑO -->
+    <?php  
+      include("DB/conexion.php");
+      $sql="SELECT * from tabla_localidad";
+      $result=mysqli_query($con,$sql);
+    ?>
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Añadir Dueño</h3>           
+        </div>
+          <form action="Añadir_Dueño.php" method="POST">
+            <div class="form-group">
+              <input type="text" name="Celular" class="form-control" placeholder="Celular" autofocus>
+            </div>
+            <div class="form-group">
+              <input type="text" name="Nombre_Dueño" class="form-control" placeholder="Nombre" autofocus>
+            </div>
+            <div class="form-group">
+              <input type="text" name="Telefono_Fijo" class="form-control" placeholder="Telefono FIjo" autofocus>
+            </div>
+            <div class="form-group">
+              <input type="text" name="Dirección" class="form-control" placeholder="Dirección" autofocus>
+            </div>
+            <div class="form-group">
+              <select name="Ciudad" id="controlBuscador" style="width: 100%">
+                <option disabled selected>Seleccione localidad</option>
+                  <?php while ($ver=mysqli_fetch_row($result)) {?>
+                    <option value="<?php echo $ver[1] ?>">
+                      <?php echo $ver[1] ?>
+                    </option>
+                  <?php  }?>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="text" name="Correo" class="form-control" placeholder="Correo" autofocus>
+            </div>
+            <div class="modal-footer">
+              <input type="submit" name="agregar_dueño" class="btn btn-success" value="Agregar">
+              <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
+<!-- DATATABLE DUEÑO -->
   <div class="datatable-responsive datatable-box">
-  <table id="dueño" class="table table-responsive table-sm non-top-border " width="100%" cellspacing="0">
-        <thead>
-            <tr>       
-                <th>Celular</th>
-                <th>Nombre</th>
-                <th>Telefono fijo</th>
-                <th>Dirección</th>
-                <th>Ciudad</th>
-                <th>Correo</th>
-                <th>Acción</th>                 
-            </tr>
-        </thead>
-        <tbody>
+    <table id="dueño" class="table table-responsive table-sm non-top-border " width="100%" cellspacing="0">
+      <thead>
+          <tr>       
+            <th>Celular</th>
+            <th>Nombre</th>
+            <th>Telefono fijo</th>
+            <th>Dirección</th>
+            <th>Ciudad</th>
+            <th>Correo</th>
+            <th>Acción</th>                 
+          </tr>
+      </thead>
+      <tbody>
         <?php  
           include("DB/conexion.php");
           $query="SELECT * FROM tabla_dueño";
           $resultado= $con->query($query);
           while($mostrar=$resultado->fetch_assoc()){
         ?>   
-            <tr>            
-                <td><?php echo $mostrar['Celular'] ?></td>
-                <td><a id="hrefvista" href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
-                <td><?php echo $mostrar['Telefono_Fijo'] ?></td>
-                <td><?php echo $mostrar['Dirección'] ?></td>
-                <td><?php echo $mostrar['Ciudad'] ?></td>
-                <td><?php echo $mostrar['Correo'] ?></td>  
-                <td>
+          <tr>            
+            <td><?php echo $mostrar['Celular'] ?></td>
+            <td><a id="hrefvista" href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>"><?php echo $mostrar['Nombre_Dueño'] ?></a></td>
+            <td><?php echo $mostrar['Telefono_Fijo'] ?></td>
+            <td><?php echo $mostrar['Dirección'] ?></td>
+            <td><?php echo $mostrar['Ciudad'] ?></td>
+            <td><?php echo $mostrar['Correo'] ?></td>  
+            <td>
               <a href="Edit_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>" title="Editar dueño" class="btn btn-secondary">
                 <i class="icofont-ui-edit"></i>
               </a>
@@ -297,27 +289,14 @@ if (!isset($_SESSION['loggedin'])) {
                 <i class="far fa-trash-alt"></i>
               </a>
               <a href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>" title="Ver detalles dueño" class="btn btn-primary">
-              <i class="icofont-eye-alt"></i>
+                <i class="icofont-eye-alt"></i>
               </a>
-               </td>
-            </tr>
-            <?php
-              }
-            ?>   
-        </tbody>
-        <!-- <tfoot>
-            <tr>
-                <th>Doc</th>
-                <th>Nombre</th>
-                <th>Celular</th>
-                <th>Telefono_Fijo</th>
-                <th>Dirección</th>
-                <th>Ciudad</th>
-                <th>Correo</th>
-                <th>Fecha_Registro</th>  
-                <th>Acción</th>        
-            </tr>
-      </tfoot> -->
+            </td>
+          </tr>
+          <?php
+            }
+          ?>   
+      </tbody>
     </table>
   </div>  
 </div> 

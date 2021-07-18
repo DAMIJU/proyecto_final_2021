@@ -87,16 +87,14 @@ if (!isset($_SESSION['loggedin'])) {
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <!-- <a href="../index.php" class="nav-link">Inicio</a> -->
-      </li>
+      <li class="nav-item d-none d-sm-inline-block"></li>   
     </ul>
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->      
       <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#exitModal">
-              <i class="icofont-exit" aria-hidden="true"></i> Salir
-          </a>
+        <a class="nav-link" data-toggle="modal" data-target="#exitModal">
+          <i class="icofont-exit" aria-hidden="true"></i> Salir
+        </a>
       </li>
     </ul>
   </nav>
@@ -104,221 +102,212 @@ if (!isset($_SESSION['loggedin'])) {
     <div class="sidebar">
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-        <img src="../assets/img/Logo.ico" rel="icon" class="brand-image img-circle elevation-4" style="opacity: .8">
+          <img src="../assets/img/Logo.ico" rel="icon" class="brand-image img-circle elevation-4" style="opacity: .8">
         </div>
         <div class="info">
-        <span class="brand-text font-weight-light" style="font-size:2.5vh"><?php echo $row['Apellidos_Usuario']?><br><?php echo $row['Nombre_Usuario']?></span>
+          <span class="brand-text font-weight-light" style="font-size:2.5vh"><?php echo $row['Apellidos_Usuario']?><br><?php echo $row['Nombre_Usuario']?></span>
         </div>
       </div>
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">       
-          <li class="nav-item menu-open">
-            <a href="Admin.php" class="nav-link">
-              <i class="nav-icon fa fa-dashboard"></i>
-              <p>
-                Inicio
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="Dueño.php" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
-              <p>
-                Dueño            
-              </p>
-            </a>    
-          <li class="nav-item">
-            <a href="Mascota.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Vista Mascota')">
-              <i class="nav-icon fas fa-dog"></i>
-              <p>
-                Mascota             
-              </p>
-            </a>     
-          </li>   
-          <li class="nav-item">
-            <a href="Citas.php" class="nav-link">
-              <i class="nav-icon fa fa-calendar-alt"></i>
-              <p>
-                Citas
-              </p>
-            </a>
-          </li>  
-          <li class="nav-item">
-            <a href="Configuracion.php" class="nav-link">
-            <i class="nav-icon fas fa-cogs"></i>
-              <p>
-                Configuración
-              </p>
-              <i class="fas fa-angle-left right"></i>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fas fa-bars nav-icon"></i>
-                  <p>Menú</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                <i class="fas fa-building nav-icon"></i>
-                  <p>Datos de la empresa</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                <i class="fas fa-photo-video nav-icon"></i>
-                  <p>Galería de imágenes</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!-- <div class="Footer">
-            <button class="btn btn-danger" onclick="location.href='#'">Cerrar sesión</button>
-          </div> -->
+        <li class="nav-item menu-open">
+          <a href="Admin.php" class="nav-link">
+            <i class="nav-icon fa fa-dashboard"></i>
+            <p>
+              Inicio
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="Dueño.php" class="nav-link">
+            <i class="nav-icon fas fa-users"></i>
+            <p>
+              Dueño            
+            </p>
+          </a>
+        </li>  
+        <li class="nav-item">
+          <a href="Mascota.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Vista Mascota')">
+            <i class="nav-icon fas fa-dog"></i>
+            <p>
+              Mascota             
+            </p>
+          </a>     
+        </li>   
+        <li class="nav-item">
+          <a href="Citas.php" class="nav-link">
+            <i class="nav-icon fa fa-calendar-alt"></i>
+            <p>
+              Citas
+            </p>
+          </a>
+        </li>  
+        <li class="nav-item">
+          <a href="Configuracion.php" class="nav-link">
+          <i class="nav-icon fas fa-cogs"></i>
+            <p>
+              Configuración
+            </p>
+            <i class="fas fa-angle-left right"></i>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-bars nav-icon"></i>
+                <p>Menú</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+              <i class="fas fa-building nav-icon"></i>
+                <p>Datos de la empresa</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+              <i class="fas fa-photo-video nav-icon"></i>
+                <p>Galería de imágenes</p>
+              </a>
+            </li>
+          </ul>
+        </li>
       </nav>
     </div>
   </aside>
 </div>
+<!-- MODAL PARA CERRAR SESIÓN -->
 <div class="modal fade" id="exitModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">¿Desea salir?</h3>
-              </div>
-              <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
-                            <div class="modal-footer">
-                                <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
-                                <a class="btn btn-raised btn-danger" href="logout.php">Cerrar Sesión</a>
-                            </div>
-            </div>
-          </div>
-        </div>
-  <div class="content-wrapper">
-      <!-- MESSAGES -->
-      <?php if (isset($_SESSION['message'])) { ?>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">¿Desea salir?</h3>
+      </div>
+      <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
+      <div class="modal-footer">
+        <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
+        <a class="btn btn-raised btn-danger" href="logout.php">Cerrar Sesión</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content-wrapper">
+    <!-- MESSAGES -->
+    <?php if (isset($_SESSION['message'])) { ?>
       <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
         <?= $_SESSION['message']?>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <?php session_unset(); } ?>
-
-      <!-- FORMULARIO AÑADIR DUEÑO -->
-      
-      <?php
+    <?php session_unset(); } ?>
+    <!-- FORMULARIO AÑADIR DUEÑO -->
+    <?php
       include("DB/conexion.php");
-
       $Num_Registro_Mascota = $_REQUEST['Num_Registro_Mascota'];
-      
       $query="SELECT * FROM tabla_mascotas INNER JOIN tabla_dueño ON tabla_mascotas.Registro_Dueño = tabla_dueño.Num_Registro_Dueño WHERE Num_Registro_Mascota='$Num_Registro_Mascota'";
       $resultado= $con->query($query);
       $row=$resultado->fetch_assoc();
-      ?>
-      <div class="text-center">
-  <h1>Datos de <?php echo $row['Nombre_Mascota']; ?></h1>
-      </div>
+    ?>
+    <div class="text-center">
+      <h1>Datos de <?php echo $row['Nombre_Mascota']; ?></h1>
+    </div>
   <div class="row" id="Vista">
-        <div class="col-md">
-            <div class="section-box">
+    <div class="col-md">
+      <div class="section-box">
         <div class="table-responsive col-sm">
-            <table class="table table-sm  non-top-border">
+          <table class="table table-sm  non-top-border">
             <tbody>
-                    <tr>
-                        <th>Registro</th>
-                        <td> <?php echo $row['Num_Registro_Mascota']; ?></td>
-                    </tr>
-                                    <tr>
-                    <th>Mascota</th>
-                    <td>
-                      <?php echo $row['Nombre_Mascota']; ?>
-                                                </td>
-                    <tr>
-                        <th>Dueño</th>
-                        <td><a id="hrefvista" href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $row['Num_Registro_Dueño']?>"><?php echo $row['Nombre_Dueño'] ?></a></td>
-                    </tr>
-
-                    <tr>
-                        <th>Raza</th>
-                        <td><?php echo $row['Raza']; ?></td>
-                    </tr>
-                    <tr>
-                        <th>Fecha de nacimiento</th>
-                        <td><?php echo $row['Fecha_Nac']; ?></td>
-                    </tr>
-                    <tr>
-                        <th>Sexo</th>
-                        <td><?php echo $row['Sexo']; ?></td>
-                    </tr>
-                    <tr>
-                        <th>Fecha de registro</th>
-                        <td><?php echo $row['Fecha_Registro_Mascota']; ?></td>
-                    </tr>
+              <tr>
+                <th>Registro</th>
+                <td> <?php echo $row['Num_Registro_Mascota']; ?></td>
+              </tr>
+              <tr>
+                <th>Mascota</th>    
+                <td><?php echo $row['Nombre_Mascota']; ?></td> 
+              </tr>
+              <tr>
+                <th>Dueño</th>
+                <td><a id="hrefvista" href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $row['Num_Registro_Dueño']?>"><?php echo $row['Nombre_Dueño'] ?></a></td>
+              </tr>
+              <tr>
+                <th>Raza</th>
+                <td><?php echo $row['Raza']; ?></td>
+              </tr>
+              <tr>
+                <th>Fecha de nacimiento</th>
+                <td><?php echo $row['Fecha_Nac']; ?></td>
+              </tr>
+              <tr>
+                <th>Sexo</th>
+                <td><?php echo $row['Sexo']; ?></td>
+              </tr>
+              <tr>
+                <th>Fecha de registro</th>
+                <td><?php echo $row['Fecha_Registro_Mascota']; ?></td>
+              </tr>
             </tbody>
-            </table>
+          </table>
         </div>
-    </div>             
-        </div>
-      </div>
-      <div class="botones">
-            <a href="Edit_Mascota.php?Num_Registro_Mascota=<?php echo $row['Num_Registro_Mascota']?>" class="btn btn-success">Editar</a>
-            <a href="#" onclick="preguntar(<?php echo $row['Num_Registro_Mascota']?>)" class="btn btn-danger">Eliminar</a>
-            <a href="javascript: history.go(-1)" role="button" class="btn btn-primary">Volver</a>
+      </div>             
+    </div>
   </div>
-  <div class="text-center">
-  <h1> Historial</h1>
-      </div>
-      <div class="row" id="Vista2">
-        <div class="col-md">
-            <div class="section-box">
+    <div class="botones">
+      <a href="Edit_Mascota.php?Num_Registro_Mascota=<?php echo $row['Num_Registro_Mascota']?>" class="btn btn-success">Editar</a>
+      <a href="#" onclick="preguntar(<?php echo $row['Num_Registro_Mascota']?>)" class="btn btn-danger">Eliminar</a>
+      <a href="javascript: history.go(-1)" role="button" class="btn btn-primary">Volver</a>
+    </div>
+    <div class="text-center">
+      <h1> Historial</h1>
+    </div>
+  <div class="row" id="Vista2">
+    <div class="col-md">
+      <div class="section-box">
         <div class="table-responsive col-sm">
-            <table class="table table-sm  non-top-border" id="Intento">      
-                <!-- <h3>Sus Mascotas</h3> -->
-        <thead>
-            <tr>                  
+          <table class="table table-sm  non-top-border" id="Intento">      
+            <thead>
+              <tr>                  
                 <th>Tipo de cita</th>
                 <th>Notas internas</th>  
                 <th>Fecha</th>    
-                <th>Acción</th>
-                       
-            </tr>
-        </thead>
-        <tbody>
-          <?php  
-          include("DB/conexion.php");
-          $query2="SELECT * FROM historial_mascota
-          INNER JOIN tabla_dueño ON historial_mascota.Num_Dueño = tabla_dueño.Num_Registro_Dueño
-          INNER JOIN tabla_mascotas ON historial_mascota.Num_Mascota = tabla_mascotas.Num_Registro_Mascota WHERE Num_Mascota = $Num_Registro_Mascota";
-          $resultado2= $con->query($query2);
-          while($mostrar=$resultado2->fetch_assoc()){
-          ?>   
-            <tr>       
-              <td><?php echo $mostrar['Tipo_Cita'];?></td>
-              <td><?php echo $mostrar['Notas_Internas'];?></td>
-              <td><?php echo $mostrar['Fecha_Cita'];?></td>      
-              <td>
-                      <a id="a_delete" href="#" onclick="preguntar(<?php echo $mostrar['Num_Historial_Cita']?>)" title="Eliminar registro">
-                          Eliminar
-                      </a> /
-                      <a id="a_edit" href="Edit_Historial.php?Num_Historial_Cita=<?php echo $mostrar['Num_Historial_Cita']?>" title="Editar registro">Editar</a>
-                    </td>
-            </tr>
-            <?php
-              }
-            ?>   
-        </tbody>
-            </table>
-                </div>
-            </div>
+                <th>Acción</th>          
+              </tr>
+            </thead>
+            <tbody>
+              <?php  
+                include("DB/conexion.php");
+                $query2="SELECT * FROM historial_mascota
+                INNER JOIN tabla_dueño ON historial_mascota.Num_Dueño = tabla_dueño.Num_Registro_Dueño
+                INNER JOIN tabla_mascotas ON historial_mascota.Num_Mascota = tabla_mascotas.Num_Registro_Mascota WHERE Num_Mascota = $Num_Registro_Mascota";
+                $resultado2= $con->query($query2);
+                while($mostrar=$resultado2->fetch_assoc()){
+              ?>   
+                <tr>       
+                  <td><?php echo $mostrar['Tipo_Cita'];?></td>
+                  <td><?php echo $mostrar['Notas_Internas'];?></td>
+                  <td><?php echo $mostrar['Fecha_Cita'];?></td>      
+                  <td>
+                    <a id="a_delete" href="#" onclick="preguntar(<?php echo $mostrar['Num_Historial_Cita']?>)" title="Eliminar registro">
+                        Eliminar
+                    </a> /
+                    <a id="a_edit" href="Edit_Historial.php?Num_Historial_Cita=<?php echo $mostrar['Num_Historial_Cita']?>" title="Editar registro">Editar</a>
+                  </td>
+                </tr>
+              <?php
+                }
+              ?>   
+            </tbody>
+          </table>  
         </div>
+      </div>
+    </div>
   </div>
 </div> 
-   <footer class="main-footer">
-      <div class="float-right d-none d-sm-block">
-        <b>Servicios Caninos Casme.</b> 
-      </div>
-        <strong>Panel de administrador</a></strong> 
-    </footer>
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Servicios Caninos Casme.</b> 
+    </div>
+      <strong>Panel de administrador</a></strong> 
+  </footer>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->

@@ -14,5 +14,4 @@ if(isset($_GET['Num_Registro_Mascota'])) {
   $_SESSION['message_type'] = 'danger';
   header('Location: Mascota.php');
 }
-
 ?>
