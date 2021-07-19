@@ -24,15 +24,9 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <style>
     .activo {
-     color: #9ACD32;
+     color:yellow;
 }
   </style>
-  <script>
-    $('#menu li a').on('click', function(){
-    $('li a.activo').removeClass('activo');
-    $(this).addClass('activo');
-});
-  </script>
   
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
@@ -46,7 +40,7 @@
         <ul>
           <li><a href="index.php">Inicio</a></li>
           <li><a href="Nosotros.php">Nosotros</a></li>
-          <li class="activo"><a href="Servicios.php">Servicios</a></li>
+          <li><a class="activo" style="color:yellow" href="Servicios.php">Servicios</a></li>
           <li><a href="Galeria.php">Galería</a></li>
           <li><a href="Login.php">Admin</a></li>
         </ul>

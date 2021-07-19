@@ -38,7 +38,7 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.php">Inicio</a></li>
+          <li><a style="color:yellow" href="index.php">Inicio</a></li>
           <li><a href="Nosotros.php">Nosotros</a></li>
           <li><a href="Servicios.php">Servicios</a></li>
           <li><a href="Galeria.php">Galería</a></li>

@@ -28,17 +28,6 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
   <link href="assets/css/style.css" rel="stylesheet">
-  <style>
-    .activo {
-      
-}
-  </style>
-  <script>
-    $('#menu li a').on('click', function(){
-    $('li a.activo').removeClass('activo');
-    $(this).addClass('activo');
-});
-  </script>
 </head>
 <body>
   <header id="header" class="fixed-top ">
@@ -49,7 +38,7 @@
           <li><a href="index.php">Inicio</a></li>
           <li><a href="Nosotros.php">Nosotros</a></li>
           <li><a href="Servicios.php">Servicios</a></li>
-          <li class="active"><a href="Galeria.php">Galería</a></li>
+          <li><a style="color:yellow" href="Galeria.php">Galería</a></li>
           <li><a href="Login.php">Admin</a></li>
         </ul>
       </nav>
@@ -57,6 +46,7 @@
   </header>
  <section id="portfolio" class="portfolio">
       <div class="container text-center">
+      <h1 style="font-weight:bold;color:#83AE2A;margin-top:-70px">Galería de imágenes</h1>
         <div class="row portfolio-container">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
