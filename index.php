@@ -29,20 +29,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet"> 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
-
-  <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Tempo - v2.2.1
-  * Template URL: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 <body>
-<!--   <button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button> -->
-  <!-- ======= Header ======= -->
   <header id="header" class="">
     <div class="container d-flex align-items-center">
       <h1 class="logo mr-auto"><a href="#"><img src="assets/img/Logo.png" alt="Logo Caninos Casmes"></a></h1>
@@ -57,21 +46,17 @@
         </ul>
       </nav>
     </div>
-  </header><!-- End Header -->
-  <!-- ======= Hero Section ======= -->
+  </header>
   <section id="hero">
     <div class="hero-container">
-      <!-- <h3>Bienvenidos</h3> -->
       <h1 style="font-family: 'Audiowide', cursive;">Servicios Caninos Casme</h1>
       <h2>Escuela profesional de adiestramiento canino</h2>
       <a id="btn-abrir-popup" class="btn-get-started btn btn-lg scrollto span2">Contactenos</a>   
     </div>
-    <!-- <div class="container"> -->
        <div class="contenedor">
 		     <div class="overlay" id="overlay">
 			     <div class="popup" id="popup">
 				     <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a><section id="contact" class="contact">
-              <!-- <div class="row mt-5"> -->
                 <div class="col-lg-15">
                   <div class="info">
 
@@ -91,11 +76,10 @@
                       <i class="icofont-phone"></i>
                       <h4>Telefono:</h4>
                       <p>+52 789 101 7950</p>
-                    </div>
-                    
+                    </div>   
                 </div>
-                  <br><br>
-                    <div class="row">        
+                <br><br>
+                <div class="row">        
                       <div class="col-md-6">
                         <a id="btn-abrir-popup" href="https://wa.me/527891017905" target="_blank" class="btn-get-started btn btn-lg scrollto span2">Whatsapp</a> 
                         <a id="btn-abrir-popup" href="tel:+527891017950" class="btn-get-started btn btn-lg scrollto span2">Llamar ahora</a>         
@@ -107,23 +91,17 @@
                 </section>
               </div>
             </div>
-            </div>
- 
+        </div>
     </section>
     <br></br>
-    <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
       <div class="container">
         <div class="section-title">
           <h3>¡Adiestramos tu perro para que tu lo disfrutes!</h3>
           <p></p>
-          <!-- <a class="cta-btn" href="#">Ir</a> -->
         </div>
       </div>
     </section> 
-    <!-- End Cta Section -->
-    <!-- ======= Team Section ======= -->
-    
     <section id="team" class="team">
       <div class="container">
 
@@ -132,13 +110,6 @@
             <div class="member">
               <div class="member-img">
                 <img src="assets/img/team/Adiestrador_canino.jpg" class="img-fluid" alt="">
-                <!-- <div class="social">
-                   <a href=""><i class="icofont-twitter"></i></a> 
-                  <a href="#" id="btn-abrir-popup"><i class="icofont-facebook"></i></a>
-                  
-                   <a  id="btnabrir"><i class="icofont-info"></i></a>
-                   <a href=""><i class="icofont-linkedin"></i></a> 
-                </div> -->
               </div>
               <div class="member-info">
                 <h2>Adiestrador canino</h2>
@@ -146,7 +117,6 @@
               <a id="btnabrir" class="btn-get-started btn btn-lg scrollto span2" data-toggle="modal" data-target="#staticBackdrop"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"></a>
           </div>
         </div>
-        <!---Se abre código de modal que muestra info sobre Caninos Casme-->
         <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
@@ -173,28 +143,7 @@
             </div>
           </div>
         </div>
-    <!-- <div class="fondo_transparente row">
-      <div class="modal col-xs-12 col-sm-12 col-md-9">        
-           <a class="modal_cerrar"> <i class="fas fa-times"></i></a>  
-           
-        <div class="section-title">
-          <div class="parrafos">    
-            <p>Diego León Castaño Castaño adiestrador canino profesional con más de 15 años de experiencia.<p>
-
-            <p>Diplomado en la escuela de adiestramiento canino Handler Colombia en el 2008.<p>
-
-            <p>Participación en el 1er seminario internacional de adiestramiento Canino de perros de trabajo en la universidad UANL en noviembre del 2009 en coordinación con la fuerza aérea Colombiana.<p>
-
-            <p>Participación en seminarios de IGP, OCI, con los campeones mundiales. Valentina Balli, Arnold Kivago, Miriam Sodlengard.<p>
-
-            <p>Adiestrador Canino calificado K-nes de la escuela Colombia de adiestramiento, con énfasis en educación y modificación de conducta canina</p>
-          </div>
-        </div>
-      </div>
-    </div>    -->
   </section> 
-  <!-- End Team Section -->
-  <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
@@ -202,11 +151,6 @@
           &copy; Copyright <strong><span>Casme</span></strong>. Todos los derechos reservados.
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/ -->
-          <!-- Diseñado por <a href="#">Caninos Casme</a> -->
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
@@ -214,14 +158,12 @@
         <a href="https://www.facebook.com/Servicios-caninos-Casme-905518146207815" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>     
         <a href="https://www.instagram.com/servicioscaninoscasme/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
         <a href="https://wa.me/527891017905" target="_blank" class="google-plus"><i class="bx bxl-whatsapp"></i></a>
-        <!-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
 
   <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
 
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
@@ -230,7 +172,6 @@
   <script src="assets/vendor/venobox/venobox.min.js"></script>
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
 
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   <script src="popup.js"></script>
