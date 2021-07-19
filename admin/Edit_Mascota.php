@@ -173,9 +173,6 @@ if (!isset($_SESSION['loggedin'])) {
               </li>
             </ul>
           </li>
-          <!-- <div class="Footer">
-            <button class="btn btn-danger" onclick="location.href='#'">Cerrar sesión</button>
-          </div> -->
       </nav>
     </div>
   </aside>
@@ -196,21 +193,30 @@ if (!isset($_SESSION['loggedin'])) {
         </div>
 <div class="content-wrapper">
 <?php
+
 include("DB/conexion.php");
 
+/* AQUI SE ATRAPAN LOS DATOS */
 $Num_Registro_Mascota = $_REQUEST['Num_Registro_Mascota'];
+
+ /* AQUI REALIZAMOS UNA CONSULTA EN LA TABLA MASCOTA QUE DEACUERDO AL NUMERO DEL
+     REGISTRO DE LA MASCOTA SELECCIONADA PARA AUTOCOMPLEMENTAR LOS DATOS DEL
+     FORMULARIO QUE ESTA DENTRO DEL MODAL staticBackdropLabel
+      */
 $query="SELECT * FROM tabla_mascotas WHERE Num_Registro_Mascota='$Num_Registro_Mascota'";
 $resultado= $con->query($query);
 $row=$resultado->fetch_assoc();
 
 if(isset($_POST['update'])){
-  
+
+   /* AQUI SE RECIBEN LOS DATOS DEL FORMULARIO */
   $Num_Registro_Mascota = $_REQUEST['Num_Registro_Mascota'];
   $Nombre_Mascota = $_POST['Nombre_Mascota'];
   $Raza = $_POST['Raza'];
   $Fecha_Nac = $_POST['Fecha_Nac'];
   $Sexo = $_POST['Sexo'];
-
+  
+  /* AQUI REALIZAMOS EL UPDATE DEL REGISTRO QUE SE SELECCIONÓ */
   $query="UPDATE tabla_mascotas SET Nombre_Mascota='$Nombre_Mascota', Raza='$Raza', Fecha_Nac='$Fecha_Nac', Sexo='$Sexo' WHERE Num_Registro_Mascota='$Num_Registro_Mascota'";
   $ResultadoEditMascota = $con->query($query);
 
@@ -221,44 +227,46 @@ if(isset($_POST['update'])){
   }
 }
 ?>
-        <div class="container p-4">
-  <div class="row">
-    <div class="col-md-5 mx-auto">
-      <div class="card card-body" style="background-color: #2D92CB;">
-      <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Editando a <?php echo $row['Nombre_Mascota']; ?></h3>   
-      <form action="" method="POST">
+ <div class="container p-4">
+   <div class="row">
+     <div class="col-md-5 mx-auto">
+       <div class="card card-body" style="background-color: #2D92CB;">
+        <!-- AQUI ESTA EL MODAL QUE CONTIENE EL FORMULARIO QUE REALIZA LA ACCIÓN DE LA PÁGINA -->
+        <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Editando a <?php echo $row['Nombre_Mascota']; ?></h3>   
+        <form action="" method="POST">
             <div class="form-group">
               <input type="text" name="Nombre_Mascota" class="form-control" value="<?php echo $row['Nombre_Mascota']; ?>" placeholder="Actualizar Mascota">
             </div>
             <div class="form-group">
-            <input type="text" name="Raza" class="form-control" value="<?php echo $row['Raza']; ?>" placeholder="Actualizar Raza">
+              <input type="text" name="Raza" class="form-control" value="<?php echo $row['Raza']; ?>" placeholder="Actualizar Raza">
             </div>
             <div class="form-group">
               <input id="fecha" type="date" name="Fecha_Nac" class="form-control" value="<?php echo $row['Fecha_Nac']; ?>" placeholder="Actualizar Fecha nacimiento" autofocus>
             </div>
             <div class="form-group">
-            <input type="text" name="Sexo" class="form-control" value="<?php echo $row['Sexo']; ?>" placeholder="Actualizar Sexo">
+              <input type="text" name="Sexo" class="form-control" value="<?php echo $row['Sexo']; ?>" placeholder="Actualizar Sexo">
             </div>
             <div class="botones">
-            <button name="update" class="btn btn-success">Actualizar</button>
-            <a href="javascript: history.go(-1)" role="button" class="btn btn-danger">Cancelar</a>
-        </div>             
-      </form>
-      </div>
-    </div>
-  </div>
+              <button name="update" class="btn btn-success">Actualizar</button>
+              <a href="javascript: history.go(-1)" role="button" class="btn btn-danger">Cancelar</a>
+            </div>             
+        </form>
+       </div>
+     </div>
+   </div>
+ </div>
 </div>
-</div>
-    <footer class="main-footer">
+
+<footer class="main-footer">
       <div class="float-right d-none d-sm-block">
         <b>Servicios Caninos Casme.</b> 
       </div>
         <strong>Panel de administrador</a></strong> 
-    </footer>
+</footer>
   <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
+<aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
-  </aside>
+</aside>
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
@@ -322,17 +330,6 @@ if(isset($_POST['update'])){
   src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
   crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
-<script> $(document).ready(function() {
-    $('#Tabla_mascotas').DataTable( {
-        language: {
-            url: 'https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
-        }
-    } );
-} );
-</script>
-
 <script type="text/javascript">
       function preguntar(Num_Registro_Mascota)
       {
@@ -341,13 +338,6 @@ if(isset($_POST['update'])){
           window.location.href = "Delete_Mascota.php?Num_Registro_Mascota="+Num_Registro_Mascota;
         }
       }
-</script>
-<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-	<script src="select2/select2.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('#controlBuscador').select2({ dropdownParent: "#staticBackdrop" });
-	});
 </script>
 <script>
 window.addEventListener('load',function(){

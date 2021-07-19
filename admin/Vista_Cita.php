@@ -180,24 +180,21 @@ if (!isset($_SESSION['loggedin'])) {
   </aside>
 </div>
 
-  <div class="content-wrapper">
+<div class="content-wrapper">
   <div class="modal fade" id="exitModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">¿Desea salir?</h3>
-              </div>
-              <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
-                            <div class="modal-footer">
-                                <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
-                                <a class="btn btn-raised btn-danger" href="logout.php">Cerrar Sesión</a>
-                            </div>
-            </div>
+             <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">¿Desea salir?</h3>
+                </div>
+                <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
+                   <a class="btn btn-raised btn-danger" href="logout.php">Cerrar Sesión</a>
+                </div>
+             </div>
           </div>
-        </div>
-  
-  <!-- <button class="btn btn-success" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Dueño</button>
-  <button class="btn btn-warning" id="" data-toggle="" data-target="">Info</button> -->
+  </div>
     
       <!-- MESSAGES -->
       <?php if (isset($_SESSION['message'])) { ?>
@@ -223,16 +220,15 @@ if (!isset($_SESSION['loggedin'])) {
         $resultado= $con->query($query);
         $row=$resultado->fetch_assoc();
       ?>
-      <div class="text-center">
-      <h1>Detalles cita <?php echo $row['Nombre_Mascota']; ?></h1>
-      </div>
-  <div class="row" id="Vista">
-        <div class="col-md">
-            <div class="section-box">
+ <div class="text-center">
+   <h1>Detalles cita <?php echo $row['Nombre_Mascota']; ?></h1>
+ </div>
+ <div class="row" id="Vista">
+   <div class="col-md">
+      <div class="section-box">
         <div class="table-responsive col-sm">
             <table class="table table-sm  non-top-border">
-            <tbody>
-                                                                                   
+             <tbody>                                                               
                     <tr>
                         <th>Dueño</th>
                         <td>
@@ -275,29 +271,28 @@ if (!isset($_SESSION['loggedin'])) {
                         <?php echo $row['Estado_Cita']; ?>
                         </td>
                     </tr>
-                </tbody>
+             </tbody>
             </table>
         </div>
-    </div>             
-        </div>
-      
-  </div>
-   <div class="botones">
-            <a href="Edit_Cita.php?Num_Registro_Cita=<?php echo $row['Num_Registro_Cita']?>" class="btn btn-success">Editar</a>
-            <a href="#" onclick="preguntar(<?php echo $row['Num_Registro_Cita']?>)" class="btn btn-danger">Eliminar</a>
-            <a href="javascript: history.go(-1)" role="button" class="btn btn-primary">Volver</a>
-    </div> 
+      </div>             
+   </div>     
+ </div>
+ <div class="botones">
+     <a href="Edit_Cita.php?Num_Registro_Cita=<?php echo $row['Num_Registro_Cita']?>" class="btn btn-success">Editar</a>
+     <a href="#" onclick="preguntar(<?php echo $row['Num_Registro_Cita']?>)" class="btn btn-danger">Eliminar</a>
+     <a href="javascript: history.go(-1)" role="button" class="btn btn-primary">Volver</a>
+ </div> 
 </div> 
-   <footer class="main-footer">
-      <div class="float-right d-none d-sm-block">
-        <b>Servicios Caninos Casme.</b> 
-      </div>
-        <strong>Panel de administrador</a></strong> 
-    </footer>
+<footer class="main-footer">
+  <div class="float-right d-none d-sm-block">
+     <b>Servicios Caninos Casme.</b> 
+  </div>
+     <strong>Panel de administrador</a></strong> 
+</footer>
   <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
+<aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
-  </aside>
+</aside>
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
