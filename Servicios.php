@@ -24,30 +24,14 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <style>
     .activo {
-     color: #9ACD32;
+     color:yellow;
 }
   </style>
-  <script>
-    $('#menu li a').on('click', function(){
-    $('li a.activo').removeClass('activo');
-    $(this).addClass('activo');
-});
-  </script>
   
-  <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Tempo - v2.2.1
-  * Template URL: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 <body>
-  
- <!-- <button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button> -->
-<!-- ======= Header ======= -->
+
 <header id="header" class="">
     <div class="container d-flex align-items-center">
       <h1 class="logo mr-auto"><a href="index.php"><img src="assets/img/Logo.png" alt="Logo Caninos Casmes"></a></h1>
@@ -56,24 +40,17 @@
         <ul>
           <li><a href="index.php">Inicio</a></li>
           <li><a href="Nosotros.php">Nosotros</a></li>
-          <li class="activo"><a href="Servicios.php">Servicios</a></li>
+          <li><a class="activo" style="color:yellow" href="Servicios.php">Servicios</a></li>
           <li><a href="Galeria.php">Galería</a></li>
           <li><a href="Login.php">Admin</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <!-- End Header -->
   <br>
 <main id="main">
-    <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container">
-        <!-- <div class="section-title">
-           <h2>Services</h2> 
-          <h3><span></span></h3>
-           <p>Estos son los servicios que prestamos</p> 
-        </div> -->
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box">
@@ -237,20 +214,13 @@
           </div>
         </div>
       </div>
-  <!-- End Services Section -->
- <!-- ======= Footer ======= -->
- <footer id="footer">
+  <footer id="footer">
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
           &copy; Copyright <strong><span>Casme</span></strong>. Todos los derechos reservados.
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/ -->
-         <!--  Diseñado por <a href="#">Caninos Casme</a> -->
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
@@ -258,15 +228,11 @@
         <a href="https://www.facebook.com/Servicios-caninos-Casme-905518146207815" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>     
         <a href="https://www.instagram.com/servicioscaninoscasme/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
         <a href="https://wa.me/527891017905" target="_blank" class="google-plus"><i class="bx bxl-whatsapp"></i></a>
-        <!-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
 
   <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
-
-<!-- Vendor JS Files -->
-<!-- Vendor JS Files -->
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
