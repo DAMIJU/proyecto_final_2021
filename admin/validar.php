@@ -39,7 +39,7 @@ if ($stmt = $conn->prepare('SELECT id_user , clave FROM usuarios WHERE usuario =
            
        				// SI EL USUARIO EXISTE PERO EL PASSWORD NO COINCIDE IMPRIMIR EN PANTALLA PASSWORD INCORRECTO
        
-                   		else { echo "<script>alert('Nombre de usuario o contraseña inválido');window.location='../Login.php'</script>"; }
+                   		else { echo "<script>alert('Nombre de usuario y contraseña no coninciden');window.location='../Login.php'</script>"; }
        	}  
 
       			   // SI EL USUARIO NO EXISTE MOSTRAR USUARIO INCORRECTO

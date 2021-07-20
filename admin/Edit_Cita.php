@@ -197,13 +197,14 @@ if (!isset($_SESSION['loggedin'])) {
 </div>
 <div class="content-wrapper">
 <?php
+
 include("DB/conexion.php");
 
   /* AQUI SE ATRAPAN LOS DATOS */
   $Num_Registro_Cita = $_REQUEST['Num_Registro_Cita'];
 
-  /* AQUI REALIZAMOS UNA CONSULTAD EN LA TABLA CITAS PARA DEACUERDO AL NUMERO DEL
-     REGISTRO DE LA CITA SELECCIONADO PARA AUTOCOMPLEMENTAR LOS DATOS DEL
+  /* AQUI REALIZAMOS UNA CONSULTA EN LA TABLA CITAS QUE DEACUERDO AL NUMERO DEL
+     REGISTRO DE LA CITA SELECCIONADA PARA AUTOCOMPLEMENTAR LOS DATOS DEL
      FORMULARIO QUE ESTA DENTRO DEL MODAL staticBackdropLabel
       */
   $query="SELECT * FROM tabla_citas 
@@ -215,12 +216,19 @@ include("DB/conexion.php");
 if(isset($_POST['update'])){
 
   /* AQUI SE RECIBEN LOS DATOS DEL FORMULARIO */
+  $query2 = "SELECT * FROM tabla_para_acciones WHERE Descripción = 'Empleado'";
+  $resultado2 = $con->query($query2);
+  $row2 = $resultado2->fetch_assoc();
+  $contraseña = $row2['Contraseña'];
+  $password = $_POST['password'];
   $Tipo_Cita = $_POST['Tipo_Cita'];
   $Fecha_Cita = $_POST['Fecha_Cita'];
   $Hora_Cita = $_POST['Hora_Cita'];
+  $Notas_Internas = $_POST['Notas_Internas'];
  
+  if($contraseña === $_POST['password']){
   /* AQUI REALIZAMOS EL UPDATE DEL REGISTRO QUE SE SELECCIONÓ */
-  $query="UPDATE tabla_citas SET Tipo_Cita='$Tipo_Cita', Fecha_Cita='$Fecha_Cita', Hora_Cita='$Hora_Cita' WHERE Num_Registro_Cita='$Num_Registro_Cita'";
+  $query="UPDATE tabla_citas SET Tipo_Cita='$Tipo_Cita', Notas_Internas='$Notas_Internas', Fecha_Cita='$Fecha_Cita', Hora_Cita='$Hora_Cita' WHERE Num_Registro_Cita='$Num_Registro_Cita'";
   $ResultadoEditMascota = $con->query($query);
 
   if($ResultadoEditMascota){
@@ -228,6 +236,7 @@ if(isset($_POST['update'])){
   }else{
     echo "<script>alert('los datos no se han podido actualizar correctamente');</script>";
   }
+}
 }
 ?>
  
@@ -254,6 +263,9 @@ if(isset($_POST['update'])){
               </div>
               <div class="form-group">
                   <input id="Notas_Internas" type="text" name="Notas_Internas" class="form-control" value="<?php echo $row['Notas_Internas']; ?>" placeholder="Notas internas" autofocus>
+              </div>
+              <div class="form-group">
+                  <input type="password" name="password" class="form-control" value="" placeholder="Contraseña de Administrador">
               </div>
               <div class="botones">
                   <button name="update" class="btn btn-success">Actualizar</button>

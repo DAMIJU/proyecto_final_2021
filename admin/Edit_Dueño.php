@@ -206,6 +206,12 @@ if (!isset($_SESSION['loggedin'])) {
         $result=mysqli_query($con,$sql);
 
       if(isset($_POST['update'])){
+
+        $query2 = "SELECT * FROM tabla_para_acciones WHERE Descripción = 'Empleado'";
+        $resultado2 = $con->query($query2);
+        $row2 = $resultado2->fetch_assoc();
+        $contraseña = $row2['Contraseña'];
+        $password = $_POST['password'];
         $Num_Registro_Dueño = $_REQUEST['Num_Registro_Dueño'];
         $celular = $_POST['celular'];
         $Nombre_Dueño= $_POST['Nombre_Dueño'];
@@ -214,6 +220,8 @@ if (!isset($_SESSION['loggedin'])) {
         $Ciudad = $_POST['Ciudad'];
         $Correo = $_POST['Correo'];
         $Fecha_Registro_Dueño = $_POST['Fecha_Registro_Dueño'];
+
+        if($contraseña === $_POST['password']){
         $query = "UPDATE tabla_dueño set Celular = '$celular', Nombre_Dueño = '$Nombre_Dueño', Telefono_Fijo = '$Telefono_Fijo', Dirección = '$Dirección', Ciudad = '$Ciudad', Correo = '$Correo', Fecha_Registro_Dueño = '$Fecha_Registro_Dueño' WHERE Num_Registro_Dueño=$Num_Registro_Dueño";
         $ResultadoEditDueño = $con->query($query);
 
@@ -223,6 +231,7 @@ if (!isset($_SESSION['loggedin'])) {
           echo "<script>alert('los datos no se han podido actualizar correctamente');</script>";
         }
       }
+    }
     ?>
   <div class="container p-4">
     <div class="row">
@@ -257,6 +266,9 @@ if (!isset($_SESSION['loggedin'])) {
             </div>
             <div class="form-group">
               <input id="fecha" type="date" name="Fecha_Registro_Dueño" class="form-control" value="<?php echo $row['Fecha_Registro_Dueño'];  ?>" placeholder="Fecha_Registro" autofocus>
+            </div>
+            <div class="form-group">
+                  <input type="password" name="password" class="form-control" value="" placeholder="Contraseña de Administrador">
             </div>
             <div class="botones">
               <button name="update" class="btn btn-success">Actualizar</button>

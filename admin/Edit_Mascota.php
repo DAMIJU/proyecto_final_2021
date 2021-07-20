@@ -210,12 +210,18 @@ $row=$resultado->fetch_assoc();
 if(isset($_POST['update'])){
 
    /* AQUI SE RECIBEN LOS DATOS DEL FORMULARIO */
+  $query2 = "SELECT * FROM tabla_para_acciones WHERE Descripción = 'Empleado'";
+  $resultado2 = $con->query($query2);
+  $row2 = $resultado2->fetch_assoc();
+  $contraseña = $row2['Contraseña'];
+  $password = $_POST['password'];
   $Num_Registro_Mascota = $_REQUEST['Num_Registro_Mascota'];
   $Nombre_Mascota = $_POST['Nombre_Mascota'];
   $Raza = $_POST['Raza'];
   $Fecha_Nac = $_POST['Fecha_Nac'];
   $Sexo = $_POST['Sexo'];
   
+  if($contraseña === $_POST['password']){
   /* AQUI REALIZAMOS EL UPDATE DEL REGISTRO QUE SE SELECCIONÓ */
   $query="UPDATE tabla_mascotas SET Nombre_Mascota='$Nombre_Mascota', Raza='$Raza', Fecha_Nac='$Fecha_Nac', Sexo='$Sexo' WHERE Num_Registro_Mascota='$Num_Registro_Mascota'";
   $ResultadoEditMascota = $con->query($query);
@@ -225,6 +231,7 @@ if(isset($_POST['update'])){
   }else{
     echo "<script>alert('los datos no se han podido actualizar correctamente');</script>";
   }
+}
 }
 ?>
  <div class="container p-4">
@@ -245,6 +252,9 @@ if(isset($_POST['update'])){
             </div>
             <div class="form-group">
               <input type="text" name="Sexo" class="form-control" value="<?php echo $row['Sexo']; ?>" placeholder="Actualizar Sexo">
+            </div>
+            <div class="form-group">
+                  <input type="password" name="password" class="form-control" value="" placeholder="Contraseña de Administrador">
             </div>
             <div class="botones">
               <button name="update" class="btn btn-success">Actualizar</button>
