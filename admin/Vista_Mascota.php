@@ -263,7 +263,7 @@ if (!isset($_SESSION['loggedin'])) {
     <div class="col-md">
       <div class="section-box">
         <div class="table-responsive col-sm">
-          <table class="table table-sm  non-top-border" id="Intento">      
+          <table class="table table-sm  non-top-border" id="historial">      
             <thead>
               <tr>                  
                 <th>Tipo de cita</th>
@@ -375,7 +375,7 @@ if (!isset($_SESSION['loggedin'])) {
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
 <script> $(document).ready(function() {
-    $('#dueño').DataTable( {
+    $('#historial').DataTable( {
         language: {
             url: 'https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
         }

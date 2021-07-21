@@ -39,5 +39,5 @@ require_once("ConectarBD_Mysql.php");
        	}  
           		else { echo "<script>alert('Este usuario no existe o es inválido');window.location='../Login.php'</script>"; }
 	$stmt->close();
-}
+
 ?>
