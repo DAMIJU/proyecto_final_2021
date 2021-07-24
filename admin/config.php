@@ -204,6 +204,7 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
       <strong>Panel de administrador</a></strong> 
   </footer>
+  <textarea class="form-control" id="ckeditor" name="content" required></textarea>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -266,12 +267,11 @@ if (!isset($_SESSION['loggedin'])) {
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
+<script src="../assets/plugins/ckeditor/ckeditor.js"></script>
 
 </body>
 </html>
 <?php 
-    }if($_REQUEST="Config.php"){
-        header ("Location: Admin.php");   
     }
 ?>
 
