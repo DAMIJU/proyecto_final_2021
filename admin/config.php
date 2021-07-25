@@ -197,14 +197,24 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </div>
 </div>
-
+<div class="content-wrapper">
+  <div class="content-header admin-panel">      
+    <div class="text-center">
+      <h1>CONFIGURACIÓN</h1>
+    </div>   
+  </div>
+    
+  <div class="wrapper2">
+      <h2 class="title">Menú</h2>
+			<textarea class="form-control" id="ckeditor" name="content" required></textarea>
+	</div>
+</div>   
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
       <b>Servicios Caninos Casme.</b> 
     </div>
       <strong>Panel de administrador</a></strong> 
   </footer>
-  <textarea class="form-control" id="ckeditor" name="content" required></textarea>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -268,7 +278,9 @@ if (!isset($_SESSION['loggedin'])) {
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
 <script src="../assets/plugins/ckeditor/ckeditor.js"></script>
-
+<script>
+  CKEDITOR.replace('content');
+</script>
 </body>
 </html>
 <?php 
