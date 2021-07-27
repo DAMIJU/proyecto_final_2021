@@ -166,7 +166,7 @@ if (!isset($_SESSION['loggedin'])) {
               </a>
             </li>
             <li class="nav-item">
-              <a href="Config.php?modulo=GaleriaImagenes" class="nav-link">
+              <a href="Config.php?modulo=Galeria" class="nav-link">
                 <i class="fas fa-photo-video nav-icon"></i>
                 <p>Galería de imágenes</p>
               </a>
