@@ -215,7 +215,7 @@ if(isset($_POST['delete'])){
   $ResultadoDeleteHistorial = $con->query($query3);
 
   if($ResultadoDeleteHistorial){
-  echo "<script>alert('Los datos se han eliminado correctamente'); window.history.go(-2);</script>";
+  echo "<script>alert('Los datos se han eliminado correctamente');window.location='Mascota.php'</script>";
   }else{
     echo "<script>alert('Los datos no se han eliminado correctamente');</script>";
   }

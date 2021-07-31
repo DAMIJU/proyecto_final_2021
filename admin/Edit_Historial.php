@@ -203,10 +203,17 @@ if (!isset($_SESSION['loggedin'])) {
 
     if(isset($_POST['update'])){
       
+       /* AQUI SE RECIBEN LOS DATOS DEL FORMULARIO */
+      $query2 = "SELECT * FROM tabla_para_acciones WHERE Descripción = 'Empleado'";
+      $resultado2 = $con->query($query2);
+      $row2 = $resultado2->fetch_assoc();
+      $contraseña = $row2['Contraseña'];
+      $password = $_POST['password'];
       $Tipo_Cita = $_POST['Tipo_Cita'];
       $Notas_Internas = $_POST['Notas_Internas'];
       $Fecha_Cita = $_POST['Fecha_Cita'];
       
+      if($contraseña === $_POST['password']){
       $query="UPDATE historial_mascota SET Tipo_Cita='$Tipo_Cita', Notas_Internas='$Notas_Internas', Fecha_Cita='$Fecha_Cita' WHERE Num_Historial_Cita='$Num_Historial_Cita'";
       $ResultadoEditMascota = $con->query($query);
 
@@ -216,6 +223,7 @@ if (!isset($_SESSION['loggedin'])) {
         echo "<script>alert('los datos no se han podido actualizar correctamente');</script>";
       }
     }
+  }
   ?>
   <div class="container p-4">
     <div class="row">
@@ -236,6 +244,9 @@ if (!isset($_SESSION['loggedin'])) {
             </div>
             <div class="form-group">
               <input id="fecha" type="date" name="Fecha_Cita" class="form-control" value="<?php echo $row['Fecha_Cita']; ?>" placeholder="Fecha de cita" autofocus>
+            </div>
+            <div class="form-group">
+                  <input type="password" name="password" class="form-control" value="" placeholder="Contraseña de Administrador">
             </div>
             <div class="botones">
               <button name="update" class="btn btn-success">Actualizar</button>
