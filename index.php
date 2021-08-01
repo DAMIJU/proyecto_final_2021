@@ -97,7 +97,7 @@
     <section id="cta" class="cta">
       <div class="container">
         <div class="section-title">
-          <h3>¡Adiestramos tu perro para que tu lo disfrutes!</h3>
+          <h3>¡Adiestramos a tu perro para que tu lo disfrutes!</h3>
           <p></p>
         </div>
       </div>
@@ -158,6 +158,7 @@
         <a href="https://www.facebook.com/Servicios-caninos-Casme-905518146207815" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>     
         <a href="https://www.instagram.com/servicioscaninoscasme/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
         <a href="https://wa.me/527891017905" target="_blank" class="google-plus"><i class="bx bxl-whatsapp"></i></a>
+        <a href="https://www.youtube.com/user/Diegocasme/videos" target="_blank" class="youtube"><i class="bx bxl-youtube"></i></a>
       </div>
     </div>
   </footer>
