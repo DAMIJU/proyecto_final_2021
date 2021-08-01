@@ -89,7 +89,7 @@
           </div>    
         </div>
       </div>
-      <br><br><br><br><br>
+      
       <!---Modal Adiestramiento-->
       <div class="modal fade" id="Modal_ServicioAdiestramiento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
