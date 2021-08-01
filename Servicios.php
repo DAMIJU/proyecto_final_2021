@@ -214,6 +214,7 @@
           </div>
         </div>
       </div>
+</main>
   <footer id="footer">
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
