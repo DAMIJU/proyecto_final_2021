@@ -46,7 +46,6 @@
   </header>
  <section id="portfolio" class="portfolio">
       <div class="container text-center">
-      <h1 style="font-weight:bold;color:#83AE2A;margin-top:-70px">Galería de imágenes</h1>
         <div class="row portfolio-container">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">

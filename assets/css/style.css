@@ -2096,6 +2096,7 @@ Full screen Modal
   background-color: #2D92CB;
   text-align: center;
 }
+
 .modal-content .row{
   display: flex;
   flex-wrap: wrap;

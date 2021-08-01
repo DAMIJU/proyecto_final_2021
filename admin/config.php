@@ -587,8 +587,8 @@ if (!isset($_SESSION['loggedin'])) {
   <!-- Bootstrap para DataTables -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
-  <!-- Vendor CSS Files -->
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Vendor CSS Files -->
+<link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
   <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
@@ -749,9 +749,9 @@ if (!isset($_SESSION['loggedin'])) {
                 <tr style="text-align:center">            
                   <td><?php echo $mostrar['portfolio_id'] ?></td>
                   <td><?php echo $mostrar['title']?></td>
-                  <td><img src="<?php echo $mostrar['imagen']?>"></td>
+                  <td><img style="max-width:50%" class="img-fluid" src="data:image/jpg;base64,<?php echo base64_encode($mostrar['imagen']);?>"></td>
                   <td>
-                    <a href="Edit_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>" title="Editar dueño" class="btn btn-secondary">
+                    <a title="Editar imagen" class="btn btn-secondary" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#ModalGaleria<?php echo $mostrar['portfolio_id']?>">
                       <i class="icofont-ui-edit"></i>
                     </a>
                     <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro_Dueño']?>)" title="Eliminar dueño" class="btn btn-danger">
@@ -763,6 +763,7 @@ if (!isset($_SESSION['loggedin'])) {
                   </td>
                 </tr>
                 <?php
+                  include("ModalActualizarGaleria.php");
                   }
                 ?>   
             </tbody>
