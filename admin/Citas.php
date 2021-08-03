@@ -152,24 +152,24 @@ if (!isset($_SESSION['loggedin'])) {
               <i class="fas fa-angle-left right"></i>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fas fa-bars nav-icon"></i>
-                  <p>Menú</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
+            <li class="nav-item">
+              <a href="Config.php?modulo=menu" class="nav-link">
+                <i class="fas fa-bars nav-icon"></i>
+                <p>Menú</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Config.php?modulo=DatosEmpresa" class="nav-link">
                 <i class="fas fa-building nav-icon"></i>
-                  <p>Datos de la empresa</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
+                <p>Datos de la empresa</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Config.php?modulo=Galeria" class="nav-link">
                 <i class="fas fa-photo-video nav-icon"></i>
-                  <p>Galería de imágenes</p>
-                </a>
-              </li>
+                <p>Galería de imágenes</p>
+              </a>
+            </li>
             </ul>
           </li>
       </nav>
@@ -332,12 +332,13 @@ if (!isset($_SESSION['loggedin'])) {
                 <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro_Cita']?>)" title="Eliminar cita" class="btn btn-danger">
                   <i class="far fa-trash-alt"></i>
                 </a>
-                <a href="Vista_Cita.php?Num_Registro_Cita=<?php echo $mostrar['Num_Registro_Cita']?>" title="Ver detalles cita" class="btn btn-primary">
+                <a title="Editar imagen" class="btn btn-primary" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#ModalCitas<?php echo $mostrar['Num_Registro_Cita']?>">
                   <i class="icofont-eye-alt"></i>
                 </a>
               </td>
           </tr>
             <?php
+              include("ModalVerCitas.php");
               } 
             ?>   
       </tbody>
@@ -505,3 +506,4 @@ document.getElementById('hora').type= 'time';
     });
 </script>
 </body>
+
