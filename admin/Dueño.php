@@ -196,7 +196,6 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="text-center">
     <h1>DUEÑO</h1>
     <button class="btn-add-dueño" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Dueño</button>
-    <button class="btn btn-warning" id="" data-toggle="" data-target="">Info</button>
   </div> 
   <!-- MESSAGES -->
     <?php if (isset($_SESSION['message'])) { ?>
