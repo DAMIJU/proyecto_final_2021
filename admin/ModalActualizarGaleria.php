@@ -9,6 +9,7 @@
       </div>
       <div class="modal-body">
       <form method="POST" autocomplete="OFF" action="#" enctype="multipart/form-data">
+      <input type="hidden" name="portfolio_id" value="<?php echo $mostrar['portfolio_id']?>">
         <div class="form-group">
           <label style="font-weight:normal;font-weight:bold" class="col-md-2"> Título </label>
             <div class="col-md-7">
@@ -27,10 +28,29 @@
 
       </div>
       <div class="modal-footer">
-      <input type="submit" name="Agregar_Mascota" class="btn btn-success" value="Agregar">
+      <input type="submit" name="GuardarImagenGaleria" class="btn btn-success" value="Agregar">
               <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>   
         </form>
       </div>
     </div>
   </div>
 </div>
+<?php 
+   if(isset($_POST['GuardarImagenGaleria'])){
+    include("DB/conexion.php");
+      $portfolio_id = $_REQUEST['portfolio_id'];
+      $TituloImagen = $_POST['TituloImagen'];
+      $ImagenPortafolio = addslashes(file_get_contents($_FILES['ImagenPortafolio']['tmp_name']));
+
+      $query="UPDATE tabla_portfolio SET title='".$TituloImagen."', imagen='".$ImagenPortafolio."' WHERE portfolio_id='".$portfolio_id."'  ";
+	    $resultado = $con->query($query);
+
+	    if($resultado){
+		  echo "<script>alert('Los datos han sido actualizados correctamente');window.location='config.php?modulo=Galeria'</script>";
+	    }else{
+		  echo "<script type=\"text/javascript\">alert(\"No se podrán guardar los datos\");</script>";  
+	    }
+
+   }
+
+?>

@@ -24,7 +24,7 @@
 
       </div>
       <div class="modal-footer">
-      <input type="button" name="Eliminar_ImagenGaleria" class="btn btn-success" onclick="location.href='DeleteImageGallery.php?Portfolio_id=<?php echo $mostrar['portfolio_id']?>'" value="Eliminar">
+      <input type="submit" name="Eliminar_ImagenGaleria" class="btn btn-success" id="<?php echo $mostrar['portfolio_id']?>" value="Eliminar">
       <button type="button" class="btn btn-success" data-dismiss="modal">Cancelar</button>   
       </div>
     </div>
