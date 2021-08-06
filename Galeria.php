@@ -58,6 +58,130 @@
           </div>
           <?php } ?>
       </div>
+      <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-30-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/Galeria_opt/Galeria-12-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="assets/img/Galeria_opt/Galeria-14-min.jpg"  loading="lazy" class="img-fluid" alt="Imagen Casme">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-10-min.jpg"  loading="lazy" mg prueba.png" class="img-fluid" alt="Imagen Casme">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="assets/img/Galeria_opt/Galeria-7-min.jpg"  loading="lazy" class="img-fluid" alt="Imagen Casme">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-24-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-21-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/Galeria_opt/Galeria-6-min.jpg"  loading="lazy" class="img-fluid" alt="Imagen Casme">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-11-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-3-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-13-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-4-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">  
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-15-min.jpg" loading="lazy"class="img-fluid" alt="Imagen Casme">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-16-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">   
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-18-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">    
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-19-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-20-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">   
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-23-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-25-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-26-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-27-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-29-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">   
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-2-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+          </div> 
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-31-min.jpg" loading="lazy"  class="img-fluid" alt="Imagen Casme">     
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-32-min.jpg" loading="lazy"  class="img-fluid" alt="Imagen Casme">
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-5-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme"> 
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-1-min.jpg" loading="lazy"class="img-fluid" alt="Imagen Casme">
+          </div> 
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="assets/img/Galeria_opt/Galeria-8-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-17-min.jpg" loading="lazy"class="img-fluid" alt="Imagen Casme">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-9-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme">     
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/Galeria_opt/Galeria-22-min.jpg" loading="lazy" class="img-fluid" alt="Imagen Casme"> 
+          </div> -->
       
     <a class="btn-get-started btn btn-lg scrollto span2">Ver más</a>
 </div>
