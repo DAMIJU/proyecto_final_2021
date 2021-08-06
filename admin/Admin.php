@@ -172,6 +172,13 @@ if (!isset($_SESSION['loggedin'])) {
               </a>
             </li>
           </ul>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="Config.php?modulo=AddUser" class="nav-link">
+                <i class="fas fa-user nav-icon"></i>
+                <p>Añadir usuario</p>
+              </a>
+            </li>
         </li>
       </nav>
     </div>
