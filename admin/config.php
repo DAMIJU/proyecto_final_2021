@@ -754,7 +754,7 @@ if (!isset($_SESSION['loggedin'])) {
                     <a title="Editar imagen" class="btn btn-secondary" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#ModalGaleria<?php echo $mostrar['portfolio_id']?>">
                       <i class="icofont-ui-edit"></i>
                     </a>
-                    <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro_Dueño']?>)" title="Eliminar dueño" class="btn btn-danger">
+                    <a href="DeleteImageGallery.php?Portfolio_id=<?php echo $mostrar['portfolio_id']?>" title="Eliminar dueño" class="btn btn-danger">
                       <i class="far fa-trash-alt"></i>
                     </a>
                     <a href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>" title="Ver detalles dueño" class="btn btn-primary">
@@ -764,6 +764,7 @@ if (!isset($_SESSION['loggedin'])) {
                 </tr>
                 <?php
                   include("ModalActualizarGaleria.php");
+                  include("ModalEliminarGaleria.php");
                   }
                 ?>   
             </tbody>
