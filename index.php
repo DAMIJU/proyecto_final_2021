@@ -39,10 +39,10 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li><a style="color:yellow" href="index.php">Inicio</a></li>
-          <li><a href="Nosotros.php">Nosotros</a></li>
-          <li><a href="Servicios.php">Servicios</a></li>
-          <li><a href="Galeria.php">Galería</a></li>
-          <li><a href="Login.php">Admin</a></li>
+          <li><a id="nosotros_id" href="Nosotros.php">Nosotros</a></li>
+          <li><a id="servicios_id" href="Servicios.php">Servicios</a></li>
+          <li><a id="galeria_id" href="Galeria.php">Galería</a></li>
+          <li><a id="administrador_login" href="Login.php">Admin</a></li>
         </ul>
       </nav>
     </div>

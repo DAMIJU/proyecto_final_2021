@@ -121,7 +121,7 @@ if (!isset($_SESSION['loggedin'])) {
           </a>
         </li>
         <li class="nav-item">
-          <a href="Dueño.php" class="nav-link">
+          <a id="boton_dueño" href="Dueño.php" class="nav-link">
             <i class="nav-icon fas fa-users"></i>
             <p>
               Dueño            

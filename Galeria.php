@@ -39,7 +39,7 @@
           <li><a href="Nosotros.php">Nosotros</a></li>
           <li><a href="Servicios.php">Servicios</a></li>
           <li><a style="color:yellow" href="Galeria.php">Galería</a></li>
-          <li><a href="Login.php">Admin</a></li>
+          <li><a id="administrador_login" href="Login.php">Admin</a></li>
         </ul>
       </nav>
     </div>

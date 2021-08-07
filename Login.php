@@ -69,7 +69,7 @@
 					    <a href="#" onclick="alert('Acción aún no disponible')" style="float:right;font-size:12px;">¿Olvidó su contraseña?</a>
 					    <input type="password" name="password" class="form-control form-control-sm" placeholder="Contraseña" maxlength="" id="login-pass">
 				    </div>
-				  <button type="submit" class="btn btn_AccederNewLogin btn-block">Acceder</button>
+				  <button id="acceder_administrador" type="submit" class="btn btn_AccederNewLogin btn-block">Acceder</button>
 			    </form>
 		  </div>
 	  </div>

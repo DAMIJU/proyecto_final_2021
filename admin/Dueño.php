@@ -287,7 +287,7 @@ if (!isset($_SESSION['loggedin'])) {
             <td><?php echo $mostrar['Ciudad'] ?></td>
             <td><?php echo $mostrar['Correo'] ?></td>  
             <td>
-              <a href="Edit_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>" title="Editar dueño" class="btn btn-secondary">
+              <a id="editar_dueño" href="Edit_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>" title="Editar dueño" class="btn btn-secondary">
                 <i class="icofont-ui-edit"></i>
               </a>
               <a href="#" onclick="preguntar(<?php echo $mostrar['Num_Registro_Dueño']?>)" title="Eliminar dueño" class="btn btn-danger">
