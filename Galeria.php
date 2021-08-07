@@ -38,7 +38,7 @@
           <li><a href="index.php">Inicio</a></li>
           <li><a href="Nosotros.php">Nosotros</a></li>
           <li><a href="Servicios.php">Servicios</a></li>
-          <li><a style="color:yellow" href="Galeria.php">Galería</a></li>
+          <li><a style="color:#2C2E27" href="Galeria.php">Galería</a></li>
           <li><a href="Login.php">Admin</a></li>
         </ul>
       </nav>
