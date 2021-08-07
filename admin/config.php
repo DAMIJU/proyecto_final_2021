@@ -1393,10 +1393,10 @@ if (!isset($_SESSION['loggedin'])) {
             <input type="password" name="password" id="password" class="form-control" />
           </div>
 
-          <div class="form-outline mb-4">
+<!--           <div class="form-outline mb-4">
             <label class="form-label FormLogin" for="password">Confirmar Contraseña<span style="color:red">*</span></label>
             <input type="password" name="password2" id="password2" class="form-control" />
-          </div>
+          </div> -->
           <input type="submit" name="GuardarNuevoUsuarioAdmin" class="btn btn-success btn-block mb-4" value="Guardar">
         </form>
         </div>
