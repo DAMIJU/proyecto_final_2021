@@ -12,6 +12,6 @@
 	if(mysqli_num_rows($res) > 0 ){
 		echo "<script>location.href='Admin.php'</script>";
 	}else{
-		echo "<script>alert('Usuario o contraseña incorrecto')</script>";
+		echo "<script>alert('Usuario o contraseña incorrecto');window.location='../Login.php'</script>";
 	}
 ?>
