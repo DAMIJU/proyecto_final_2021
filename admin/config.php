@@ -175,6 +175,12 @@ if (!isset($_SESSION['loggedin'])) {
                 <p>Galería de imágenes</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="Config.php?modulo=AddUser" class="nav-link">
+                <i class="fas fa-user nav-icon"></i>
+                <p>Añadir usuario</p>
+              </a>
+            </li>
           </ul>
         </li>
       </nav>
@@ -433,6 +439,12 @@ if (!isset($_SESSION['loggedin'])) {
               <a href="Config.php?modulo=Galeria" class="nav-link">
                 <i class="fas fa-photo-video nav-icon"></i>
                 <p>Galería de imágenes</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Config.php?modulo=AddUser" class="nav-link">
+                <i class="fas fa-user nav-icon"></i>
+                <p>Añadir usuario</p>
               </a>
             </li>
           </ul>
@@ -697,6 +709,12 @@ if (!isset($_SESSION['loggedin'])) {
                 <p>Galería de imágenes</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="Config.php?modulo=AddUser" class="nav-link">
+                <i class="fas fa-user nav-icon"></i>
+                <p>Añadir usuario</p>
+              </a>
+            </li>
           </ul>
         </li>
       </nav>
@@ -756,9 +774,6 @@ if (!isset($_SESSION['loggedin'])) {
                     </a>
                     <a title="Eliminar dueño" class="btn btn-danger" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#ModalEliminarGaleria<?php echo $mostrar['portfolio_id']?>">
                       <i class="far fa-trash-alt"></i>
-                    </a>
-                    <a href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>" title="Ver detalles dueño" class="btn btn-primary">
-                      <i class="icofont-eye-alt"></i>
                     </a>
                   </td>
                 </tr>
@@ -1017,6 +1032,12 @@ if (!isset($_SESSION['loggedin'])) {
               <a href="Config.php?modulo=Galeria" class="nav-link">
                 <i class="fas fa-photo-video nav-icon"></i>
                 <p>Galería de imágenes</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Config.php?modulo=AddUser" class="nav-link">
+                <i class="fas fa-user nav-icon"></i>
+                <p>Añadir usuario</p>
               </a>
             </li>
           </ul>
