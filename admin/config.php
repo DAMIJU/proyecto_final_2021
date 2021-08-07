@@ -1345,6 +1345,12 @@ if (!isset($_SESSION['loggedin'])) {
                 <p>Galería de imágenes</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="Config.php?modulo=AddUser" class="nav-link">
+                <i class="fas fa-user nav-icon"></i>
+                <p>Añadir usuario</p>
+              </a>
+            </li>
           </ul>
         </li>
       </nav>
