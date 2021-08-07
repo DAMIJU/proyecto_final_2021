@@ -1,43 +1,17 @@
-<?php
-session_start();
-require_once("ConectarBD_Mysql.php");
+<?php 
+	session_start();
+	include("DB/conexion.php");
 
-	if ( !isset($_POST['username'], $_POST['password']) )
-	{
-	echo "<script>alert('Por favor llene todos los campos requeridos.');window.location=''</script>";
+	$username = $_POST['username'];
+	$password = sha1($_POST['password']);
+
+	$res = $con->query("SELECT * FROM usuarios WHERE usuario='".$username."' AND clave='".$password."'")or die($con->error);
+	session_regenerate_id();
+	$_SESSION['loggedin'] = TRUE;
+	$_SESSION['name'] = $_POST['username'];
+	if(mysqli_num_rows($res) > 0 ){
+		echo "<script>location.href='Admin.php'</script>";
+	}else{
+		echo "<script>alert('Usuario o contraseña incorrecto')</script>";
 	}
-
-	if ($stmt = $conn->prepare('SELECT id_user , clave FROM usuarios WHERE usuario = ?'))
- 	{
-	$stmt->bind_param('s', $_POST['username']);
-	$stmt->execute();
-	$stmt->store_result();
-
-     if ($stmt->num_rows > 0)
-      {
-		$stmt->bind_result($id_user, $clave);
-		$stmt->fetch();
-        
-          	if(password_verify( $_POST['password'],$clave))
-        		{
-					session_regenerate_id();
-					$_SESSION['loggedin'] = TRUE;
-					$_SESSION['name'] = $_POST['username'];
-					$_SESSION['id_user'] = $id_user;
-                    header('Location: Admin.php');
-                   
-
-				} 
-           
-       				// SI EL USUARIO EXISTE PERO EL PASSWORD NO COINCIDE IMPRIMIR EN PANTALLA PASSWORD INCORRECTO
-       
-                   		else { echo "<script>alert('Nombre de usuario y contraseña inválido');window.location='../Login.php'</script>"; }
-
-				}       
-                   	else { echo "<script>alert('Nombre de usuario o contraseña inválido');window.location='../Login.php'</script>"; }
-
-       	}  
-          		else { echo "<script>alert('Este usuario no existe o es inválido');window.location='../Login.php'</script>"; }
-	$stmt->close();
-
 ?>

@@ -62,7 +62,7 @@
 			    <form action="admin/validar.php" method="POST" id="Form_InicioSesion">
 				    <div class="form-group">
 					    <label for="exampleInputEmail1">Nombre de usuario<span style="color:red">*</span></label>
-					    <input type="text" name="username" class="form-control form-control-sm" placeholder="Usuario" maxlength="10" id="login-name">
+					    <input type="text" name="username" class="form-control form-control-sm" placeholder="Usuario" id="login-name">
 				    </div>
 				    <div class="form-group">
 					    <label for="exampleInputPassword1">Contraseña<span style="color:red">*</span></label>

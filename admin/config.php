@@ -1221,6 +1221,10 @@ if (!isset($_SESSION['loggedin'])) {
     li{
       list-style: none;
     }
+
+    label .FormLogin{
+      font-weight: 1;
+    }
   </style>
   <link rel="stylesheet" type="text/css" href="select2/select2.min.css">
 </head>
@@ -1355,9 +1359,46 @@ if (!isset($_SESSION['loggedin'])) {
           <h2 class="title">Añadir usuario</h2>
         </div>
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#!" class="btn btn-primary">Go somewhere</a>
+        <form action="AgregarUser.php" method="POST" autocomplete="OFF">
+          <!-- 2 column grid layout with text inputs for the first and last names -->
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label FormLogin" for="NombreCompleto">Nombre<span style="color:red">*</span></label>
+                <input type="text" class="form-control" name="FullName">
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label FormLogin" for="Apellido">Apellido<span style="color:red">*</span></label>
+                <input type="text" id="Apellido" required="required" name="Apellidos_Usuario" class="form-control" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-outline mb-4">
+            <label class="form-label FormLogin" for="usuario">Número de documento<span style="color:red">*</span></label>
+            <input type="number" name="id_user" required="required" id="id_user" class="form-control" />
+          </div> 
+
+          <!-- Text input -->
+          <div class="form-outline mb-4">
+            <label class="form-label FormLogin" for="usuario">Nombre de Usuario<span style="color:red">*</span></label>
+            <input type="text" name="usuario" required="required" id="usuario" class="form-control" />
+          </div>
+
+          <!-- Text input -->
+          <div class="form-outline mb-4">
+            <label class="form-label FormLogin" for="password">Contraseña<span style="color:red">*</span></label>
+            <input type="password" name="password" id="password" class="form-control" />
+          </div>
+
+          <div class="form-outline mb-4">
+            <label class="form-label FormLogin" for="password">Confirmar Contraseña<span style="color:red">*</span></label>
+            <input type="password" name="password2" id="password2" class="form-control" />
+          </div>
+          <input type="submit" name="GuardarNuevoUsuarioAdmin" class="btn btn-success btn-block mb-4" value="Guardar">
+        </form>
         </div>
       </div>
       </div>  
