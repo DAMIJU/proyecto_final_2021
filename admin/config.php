@@ -175,6 +175,12 @@ if (!isset($_SESSION['loggedin'])) {
                 <p>Galería de imágenes</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="Config.php?modulo=AddUser" class="nav-link">
+                <i class="fas fa-user nav-icon"></i>
+                <p>Añadir usuario</p>
+              </a>
+            </li>
           </ul>
         </li>
       </nav>
@@ -433,6 +439,12 @@ if (!isset($_SESSION['loggedin'])) {
               <a href="Config.php?modulo=Galeria" class="nav-link">
                 <i class="fas fa-photo-video nav-icon"></i>
                 <p>Galería de imágenes</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Config.php?modulo=AddUser" class="nav-link">
+                <i class="fas fa-user nav-icon"></i>
+                <p>Añadir usuario</p>
               </a>
             </li>
           </ul>
@@ -697,6 +709,12 @@ if (!isset($_SESSION['loggedin'])) {
                 <p>Galería de imágenes</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="Config.php?modulo=AddUser" class="nav-link">
+                <i class="fas fa-user nav-icon"></i>
+                <p>Añadir usuario</p>
+              </a>
+            </li>
           </ul>
         </li>
       </nav>
@@ -756,9 +774,6 @@ if (!isset($_SESSION['loggedin'])) {
                     </a>
                     <a title="Eliminar dueño" class="btn btn-danger" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#ModalEliminarGaleria<?php echo $mostrar['portfolio_id']?>">
                       <i class="far fa-trash-alt"></i>
-                    </a>
-                    <a href="Vista_Dueño.php?Num_Registro_Dueño=<?php echo $mostrar['Num_Registro_Dueño']?>" title="Ver detalles dueño" class="btn btn-primary">
-                      <i class="icofont-eye-alt"></i>
                     </a>
                   </td>
                 </tr>
@@ -1019,6 +1034,12 @@ if (!isset($_SESSION['loggedin'])) {
                 <p>Galería de imágenes</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="Config.php?modulo=AddUser" class="nav-link">
+                <i class="fas fa-user nav-icon"></i>
+                <p>Añadir usuario</p>
+              </a>
+            </li>
           </ul>
         </li>
       </nav>
@@ -1221,6 +1242,10 @@ if (!isset($_SESSION['loggedin'])) {
     li{
       list-style: none;
     }
+
+    label .FormLogin{
+      font-weight: 1;
+    }
   </style>
   <link rel="stylesheet" type="text/css" href="select2/select2.min.css">
 </head>
@@ -1320,6 +1345,12 @@ if (!isset($_SESSION['loggedin'])) {
                 <p>Galería de imágenes</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="Config.php?modulo=AddUser" class="nav-link">
+                <i class="fas fa-user nav-icon"></i>
+                <p>Añadir usuario</p>
+              </a>
+            </li>
           </ul>
         </li>
       </nav>
@@ -1355,9 +1386,46 @@ if (!isset($_SESSION['loggedin'])) {
           <h2 class="title">Añadir usuario</h2>
         </div>
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#!" class="btn btn-primary">Go somewhere</a>
+        <form action="AgregarUser.php" method="POST" autocomplete="OFF">
+          <!-- 2 column grid layout with text inputs for the first and last names -->
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label FormLogin" for="NombreCompleto">Nombre<span style="color:red">*</span></label>
+                <input type="text" class="form-control" name="FullName">
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label FormLogin" for="Apellido">Apellido<span style="color:red">*</span></label>
+                <input type="text" id="Apellido" required="required" name="Apellidos_Usuario" class="form-control" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-outline mb-4">
+            <label class="form-label FormLogin" for="usuario">Número de documento<span style="color:red">*</span></label>
+            <input type="number" name="id_user" required="required" id="id_user" class="form-control" />
+          </div> 
+
+          <!-- Text input -->
+          <div class="form-outline mb-4">
+            <label class="form-label FormLogin" for="usuario">Nombre de Usuario<span style="color:red">*</span></label>
+            <input type="text" name="usuario" required="required" id="usuario" class="form-control" />
+          </div>
+
+          <!-- Text input -->
+          <div class="form-outline mb-4">
+            <label class="form-label FormLogin" for="password">Contraseña<span style="color:red">*</span></label>
+            <input type="password" name="password" id="password" class="form-control" />
+          </div>
+
+<!--           <div class="form-outline mb-4">
+            <label class="form-label FormLogin" for="password">Confirmar Contraseña<span style="color:red">*</span></label>
+            <input type="password" name="password2" id="password2" class="form-control" />
+          </div> -->
+          <input type="submit" name="GuardarNuevoUsuarioAdmin" class="btn btn-success btn-block mb-4" value="Guardar">
+        </form>
         </div>
       </div>
       </div>  
