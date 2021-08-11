@@ -747,7 +747,7 @@ if (!isset($_SESSION['loggedin'])) {
     
   <div class="wrapper2">
       <h2 class="title">Galería</h2>
-			  <div class="datatable-responsive">
+			  <div class="datatable-responsive ">
           <table id="Galeria" class="table table-responsive" width="100%" cellspacing="0">
             <thead>
                 <tr style="text-align:center;">       
