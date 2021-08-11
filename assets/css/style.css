@@ -288,7 +288,7 @@ body {
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  z-index: 2000;
+  z-index: 1;
 }
 
 #header .logo a {
@@ -342,7 +342,7 @@ body {
   transition: 0.3s;
   font-size: 18px;
   font-weight: 500;
-  font-family: "Roboto",sans-serif;
+  font-family: 'Open Sans', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
   padding: 0 4px;
 }
 /* 
@@ -369,7 +369,7 @@ body {
 .nav-menu a:hover,
 .nav-menu .active > a,
 .nav-menu li:hover > a{
-  color: #fff;
+  color: #2C2E27;
 }
 
 /*Mobile Nab*/
@@ -389,7 +389,7 @@ body {
 }
 
 .mobile-nav-toggle i{
-  color:#9ACD32
+  color:#9ACD32;
 }
 
 .mobile-nav{
@@ -439,7 +439,7 @@ body {
 .mobile-nav a{
   display: block;
   position: relative;
-  color: #000;
+  color: #2C2E27;
   padding: 10px 20px;
   font-weight: 500;
   outline: none;
@@ -928,27 +928,17 @@ section {
   -moz-box-shadow: 10px 10px 5px #ccc;
   -webkit-box-shadow: 10px 10px 5px #ccc;
   -khtml-box-shadow: 10px 10px 5px #ccc;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
-
-
-/* .services .icon-box::before {
-  content: '';
-  position: absolute;
-  background: #fdeff2;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  top: 100%;
-  transition: all 0.7s;
-  z-index: -1;
-} */
-
-/* .services .icon-box:hover::before {
-  background: #2D92CB;
-  top: 0;
-  border-radius: 0px;
+@media (min-width: 768px){
+.col-md-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
 }
- */
+}
 .services .icon {
   margin-bottom: 15px;
 }
@@ -991,6 +981,20 @@ section {
   background-color:  #9ACD32;
   color: #2C2E27;
   margin-top:45px;
+}
+.container .btn-get-started2 {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 5px 20px 5px 20px;
+  border-radius: 30px;
+  transition: 0.3s;
+  background-color: #9ACD32;
+  color: #2C2E27;
+  margin-top: 25px;
 }
 .container .btn-get-started:hover{
   background:  #83AE2A;
@@ -1084,7 +1088,7 @@ section {
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio {
-  margin-top: 190px;
+  margin-top: 35px;
 }
 .portfolio #portfolio-flters {
   padding: 0;
@@ -2018,9 +2022,9 @@ Full screen Modal
   padding: 8px 30px 9px 30px;
   border-radius: 10px;
   transition: 0.3s;
-  background-color: #9ACD32;
-  color: #2C2E27;
-  border-color: #9ACD32;
+  background-color: #6c757d;
+  color: #fff;
+  border-color: #6c757d;
 }
 .content-wrapper .botones .btn-primary{
   color: #fff;
@@ -2083,9 +2087,9 @@ Full screen Modal
   border-color: #83AE2A;
 }
 .modal-content .btn-success:hover{
-  background:  #83AE2A;
-  color: #2C2E27;
-  border-color: #9ACD32;
+  background:  #525559;
+  color: #fff;
+  border-color: #525559;  
 }
 .modal-content .modal-footer{
   display: flex;

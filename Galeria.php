@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -8,6 +7,22 @@
   <title>Galería</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  <meta content="Miguel Angel Arias, Darwin Meneses, Juan Esteban Alvarez" name="autor">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="assets/js/CaninosCasmeLogin.js"></script>
+
+
+
+
+
 
   <!-- Favicons -->
   <link href="assets/img/Logo.ico" rel="icon">
@@ -26,11 +41,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet"> 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
-  <header id="header" class="fixed-top ">
+  <header id="header" class="">
     <div class="container d-flex align-items-center">
       <h1 class="logo mr-auto"><a href="index.php"><img src="assets/img/Logo.png" alt="Caninos Casme"></a></h1>
       <nav class="nav-menu d-none d-lg-block">
@@ -38,7 +52,7 @@
           <li><a href="index.php">Inicio</a></li>
           <li><a href="Nosotros.php">Nosotros</a></li>
           <li><a href="Servicios.php">Servicios</a></li>
-          <li><a style="color:yellow" href="Galeria.php">Galería</a></li>
+          <li><a style="color:#2C2E27" href="Galeria.php">Galería</a></li>
           <li><a href="Login.php">Admin</a></li>
         </ul>
       </nav>

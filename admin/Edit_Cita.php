@@ -215,7 +215,7 @@ include("DB/conexion.php");
 
 if(isset($_POST['update'])){
 
-  /* AQUI SE RECIBEN LOS DATOS DEL FORMULARIO */
+  /* AQUI SE RECIBEN LOS DATOS DEL FORMULARIO bobo */
   $query2 = "SELECT * FROM tabla_para_acciones WHERE Descripción = 'Empleado'";
   $resultado2 = $con->query($query2);
   $row2 = $resultado2->fetch_assoc();

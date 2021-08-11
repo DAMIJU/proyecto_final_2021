@@ -24,7 +24,7 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <style>
     .activo {
-     color:yellow;
+     color:#2C2E27;
 }
   </style>
   
@@ -40,7 +40,7 @@
         <ul>
           <li><a href="index.php">Inicio</a></li>
           <li><a href="Nosotros.php">Nosotros</a></li>
-          <li><a style="color:yellow" href="Servicios.php">Servicios</a></li>
+          <li><a style="color:#2C2E27" href="Servicios.php">Servicios</a></li>
           <li><a href="Galeria.php">Galería</a></li>
           <li><a href="Login.php">Admin</a></li>
         </ul>
@@ -73,9 +73,9 @@
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box">
               <div class="icon"><img src="https://img.icons8.com/wired/64/000000/syringe.png"></div>
-              <h4 class="title"><a href="">Vacunacion</a></h4>
+              <h4 class="title"><a href="">Medicina Preventiva</a></h4>
               <p class="description"></p>
-              <a id="btnabrir" class="btn-get-started btn btn-lg scrollto span2" data-toggle="modal" data-target="#ModalServicio_Vacunacion"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"></a>
+              <a id="btnabrir" class="btn-get-started2 btn btn-lg scrollto span2" data-toggle="modal" data-target="#ModalServicio_Vacunacion"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"></a>
             </div>
           </div>
 
@@ -96,9 +96,6 @@
           <div class="modal-content">
             <div class="modal-header" style="background-color:#9ACD32">
               <h5 class="modal-title" style="font-weight:bold" id="exampleModalLabel">Adiestramiento básico</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
             </div>
             <div class="modal-body">
               <p>Básica con correa” ¿Te gustaría entender a tu perro y mejorar tu relación con él? Conseguir que los paseos sean agradables y que el perro obedezca de manera natural es mucho más fácil de lo que puede parecer. Descúbrelo todo en este adiestramiento</p>
@@ -121,6 +118,7 @@
                   <li>XII. Quieto echado a 2 metros duración 1 min</li>
                 </div>
               </div>
+              <img class="Img_VacunamosTuPerrito img-fluid" src="assets/img/Adiestramiento3.png" style="width:40%" alt="Vacunamos tu perrito">
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -135,13 +133,13 @@
           <div class="modal-content">
             <div class="modal-header" style="background-color:#9ACD32">
               <h5 class="modal-title" style="font-weight:bold" id="exampleModalLabel">Gimnasia Canina</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
             </div>
             <div class="modal-body">
-              <center><p style="color:red;font-size:20px">¡Ejercita a tu perro!</p>
-              <p>Ejercitamos a tu perro, llevamos un plan cardiobascular en caminadora, canina.</p>
+              <center><p style="color:red;font-size:20px">¡Ejercita a tu can!</p>
+              <p>Cuando un perro realiza ejercicio constantemente, se cansa y libera mucha 
+                energía y emociones, lo que reduce los problemas de comportamiento comunes, como ladrar 
+                constantemente, morder cosas que no debe, excavar en los jardines y otros comportamientos 
+                que se relacionan generalmente con la ansiedad.</p>
               <img class="Img_GimnasiaCanina img-fluid" style="width:40%" src="assets/img/Gimnasia_Casme.jpg" alt="Gimnasia Canina"></center>
             </div>
             <div class="modal-footer">
@@ -151,20 +149,22 @@
         </div>
       </div>
     </section>
-     
     <!---Modal Vacunación-->
     <div class="modal fade" id="ModalServicio_Vacunacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header" style="background-color:#9ACD32">
-              <h5 class="modal-title" style="font-weight:bold" id="exampleModalLabel">Vacunación</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+              <h5 class="modal-title" style="font-weight:bold" id="exampleModalLabel">Medicina Preventiva</h5>
             </div>
             <div class="modal-body">
-              <center>¡Vacunamos a tu perrito según la edad!</p>
-              <img class="Img_VacunamosTuPerrito img-fluid" src="assets/img/Vacunacion_Casme.jpg" style="width:40%" alt="Vacunamos tu perrito">
+              <center><p style="color:red;font-size:20px">¡Vacunamos a tu perrito según la edad!</p>
+              <p>La vacunación en las mascotas tiene como objetivo prevenir algunas de las enfermedades 
+                infecciosas graves o contagiosas de las que afectan a nuestros caninos. 
+                Éstas pueden resultar mortales o muy debilitantes. En muchos casos no existe 
+                tratamiento o resulta muy difícil, largo o poco accesible, por lo que la vacunación es una 
+                herramienta importante, y a veces puede ser la única herramienta para controlarlas y asegurar 
+                el bienestar de tus mascotas.</p>
+              <img class="Img_VacunamosTuPerrito img-fluid" src="assets/img/Vacuna.png" style="width:40%" alt="Vacunamos tu perrito">
               </center>
             </div>
             <div class="modal-footer">
@@ -180,9 +180,6 @@
           <div class="modal-content">
           <div class="modal-header" style="background-color:#9ACD32">
               <h5 class="modal-title" style="font-weight:bold" id="exampleModalLabel">Estética Canina</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
             </div>
             <div class="modal-body">
               <p>La mejor opción para nuestros perros en Tantoyuca y la región, nuestro servicio incluye:</p>
@@ -191,14 +188,14 @@
                   <li>Desenredado</li>
                   <li>Recuperación de pelaje</li>
                   <li>Baño control caída de pelo</li>
-                  <li>Baño con shampoo hipo alergénico y aromaterapia</li>
+                  <li>Baño con shampoo hipo alergénico</li>
                   <li>Lavanda y romero</li>
                   <li>Masaje relajante durante el baño</li>
                   <li>Limpieza de glándulas anales</li>
-                  <li>Acondicionado y texturizado de pelo según la raza</li>
+                  <li>Acondicionado y texturizado de pelo.</li>
                 </div>
                 <div class="col-md-6">
-                  <li>Secado rápido y a conciencia</li>
+                  <li>Secado profundo</li>
                   <li>Corte de uñas ya reblandecidas por el baño</li>
                   <li>Limpieza de oídos</li>
                   <li>Corte y arreglo estético que puede ser clásico</li>
@@ -207,9 +204,12 @@
                   <li>Adorno y perfume si es de su agrado</li>
                 </div>
               </div>
+              <div class="col-md-12">
+              <img class="Img_VacunamosTuPerrito img-fluid" src="assets/img/Estetica.png" style="width:40%" alt="Vacunamos tu perrito">
+            </div>
             </div>
             <div class="modal-footer">
-            <button style="margin-left:85%" type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             </div>
           </div>
         </div>
