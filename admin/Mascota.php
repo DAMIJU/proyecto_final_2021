@@ -151,18 +151,6 @@ if (!isset($_SESSION['loggedin'])) {
             <i class="fas fa-angle-left right"></i>
           </a>
           <ul class="nav nav-treeview">
-          <li class="nav-item">
-              <a href="Config.php?modulo=menu" class="nav-link">
-                <i class="fas fa-bars nav-icon"></i>
-                <p>Menú</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="Config.php?modulo=DatosEmpresa" class="nav-link">
-                <i class="fas fa-building nav-icon"></i>
-                <p>Datos de la empresa</p>
-              </a>
-            </li>
             <li class="nav-item">
               <a href="Config.php?modulo=Galeria" class="nav-link">
                 <i class="fas fa-photo-video nav-icon"></i>
