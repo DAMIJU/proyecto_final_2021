@@ -24,7 +24,7 @@
 
       </div>
       <div class="modal-footer">
-      <a href="DeleteImageGallery.php?portfolio_id=<?php echo $mostrar['portfolio_id']?>" name="Eliminar_ImagenGaleria" class="btn btn-success" id="" value="Eliminar"></a>
+      <a href="DeleteImageGallery.php?portfolio_id=<?php echo $mostrar['portfolio_id']?>" name="Eliminar_ImagenGaleria" class="btn btn-success" id="" value="Eliminar">Eliminar</a>
       <button type="button" class="btn btn-success" data-dismiss="modal">Cancelar</button>   
       </div>
     </div>
