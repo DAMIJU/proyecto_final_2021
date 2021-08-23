@@ -931,6 +931,18 @@ section {
   margin-top: 25px;
   margin-bottom: 25px;
 }
+.Img_Adiestramiento{
+  border-radius: 5px;
+  border:2px solid #fff;
+  box-shadow: 10px 10px 5px #ccc;
+  -moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+  -khtml-box-shadow: 10px 10px 5px #ccc;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
 @media (min-width: 768px){
 .col-md-12 {
     -ms-flex: 0 0 100%;

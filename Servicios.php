@@ -82,7 +82,7 @@
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box">
               <div class="icon"><img src="https://img.icons8.com/ios/64/000000/poodle.png"/></div>
-              <h4 class="title"><a href="">Estetica canina</a></h4>
+              <h4 class="title"><a href="">Estetica</a></h4>
               <p class="description"></p>
               <a id="btnabrir" class="btn-get-started btn btn-lg scrollto span2" data-toggle="modal" data-target="#Modal_EsteticaCanina"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"></a>
             </div>
@@ -95,30 +95,17 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header" style="background-color:#9ACD32">
-              <h5 class="modal-title" style="font-weight:bold" id="exampleModalLabel">Adiestramiento básico</h5>
+              <h5 class="modal-title" style="font-weight:bold" id="exampleModalLabel">Adiestramiento Canino</h5>
             </div>
             <div class="modal-body">
-              <p>Básica con correa” ¿Te gustaría entender a tu perro y mejorar tu relación con él? Conseguir que los paseos sean agradables y que el perro obedezca de manera natural es mucho más fácil de lo que puede parecer. Descúbrelo todo en este adiestramiento</p>
-              <p>12 órdenes en total:</p>
-              <div class="row">
-                <div class="col-md-6">
-                  <li>I. Caminado junto con correa. </li>
-                  <li>II. Paso lento.</li>
-                  <li>III. Paso normal.</li>
-                  <li>IV. Paso rápido.</li>
-                  <li>V. Vuelta a la derecha.</li>
-                  <li>VI. Vuelta a la izquierda.</li>
-                </div>
-                <div class="col-md-6">
-                  <li>VII. Media vuelta.</li>
-                  <li>VIII. Sentado a la orden.</li>
-                  <li>IX. Sentado automático.</li>
-                  <li>X. Echado a la orden.</li>
-                  <li>XI. Quieto sentado a 2 metros duración 1 minuto.</li>
-                  <li>XII. Quieto echado a 2 metros duración 1 min</li>
-                </div>
-              </div>
-              <img class="Img_VacunamosTuPerrito img-fluid" src="assets/img/Adiestramiento3.png" style="width:40%" alt="Vacunamos tu perrito">
+              <center><!-- <p style="color:red;font-size:20px">Adiestramiento canino</p> -->
+              <p>El adiestramiento consiste en entrenar al perro para que obedezca órdenes básicas o adquiera unas habilidades concretas. 
+                El adiestramiento te proporciona herramientas para manejar ciertas situaciones en el día a día, es ganar en confianza y control.
+                Ten muy en cuenta que un mal adiestramiento puede provocar severos daños emocionales a tu perro y, en algunos casos, también físicos.
+                Así que si no sabes muy bien cómo adentrarte en el mundo de la educación canina, contáctanos, tenemos  más de 16 años de experiencia.
+                Poseemos varios módulos los cuales están hechos para acoplarse a las necesidades de cada perrito y familia.</p>
+                <p>Si te interesa, haz clic en la imagen para saber más:<p>
+              <img class="Img_Adiestramiento img-fluid" style="width:40%" src="assets/img/Adiestramiento.png" href="Adiestramiento.php" alt="Adiestramiento Canino"></center>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -135,7 +122,7 @@
               <h5 class="modal-title" style="font-weight:bold" id="exampleModalLabel">Gimnasia Canina</h5>
             </div>
             <div class="modal-body">
-              <center><p style="color:red;font-size:20px">¡Ejercita a tu can!</p>
+              <center><!-- <p style="color:red;font-size:20px">¡Ejercita a tu can!</p> -->
               <p>Cuando un perro realiza ejercicio constantemente, se cansa y libera mucha 
                 energía y emociones, lo que reduce los problemas de comportamiento comunes, como ladrar 
                 constantemente, morder cosas que no debe, excavar en los jardines y otros comportamientos 
@@ -157,7 +144,7 @@
               <h5 class="modal-title" style="font-weight:bold" id="exampleModalLabel">Medicina Preventiva</h5>
             </div>
             <div class="modal-body">
-              <center><p style="color:red;font-size:20px">¡Vacunamos a tu perrito según la edad!</p>
+              <center><!-- <p style="color:red;font-size:20px">¡Vacunamos a tu perrito según la edad!</p> -->
               <p>La vacunación en las mascotas tiene como objetivo prevenir algunas de las enfermedades 
                 infecciosas graves o contagiosas de las que afectan a nuestros caninos. 
                 Éstas pueden resultar mortales o muy debilitantes. En muchos casos no existe 
