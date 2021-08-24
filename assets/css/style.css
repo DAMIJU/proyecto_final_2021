@@ -920,18 +920,13 @@ section {
   z-index: 1;
   text-align: center;
 }
-
-.Img_VacunamosTuPerrito, .Img_GimnasiaCanina, .Img_VacunamosTuPerrito{
-  border-radius: 5px;
-  border:2px solid #fff;
-  box-shadow: 10px 10px 5px #ccc;
-  -moz-box-shadow: 10px 10px 5px #ccc;
-  -webkit-box-shadow: 10px 10px 5px #ccc;
-  -khtml-box-shadow: 10px 10px 5px #ccc;
-  margin-top: 25px;
-  margin-bottom: 25px;
+#Modal_ServicioAdiestramiento .Adiestramiento {
+  color: #2D92CB;
 }
-.Img_Adiestramiento{
+#Modal_ServicioAdiestramiento .Adiestramiento:hover {
+  color: #1F74A3;
+}
+.Img_VacunamosTuPerrito, .Img_GimnasiaCanina, .Img_VacunamosTuPerrito, .Img_Adiestramiento{
   border-radius: 5px;
   border:2px solid #fff;
   box-shadow: 10px 10px 5px #ccc;
@@ -940,7 +935,6 @@ section {
   -khtml-box-shadow: 10px 10px 5px #ccc;
   margin-top: 25px;
   margin-bottom: 25px;
-  cursor: pointer;
 }
 
 @media (min-width: 768px){
@@ -1012,7 +1006,23 @@ section {
   background:  #83AE2A;
   color: #2C2E27;
 }
-
+/*--------------------------------------------------------------
+# Adiestramiento
+--------------------------------------------------------------*/
+#Adiestramiento{
+  padding: 65px 8px;
+  z-index: 50;
+}
+#Adiestramiento .Img-Adiestramiento {
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 65px;
+}
+#Adiestramiento p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/

@@ -104,7 +104,7 @@
                 Ten muy en cuenta que un mal adiestramiento puede provocar severos daños emocionales a tu perro y, en algunos casos, también físicos.
                 Así que si no sabes muy bien cómo adentrarte en el mundo de la educación canina, contáctanos, tenemos  más de 16 años de experiencia.
                 Poseemos varios módulos los cuales están hechos para acoplarse a las necesidades de cada perrito y familia.</p>
-                <p>Si te interesa, haz clic en la imagen para saber más:<p>
+                <p>Si te interesa, haz <a class="Adiestramiento" href ="Adiestramiento.php">clic aquí</a> para saber más:<p>   
               <img class="Img_Adiestramiento img-fluid" style="width:40%" src="assets/img/Adiestramiento.png" href="Adiestramiento.php" alt="Adiestramiento Canino"></center>
             </div>
             <div class="modal-footer">
