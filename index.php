@@ -69,7 +69,7 @@
                     <div class="email">
                       <i class="icofont-envelope"></i>
                       <h4>Correo:</h4>
-                      <p>casdie@gmail.com</p>
+                      <p>servicioscaninoscasme.mx@gmail.com</p>
                     </div>
 
                     <div class="phone">

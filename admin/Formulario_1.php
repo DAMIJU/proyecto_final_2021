@@ -145,7 +145,7 @@ if (!isset($_SESSION['loggedin'])) {
           </a>
         </li>
         <li class="nav-item">
-          <a href="https://docs.google.com/spreadsheets/d/1C04SAZxKF_mlWUMR-ZbjBEnl5qvNo3hSlTSZ7WZdhV0/edit?usp=sharing" target="_blank" class="nav-link">
+          <a href="Citas.php" class="nav-link">
             <i class="nav-icon fa fa-calendar-alt"></i>
             <p>
               Formulario 1
@@ -153,7 +153,7 @@ if (!isset($_SESSION['loggedin'])) {
           </a>
         </li>
         <li class="nav-item">
-          <a href="Configuracion.php" class="nav-link">
+          <a href="https://docs.google.com/spreadsheets/u/7/d/e/2PACX-1vTAFoA7hRKKQs-WyXTMEPjY23xfgP3XgzBsWNTj1tCLZKja7ddqzfE7ZwIuxL6f0u2tgLpkraUPcJpe/pubhtml" class="nav-link">
             <i class="nav-icon fas fa-cogs"></i>
             <p>
               Configuración
@@ -179,93 +179,7 @@ if (!isset($_SESSION['loggedin'])) {
       </nav>
     </div>
   </aside>
-</div>
-<!-- MODAL PARA CERRAR SESIÓN -->
-<div class="modal fade" id="exitModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">¿Desea salir?</h3>
-      </div>
-      <div class="modal-body">Presione "Cerrar Sesión" si desea salir.</div>
-        <div class="modal-footer">
-          <button class="btn btn-raised btn-secondary" type="button" data-dismiss="modal">Cancelar</button>&nbsp;
-          <a class="btn btn-raised btn-danger" href="logout.php">Cerrar Sesión</a>
-        </div>
-    </div>
-  </div>
-</div>
-<div class="content-wrapper">
-  <div class="content-header admin-panel">      
-    <div class="text-center">
-      <h1>PANEL DE ADMINISTRADOR</h1>
-    </div>   
-  </div>
-    <div class="row row-admin">
-      <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-info">
-          <div class="inner">
-            <h3>Dueño</h3>
-            <p>Registrar un dueño</p>
-          </div>
-          <div class="icon">
-            <i class="fas fa-user-plus"></i>
-          </div>
-          <a href="Dueño.php" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-      </div>
-      <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-success">
-          <div class="inner">
-            <h3>Mascota<sup style="font-size: 20px"></sup></h3>
-            <p>Registrar mascota</p>
-          </div>
-          <div class="icon">
-            <i class="fas fa-paw"></i>
-          </div>
-          <a href="Mascota.php" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-      </div>
-      <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-warning">
-          <div class="inner">
-            <h3>Citas</h3>
-            <p>Añadir citas</p>
-          </div>
-          <div class="icon">
-            <i class="far fa-calendar-check"></i>
-          </div>
-          <a href="Citas.php" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-      </div>
-      <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-danger">
-          <div class="inner">
-            <h3>Configuración</h3>
-            <p>Configure su paginas</p>
-          </div>
-          <div class="icon">
-            <i class="fas fa-cog"></i>
-          </div>
-          <a href="#" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-      </div>
-    </div>
-  <div class="wrapper2">
-      <h2 class="title">Lista de pendientes</h2>
-    <div class="inputFields">
-			<input type="text" id="taskValue" placeholder="Ingrese un pendiente">
-			<button type="submit" id="addBtn" class="btn"><i class="fa fa-plus"></i></button>
-		</div>
-		<div class="content">
-			<ul id="tasks"></ul>		
-		</div>
-	</div>
-</div>   
+  
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
       <b>Servicios Caninos Casme.</b> 
