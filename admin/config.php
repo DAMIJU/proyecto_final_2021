@@ -166,7 +166,7 @@ if (!isset($_SESSION['loggedin'])) {
             <li class="nav-item">
               <a href="Config.php?modulo=AddUser" class="nav-link">
                 <i class="fas fa-user nav-icon"></i>
-                <p>Añadir usuario</p>
+                <p>Añadir admin</p>
               </a>
             </li>
           </ul>
@@ -410,19 +410,7 @@ if (!isset($_SESSION['loggedin'])) {
             </p>
             <i class="fas fa-angle-left right"></i>
           </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="Config.php?modulo=menu" class="nav-link">
-                <i class="fas fa-bars nav-icon"></i>
-                <p>Menú</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="Config.php?modulo=DatosEmpresa" class="nav-link">
-                <i class="fas fa-building nav-icon"></i>
-                <p>Datos de la empresa</p>
-              </a>
-            </li>
+          <ul class="nav nav-treeview">        
             <li class="nav-item">
               <a href="Config.php?modulo=Galeria" class="nav-link">
                 <i class="fas fa-photo-video nav-icon"></i>
@@ -432,7 +420,7 @@ if (!isset($_SESSION['loggedin'])) {
             <li class="nav-item">
               <a href="Config.php?modulo=AddUser" class="nav-link">
                 <i class="fas fa-user nav-icon"></i>
-                <p>Añadir usuario</p>
+                <p>Añadir admin</p>
               </a>
             </li>
           </ul>
@@ -669,7 +657,15 @@ if (!isset($_SESSION['loggedin'])) {
               Citas
             </p>
           </a>
-        </li>  
+        </li>
+        <li class="nav-item">
+          <a href="https://docs.google.com/spreadsheets/d/1C04SAZxKF_mlWUMR-ZbjBEnl5qvNo3hSlTSZ7WZdhV0/edit?usp=sharing" target="_blank" class="nav-link">
+            <i class="nav-icon fa fa-calendar-alt"></i>
+            <p>
+              Formulario 1
+            </p>
+          </a>
+        </li>
         <li class="nav-item">
           <a href="Configuracion.php" class="nav-link active">
             <i class="nav-icon fas fa-cogs"></i>
@@ -680,18 +676,6 @@ if (!isset($_SESSION['loggedin'])) {
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="Config.php?modulo=menu" class="nav-link">
-                <i class="fas fa-bars nav-icon"></i>
-                <p>Menú</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="Config.php?modulo=DatosEmpresa" class="nav-link">
-                <i class="fas fa-building nav-icon"></i>
-                <p>Datos de la empresa</p>
-              </a>
-            </li>
-            <li class="nav-item">
               <a href="Config.php?modulo=Galeria" class="nav-link">
                 <i class="fas fa-photo-video nav-icon"></i>
                 <p>Galería de imágenes</p>
@@ -700,7 +684,7 @@ if (!isset($_SESSION['loggedin'])) {
             <li class="nav-item">
               <a href="Config.php?modulo=AddUser" class="nav-link">
                 <i class="fas fa-user nav-icon"></i>
-                <p>Añadir usuario</p>
+                <p>Añadir admin</p>
               </a>
             </li>
           </ul>
@@ -725,58 +709,51 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </div>
 </div>
-<div class="content-wrapper">
-  <div class="content-header admin-panel">      
+  <div class="content-wrapper">
     <div class="text-center">
-      <h1>CONFIGURACIÓN</h1>
-      <div><button class="btn btn-info" onclick="location.href='Config.php?modulo=AgregarGaleria'">Agregar</button></div>
-    </div>   
+    <h1>Galería de imágenes</h1>
+    <button class="btn-add-mascota" onclick="location.href='Config.php?modulo=AgregarGaleria'">Agregar</button>
   </div>
-    
-  <div class="wrapper2">
-      <h2 class="title">Galería</h2>
-			  <div class="datatable-responsive ">
-          <table id="Galeria" class="table table-responsive" width="100%" cellspacing="0">
-            <thead>
-                <tr style="text-align:center;">       
-                  <th style="width:120px">No.</th>
-                  <th style="width:350px">Título</th>
-                  <th style="width:380px">Imagen</th> 
-                  <th>Acciones</th>               
-                </tr>
-            </thead>
-            <tbody>
-              <?php  
-                include("DB/conexion.php");
-                $query="SELECT * FROM tabla_portfolio";
-                $resultado= $con->query($query);
-                while($mostrar=$resultado->fetch_assoc()){
-              ?>   
-                <tr style="text-align:center">            
-                  <td><?php echo $mostrar['portfolio_id'] ?></td>
-                  <td><?php echo $mostrar['title']?></td>
-                  <td><img style="max-width:50%" class="img-fluid" src="data:image/jpg;base64,<?php echo base64_encode($mostrar['imagen']);?>"></td>
-                  <td>
-                    <a title="Editar imagen" class="btn btn-secondary" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#ModalGaleria<?php echo $mostrar['portfolio_id']?>">
-                      <i class="icofont-ui-edit"></i>
-                    </a>
-                    <a title="Eliminar dueño" class="btn btn-danger" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#ModalEliminarGaleria<?php echo $mostrar['portfolio_id']?>">
-                      <i class="far fa-trash-alt"></i>
-                    </a>
-                  </td>
-                </tr>
-                <?php
-                  include("ModalActualizarGaleria.php");
-                  include("ModalEliminarGaleria.php");
-                  }
-                ?>   
-            </tbody>
-          </table>
-      </div>  
-  </div> 
-	</div>
-<!-- DATATABLE DUEÑO -->
-  
+<!-- DATATABLE GALERIA -->
+  <div id="galeria_wrapper"class="datatable-responsive datatable-box">
+    <table id="galeria" class="table table-responsive table-sm non-top-border dt-responsive" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Nº</th>
+          <th>Titulo</th>
+          <th>Imagen</th>
+          <th>Acción</th>             
+        </tr>
+      </thead>
+      <tbody>
+        <?php  
+          include("DB/conexion.php");
+          $query="SELECT * FROM tabla_portfolio";
+          $resultado= $con->query($query);
+          while($mostrar=$resultado->fetch_assoc()){
+        ?>
+          <tr>            
+            <td><?php echo $mostrar['portfolio_id'] ?></td>
+            <td><?php echo $mostrar['title']?></td>
+            <td><img style="max-width:40%" class="img-fluid" src="data:image/jpg;base64,<?php echo base64_encode($mostrar['imagen']);?>"></td>
+            <td>
+              <a title="Editar imagen" class="btn btn-secondary" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#ModalGaleria<?php echo $mostrar['portfolio_id']?>">
+                <i class="icofont-ui-edit"></i>
+              </a>
+              <a title="Eliminar dueño" class="btn btn-danger" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#ModalEliminarGaleria<?php echo $mostrar['portfolio_id']?>">
+                <i class="far fa-trash-alt"></i>
+              </a>
+              </td>
+            </tr>
+        <?php
+            include("ModalActualizarGaleria.php");
+            include("ModalEliminarGaleria.php");
+          } 
+        ?>   
+      </tbody>
+    </table>
+  </div>
+</div>
    <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
         <b>Servicios Caninos Casme.</b> 
@@ -853,7 +830,7 @@ if (!isset($_SESSION['loggedin'])) {
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
 <script> $(document).ready(function() {
-    $('#Galeria').DataTable( {
+    $('#galeria').DataTable( {
         language: {
             url: 'https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
         }
@@ -994,7 +971,15 @@ if (!isset($_SESSION['loggedin'])) {
               Citas
             </p>
           </a>
-        </li>  
+        </li>
+        <li class="nav-item">
+          <a href="https://docs.google.com/spreadsheets/d/1C04SAZxKF_mlWUMR-ZbjBEnl5qvNo3hSlTSZ7WZdhV0/edit?usp=sharing" target="_blank" class="nav-link">
+            <i class="nav-icon fa fa-calendar-alt"></i>
+            <p>
+              Formulario 1
+            </p>
+          </a>
+        </li> 
         <li class="nav-item">
           <a href="Configuracion.php" class="nav-link active">
             <i class="nav-icon fas fa-cogs"></i>
@@ -1005,18 +990,6 @@ if (!isset($_SESSION['loggedin'])) {
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="Config.php?modulo=menu" class="nav-link">
-                <i class="fas fa-bars nav-icon"></i>
-                <p>Menú</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="Config.php?modulo=DatosEmpresa" class="nav-link">
-                <i class="fas fa-building nav-icon"></i>
-                <p>Datos de la empresa</p>
-              </a>
-            </li>
-            <li class="nav-item">
               <a href="Config.php?modulo=Galeria" class="nav-link">
                 <i class="fas fa-photo-video nav-icon"></i>
                 <p>Galería de imágenes</p>
@@ -1025,7 +998,7 @@ if (!isset($_SESSION['loggedin'])) {
             <li class="nav-item">
               <a href="Config.php?modulo=AddUser" class="nav-link">
                 <i class="fas fa-user nav-icon"></i>
-                <p>Añadir usuario</p>
+                <p>Añadir admin</p>
               </a>
             </li>
           </ul>
@@ -1034,7 +1007,6 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </aside>
 </div>
-
 <!-- MODAL PARA CERRAR SESIÓN -->
 <div class="modal fade" id="exitModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -1305,7 +1277,15 @@ if (!isset($_SESSION['loggedin'])) {
               Citas
             </p>
           </a>
-        </li>  
+        </li>
+        <li class="nav-item">
+          <a href="https://docs.google.com/spreadsheets/d/1C04SAZxKF_mlWUMR-ZbjBEnl5qvNo3hSlTSZ7WZdhV0/edit?usp=sharing" target="_blank" class="nav-link">
+           <i class="nav-icon fas fa-clipboard"></i>
+            <p>
+              Formulario 1
+            </p>
+          </a>
+        </li> 
         <li class="nav-item">
           <a href="Configuracion.php" class="nav-link active">
             <i class="nav-icon fas fa-cogs"></i>
@@ -1316,18 +1296,6 @@ if (!isset($_SESSION['loggedin'])) {
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="Config.php?modulo=menu" class="nav-link">
-                <i class="fas fa-bars nav-icon"></i>
-                <p>Menú</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="Config.php?modulo=DatosEmpresa" class="nav-link">
-                <i class="fas fa-building nav-icon"></i>
-                <p>Datos de la empresa</p>
-              </a>
-            </li>
-            <li class="nav-item">
               <a href="Config.php?modulo=Galeria" class="nav-link">
                 <i class="fas fa-photo-video nav-icon"></i>
                 <p>Galería de imágenes</p>
@@ -1336,7 +1304,7 @@ if (!isset($_SESSION['loggedin'])) {
             <li class="nav-item">
               <a href="Config.php?modulo=AddUser" class="nav-link">
                 <i class="fas fa-user nav-icon"></i>
-                <p>Añadir usuario</p>
+                <p>Añadir admin</p>
               </a>
             </li>
           </ul>
@@ -1345,7 +1313,6 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </aside>
 </div>
-
 <!-- MODAL PARA CERRAR SESIÓN -->
 <div class="modal fade" id="exitModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -1367,11 +1334,10 @@ if (!isset($_SESSION['loggedin'])) {
       <h1>CONFIGURACIÓN</h1>
     </div>   
   </div>
-    
   <div class="wrapper2">
       <div class="card">
         <div class="card-header card-primary">
-          <h2 class="title">Añadir usuario</h2>
+          <h2 class="title">Añadir admin</h2>
         </div>
         <div class="card-body">
         <form action="AgregarUser.php" method="POST" autocomplete="OFF">

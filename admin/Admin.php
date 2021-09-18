@@ -146,7 +146,7 @@ if (!isset($_SESSION['loggedin'])) {
         </li>
         <li class="nav-item">
           <a href="https://docs.google.com/spreadsheets/d/1C04SAZxKF_mlWUMR-ZbjBEnl5qvNo3hSlTSZ7WZdhV0/edit?usp=sharing" target="_blank" class="nav-link">
-            <i class="nav-icon fa fa-calendar-alt"></i>
+            <i class="nav-icon fas fa-clipboard"></i>
             <p>
               Formulario 1
             </p>
@@ -170,7 +170,7 @@ if (!isset($_SESSION['loggedin'])) {
             <li class="nav-item">
               <a href="Config.php?modulo=AddUser" class="nav-link">
                 <i class="fas fa-user nav-icon"></i>
-                <p>Añadir usuario</p>
+                <p>Añadir admin</p>
               </a>
             </li>
           </ul>
