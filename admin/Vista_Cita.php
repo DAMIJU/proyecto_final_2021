@@ -172,6 +172,12 @@ if (!isset($_SESSION['loggedin'])) {
                 <p>Añadir admin</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="Config.php?modulo=AddUser" class="nav-link">
+                <i class="fas fa-unlock nav-icon"></i>
+                <p>Contraseñas</p>
+              </a>
+            </li>
             </ul>
           </li>
           <!-- <div class="Footer">

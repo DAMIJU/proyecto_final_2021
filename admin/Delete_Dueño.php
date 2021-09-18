@@ -173,6 +173,12 @@ if (!isset($_SESSION['loggedin'])) {
                 <p>Añadir admin</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="Config.php?modulo=AddUser" class="nav-link">
+                <i class="fas fa-unlock nav-icon"></i>
+                <p>Contraseñas</p>
+              </a>
+            </li>
           </ul>
         </li>
       </nav>
@@ -240,14 +246,14 @@ if(isset($_POST['delete'])){
     <div class="row">
       <div class="col-md-5 mx-auto">
         <div class="card card-body" style="background-color: #2D92CB;">
-          <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Editando a <?php echo $row['Nombre_Dueño']; ?></h3> 
+          <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Se eliminará por completo a <?php echo $row['Nombre_Dueño']; ?></h3> 
           <form action="" method="POST">
             <div class="form-group">
               <input type="password" name="password" class="form-control" value="" placeholder="Contraseña de Administrador">
             </div>
             <div class="botones">
-              <button name="delete" class="btn btn-success">Actualizar</button>
-              <a href="javascript: history.go(-1)" role="button" class="btn btn-danger">Cancelar</a>
+              <button name="delete" class="btn btn-danger">Eliminar</button>
+              <a href="javascript: history.go(-1)" role="button" class="btn btn-secondary">Cancelar</a>
             </div>   
           </form>
         </div>
