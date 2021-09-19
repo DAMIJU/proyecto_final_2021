@@ -56,7 +56,7 @@
     </div>
     <div class="col-md-6">
         <h2 style="color:#138fcb;font-family:Roboto Condensed;font-weight:bold">Importancia de educar y adiestrar a tu perro</h2>
-        <p>Cuano hablamos de adiestrar a un perro, mucha gente suele asociar el concepto adiestramiento con algo negativo para el animal. Pero, en realidad, educar y adiestrar a un perro tiene muchos aspectos positivos si se hace de forma correcta. Hoy queremos hablarte de algunos de ellos, ¡vamos allá!</p>       
+        <p>Cuando hablamos de adiestrar a un perro, mucha gente suele asociar el concepto adiestramiento con algo negativo para el animal. Pero, en realidad, educar y adiestrar a un perro tiene muchos aspectos positivos si se hace de forma correcta. Hoy queremos hablarte de algunos de ellos, ¡vamos allá!</p>       
         <p>En primer lugar, es muy importante que quede clara la diferencia entre educar a un perro y adiestrarlo: la educación canina tiene como objetivos mejorar la relación entre el perro y su guía, mejorando la comunicación entre ambos y ayudando al perro a encontrar un equilibrio emocional que facilite su adaptación al entorno. Por simplificarlo un poco, consiste en ganarse la confianza del perro para poder guiarle en su aprendizaje, en entender qué necesita para estar equilibrado y en saber cómo comunicarle lo que está permitido y lo que no.</p>
         <p>Por otra parte, el adiestramiento consiste en entrenar al perro para que obedezca órdenes básicas o adquiera unas habilidades concretas. El adiestramiento te proporciona herramientas para manejar ciertas situaciones en el día a día, es ganar en confianza y control. Por ejemplo: Si enseñas a tu perro a venir a la llamada, tendrás más confianza para dejarlo suelto y tu perro disfrutará de mucha más libertad.</p>
         <p>Por tanto, si lo que quieres conseguir es que tu perro aprenda unas órdenes básicas y sea capaz de convivir mejor con el entorno en el que vive, deberás combinar el adiestramiento con la educación canina para conseguir los mejores resultados. Y, sobre todo, deberás tener en cuenta que este trabajo no pasa solo por las manos del educador: tú también eres una parte vital del proceso y deberás aprender a entender el lenguaje y las necesidades de tu perro, mejorar tu comunicación con él y explicarle con claridad qué es lo que esperas de vuestra relación.</p>
@@ -77,7 +77,7 @@
     <div class="row">  
     <div class="col-md-6">
         <h2 style="color:#138fcb;font-family:Roboto Condensed;font-weight:bold">Beneficios de adiestrar y educar a tu perro</h2>
-        <p>Algunos ya te los hemos contado más arriba: la educación canina hará que tu perro sepa reaccionar mejor ante diferentes estímulos de su día a día y mejorará vuestra convivencia. Pero también conseguiréis otros beneficios: un perro educado se porta mejor y, por tanto:</p>       
+        <p>Algunos ya te los hemos contado más arriba: la educación canina hará que tu perro sepa reaccionar mejor ante diferentes estímulos de su día a día y mejorará nuestra convivencia. Pero también conseguiréis otros beneficios: un perro educado se porta mejor y, por tanto:</p>       
         <p>#1 Mejorarás el vínculo que te une a tu perro
 Un perro educado es un perro con el que no tienes conflictos constantes. Tu  relación con el será menos tensa y más confiable, tu perro se sentirá más seguro y estará menos estresado: tener a un perro educado te permitirá compartir muchas más experiencias positivas con él.</p>
         <p>#2 Corregirás conductas inapropiadas
