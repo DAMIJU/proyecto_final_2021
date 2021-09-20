@@ -144,10 +144,26 @@ if (!isset($_SESSION['loggedin'])) {
             </a>
           </li>
           <li class="nav-item">
-          <a href="https://docs.google.com/spreadsheets/d/1C04SAZxKF_mlWUMR-ZbjBEnl5qvNo3hSlTSZ7WZdhV0/edit?usp=sharing" target="_blank" class="nav-link">
+          <a href="https://docs.google.com/spreadsheets/d/1yrcoWa9NW8_W0c331Dn6I7Eo7khiJc_bRkr7Gh91E04/edit?usp=sharing" target="_blank" class="nav-link">
             <i class="nav-icon fas fa-clipboard"></i>
             <p>
-              Formulario 1
+              Form educación
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://docs.google.com/spreadsheets/d/14CeUn7SXvCSbLqx6X43VQaimSk4uE7s4iQjCJiLNsxc/edit?usp=sharing" target="_blank" class="nav-link">
+            <i class="nav-icon fas fa-clipboard"></i>
+            <p>
+              Form adiestramiento
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://docs.google.com/spreadsheets/d/1UpHaj2hp8583jv18H2mekoe2OOlT6WxSP-NTTzLo1D8/edit?usp=sharing" target="_blank" class="nav-link">
+            <i class="nav-icon fas fa-clipboard"></i>
+            <p>
+              Form modificación conductual
             </p>
           </a>
         </li> 

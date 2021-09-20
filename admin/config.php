@@ -659,10 +659,26 @@ if (!isset($_SESSION['loggedin'])) {
           </a>
         </li>
         <li class="nav-item">
-          <a href="https://docs.google.com/spreadsheets/d/1C04SAZxKF_mlWUMR-ZbjBEnl5qvNo3hSlTSZ7WZdhV0/edit?usp=sharing" target="_blank" class="nav-link">
+          <a href="https://docs.google.com/spreadsheets/d/1yrcoWa9NW8_W0c331Dn6I7Eo7khiJc_bRkr7Gh91E04/edit?usp=sharing" target="_blank" class="nav-link">
             <i class="nav-icon fas fa-clipboard"></i>
             <p>
-              Formulario 1
+              Form educación
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://docs.google.com/spreadsheets/d/14CeUn7SXvCSbLqx6X43VQaimSk4uE7s4iQjCJiLNsxc/edit?usp=sharing" target="_blank" class="nav-link">
+            <i class="nav-icon fas fa-clipboard"></i>
+            <p>
+              Form adiestramiento
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://docs.google.com/spreadsheets/d/1UpHaj2hp8583jv18H2mekoe2OOlT6WxSP-NTTzLo1D8/edit?usp=sharing" target="_blank" class="nav-link">
+            <i class="nav-icon fas fa-clipboard"></i>
+            <p>
+              Form modificación conductual
             </p>
           </a>
         </li>
@@ -971,10 +987,26 @@ if (!isset($_SESSION['loggedin'])) {
           </a>     
         </li>   
         <li class="nav-item">
-          <a href="Citas.php" class="nav-link">
-            <i class="nav-icon fa fa-calendar-alt"></i>
+          <a href="https://docs.google.com/spreadsheets/d/1yrcoWa9NW8_W0c331Dn6I7Eo7khiJc_bRkr7Gh91E04/edit?usp=sharing" target="_blank" class="nav-link">
+            <i class="nav-icon fas fa-clipboard"></i>
             <p>
-              Citas
+              Form educación
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://docs.google.com/spreadsheets/d/14CeUn7SXvCSbLqx6X43VQaimSk4uE7s4iQjCJiLNsxc/edit?usp=sharing" target="_blank" class="nav-link">
+            <i class="nav-icon fas fa-clipboard"></i>
+            <p>
+              Form adiestramiento
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://docs.google.com/spreadsheets/d/1UpHaj2hp8583jv18H2mekoe2OOlT6WxSP-NTTzLo1D8/edit?usp=sharing" target="_blank" class="nav-link">
+            <i class="nav-icon fas fa-clipboard"></i>
+            <p>
+              Form modificación conductual
             </p>
           </a>
         </li>
@@ -1291,13 +1323,29 @@ if (!isset($_SESSION['loggedin'])) {
           </a>
         </li>
         <li class="nav-item">
-          <a href="https://docs.google.com/spreadsheets/d/1C04SAZxKF_mlWUMR-ZbjBEnl5qvNo3hSlTSZ7WZdhV0/edit?usp=sharing" target="_blank" class="nav-link">
+          <a href="https://docs.google.com/spreadsheets/d/1yrcoWa9NW8_W0c331Dn6I7Eo7khiJc_bRkr7Gh91E04/edit?usp=sharing" target="_blank" class="nav-link">
             <i class="nav-icon fas fa-clipboard"></i>
             <p>
-              Formulario 1
+              Form educación
             </p>
           </a>
-        </li> 
+        </li>
+        <li class="nav-item">
+          <a href="https://docs.google.com/spreadsheets/d/14CeUn7SXvCSbLqx6X43VQaimSk4uE7s4iQjCJiLNsxc/edit?usp=sharing" target="_blank" class="nav-link">
+            <i class="nav-icon fas fa-clipboard"></i>
+            <p>
+              Form adiestramiento
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://docs.google.com/spreadsheets/d/1UpHaj2hp8583jv18H2mekoe2OOlT6WxSP-NTTzLo1D8/edit?usp=sharing" target="_blank" class="nav-link">
+            <i class="nav-icon fas fa-clipboard"></i>
+            <p>
+              Form modificación conductual
+            </p>
+          </a>
+        </li>
         <li class="nav-item">
           <a href="Configuracion.php" class="nav-link active">
             <i class="nav-icon fas fa-cogs"></i>
@@ -1363,13 +1411,13 @@ if (!isset($_SESSION['loggedin'])) {
           <div class="row mb-4">
             <div class="col">
               <div class="form-outline">
-                <label class="form-label FormLogin" for="NombreCompleto">Nombre<span style="color:red">*</span></label>
+                <label class="form-label FormLogin" for="NombreCompleto">Nombres<span style="color:red">*</span></label>
                 <input type="text" class="form-control" name="FullName">
               </div>
             </div>
             <div class="col">
               <div class="form-outline">
-                <label class="form-label FormLogin" for="Apellido">Apellido<span style="color:red">*</span></label>
+                <label class="form-label FormLogin" for="Apellido">Apellidos<span style="color:red">*</span></label>
                 <input type="text" id="Apellido" required="required" name="Apellidos_Usuario" class="form-control" />
               </div>
             </div>
