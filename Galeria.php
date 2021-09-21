@@ -19,11 +19,6 @@
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <script src="assets/js/CaninosCasmeLogin.js"></script>
 
-
-
-
-
-
   <!-- Favicons -->
   <link href="assets/img/Logo.ico" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">

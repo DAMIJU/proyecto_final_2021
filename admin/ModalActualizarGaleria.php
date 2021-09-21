@@ -2,7 +2,7 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content ActualizarGaleria">
       <div class="modal-header">
-        <center><h5 style="font-weight:bold;color:#ffffff" class="modal-title" id="exampleModalLabel">Actualizar <?php echo $mostrar['title']?></h5></center>
+        <center><h5 style="color:#000000;font-size:28px;font-family:Open Sans, SanS-serif" class="modal-title" id="exampleModalLabel">Actualizar <?php echo $mostrar['title']?></h5></center>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
