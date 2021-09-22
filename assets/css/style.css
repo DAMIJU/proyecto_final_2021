@@ -2248,7 +2248,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   justify-content: flex-end;
   /* padding: 10px 10px 0px 0px; */
 }
-.content-wrapper .btn-add-mascota{
+.content-wrapper .btn-add-mascota .btn-Add-Admin{
   display: inline-block;
   font-weight: 400;
   color: #fff;
@@ -2268,7 +2268,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   background-color: #2D92CB;
   border-color: #2D92CB;
 }
-.content-wrapper .btn-add-mascota:hover{
+.content-wrapper .btn-add-mascota .btn-Add-Admin:hover{
   display: inline-block;
   font-weight: 400;
   color: #fff;
