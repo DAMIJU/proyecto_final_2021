@@ -1576,8 +1576,8 @@ if (!isset($_SESSION['loggedin'])) {
   <!-- Bootstrap para DataTables -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
-  <!-- Vendor CSS Files -->
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Vendor CSS Files -->
+<link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
   <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
@@ -1586,10 +1586,6 @@ if (!isset($_SESSION['loggedin'])) {
   <style>
     li{
       list-style: none;
-    }
-
-    label .FormLogin{
-      font-weight: 1;
     }
   </style>
   <link rel="stylesheet" type="text/css" href="select2/select2.min.css">
@@ -1720,6 +1716,7 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </aside>
 </div>
+
 <!-- MODAL PARA CERRAR SESIÓN -->
 <div class="modal fade" id="exitModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -1735,67 +1732,53 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
   </div>
 </div>
-<div class="content-wrapper">
-  <div class="content-header admin-panel">      
-    <div class="text-center">
-      <h1>CONFIGURACIÓN</h1>
+  <div class="content-wrapper">
+    <div class="content-header admin-panel">      
+      <div class="text-center">
+        <h1>CONFIGURACIÓN USUARIOS ADMINISTRADORES</h1>
     </div>
-    <a href="Config.php?modulo=AddUser"><button class="btn btn-info">Añadir admin</button></a>
+    <a href="Config.php?modulo=AddUser"><button class="btn btn-info">Registrar admin</button></a>
   </div>
- 
-  <div class="wrapper2">
-      <div class="card">
-        <div class="card-header card-primary">
-          <h2 class="title">Añadir admin</h2>
-        </div>
-        <div class="card-body">
-        <form action="AgregarUser.php" method="POST" autocomplete="OFF">
-          <!-- 2 column grid layout with text inputs for the first and last names -->
-          <div class="row mb-4">
-            <div class="col">
-              <div class="form-outline">
-                <label class="form-label FormLogin" for="NombreCompleto">Nombres<span style="color:red">*</span></label>
-                <input type="text" class="form-control" name="FullName">
-              </div>
-            </div>
-            <div class="col">
-              <div class="form-outline">
-                <label class="form-label FormLogin" for="Apellido">Apellidos<span style="color:red">*</span></label>
-                <input type="text" id="Apellido" required="required" name="Apellidos_Usuario" class="form-control" />
-              </div>
-            </div>
-          </div>
-
-          <div class="form-outline mb-4">
-            <label class="form-label FormLogin" for="usuario">Número de documento<span style="color:red">*</span></label>
-            <input type="number" name="id_user" required="required" id="id_user" class="form-control" />
-          </div> 
-
-          <!-- Text input -->
-          <div class="form-outline mb-4">
-            <label class="form-label FormLogin" for="usuario">Nombre de Usuario<span style="color:red">*</span></label>
-            <input type="text" name="usuario" required="required" id="usuario" class="form-control" />
-          </div>
-
-          <!-- Text input -->
-          <div class="form-outline mb-4">
-            <label class="form-label FormLogin" for="password">Contraseña<span style="color:red">*</span></label>
-            <input type="password" name="password" id="password" class="form-control" />
-          </div>
-
-<!--           <div class="form-outline mb-4">
-            <label class="form-label FormLogin" for="password">Confirmar Contraseña<span style="color:red">*</span></label>
-            <input type="password" name="password2" id="password2" class="form-control" />
-          </div> -->
-          <input type="submit" name="GuardarNuevoUsuarioAdmin" class="btn btn-success btn-block mb-4" value="Guardar">
-        </form>
-        </div>
-      </div>
-      </div>  
-  </div> 
-	</div>
-<!-- DATATABLE DUEÑO -->
-  
+<!-- DATATABLE GALERIA -->
+  <div id="galeria_wrapper"class="datatable-responsive datatable-box">
+    <table id="galeria" class="table table-responsive table-sm non-top-border dt-responsive" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Nº usuario</th>
+          <th>Usuario</th>
+          <th>Apellidos</th>
+          <th>Nombres</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php  
+          include("DB/conexion.php");
+          $query="SELECT * FROM usuarios";
+          $resultado= $con->query($query);
+          while($mostrar=$resultado->fetch_assoc()){
+        ?>
+          <tr>            
+            <td><?php echo $mostrar['id_user'] ?></td>
+            <td><?php echo $mostrar['usuario']?></td>
+            <td><?php echo $mostrar['Apellidos_Usuario']?></td>
+            <td><?php echo $mostrar['Nombre_Usuario']?></td>
+            <td>
+              <a title="Editar admin" class="btn btn-secondary" href="Edit_Admin.php?id_user=<?php echo $mostrar['id_user']?>"">
+                <i class="icofont-ui-edit"></i>
+              </a>
+              <a title="Eliminar admin" onclick="preguntar(<?php echo $mostrar['id_user']?>)" class="btn btn-danger">
+                <i class="far fa-trash-alt"></i>
+              </a>
+              </td>
+            </tr>
+        <?php
+          } 
+        ?>   
+      </tbody>
+    </table>
+  </div>
+</div>
    <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
         <b>Servicios Caninos Casme.</b> 
@@ -1865,6 +1848,29 @@ if (!isset($_SESSION['loggedin'])) {
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- SCRIPTS DataTables -->
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+<script> $(document).ready(function() {
+    $('#galeria').DataTable( {
+        language: {
+            url: 'https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
+        }
+    } );
+} );
+
+/*Script eliminar admin*/
+function preguntar(id_user)
+      {
+        if(confirm('¿Está seguro que desea eliminar este admin?'))
+        {
+          window.location.href = "Delete_Admin.php?id_user="+id_user;
+        }
+      }
+</script>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 <script src="select2/select2.min.js"></script>
 <script type="text/javascript">
