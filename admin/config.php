@@ -1242,6 +1242,8 @@ if (!isset($_SESSION['loggedin'])) {
   <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="ContraseñaSegura/aaronBase.css" rel="stylesheet">
+  <link href="ContraseñaSegura/strength.css" rel="stylesheet">
   <style>
     li{
       list-style: none;
@@ -1250,8 +1252,96 @@ if (!isset($_SESSION['loggedin'])) {
     label .FormLogin{
       font-weight: 1;
     }
+
+    #myform input[type="password"]{
+    background:transparent;
+    border: 2px solid #46AC84;
+    color: #777;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    padding: 9px 5px;
+    height: 21px;
+    text-indent: 6px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border .25s linear, color .25s linear;
+    -moz-transition: border .25s linear, color .25s linear;
+    -o-transition: border .25s linear, color .25s linear;
+    transition: border .25s linear, color .25s linear;
+    -webkit-backface-visibility: hidden;
+    width:100%;
+    }
+    #myform input[type="password"]:focus{
+    outline:0;
+    }
+.strength_meter{
+width: 50%;
+height:43px;
+z-index:-1;
+border-radius:5px;
+padding-right:13px;
+}
+.button_strength {
+text-decoration: none;
+color: #000;
+font-size: 13px;
+}
+.strength_meter div{
+    width:0%;
+height: 43px;
+text-align: right;
+color: #000;
+line-height: 43px;
+-webkit-transition: all .3s ease-in-out;
+-moz-transition: all .3s ease-in-out;
+-o-transition: all .3s ease-in-out;
+-ms-transition: all .3s ease-in-out;
+transition: all .3s ease-in-out;
+padding-right: 12px;
+border-radius:5px;
+}
+
+.strength_meter div p{
+position: absolute;
+top: 22px;
+right: 0px;
+color: #FFF;
+font-size:13px;
+}
+
+.veryweak{
+    background-color: #FFA0A0;
+border-color: #F04040!important;
+width:25%!important;
+}
+
+.weak{
+background-color: #FFB78C;
+border-color: #FF853C!important;
+width:50%!important;
+}
+.medium{
+background-color: #FFEC8B;
+border-color: #FC0!important;
+width:75%!important;
+}
+.strong{
+background-color: #C3FF88;
+border-color: #8DFF1C!important;
+width:100%!important;
+}
   </style>
   <link rel="stylesheet" type="text/css" href="select2/select2.min.css">
+  <script>
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+  </script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
@@ -1408,7 +1498,7 @@ if (!isset($_SESSION['loggedin'])) {
           <h2 class="title">Añadir admin</h2>
         </div>
         <div class="card-body">
-        <form action="AgregarUser.php" method="POST" autocomplete="OFF">
+        <form action="AgregarUser.php" id="myform" method="POST" autocomplete="OFF" accept-charset="utf-8">
           <!-- 2 column grid layout with text inputs for the first and last names -->
           <div class="row mb-4">
             <div class="col">
@@ -1439,7 +1529,7 @@ if (!isset($_SESSION['loggedin'])) {
           <!-- Text input -->
           <div class="form-outline mb-4">
             <label class="form-label FormLogin" for="password">Contraseña<span style="color:red">*</span></label>
-            <input type="password" name="password" id="password" class="form-control" />
+            <input type="password" id="myPassword" name="password" class="form-control" />
           </div>
 
 <!--           <div class="form-outline mb-4">
@@ -1454,6 +1544,18 @@ if (!isset($_SESSION['loggedin'])) {
   </div> 
 	</div>
 <!-- DATATABLE DUEÑO -->
+<script src="ContraseñaSegura/js/jquery.min.js"></script>
+<script src="ContraseñaSegura/js/strength.min.js"></script>
+<script id="rendered-js">
+  $(document).ready(function ($) {
+  $('#myPassword').strength({
+    strengthClass: 'strength',
+    strengthMeterClass: 'strength_meter',
+    strengthButtonClass: 'button_strength',
+    strengthButtonText: 'Mostrar Contraseña',
+    strengthButtonTextToggle: 'Ocultar Password' });
+});
+</script>
   
    <footer class="main-footer">
       <div class="float-right d-none d-sm-block">

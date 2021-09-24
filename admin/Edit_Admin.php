@@ -240,14 +240,14 @@ if(isset($_POST['update'])){
   $contraseña = $row2['Contraseña'];
   $password = $_POST['password'];
   $id_user = $_REQUEST['id_user'];
-//   $id_user = $_POST['id_user'];
+  $Identificacion = $_POST['Identificacion'];
   $usuario = $_POST['usuario'];
   $Apellidos_Usuario = $_POST['Apellidos_Usuario'];
   $Nombre_Usuario = $_POST['Nombre_Usuario'];
   
   if($contraseña === $_POST['password']){
   /* AQUI REALIZAMOS EL UPDATE DEL REGISTRO QUE SE SELECCIONÓ */
-  $query="UPDATE usuarios SET id_user='$id_user', usuario='$usuario', Apellidos_Usuario='$Apellidos_Usuario', Nombre_Usuario='$Nombre_Usuario' WHERE id_user='$id_user'";
+  $query="UPDATE usuarios SET id_user='$Identificacion', usuario='$usuario', Apellidos_Usuario='$Apellidos_Usuario', Nombre_Usuario='$Nombre_Usuario' WHERE id_user='$id_user'";
   $ResultadoEditAdmin = $con->query($query);
 
   if($ResultadoEditAdmin){
@@ -265,9 +265,9 @@ if(isset($_POST['update'])){
         <!-- AQUI ESTA EL MODAL QUE CONTIENE EL FORMULARIO QUE REALIZA LA ACCIÓN DE LA PÁGINA -->
         <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Editando a <?php echo $row['Apellidos_Usuario']; ?>, <?php echo $row['Nombre_Usuario']?></h3>   
         <form action="" method="POST">
-            <!-- <div class="form-group">
-              <input type="number" name="id_user" class="form-control" value="<?php echo $row['id_user']; ?>" placeholder="Actualizar # de identidad del admin">
-            </div> -->
+            <div class="form-group">
+              <input type="number" name="Identificacion" class="form-control" value="<?php echo $row['id_user']; ?>" placeholder="Actualizar # de identidad del admin">
+            </div>
             <div class="form-group">
               <input type="text" name="usuario" class="form-control" value="<?php echo $row['usuario']; ?>" placeholder="Actualizar nombre de usuario">
             </div>
