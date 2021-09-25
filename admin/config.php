@@ -1253,32 +1253,7 @@ if (!isset($_SESSION['loggedin'])) {
       font-weight: 1;
     }
 
-    #myform input[type="password"]{
-    background:transparent;
-    border: 2px solid #46AC84;
-    color: #777;
-    font-family: "Lato", sans-serif;
-    font-size: 14px;
-    padding: 9px 5px;
-    height: 21px;
-    text-indent: 6px;
-    -webkit-appearance: none;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    -webkit-transition: border .25s linear, color .25s linear;
-    -moz-transition: border .25s linear, color .25s linear;
-    -o-transition: border .25s linear, color .25s linear;
-    transition: border .25s linear, color .25s linear;
-    -webkit-backface-visibility: hidden;
-    width:100%;
-    }
-    #myform input[type="password"]:focus{
-    outline:0;
-    }
+
 .strength_meter{
 width: 50%;
 height:43px;
@@ -1333,7 +1308,7 @@ width:75%!important;
 .strong{
 background-color: #C3FF88;
 border-color: #8DFF1C!important;
-width:100%!important;
+width:102.4%!important;
 }
   </style>
   <link rel="stylesheet" type="text/css" href="select2/select2.min.css">
