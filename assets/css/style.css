@@ -37,10 +37,17 @@
 	.social ul li .icon-mail {background: #666666;}
 
 	.social ul li a:hover {
-		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
-		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+		background:blueviolet; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 10px 60px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
     content: '¿Tienes un cachorro menor a 5 meses y quieres educarlo?';
 	}
+   
+  .social ul li #darwinprueba:hover {
+    background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+    content: '¿Tienes un cachorro menor a 5 meses y quieres educarlo?';
+
+  };
 
 body {
   font-family: "Open Sans", sans-serif;

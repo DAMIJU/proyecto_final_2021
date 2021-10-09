@@ -28,6 +28,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
+<div class="sticky-container">
 <header id="header" class="">
     <div class="container d-flex align-items-center">
       <h1 class="logo mr-auto"><a href="index.php"><img src="assets/img/Logo.png" alt="Logo Caninos Casmes"></a></h1>
@@ -106,6 +107,17 @@
   </footer>
 
   <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+  <div class="social">
+		<ul>
+			<li><a id="darwinprueba" href="http://www.facebook.com/falconmasters" target="_blank" src="icon-facebook"></a></li>
+			<li><a href="http://www.twitter.com/falconmasters" target="_blank" class="icon-twitter"></a></li>
+			<li><a href="http://www.googleplus.com/falconmasters" target="_blank" class="icon-googleplus"></a></li>
+			<li><a href="http://www.pinterest.com/falconmasters" target="_blank" class="icon-pinterest"></a></li>
+			<li><a href="mailto:contacto@falconmasters.com" class="icon-mail"></a></li>
+		</ul>
+	</div>
+
+</div>
 
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
