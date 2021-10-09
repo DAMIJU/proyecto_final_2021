@@ -222,6 +222,18 @@
   </footer>
 
   <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+  <div class="social">
+		<ul>
+			<li><a href="http://www.facebook.com/falconmasters" target="_blank" class="icon-facebook"></a></li>
+			<li><a href="http://www.twitter.com/falconmasters" target="_blank" class="icon-twitter"></a></li>
+			<li><a href="http://www.googleplus.com/falconmasters" target="_blank" class="icon-googleplus"></a></li>
+			<li><a href="http://www.pinterest.com/falconmasters" target="_blank" class="icon-pinterest"></a></li>
+			<li><a href="mailto:contacto@falconmasters.com" class="icon-mail"></a></li>
+		</ul>
+	</div>
+  
+
+</div>
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
