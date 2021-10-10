@@ -58,7 +58,7 @@
       <img src="assets/img/Educacion_img.png" class="card-img-top" alt="Imagen educacion canina">
       <div class="card-body">
         <h5 class="card-title">Educación</h5>
-        <p class="card-text">Tengo un cachorro menor a 5 meses y quiero educarlo</p>
+        <p class="card-text">Tengo un cachorro menor a 5 meses y quiero educarlo.</p>
         <a href="https://forms.gle/HkcuqNQ4MNmQVRtz8" target="_blank" class="btn-get-started-forms">Si</a>
         <a id="btnabrir" class="btn-get-started-forms" data-toggle="modal" data-target="#Modal_Educacion"><img src="https://img.icons8.com/dotty/17/000000/movies-folder--v1.png"></a>
       </div>
@@ -69,8 +69,8 @@
       <img src="assets/img/Adiestramiento_img.png" class="card-img-top" alt="Imagen adiestramiento canino">
       <div class="card-body">
         <h5 class="card-title">Adiestramiento</h5>
-        <p class="card-text">Quiero que mi perro obedezca a travez de comandos o que hiciera trucos.</p>
-        <a href="https://forms.gle/hF1FzV6gJtkNirhu6" target="_blank" class="btn-get-started-forms">Si</a>
+        <p class="card-text">Quiero que mi perro obedezca a través de comandos o que hiciera trucos.</p>
+        <a href="https://forms.gle/hF1FzV6gJtkNirhu6F" target="_blank" class="btn-get-started-forms">Si</a>
         <a id="btnabrir" class="btn-get-started-forms" data-toggle="modal" data-target="#Modal_Adiestramiento"><img src="https://img.icons8.com/dotty/17/000000/movies-folder--v1.png"></a>
       </div>
     </div>
@@ -199,13 +199,12 @@
     <div class="row">  
     <div class="col-md-6">
         <h2 style="color:#138fcb;font-family:Roboto Condensed;font-weight:bold">Beneficios de adiestrar y educar a tu perro</h2>
-        <p>Algunos ya te los hemos contado más arriba: la educación canina hará que tu perro sepa reaccionar mejor ante diferentes estímulos de su día a día y mejorará nuestra convivencia. Pero también conseguiréis otros beneficios: un perro educado se porta mejor y, por tanto:</p>       
-        <p>#1 Mejorarás el vínculo que te une a tu perro
+        <p>Algunos ya te los hemos contado más arriba: la educación canina hará que tu perro sepa reaccionar mejor ante diferentes estímulos de su día a día y mejorará nuestra convivencia. Pero también conseguirás otros beneficios: un perro educado se porta mejor y, por tanto:</p>       
+        <p>#1 Mejorarás el vínculo que te une a tu perro.
 Un perro educado es un perro con el que no tienes conflictos constantes. Tu  relación con el será menos tensa y más confiable, tu perro se sentirá más seguro y estará menos estresado: tener a un perro educado te permitirá compartir muchas más experiencias positivas con él.</p>
-        <p>#2 Corregirás conductas inapropiadas
-El estrés, la ansiedad u otros problemas como la agresividad pueden trabajarse mediante la educación canina y el adiestramiento. Tendrás que ser muy constante y contar con apoyo profesional pero, si sumáis esfuerzos, podrás revertir las conductas que hacen sufrir a tu perro y disfrutará más del día a día.</p>
-        <p>#3 te  entendera mejor,
-Parece una obviedad, pero tu perro no entiende las palabras que le dices. Un perro educado puede responder ante determinadas órdenes pero su lenguaje y el nuestro son radicalmente distintos, así que a través de la educación canina tanto tú como tu perro aprenderéis a comunicaros y a entender qué es lo que el otro necesita.</p>
+        <p>#2 Corregirás conductas inapropiadas como el estrés, la ansiedad u otros problemas como la agresividad, estos pueden trabajarse mediante la educación canina y el adiestramiento. Tendrás que ser muy constante y contar con apoyo profesional pero, si se suman esfuerzos, podrás revertir las conductas que hacen sufrir a tu perro y disfrutará más del día a día.</p>
+        <p>#3 Te entendera mejor,
+parece una obviedad, pero tu perro no entiende las palabras que le dices. Un perro educado puede responder ante determinadas órdenes pero su lenguaje y el nuestro son radicalmente distintos, así que a través de la educación canina tanto tú como tu perro aprenderán a comunicarse y a entender qué es lo que el otro necesita.</p>
         <p>Educar y adiestrar en obediencia a un perro te ayudará a mejorar el control que tienes sobre él o ella como guía y a que él mismo conozca la estructura de los paseos y mejore su autocontrol. En cualquier caso, una supervisión activa siempre es necesaria en los paseos de perros.</p>
         <p></p>
       </div>
@@ -230,7 +229,7 @@ Parece una obviedad, pero tu perro no entiende las palabras que le dices. Un per
     </div>
     <div class="col-md-6">
         <h2 style="color:#138fcb;font-family:Roboto Condensed;font-weight:bold">Quiero educar a mi perro, ¿Qué hago?</h2>
-        <p>En primer lugar, ármate de paciencia. Ningún perro nace educado, claro está, y es un proceso que necesita tiempo. Además, ten en cuenta que una vez el perro esté adiestrado deberéis seguir practicando lo aprendido, para que no se les olvide a ninguno de los dos: como en cualquier otro aprendizaje, cuanto más practiquéis más mejorarán.</p>
+        <p>En primer lugar, ármate de paciencia. Ningún perro nace educado, claro está, y es un proceso que necesita tiempo. Además, ten en cuenta que una vez el perro esté adiestrado deberéis seguir practicando lo aprendido, para que no se les olvide a ninguno de los dos: como en cualquier otro aprendizaje, cuanto más practiquen más mejorarán.</p>
         <p>También es importantísimo que no olvides que la educación debe ser algo positivo para el perro: tiene que divertirse aprendiendo. ¿Qué clases recuerdas tú con más cariño, aquellas con el profe más severo del cole o las que eran amenas y divertidas?</p>
         <p>Por último, ten muy en cuenta que un mal adiestramiento puede provocar severos daños emocionales a tu perro y, en algunos casos, también físicos. Así que si no sabes muy bien cómo adentrarte en el mundo de la educación canina, contáctanos,  tenemos  más de 16 años en el camino interminable de la educación Canina, escuela profesional de adiestramiento Canino CASME tenemos varios módulos los cuales están hecho par acoplarnos a las necesidades de cada perrito y cada familia</p>
       </div>
