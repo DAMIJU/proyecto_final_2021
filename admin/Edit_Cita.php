@@ -133,7 +133,7 @@ if (!isset($_SESSION['loggedin'])) {
               </p>
             </a>    
           <li class="nav-item">
-            <a href="Mascota.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Mascota')">
+            <a href="Mascota.php" class="nav-link">
               <i class="nav-icon fas fa-dog"></i>
               <p>
                 Mascota             
@@ -141,7 +141,7 @@ if (!isset($_SESSION['loggedin'])) {
             </a>     
           </li>   
           <li class="nav-item">
-            <a href="Citas.php" class="nav-link">
+            <a href="Citas.php" class="nav-link active" onclick="alert('Actualmente te encuentras en la sección de Mascota')">
               <i class="nav-icon fa fa-calendar-alt"></i>
               <p>
                 Citas
@@ -289,7 +289,7 @@ if(isset($_POST['update'])){
                   <input id="Notas_Internas" type="text" name="Notas_Internas" class="form-control" value="<?php echo $row['Notas_Internas']; ?>" placeholder="Notas internas" autofocus>
               </div>
               <div class="form-group">
-                  <input type="password" name="password" class="form-control" value="" placeholder="Contraseña de Administrador">
+                  <input type="password" name="password" class="form-control-password" value="" placeholder="Contraseña de Administrador">
               </div>
               <div class="botones">
                   <button name="update" class="btn btn-success">Actualizar</button>

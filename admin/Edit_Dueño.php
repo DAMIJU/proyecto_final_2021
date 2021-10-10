@@ -292,7 +292,7 @@ if (!isset($_SESSION['loggedin'])) {
               <input id="fecha" type="date" name="Fecha_Registro_Dueño" class="form-control" value="<?php echo $row['Fecha_Registro_Dueño'];  ?>" placeholder="Fecha_Registro" autofocus>
             </div>
             <div class="form-group">
-                  <input type="password" name="password" class="form-control" value="" placeholder="Contraseña de Administrador">
+                  <input type="password" name="password" class="form-control-password" value="" placeholder="Contraseña de Administrador">
             </div>
             <div class="botones">
               <button name="update" class="btn btn-success">Actualizar</button>

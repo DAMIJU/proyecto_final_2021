@@ -278,7 +278,7 @@ if(isset($_POST['update'])){
               <input type="text" name="Nombre_Usuario" class="form-control" value="<?php echo $row['Nombre_Usuario']; ?>" placeholder="Actualizar Nombres">
             </div>
             <div class="form-group">
-                  <input type="password" name="password" class="form-control" value="" placeholder="Contraseña de Administrador">
+                  <input type="password" name="password" class="form-control-password" value="" placeholder="Contraseña de Administrador">
             </div>
             <div class="botones">
               <button name="update" class="btn btn-success">Actualizar</button>
