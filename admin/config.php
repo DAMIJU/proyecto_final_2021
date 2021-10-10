@@ -2182,11 +2182,10 @@ function preguntar(id_user)
             <div class="card-body">
               <h5 class="card-title" style="font-weight:bold">Contraseña para acciones</h5>
               <p class="card-text">Use esta contraseña para modificar, eliminar registros.</p>
-              <a href="#" class="btn btn-success" data-toggle="modal" data-target="#CambiarContraseñaAcciones<?php echo $mostrar['ID']?>">Cambiar contraseña</a>
+              <a href="ActualizarContraseñaAcciones.php?ID=1" class="btn btn-success">Cambiar contraseña</a>
               <a href="Config.php?modulo=AddUser" class="btn btn-danger">Ir atrás</a>
             </div>
           </div>
-          <?php include("ModalActualizarContraseñaAcciones.php")?>
         </div>
         </div>
       </div>

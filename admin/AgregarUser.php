@@ -15,5 +15,4 @@
             }else{
               echo "<script type=\"text/javascript\">alert(\"No se podrán guardar los datos\");</script>";  
             }
-
 ?>
