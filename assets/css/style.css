@@ -19,7 +19,29 @@
 		list-style: none;
 	}
 
-	.social ul li a {
+	.social ul li #prueba1 {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+  
+	.social ul li #prueba2 {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+  
+	.social ul li #prueba3 {
 		display: inline-block;
 		color:#fff;
 		background: #000;
@@ -42,7 +64,19 @@
     content: '¿Tienes un cachorro menor a 5 meses y quieres educarlo?';
 	}
    
-  .social ul li #darwinprueba:hover {
+  .social ul li #prueba1:hover {
+    background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+    content: '¿Tienes un cachorro menor a 5 meses y quieres educarlo?';
+
+  };
+  .social ul li #prueba2:hover {
+    background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+    content: '¿Tienes un cachorro menor a 5 meses y quieres educarlo?';
+
+  };
+  .social ul li #prueba3:hover {
     background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
 		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
     content: '¿Tienes un cachorro menor a 5 meses y quieres educarlo?';
