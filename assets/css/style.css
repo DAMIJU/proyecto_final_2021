@@ -1098,6 +1098,22 @@ section {
   margin-bottom: 1rem;
   text-align: justify;
 }
+.container .btn-get-started-forms {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 5px 20px 5px 20px;
+  border-radius: 30px;
+  transition: 0.3s;
+  background-color: #9ACD32;
+  color: #2c2e27c2;
+  margin-top: 20px;
+  margin-left: 45px;
+  cursor: pointer;
+}
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
