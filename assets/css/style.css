@@ -407,11 +407,11 @@ body {
   width: 100%;
 }
 
-.nav-menu a:hover,
+/* .nav-menu a:hover,
 .nav-menu .active > a,
 .nav-menu li:hover > a{
   color: #2C2E27;
-}
+} */
 
 /*Mobile Nab*/
 .mobile-nav-toggle{
