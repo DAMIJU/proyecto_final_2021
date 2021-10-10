@@ -1427,7 +1427,7 @@ width:102.4%!important;
               </a>
             </li>
             <li class="nav-item">
-              <a href="Config.php?modulo=AddUser" class="nav-link">
+              <a href="Config.php?modulo=AddUser" class="nav-link active">
                 <i class="fas fa-user nav-icon"></i>
                 <p>Añadir admin</p>
               </a>
@@ -2178,21 +2178,33 @@ function preguntar(id_user)
         <div class="card-body">
         
           <!-- 2 column grid layout with text inputs for the first and last names -->
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title" style="font-weight:bold">Contraseña para acciones</h5>
-              <p class="card-text">Use esta contraseña para modificar, eliminar registros.</p>
-              <a href="ActualizarContraseñaAcciones.php?ID=1" class="btn btn-success">Cambiar contraseña</a>
-              <a href="Config.php?modulo=AddUser" class="btn btn-danger">Ir atrás</a>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title" style="font-weight:bold">Cambiar contraseña para acciones</h5>
+                  <p class="card-text">Utilice esta contraseña para realizar acciones, como modificar y eliminar (Solo admin).</p>
+                  <a href="ActualizarContraseñaAcciones.php?ID=1" class="btn btn-success">Cambiar contraseña</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title" style="font-weight:bold">Cambiar contraseña de perfil</h5>
+                  <p class="card-text">Utilice esta contraseña como administrador para acceder a Servicios Caninos Casme.</p>
+                  <a href="ContraseñaAdmin.php" class="btn btn-success">Cambiar contraseña</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <?php } ?>
         </div>
       </div>
       </div>  
   </div> 
 	</div>
-  <?php } ?>
 <!-- DATATABLE DUEÑO -->
 <script src="ContraseñaSegura/js/jquery.min.js"></script>
 <script src="ContraseñaSegura/js/strength.min.js"></script>
