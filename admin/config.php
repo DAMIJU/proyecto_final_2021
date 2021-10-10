@@ -2164,49 +2164,36 @@ function preguntar(id_user)
       <h1>CONFIGURACIÓN DE CONTRASEÑAS</h1>
     </div>
   </div>
- 
+  <?php  
+    include("DB/conexion.php");
+    $query="SELECT * FROM tabla_para_acciones";
+    $resultado= $con->query($query);
+    while($mostrar=$resultado->fetch_assoc()){
+  ?>
   <div class="wrapper2">
       <div class="card">
         <div class="card-header card-primary">
           Elija la contraseña que desea cambiar
         </div>
         <div class="card-body">
-        <form action="AgregarUser.php" id="myform" method="POST" autocomplete="OFF" accept-charset="utf-8">
+        
           <!-- 2 column grid layout with text inputs for the first and last names -->
           <div class="card" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title" style="font-weight:bold">Contraseña para acciones</h5>
               <p class="card-text">Use esta contraseña para modificar, eliminar registros.</p>
-              <a href="#" class="btn btn-success" data-toggle="modal" data-target="#CambiarContraseñaAcciones">Cambiar contraseña</a>
+              <a href="#" class="btn btn-success" data-toggle="modal" data-target="#CambiarContraseñaAcciones<?php echo $mostrar['ID']?>">Cambiar contraseña</a>
               <a href="Config.php?modulo=AddUser" class="btn btn-danger">Ir atrás</a>
             </div>
           </div>
-          <div class="modal fade" id="CambiarContraseñaAcciones" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel" style="font-weight:bold;">Cambiar contraseña para acciones</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <input type="password" name="ContrasenaAccionesNueva" class="form-control" placeholder="Contraseña nueva"><br>
-                  <input type="password" name="" class="form-control" placeholder="Contraseña actual">
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-info" onclick="alert('Aún faltan cosas, espere JAJAJAJ')">Guardar cambios</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </form>
+          <?php include("ModalActualizarContraseñaAcciones.php")?>
+        </div>
         </div>
       </div>
       </div>  
   </div> 
 	</div>
+  <?php } ?>
 <!-- DATATABLE DUEÑO -->
 <script src="ContraseñaSegura/js/jquery.min.js"></script>
 <script src="ContraseñaSegura/js/strength.min.js"></script>
