@@ -217,58 +217,35 @@ if (!isset($_SESSION['loggedin'])) {
         </div>
 <div class="content-wrapper">
 <?php
+   if(isset($_POST['GuardarDatosContrasenaPerfil'])){
+    include("DB/conexion.php");
+    $password = $_POST['password'];
+    $NewPasswordPerfil = sha1($_POST['NewPasswordPerfil']);
 
-include("DB/conexion.php");
+    $querySeleccionar = "SELECT Contraseña FROM tabla_para_acciones WHERE Contraseña='$password'";
+    if($querySeleccionar){
+        $queryModificarPerfil = "UPDATE usuarios SET clave='$NewPasswordPerfil";
+    }else{
 
-/* AQUI SE ATRAPAN LOS DATOS */
-$ID = $_REQUEST['ID'];
+    }
+   }
 
- /* AQUI REALIZAMOS UNA CONSULTA EN LA TABLA MASCOTA QUE DEACUERDO AL NUMERO DEL
-     REGISTRO DE LA MASCOTA SELECCIONADA PARA AUTOCOMPLEMENTAR LOS DATOS DEL
-     FORMULARIO QUE ESTA DENTRO DEL MODAL staticBackdropLabel
-      */
-$query="SELECT * FROM tabla_para_acciones WHERE ID='$ID'";
-$resultado= $con->query($query);
-$row=$resultado->fetch_assoc();
-
-if(isset($_POST['update'])){
-
-   /* AQUI SE RECIBEN LOS DATOS DEL FORMULARIO */
-  $query2 = "SELECT * FROM tabla_para_acciones WHERE Descripción = 'Empleado'";
-  $resultado2 = $con->query($query2);
-  $row2 = $resultado2->fetch_assoc();
-  $contraseña = $row2['Contraseña'];  
-  $password = $_POST['password'];
-  $NewPassword = $_POST['NewPassword'];
-  
-  if($contraseña === $_POST['password']){
-  /* AQUI REALIZAMOS EL UPDATE DEL REGISTRO QUE SE SELECCIONÓ */
-  $query="UPDATE tabla_para_acciones SET Contraseña='$NewPassword' WHERE ID='$ID'";
-  $ResultadoContrasenaAcciones = $con->query($query);
-
-  if($ResultadoContrasenaAcciones){
-  echo "<script>alert('La contraseña se ha actualizado correctamente');window.location='Config.php?modulo=Passwords'</script>";
-  }else{
-    echo "<script>alert('los datos no se han podido actualizar correctamente');</script>";
-  }
-}
-}
 ?>
  <div class="container p-4">
    <div class="row">
      <div class="col-md-5 mx-auto">
        <div class="card card-body" style="background-color: #2D92CB;">
         <!-- AQUI ESTA EL MODAL QUE CONTIENE EL FORMULARIO QUE REALIZA LA ACCIÓN DE LA PÁGINA -->
-        <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Cambiar contraseña para acciones</h3>
-        <form action="" method="POST">
+        <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Cambiar contraseña de perfil</h3>
+        <form action="ContraseñaAdmin.php?id_user=<?php echo $row['id_user']?>" method="POST">
             <div class="form-group">
-              <input type="password" name="password" class="form-control" value="" placeholder="Contraseña actual de Administrador">
+              <input type="password" name="password" class="form-control" value="" placeholder="Contraseña actual de Administrador (Perfil)">
             </div>
             <div class="form-group">
-            <input type="password" name="NewPassword" class="form-control" value="" placeholder="Contraseña nueva de Administrador">
+            <input type="password" name="NewPasswordPerfil" class="form-control" value="" placeholder="Contraseña nueva de Administrador (Perfil)">
             </div>
             <div class="botones">
-              <button name="update" class="btn btn-success">Actualizar</button>
+              <button type="submit" name="GuardarDatosContrasenaPerfil" class="btn btn-success">Actualizar</button>
               <a href="javascript: history.go(-1)" role="button" class="btn btn-danger">Cancelar</a>
             </div>             
         </form>
