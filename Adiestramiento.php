@@ -59,8 +59,8 @@
       <div class="card-body">
         <h5 class="card-title">Educación</h5>
         <p class="card-text">Tengo un cachorro menor a 5 meses y quiero educarlo.</p>
-        <a href="https://forms.gle/HkcuqNQ4MNmQVRtz8" target="_blank" class="btn-get-started-forms">Si</a>
-        <a id="btnabrir" class="btn-get-started-forms" data-toggle="modal" data-target="#Modal_Educacion"><img src="https://img.icons8.com/dotty/17/000000/movies-folder--v1.png"></a>
+        <a href="https://forms.gle/HkcuqNQ4MNmQVRtz8" title="Formulario de educacion" target="_blank" class="btn-get-started-forms">Si</a>
+        <a id="btnabrir" class="btn-get-started-forms" title="Videos de educacion" data-toggle="modal" data-target="#Modal_Educacion"><img src="https://img.icons8.com/dotty/17/000000/movies-folder--v1.png"></a>
       </div>
     </div>
   </div>
@@ -70,8 +70,8 @@
       <div class="card-body">
         <h5 class="card-title">Adiestramiento</h5>
         <p class="card-text">Quiero que mi perro obedezca a través de comandos o que hiciera trucos.</p>
-        <a href="https://forms.gle/hF1FzV6gJtkNirhu6F" target="_blank" class="btn-get-started-forms">Si</a>
-        <a id="btnabrir" class="btn-get-started-forms" data-toggle="modal" data-target="#Modal_Adiestramiento"><img src="https://img.icons8.com/dotty/17/000000/movies-folder--v1.png"></a>
+        <a href="https://forms.gle/hF1FzV6gJtkNirhu6F" title="Formulario de adiestramiento" target="_blank" class="btn-get-started-forms">Si</a>
+        <a id="btnabrir" class="btn-get-started-forms" title="Videos de adiestramiento" data-toggle="modal" data-target="#Modal_Adiestramiento"><img src="https://img.icons8.com/dotty/17/000000/movies-folder--v1.png"></a>
       </div>
     </div>
   </div>
@@ -81,8 +81,8 @@
       <div class="card-body">
         <h5 class="card-title">Modificación conductual</h5>
         <p class="card-text">Mi perro es agresivo, destructor y no obedece.</p>
-        <a href="https://forms.gle/C9tRhMggUn5XsLgq7" target="_blank" class="btn-get-started-forms">Si</a>
-        <a id="btnabrir" class="btn-get-started-forms" data-toggle="modal" data-target="#Modal_Modificacion_Conductual"><img src="https://img.icons8.com/dotty/17/000000/movies-folder--v1.png"></a>
+        <a href="https://forms.gle/C9tRhMggUn5XsLgq7" title="Formulario de modificación conducual" target="_blank" class="btn-get-started-forms">Si</a>
+        <a id="btnabrir" class="btn-get-started-forms" title="Videos de modificacion conductual"data-toggle="modal" data-target="#Modal_Modificacion_Conductual"><img src="https://img.icons8.com/dotty/17/000000/movies-folder--v1.png"></a>
       </div>
     </div>
   </div>
