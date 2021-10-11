@@ -275,7 +275,11 @@ if(isset($_POST['update'])){
               <input id="fecha" type="date" name="Fecha_Nac" class="form-control" value="<?php echo $row['Fecha_Nac']; ?>" placeholder="Actualizar Fecha nacimiento" autofocus>
             </div>
             <div class="form-group">
-              <input type="text" name="Sexo" class="form-control" value="<?php echo $row['Sexo']; ?>" placeholder="Actualizar Sexo">
+              <select name="Sexo">
+              <option value="<?php echo  $row['Sexo']; ?>" ><?php echo  $row['Sexo']; ?> (ACTUAL)</option>
+                <option value="Macho">Macho</option>
+                <option value="Hembra">Hembra</option>
+              </select>
             </div>
             <div class="form-group">
                   <input type="password" name="password" class="form-control-password" value="" placeholder="Contraseña de Administrador">

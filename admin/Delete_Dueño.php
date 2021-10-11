@@ -262,7 +262,7 @@ if(isset($_POST['delete'])){
     <div class="row">
       <div class="col-md-5 mx-auto">
         <div class="card card-body" style="background-color: #2D92CB;">
-          <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Se eliminará por completo a <?php echo $row['Nombre_Dueño']; ?></h3> 
+          <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Se eliminará por completo a <?php echo $row['Nombre_Dueño']; ?> y sus mascotas</h3> 
           <form action="" method="POST">
             <div class="form-group">
               <input type="password" name="password" class="form-control" value="" placeholder="Contraseña de Administrador">
