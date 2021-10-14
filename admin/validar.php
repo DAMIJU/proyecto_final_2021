@@ -14,4 +14,33 @@
 	}else{
 		echo "<script>alert('Usuario o contraseña incorrecto');window.location='../Login.php'</script>";
 	}
+
+	/* if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower ($_SERVER['HTTP_X_REQUESTED_WITH']) = 'xmlhttprequest'){
+		require 'DB/conexion.php';
+		sleep(2);
+		
+		$mysqli->set_charset('utf-8');
+
+		$usuario = $mysqli->real_escape_string($_POST['username']);
+		$pas = $mysqli->real_escape_string($_POST['password']);
+
+		if($nueva_consulta = $mysqli->prepare("")){
+			$nueva_consulta->bind_param('ss', $usuario, $pas);
+
+			$nueva_consulta->execute();
+
+			$resultado = $nueva_consulta->get_result();
+
+			if($resultado->num_rows == 0){
+				$datos = $resultado->fetch_assoc();
+				echo "<script>location.href='Admin.php'</script>"; 
+			}else{
+				echo "<script>alert('Usuario o contraseña incorrecto');window.location='../Login.php'</script>";
+			}
+
+			$nueva_consulta->close();
+		}
+	}
+
+	$mysqli->close(); */
 ?>
