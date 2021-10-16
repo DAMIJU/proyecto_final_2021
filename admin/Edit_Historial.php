@@ -144,7 +144,7 @@ if (!isset($_SESSION['loggedin'])) {
           </a>
         </li>
         <li class="nav-item">
-          <a href="https://docs.google.com/spreadsheets/d/1yrcoWa9NW8_W0c331Dn6I7Eo7khiJc_bRkr7Gh91E04/edit?usp=sharing" target="_blank" class="nav-link">
+          <a href="https://docs.google.com/spreadsheets/d/1SsyYU4b7Gv8p-rFFIoXW3fD_Xt6U8GWlxYRASe-5V_c/edit?usp=sharing" target="_blank" class="nav-link">
             <i class="nav-icon fas fa-clipboard"></i>
             <p>
               Form educación
