@@ -86,18 +86,18 @@
     </div>
   </div>
 </div>
-  </div><br><br>
+  </div>
+</div>
+<br><br>
  <footer id="footer">
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
           &copy; Copyright <strong><span>Casme</span></strong>. Todos los derechos reservados.
         </div>
-        <div class="credits">
-        </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-      <a href="https://www.tiktok.com/@diego_casme?lang=es" target="_blank" class="tiktok"><iconify-icon data-icon="simple-icons:tiktok" style="font-size:14px"></iconify-icon></a> 
+        <a href="https://www.tiktok.com/@diego_casme?lang=es" target="_blank" class="tiktok"><iconify-icon data-icon="simple-icons:tiktok" style="font-size:14px"></iconify-icon></a> 
         <a href="https://www.facebook.com/Servicios-caninos-Casme-905518146207815" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>     
         <a href="https://www.instagram.com/servicioscaninoscasme/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
         <a href="https://wa.me/527891017905" target="_blank" class="google-plus"><i class="bx bxl-whatsapp"></i></a>
@@ -105,19 +105,6 @@
       </div>
     </div>
   </footer>
-
-  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
-  <div class="social">
-		<ul>
-			<li><a id="darwinprueba" href="http://www.facebook.com/falconmasters" target="_blank" src="icon-facebook"></a></li>
-			<li><a href="http://www.twitter.com/falconmasters" target="_blank" class="icon-twitter"></a></li>
-			<li><a href="http://www.googleplus.com/falconmasters" target="_blank" class="icon-googleplus"></a></li>
-			<li><a href="http://www.pinterest.com/falconmasters" target="_blank" class="icon-pinterest"></a></li>
-			<li><a href="mailto:contacto@falconmasters.com" class="icon-mail"></a></li>
-		</ul>
-	</div>
-
-</div>
 
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

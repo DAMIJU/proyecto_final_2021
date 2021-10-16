@@ -66,10 +66,10 @@
             <img src="data:image/jpg;base64,<?php echo base64_encode($mostrar['imagen']);?>" loading="lazy" class="img-fluid" alt="Imagen Casme">
           </div>
           <?php } ?>
-      </div>   
+      </div>
     <a class="btn-get-started btn btn-lg scrollto span2">Ver más</a>
 </div>
-
+ </section>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
   $(".portfolio-item").slice(0, 6).show()
@@ -81,7 +81,7 @@
     })
 </script>
 <script>
-  document.querySelectorAll(".portfolio ").forEach(el=>{
+  document.querySelectorAll(".portfolio").forEach(el=>{
     el.addEventListener("click",function(ev){
     ev.stopPropagation();
     this.parentNode.classList.add("active");
@@ -93,8 +93,8 @@ document.querySelectorAll(".container").forEach(el=>{
   })
 })
 </script>
-</section>            
-<footer id="footer">
+   
+<footer id="footer" style="position:absolute">
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
@@ -111,7 +111,13 @@ document.querySelectorAll(".container").forEach(el=>{
     </div>
   </footer>
 
-<!-- Template Main JS File -->
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/venobox/venobox.min.js"></script>
+<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </body>
+</html>

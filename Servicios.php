@@ -202,7 +202,7 @@
         </div>
       </div>
 </main>
-  <footer id="footer">
+  <footer id="footer" style="position:absolute">
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
