@@ -261,7 +261,7 @@ if(isset($_POST['delete'])){
      <div class="col-md-5 mx-auto">
        <div class="card card-body" style="background-color: #2D92CB;">
         <!-- AQUI ESTA EL MODAL QUE CONTIENE EL FORMULARIO QUE REALIZA LA ACCIÓN DE LA PÁGINA -->
-        <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Eliminando a <?php echo $row['Apellidos_Usuario']; ?>, <?php echo $row['Nombre_Usuario']?></h3>   
+        <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Eliminando a <?php echo $row['Apellidos_Usuario']; ?> <?php echo $row['Nombre_Usuario']?></h3>   
         <form action="" method="POST">
             <div class="form-group">
               <input type="password" name="password" class="form-control" value="" placeholder="Contraseña de Administrador">

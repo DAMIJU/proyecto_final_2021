@@ -733,7 +733,7 @@ if (!isset($_SESSION['loggedin'])) {
 </div>
   <div class="content-wrapper">
     <div class="text-center">
-    <h1>Galería de imágenes</h1>
+    <h1>GALERÍA DE IMAGENES</h1>
     <button class="btn-add-mascota" onclick="location.href='Config.php?modulo=AgregarGaleria'">Agregar</button>
   </div>
 <!-- DATATABLE GALERIA -->
@@ -1459,14 +1459,11 @@ width:102.4%!important;
     </div>
   </div>
 </div>
-<div class="content-wrapper">
-  <div class="content-header admin-panel">      
+<div class="content-wrapper">    
     <div class="text-center">
       <h1>CONFIGURACIÓN</h1>
+      <a href="Config.php?modulo=ViewAdmin"><button class="btn btn-info">Admin registrados</button></a>
     </div>
-    <a href="Config.php?modulo=ViewAdmin"><button class="btn btn-info">Admin registrados</button></a>
-  </div>
- 
   <div class="wrapper2">
       <div class="card">
         <div class="card-header card-primary">
@@ -1809,17 +1806,15 @@ width:102.4%!important;
     </div>
   </div>
 </div>
-  <div class="content-wrapper">
-    <div class="content-header admin-panel">      
+  <div class="content-wrapper"> 
       <div class="text-center">
         <h1>CONFIGURACIÓN USUARIOS ADMINISTRADORES</h1>
+        <a href="Config.php?modulo=AddUser"><button class="btn btn-info">Registrar admin</button></a>
     </div>
-    <a href="Config.php?modulo=AddUser"><button class="btn btn-info">Registrar admin</button></a>
-  </div>
-<!-- DATATABLE GALERIA -->
-  <div id="galeria_wrapper"class="datatable-responsive datatable-box">
-    <table id="galeria" class="table table-responsive table-sm non-top-border dt-responsive" cellspacing="0">
-      <thead>
+<!-- DATATABLE USUARIOS ADMINISTRADORES -->
+  <div class="datatable-responsive datatable-box">
+    <table id="dueño" class="table table-responsive table-sm non-top-border dt-responsive" cellspacing="0">
+      <thead>   
         <tr>
           <th>Nº usuario</th>
           <th>Usuario</th>

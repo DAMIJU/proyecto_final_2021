@@ -278,7 +278,7 @@ if (!isset($_SESSION['loggedin'])) {
   </div>
 <!-- DATATABLE DUEÑO -->
   <div class="datatable-responsive datatable-box">
-    <table id="dueño" class="table table-responsive table-sm non-top-border " width="100%" cellspacing="0">
+    <table id="dueño" class="table table-responsive table-sm non-top-border" width="100%" cellspacing="0">
       <thead>
           <tr>       
             <th>Celular</th>

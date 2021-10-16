@@ -218,7 +218,7 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="text-center">
     <h1>MASCOTA</h1>
     <button class="btn-add-mascota" id="ModalEnsayo" data-toggle="modal" data-target="#staticBackdrop">Añadir Mascota</button>
-    <button class="btn btn-warning" id="" data-toggle="" data-target="">Cumpleaños</button>
+    <!-- <button class="btn btn-warning" id="" data-toggle="" data-target="">Cumpleaños</button> -->
   </div>
   <!-- MESSAGES -->
     <?php if (isset($_SESSION['message'])) { ?>
