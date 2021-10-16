@@ -4,13 +4,13 @@ include("DB/conexion.php");
 
 	$Portfolio_id= $_REQUEST['portfolio_id'];
 
-	$query="DELETE FROM tabla_portfolio WHERE portfolio_id ='$Porfolio_id'  ";
-	$resultado = $con->query($query);
+	$DeleteRegistro = ("DELETE FROM tabla_portfolio WHERE portfolio_id = '".$Portfolio_id."'");
+	mysqli_query($con, $DeleteRegistro);
 
-	if($resultado){
-		echo "<script>('La imagen se ha eliminado correctamente');</script>";
+	if($DeleteRegistro){
+		echo "<script>alert('La imagen se ha eliminado correctamente');window.location='Config.php?modulo=Galeria'</script>";
 	}else{
-		echo "<script type=\"text/javascript\">alert(\"No se podrán guardar los datos\");</script>";  
+		echo "<script>alert('La imagen no se pudo eliminar');window.location='Config.php?modulo=Galeria'</script>";
 	}
 
 ?>
