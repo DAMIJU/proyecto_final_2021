@@ -132,6 +132,11 @@
                  <source src="assets/video/Adiestramiento_video2.mp4">
                </video>
             </div>
+            <div class="embed-responsive embed-responsive-16by9">
+               <video controls>
+                 <source src="assets/video/Adiestramiento_video3.mp4">
+               </video>
+            </div>       
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
