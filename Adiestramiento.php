@@ -134,7 +134,17 @@
             </div>
             <div class="embed-responsive embed-responsive-16by9">
                <video controls>
-                 <source src="assets/video/Adiestramiento_video3.mp4">
+                 <source src="assets/video/Adiestramiento_video4.mp4">
+               </video>
+            </div> 
+            <div class="embed-responsive embed-responsive-16by9">
+               <video controls>
+                 <source src="assets/video/Adiestramiento_video5.mp4">
+               </video>
+            </div> 
+            <div class="embed-responsive embed-responsive-16by9">
+               <video controls>
+                 <source src="assets/video/Adiestramiento_video6.mp4">
                </video>
             </div>       
             </div>
