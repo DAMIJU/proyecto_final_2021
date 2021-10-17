@@ -2177,8 +2177,8 @@ function preguntar(id_user)
             <div class="col-sm-6">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title" style="font-weight:bold">Cambiar contraseña para acciones</h5>
-                  <p class="card-text">Utilice esta contraseña para realizar acciones, como modificar y eliminar (Solo admin).</p>
+                  <h5 class="card-title" style="font-weight:bold">Cambiar contraseña de administrador</h5>
+                  <p class="card-text">Utilice esta contraseña para realizar acciones, como editar, actualizar y eliminar informacion.</p>
                   <a href="ActualizarContraseñaAcciones.php?ID=1" class="btn btn-success">Cambiar contraseña</a>
                 </div>
               </div>
@@ -2186,8 +2186,8 @@ function preguntar(id_user)
             <div class="col-sm-6">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title" style="font-weight:bold">Cambiar contraseña de perfil</h5>
-                  <p class="card-text">Utilice esta contraseña como administrador para acceder a Servicios Caninos Casme.</p>
+                  <h5 class="card-title" style="font-weight:bold">Cambiar contraseña panel de administrador</h5>
+                  <p class="card-text">Utilice esta contraseña para acceder al panel de administrador.</p>
                   <a href="ContraseñaAdmin.php" class="btn btn-success">Cambiar contraseña</a>
                 </div>
               </div>
