@@ -254,6 +254,8 @@ if (!isset($_SESSION['loggedin'])) {
         }else{
           echo "<script>alert('los datos no se han podido actualizar correctamente');</script>";
         }
+      }else{
+        echo "<script>alert('Contraseña incorrecta, vuélvalo a intentar')</script>";
       }
     }
     ?>

@@ -251,8 +251,9 @@ if(isset($_POST['delete'])){
   }else{
     echo "<script>alert('Los datos no se han eliminado correctamente');</script>";
   }
-  
- }
+ }else{
+  echo "<script>alert('Contraseña incorrecta, vuélvalo a intentar')</script>";
+}
 }
 
 ?>

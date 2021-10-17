@@ -257,8 +257,9 @@ include("DB/conexion.php");
     }else{
       echo "<script>alert('Los datos no se han eliminado (Contraseña invalida)');</script>";
     }
-    
-   }
+   }else{
+    echo "<script>alert('Contraseña incorrecta, vuélvalo a intentar')</script>";
+  }
   }
 ?>
  
