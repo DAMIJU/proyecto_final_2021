@@ -56,7 +56,7 @@
     <div class="row">
       <div class="col-md-6">
         <h2 style="color:#138fcb;font-family:Roboto Condensed;font-weight:bold">Nuestra misión</h2>
-        <p>Consentir y embellecer a tu mascota mediante un servicio de calidad y profesionalismo, suminiestrando accesorios de calidad necesarios para una sana y alegre convivencia</p>       
+        <p>Consentir y embellecer a tu mascota mediante un servicio de calidad y profesionalismo, suminiestrando accesorios de calidad necesarios para una sana y alegre convivencia.</p>       
         <h2 style="color:#138fcb;font-family:Roboto Condensed;font-weight:bold">Nuestra visión</h2>
         <p>Ser una empresa reconocida por toda la región y recomendada por su calidad y buen servicio donde se encuentre la solución a necesidades como: elección de mascota, embellecimiento, orientación psicosocial e integración familiar.</p>  
       </div>
@@ -64,7 +64,7 @@
     </div>
   </div>
 </section><br>
-<section class="page-title" style="background-image:url('https://image.freepik.com/foto-gratis/fondo-textura-papel-arrugado-azul_118047-1342.jpg')">
+<section class="page-title" style="background-color:#2d92cb">
   <div class="auto-container">
      <br> <h2 style="color:white;text-align:center;font-weight:bold">Escuela profesional de adiestramiento canino</h2>
   </div>
