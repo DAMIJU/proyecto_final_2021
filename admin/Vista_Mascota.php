@@ -310,7 +310,7 @@ if (!isset($_SESSION['loggedin'])) {
                   <td><?php echo $mostrar['Notas_Internas'];?></td>
                   <td><?php echo $mostrar['Fecha_Cita'];?></td>      
                   <td>
-                    <a id="a_delete" href="#" onclick="preguntar(<?php echo $mostrar['Num_Historial_Cita']?>)" title="Eliminar registro">
+                    <a id="a_delete"  onclick="preguntar2(<?php echo $mostrar['Num_Historial_Cita']?>)" title="Eliminar registro">
                         Eliminar
                     </a> /
                     <a id="a_edit" href="Edit_Historial.php?Num_Historial_Cita=<?php echo $mostrar['Num_Historial_Cita']?>" title="Editar registro">Editar</a>
@@ -416,7 +416,7 @@ if (!isset($_SESSION['loggedin'])) {
       }
 </script>
 <script type="text/javascript">
-      function preguntar(Num_Historial_Cita)
+      function preguntar2(Num_Historial_Cita)
       {
         if(confirm('¿Estás seguro que quieres eliminar este registro?'))
         {
