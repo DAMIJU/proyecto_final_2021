@@ -236,13 +236,13 @@ if (!isset($_SESSION['loggedin'])) {
      <div class="col-md-5 mx-auto">
        <div class="card card-body" style="background-color: #2D92CB;">
         <!-- AQUI ESTA EL MODAL QUE CONTIENE EL FORMULARIO QUE REALIZA LA ACCIÓN DE LA PÁGINA -->
-        <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Cambiar contraseña de perfil</h3>
+        <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Cambiar contraseña del panel</h3>
         <form action="ContraseñaAdmin.php?id_user=<?php echo $row['id_user']?>" method="POST">
             <div class="form-group">
-              <input type="password" name="password" class="form-control" value="" placeholder="Contraseña actual de Administrador (Perfil)">
+              <input type="password" name="password" class="form-control" value="" placeholder="Contraseña actual">
             </div>
             <div class="form-group">
-            <input type="password" name="NewPasswordPerfil" class="form-control" value="" placeholder="Contraseña nueva de Administrador (Perfil)">
+            <input type="password" name="NewPasswordPerfil" class="form-control" value="" placeholder="Contraseña nueva">
             </div>
             <div class="botones">
               <button type="submit" name="GuardarDatosContrasenaPerfil" class="btn btn-success">Actualizar</button>
