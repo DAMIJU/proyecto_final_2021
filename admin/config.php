@@ -1813,7 +1813,7 @@ width:102.4%!important;
     </div>
 <!-- DATATABLE USUARIOS ADMINISTRADORES -->
   <div class="datatable-responsive datatable-box">
-    <table id="dueño" class="table table-responsive table-sm non-top-border dt-responsive" cellspacing="0">
+  <table id="galeria" class="table table-responsive table-sm non-top-border dt-responsive" cellspacing="0">
       <thead>   
         <tr>
           <th>Nº usuario</th>
