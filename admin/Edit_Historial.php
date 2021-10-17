@@ -189,7 +189,7 @@ if (!isset($_SESSION['loggedin'])) {
               </a>
             </li>
             <li class="nav-item">
-              <a href="Config.php?modulo=AddUser" class="nav-link">
+              <a href="Config.php?modulo=Passwords" class="nav-link">
                 <i class="fas fa-unlock nav-icon"></i>
                 <p>Contraseñas</p>
               </a>
