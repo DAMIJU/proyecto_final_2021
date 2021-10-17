@@ -50,16 +50,16 @@
   <br>
 <main id="main">
     <section id="services" class="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <div class="icon"><img src="https://img.icons8.com/pastel-glyph/64/000000/dog-heart--v2.png"/></div>
-              <h4 class="title"><a href="">Adiestramiento</a></h4>
-              <p class="description"></p>
-              <a id="btnabrir" class="btn-get-started btn btn-lg scrollto span2" data-toggle="modal" data-target="#Modal_ServicioAdiestramiento"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"></a>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0 services-adiestramiento">
+              <div class="icon-box">
+                <div class="icon"><img src="https://img.icons8.com/pastel-glyph/64/000000/dog-heart--v2.png"/></div>
+                <h4 class="title"><a href="">Adiestramiento</a></h4>
+                <p class="description"></p>
+                <a id="btnabrir" class="btn-get-started btn btn-lg scrollto span2" data-toggle="modal" data-target="#Modal_ServicioAdiestramiento"><img src="https://img.icons8.com/small/16/000000/open-in-popup.png"></a>
+              </div>
             </div>
-          </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box">

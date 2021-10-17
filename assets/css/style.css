@@ -987,6 +987,21 @@ section {
   z-index: 1;
   text-align: center;
 }
+.services-adiestramiento .icon-box {
+  padding: 60px 30px;
+  height: 310px;
+  width: 225px;
+  position: relative;
+  overflow: hidden;
+  background: #FFF;
+  box-shadow: 2px 0 35px 0 rgb(45, 146, 203);
+  transition: all 0.3s ease-in-out;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  z-index: 1;
+  text-align: center;
+}
 #Modal_ServicioAdiestramiento .Adiestramiento {
   color: #2D92CB;
 }
