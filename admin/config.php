@@ -1468,51 +1468,41 @@ width:102.4%!important;
           <h2 class="title">Añadir admin</h2>
         </div>
         <div class="card-body">
-        <form action="AgregarUser.php" id="myform" method="POST" autocomplete="OFF" accept-charset="utf-8">
-          <!-- 2 column grid layout with text inputs for the first and last names -->
+        <form action="AgregarUser.php" method="POST" autocomplete="OFF">
           <div class="row mb-4">
             <div class="col">
               <div class="form-outline">
-                <label class="form-label FormLogin" for="NombreCompleto">Nombres<span style="color:red">*</span></label>
-                <input type="text" class="form-control" name="FullName">
+                <label class="form-label FormLogin">Nombres<span style="color:red">*</span></label>
+                <input type="text" class="form-control" name="Nombre_Usuario">
               </div>
             </div>
             <div class="col">
               <div class="form-outline">
-                <label class="form-label FormLogin" for="Apellido">Apellidos<span style="color:red">*</span></label>
-                <input type="text" id="Apellido" required="required" name="Apellidos_Usuario" class="form-control" />
+                <label class="form-label FormLogin">Apellidos<span style="color:red">*</span></label>
+                <input type="text" name="Apellidos_Usuario" class="form-control">
               </div>
             </div>
           </div>
-
           <div class="form-outline mb-4">
-            <label class="form-label FormLogin" for="usuario">Número de documento<span style="color:red">*</span></label>
-            <input type="number" name="id_user" required="required" id="id_user" class="form-control" />
+            <label class="form-label FormLogin">Telefono<span style="color:red">*</span></label>
+            <input type="text" name="Tel_User" id="Tel_User" class="form-control">
           </div> 
-
           <!-- Text input -->
           <div class="form-outline mb-4">
-            <label class="form-label FormLogin" for="usuario">Nombre de Usuario<span style="color:red">*</span></label>
-            <input type="text" name="usuario" required="required" id="usuario" class="form-control" />
+            <label class="form-label FormLogin">Nombre de Usuario<span style="color:red">*</span></label>
+            <input type="text" name="usuario" class="form-control">
           </div>
-
           <!-- Text input -->
           <div class="form-outline mb-4">
-            <label class="form-label FormLogin" for="password">Contraseña<span style="color:red">*</span></label>
-            <input type="password" id="myPassword" name="password" class="form-control" />
+            <label class="form-label FormLogin">Contraseña<span style="color:red">*</span></label>
+            <input type="password" id="myPassword" name="clave" class="form-control">
           </div>
-
-<!--           <div class="form-outline mb-4">
-            <label class="form-label FormLogin" for="password">Confirmar Contraseña<span style="color:red">*</span></label>
-            <input type="password" name="password2" id="password2" class="form-control" />
-          </div> -->
-          <input type="submit" name="GuardarNuevoUsuarioAdmin" class="btn btn-success btn-block mb-4" value="Guardar">
+          <input type="submit" name="Agregar_Admin" class="btn btn-success btn-block mb-4" value="Guardar">
         </form>
         </div>
       </div>
       </div>  
   </div> 
-	</div>
 <!-- DATATABLE DUEÑO -->
 <script src="ContraseñaSegura/js/jquery.min.js"></script>
 <script src="ContraseñaSegura/js/strength.min.js"></script>
