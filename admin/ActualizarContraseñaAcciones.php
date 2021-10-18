@@ -284,10 +284,6 @@ include("DB/conexion.php");
 /* AQUI SE ATRAPAN LOS DATOS */
 $ID = $_REQUEST['ID'];
 
-$query="SELECT * FROM tabla_para_acciones WHERE ID='$ID'";
-$resultado= $con->query($query);
-$row=$resultado->fetch_assoc();
-
 if(isset($_POST['update'])){
 
    /* AQUI SE RECIBEN LOS DATOS DEL FORMULARIO */
@@ -296,7 +292,7 @@ if(isset($_POST['update'])){
   $row2 = $resultado2->fetch_assoc();
   $contraseña = $row2['Contraseña'];  
   $password = $_POST['password'];
-  $NewPassword = $_POST['NewPassword'];
+  $NewPassword = sha1($_POST['NewPassword']);
   
   if($contraseña === $_POST['password']){
   /* AQUI REALIZAMOS EL UPDATE DEL REGISTRO QUE SE SELECCIONÓ */
