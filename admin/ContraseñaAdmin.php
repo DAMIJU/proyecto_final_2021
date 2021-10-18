@@ -287,7 +287,7 @@ if(isset($_POST['GuardarDatosContrasenaPerfil'])){
 
 $id_user = $_REQUEST['id_user'];
 $password = $_POST['password'];
-$NewPasswordPerfil = sha1($_POST['NewPasswordPerfil']);
+$NewPasswordPerfil = $_POST['NewPasswordPerfil'];
  
   if($password === $_POST['password']){
     $query2 = "SELECT * FROM usuarios WHERE id_user = '$id_user' AND clave = '$password'";
