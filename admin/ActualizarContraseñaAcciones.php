@@ -223,10 +223,6 @@ include("DB/conexion.php");
 /* AQUI SE ATRAPAN LOS DATOS */
 $ID = $_REQUEST['ID'];
 
- /* AQUI REALIZAMOS UNA CONSULTA EN LA TABLA MASCOTA QUE DEACUERDO AL NUMERO DEL
-     REGISTRO DE LA MASCOTA SELECCIONADA PARA AUTOCOMPLEMENTAR LOS DATOS DEL
-     FORMULARIO QUE ESTA DENTRO DEL MODAL staticBackdropLabel
-      */
 $query="SELECT * FROM tabla_para_acciones WHERE ID='$ID'";
 $resultado= $con->query($query);
 $row=$resultado->fetch_assoc();

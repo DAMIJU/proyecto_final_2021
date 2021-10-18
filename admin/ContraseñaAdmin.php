@@ -217,19 +217,35 @@ if (!isset($_SESSION['loggedin'])) {
         </div>
 <div class="content-wrapper">
 <?php
-   if(isset($_POST['GuardarDatosContrasenaPerfil'])){
-    include("DB/conexion.php");
-    $password = $_POST['password'];
-    $NewPasswordPerfil = sha1($_POST['NewPasswordPerfil']);
 
-    $querySeleccionar = "SELECT Contraseña FROM tabla_para_acciones WHERE Contraseña='$password'";
-    if($querySeleccionar){
-        $queryModificarPerfil = "UPDATE usuarios SET clave='$NewPasswordPerfil";
-    }else{
+include("DB/conexion.php");
 
-    }
-   }
+/* AQUI SE ATRAPAN LOS DATOS */
 
+if(isset($_POST['GuardarDatosContrasenaPerfil'])){
+
+$id_user = $_REQUEST['id_user'];
+$password = $_POST['password'];
+$NewPasswordPerfil = sha1($_POST['NewPasswordPerfil']);
+
+  $query2 = "SELECT * FROM usuarios WHERE id_user = '$id_user' AND clave = '$password'";
+  $resultado2 = $con->query($query2);
+  $row2 = $resultado2->fetch_assoc();
+ 
+  if($password === $_POST['password']){
+  /* AQUI REALIZAMOS EL UPDATE DEL REGISTRO QUE SE SELECCIONÓ */
+  $query="UPDATE usuarios SET clave='$NewPasswordPerfil' WHERE id_user='$id_user'";
+  $ResultadoContrasenaPerfil = $con->query($query);
+
+  if($ResultadoContrasenaPerfil){
+  echo "<script>alert('La contraseña se ha actualizado correctamente');window.location='Config.php?modulo=Passwords'</script>";
+  }else{
+    echo "<script>alert('los datos no se han podido actualizar correctamente');</script>";
+  }
+}else{
+  echo "<script>alert('Contraseña incorrecta, vuélvalo a intentar')</script>";
+}
+}
 ?>
  <div class="container p-4">
    <div class="row">
@@ -239,10 +255,10 @@ if (!isset($_SESSION['loggedin'])) {
         <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Cambiar contraseña del panel</h3>
         <form action="ContraseñaAdmin.php?id_user=<?php echo $row['id_user']?>" method="POST">
             <div class="form-group">
-              <input type="password" name="password" class="form-control" value="" placeholder="Contraseña actual">
+              <input type="password" name="password" REQUIRED class="form-control" value="" placeholder="Contraseña actual">
             </div>
             <div class="form-group">
-            <input type="password" name="NewPasswordPerfil" class="form-control" value="" placeholder="Contraseña nueva">
+            <input type="password" name="NewPasswordPerfil" REQUIRED class="form-control" value="" placeholder="Contraseña nueva">
             </div>
             <div class="botones">
               <button type="submit" name="GuardarDatosContrasenaPerfil" class="btn btn-success">Actualizar</button>
