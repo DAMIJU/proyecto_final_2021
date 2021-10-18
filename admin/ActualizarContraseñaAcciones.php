@@ -68,11 +68,73 @@ if (!isset($_SESSION['loggedin'])) {
   <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="ContraseñaSegura/aaronBase.css" rel="stylesheet">
+  <link href="ContraseñaSegura/strength.css" rel="stylesheet">
   <style>
     li{
       list-style: none;
     }
-  </style> 
+
+    label .FormLogin{
+      font-weight: 1;
+    }
+.strength_meter{
+width: 50%;
+height:43px;
+z-index:-1;
+border-radius:5px;
+padding-right:13px;
+}
+.button_strength {
+text-decoration: none;
+color: #000;
+font-size: 13px;
+}
+.strength_meter div{
+    width:0%;
+height: 43px;
+text-align: right;
+color: #000;
+line-height: 43px;
+-webkit-transition: all .3s ease-in-out;
+-moz-transition: all .3s ease-in-out;
+-o-transition: all .3s ease-in-out;
+-ms-transition: all .3s ease-in-out;
+transition: all .3s ease-in-out;
+padding-right: 12px;
+border-radius:5px;
+}
+
+.strength_meter div p{
+position: absolute;
+top: 22px;
+right: 0px;
+color: #FFF;
+font-size:13px;
+}
+
+.veryweak{
+    background-color: #FFA0A0;
+border-color: #F04040!important;
+width:25%!important;
+}
+
+.weak{
+background-color: #FFB78C;
+border-color: #FF853C!important;
+width:50%!important;
+}
+.medium{
+background-color: #FFEC8B;
+border-color: #FC0!important;
+width:75%!important;
+}
+.strong{
+background-color: #C3FF88;
+border-color: #8DFF1C!important;
+width:102.4%!important;
+}
+  </style>
   <link rel="stylesheet" type="text/css" href="select2/select2.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -215,7 +277,6 @@ if (!isset($_SESSION['loggedin'])) {
             </div>
           </div>
         </div>
-<div class="content-wrapper">
 <?php
 
 include("DB/conexion.php");
@@ -252,29 +313,48 @@ if(isset($_POST['update'])){
 }
 }
 ?>
- <div class="container p-4">
-   <div class="row">
-     <div class="col-md-5 mx-auto">
-       <div class="card card-body" style="background-color: #2D92CB;">
-        <!-- AQUI ESTA EL MODAL QUE CONTIENE EL FORMULARIO QUE REALIZA LA ACCIÓN DE LA PÁGINA -->
-        <h3 class="modal-title" id="staticBackdropLabel" style="font-weight:bold">Cambiar contraseña de administrador</h3>
+<div class="content-wrapper">    
+    <div class="text-center">
+      <h1>CONTRASEÑAS</h1>
+    </div>
+  <div class="wrapper2">
+      <div class="card">
+        <div class="card-header card-primary">
+          <h2 class="title">Cambiar contraseña de administrador</h2>
+        </div>
+        <div class="card-body">
         <form action="" method="POST">
-            <div class="form-group">
-              <input type="password" name="password" class="form-control" value="" placeholder="Contraseña actual">
+          <!-- 2 column grid layout with text inputs for the first and last names -->
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label FormLogin" for="NombreCompleto"><span style="color:red">*</span></label>
+                <input type="password" class="form-control" name="password" REQUIRED placeholder="Contraseña actual">
+              </div>
             </div>
-            <div class="form-group">
-            <input type="password" name="NewPassword" class="form-control" value="" placeholder="Contraseña nueva">
-            </div>
-            <div class="botones">
-              <button name="update" class="btn btn-success">Actualizar</button>
-              <a href="javascript: history.go(-1)" role="button" class="btn btn-danger">Cancelar</a>
-            </div>             
+          </div>
+          <div class="form-outline mb-4">
+            <label class="form-label FormLogin" for="password"><span style="color:red">*</span></label>
+            <input type="password" id="myPassword" name="NewPassword" REQUIRED class="form-control" placeholder="Contraseña nueva"/>
+          </div>
+          <button type="submit" name="update" class="btn btn-success btn-block mb-4">Actualizar</button>
         </form>
-       </div>
-     </div>
-   </div>
- </div>
-</div>
+        </div>
+      </div>
+      </div>  
+  </div>
+<script src="ContraseñaSegura/js/jquery.min.js"></script>
+<script src="ContraseñaSegura/js/strength.min.js"></script>
+<script id="rendered-js">
+  $(document).ready(function ($) {
+  $('#myPassword').strength({
+    strengthClass: 'strength',
+    strengthMeterClass: 'strength_meter',
+    strengthButtonClass: 'button_strength',
+    strengthButtonText: 'Mostrar Contraseña',
+    strengthButtonTextToggle: 'Ocultar Password' });
+});
+</script>
 
 <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
@@ -361,3 +441,5 @@ document.getElementById('fecha').type= 'date';
 });
 </script>
 </body>
+
+

@@ -1252,8 +1252,6 @@ if (!isset($_SESSION['loggedin'])) {
     label .FormLogin{
       font-weight: 1;
     }
-
-
 .strength_meter{
 width: 50%;
 height:43px;
