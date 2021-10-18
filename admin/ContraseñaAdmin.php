@@ -308,6 +308,11 @@ $NewPasswordPerfil = sha1($_POST['NewPasswordPerfil']);
 }
 }
 ?>
+ <?php  
+      include("DB/conexion.php");
+      $sql="SELECT usuario, Tel_User from usuarios";
+      $result=mysqli_query($con,$sql);
+    ?>
 <div class="content-wrapper">    
     <div class="text-center">
       <h1>CONTRASEÑAS</h1>
@@ -320,6 +325,16 @@ $NewPasswordPerfil = sha1($_POST['NewPasswordPerfil']);
         <div class="card-body">
         <form action="ContraseñaAdmin.php?id_user=<?php echo $row['id_user']?>" method="POST">
           <!-- 2 column grid layout with text inputs for the first and last names -->
+          <div class="form-outline mb-4">
+            <select name="usuario" id="controlBuscador">
+              <option disabled selected>Seleccione un usuario administrador</option>
+                <?php while ($ver=mysqli_fetch_row($result)) {?>
+              <option value="<?php echo $ver[0] ?>">
+                  <?php echo $ver[0] ?> - <?php echo $ver[1] ?> 
+              </option>
+              <?php  }?>
+            </select>
+          </div>
           <div class="row mb-4">
             <div class="col">
               <div class="form-outline">
