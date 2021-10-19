@@ -287,12 +287,13 @@ if(isset($_POST['GuardarDatosContrasenaPerfil'])){
 
 $id_user = $_REQUEST['id_user'];
 $password = $_POST['password'];
-$NewPasswordPerfil = $_POST['NewPasswordPerfil'];
+$NewPasswordPerfil = sha1($_POST['NewPasswordPerfil']);
+
+$query2 = "SELECT * FROM usuarios WHERE id_user = '$id_user' AND clave = '$password'";
+$resultado2 = $con->query($query2);
+$row2 = $resultado2->fetch_assoc();
  
-  if($password === $_POST['password']){
-    $query2 = "SELECT * FROM usuarios WHERE id_user = '$id_user' AND clave = '$password'";
-    $resultado2 = $con->query($query2);
-    $row2 = $resultado2->fetch_assoc();
+  if($row2 === $_POST['password']){
   /* AQUI REALIZAMOS EL UPDATE DEL REGISTRO QUE SE SELECCIONÓ */
   $query="UPDATE usuarios SET clave='$NewPasswordPerfil' WHERE id_user='$id_user'";
   $ResultadoContrasenaPerfil = $con->query($query);
