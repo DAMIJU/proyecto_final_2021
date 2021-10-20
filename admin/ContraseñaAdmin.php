@@ -277,24 +277,24 @@ width:102.4%!important;
             </div>
           </div>
         </div>
-<?php
+<!-- <?php
+
+/*
 
 include("DB/conexion.php");
 
-/* AQUI SE ATRAPAN LOS DATOS */
-
 if(isset($_POST['GuardarDatosContrasenaPerfil'])){
 
-$id_user = $_REQUEST['id_user'];
-$password = $_POST['password'];
-$NewPasswordPerfil = sha1($_POST['NewPasswordPerfil']);
-
-$query2 = "SELECT * FROM usuarios WHERE id_user = '$id_user' AND clave = '$password'";
+$query2 = "SELECT * FROM usuarios WHERE clave = '$password'";
 $resultado2 = $con->query($query2);
 $row2 = $resultado2->fetch_assoc();
+$id_user = $_REQUEST['id_user'];
+$password = $_POST['password'];
+$Contraseña = $row2['Contraseña']; 
+$NewPasswordPerfil = sha1($_POST['NewPasswordPerfil']);
  
-  if($row2 === $_POST['password']){
-  /* AQUI REALIZAMOS EL UPDATE DEL REGISTRO QUE SE SELECCIONÓ */
+  if($Contraseña === $_POST['password']){
+
   $query="UPDATE usuarios SET clave='$NewPasswordPerfil' WHERE id_user='$id_user'";
   $ResultadoContrasenaPerfil = $con->query($query);
 
@@ -304,7 +304,38 @@ $row2 = $resultado2->fetch_assoc();
     echo "<script>alert('los datos no se han podido actualizar correctamente');</script>";
   }
 }else{
-  echo "<script>alert('Contraseña incorrecta, vuélvalo a intentar')</script>";
+  echo "<script>alert('Contraseña actual inválida')</script>";
+}
+}*/
+?> -->
+<?php
+
+include("DB/conexion.php");
+
+/* AQUI SE ATRAPAN LOS DATOS */
+
+if(isset($_POST['GuardarDatosContrasenaPerfil'])){
+
+   /* AQUI SE RECIBEN LOS DATOS DEL FORMULARIO */
+  $password = sha1($_POST['password']);
+  $query2 = "SELECT * FROM usuarios WHERE clave = '$password'";
+  $resultado2 = $con->query($query2);
+  $row2 = $resultado2->fetch_assoc();
+  $id_user = $_REQUEST['id_user'];
+  $NewPasswordPerfil = sha1($_POST['NewPasswordPerfil']);
+  
+  if($id_user === $_REQUEST['id_user']){
+  /* AQUI REALIZAMOS EL UPDATE DEL REGISTRO QUE SE SELECCIONÓ */
+  $query="UPDATE usuarios SET clave='$NewPasswordPerfil' WHERE clave = '$password'";
+  $ResultadoContrasenaPerfil = $con->query($query);
+
+if($ResultadoContrasenaPerfil){
+  echo "<script>alert('La contraseña se ha actualizado correctamente');window.location='Config.php?modulo=Passwords'</script>";
+  }else{
+    echo "<script>alert('los datos no se han podido actualizar correctamente');</script>";
+  }
+}else{
+  echo "<script>alert('Contraseña actual inválida')</script>";
 }
 }
 ?>
